@@ -1,23 +1,47 @@
 # Claude Skills
 
-Personal collection of [Claude Code skills](https://code.claude.com/docs/en/skills) for clinical evidence-synthesis work (systematic reviews, living guidelines, GRADE/PICO abstraction).
+Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) — for Claude Code and claude.ai — covering clinical evidence-synthesis work, academic writing/presenting, and residency-application tooling.
 
-## Skills
+## Clinical evidence synthesis
 
 | Skill | What it does |
 |---|---|
 | [`itable-extraction`](itable-extraction/) | Extracts data from clinical-trial / systematic-review publications into a structured "i-table" via a multi-agent extract → verify → assemble → validate pipeline. Handles per-arm columns, derives value formats from example rows, attaches per-value provenance, and produces an upload-ready file. |
 | [`outcomes-extraction`](outcomes-extraction/) | Extracts time-to-event outcomes (OS, DFS/PFS, RFS) and response outcomes (ORR, pCR) from trial publications into per-comparison outcome tables — hazard ratio + 95% CI, events/N per arm, landmark rates — with provenance. |
 | [`study-question-tagging`](study-question-tagging/) | Assigns included studies to the clinical questions (CQs) of a guideline or systematic review by reading the actual publications, and emits one filtered spreadsheet per question. |
+| [`guideline-lit-review`](guideline-lit-review/) | Drafts the narrative literature-review prose for a clinical-practice-guideline question directly from its populated Summary-of-Findings / GRADE tables, inserting the text into the existing .docx (ASCO house style) without altering the tables. |
+| [`lisr-pdf-downloader`](lisr-pdf-downloader/) | Retrieves full-text PDFs and supplements for systematic-review screening rounds (open-access resolution, identifier matching, browser-download playbook, round-by-round status tracking). |
 
-Each skill folder contains a `SKILL.md` (trigger description + instructions), plus supporting `references/`, `scripts/`, `assets/`, and `evals/`.
+## Academic writing & presenting
+
+| Skill | What it does |
+|---|---|
+| [`academic-pptx`](academic-pptx/) | Builds academic-style PowerPoint decks (journal clubs, grand rounds, lectures, conference talks) with restrained publication-quality design — role-based color palette, message-based slide titles, natural speaker notes — on top of the pptx skill. |
+| [`manuscript-srma`](manuscript-srma/) | Drafts, edits, and rubric-evaluates systematic-review / meta-analysis / NMA manuscripts (including living and interactive reviews) with journal-specific adapters, GRADE/PRISMA conventions, and a strict never-fabricate placeholder rule. |
+
+## Residency application
+
+| Skill | What it does |
+|---|---|
+| [`residency-program-finder`](residency-program-finder/) | Searches and verifies internal-medicine residency programs for IMG applicants — roster-confirmed affinity counts, visa/signal/tier tracking, Residency Explorer integration — and renders a verified program list as an Excel workbook and a self-contained interactive HTML apply list. |
+
+## Third-party
+
+| Skill | What it does |
+|---|---|
+| [`council`](council/) | Convenes seven debating expert personas (Adversary, Strategist, Scientist, Visionary, Engineer, Philosopher, Humanist) to stress-test a decision, then delivers a structured verdict with confidence, risks, next steps, and a minority report. Adapted from [Claude Council](https://github.com/itshussainsprojects/Claude-Council-Skill) by Hussain Ali (MIT). Not my own work — kept here for convenience. |
+
+## Notes on completeness
+
+- `academic-pptx` and `manuscript-srma` ship as standalone `SKILL.md` files. Both reference supporting `references/` / `scripts/` / `assets/` files that no longer exist on local disk (only the SKILL.md survived the claude.ai upload); the instructions are self-contained enough to work, but the full bundles would need to be re-exported from claude.ai if they still exist there.
+- `residency-program-finder`'s example JSON in `scripts/README.md` uses placeholder applicant data.
 
 ## Installation
 
-Copy (or symlink) a skill folder into `~/.claude/skills/`:
+**Claude Code:** copy a skill folder into `~/.claude/skills/`:
 
 ```bash
 cp -R itable-extraction ~/.claude/skills/
 ```
 
-Claude Code picks it up automatically; invoke it by describing a matching task or via the `Skill` tool.
+**claude.ai:** zip the folder (or use skill-creator's packager) and upload it under Settings → Capabilities → Skills.
