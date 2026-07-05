@@ -1,0 +1,53 @@
+{
+  "skill_name": "outcomes-extraction",
+  "notes": "Test fixtures live in the ASCO adjuvant-ET project (02_outcomes_extraction/ + in_system_labels/references/). Eval 1 is the full pipeline; eval 2 targets multi-arm row handling; eval 3 is a quick single-study fill. Baseline = no skill.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Extract the overall survival, disease-free survival, and recurrence-free survival results for the adjuvant endocrine-therapy trials in my outcomes tables. The to_extract and example files are in 02_outcomes_extraction/{OS,DFS,RFS}/ and the reference PDFs are in in_system_labels/references/. Fill the to_extract files in place.",
+      "expected_output": "All three *_to_extract.xlsx files filled: each row has Trial Name/NCT/PMID/O-F/Arms, HR + lower/upper CI (treatment vs control), Treatment/Control arm names, per-arm survival rates and events/N, medians = NA. RFS rows use the closest recurrence endpoint (RFI/BCFI) and flag substitutions. A provenance workbook is produced; QC shows 0 empty cells and 0 HR-sanity violations.",
+      "files": [],
+      "assertions": [
+        {"id": "files_filled", "text": "All three to_extract files have every G-Y data cell populated (no blanks; NA where unreported)"},
+        {"id": "hr_direction", "text": "HR (TE) is reported treatment-vs-control and lies within its lower/upper CI for every numeric row"},
+        {"id": "rfs_endpoint_flagged", "text": "RFS rows that substitute a non-RFS endpoint (RFI/BCFI/distant) record endpoint_used and a flag"},
+        {"id": "provenance_present", "text": "A provenance workbook with per-value sources/snippets is produced"},
+        {"id": "no_fabrication", "text": "Trials reporting no survival outcome (e.g. a QoL/dosing trial) have NA effect cells with a flag, not invented numbers"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I think the multi-arm trials in my OS/DFS/RFS outcomes tables are missing comparison rows. SOFT is 3-arm and FATA-GIM3 is 6-arm but they only have one row each in some tables. Can you verify every study and add the comparison rows that are missing?",
+      "expected_output": "A verification of arm-count vs reported comparisons per study; multi-arm trials get one row per pairwise comparison the publication reports an HR for, added contiguously (grouped by study) with the correct col-F comparison label; the Arms column = total trial arm count on every row; comparisons that lack a reported HR (global-test-only, descriptive-only) are flagged not fabricated.",
+      "files": [],
+      "assertions": [
+        {"id": "arms_total", "text": "The Arms column holds the trial's total arm count (e.g. SOFT=3, FATA-GIM3=6, BIG 1-98=4), identical on every row of that study"},
+        {"id": "rows_per_comparison", "text": "Added rows correspond to comparisons the publication actually reports an effect estimate for"},
+        {"id": "grouped_contiguous", "text": "New rows are inserted contiguously with their study, not appended at the end"},
+        {"id": "unreported_flagged", "text": "Comparisons with only a global p-value or descriptive-only HR are flagged for the user, not silently filled"}
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Just pull the overall survival hazard ratio, 95% CI, deaths and N per arm, and the 8-year OS rates for the ASTRRA trial into my OS outcomes sheet from in_system_labels/references/2023_Baek_JCO.pdf (and its supplement).",
+      "expected_output": "The ASTRRA OS row filled: HR ~0.78 (0.49-1.25) tamoxifen+OFS vs tamoxifen alone, 8-year OS ~96.5/95.3, with provenance; values cited from the paper, anything unreported as NA.",
+      "files": [],
+      "assertions": [
+        {"id": "astrra_hr", "text": "OS HR is 0.78 with CI 0.49-1.25, treatment = tamoxifen+OFS, control = tamoxifen alone"},
+        {"id": "astrra_rates", "text": "8-year OS rates ~96.5 (treatment) / 95.3 (control)"},
+        {"id": "cited", "text": "Values carry a source citation to the paper/supplement"}
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Set up the extraction job spec and config files for my OS/DFS/RFS outcome tables using the references folder — produce jobs.json (source files matched to each study, with the needed comparison rows) and the assemble/add_rows config skeletons. Tell me which file matches need verifying.",
+      "expected_output": "A jobs.json listing one entry per unique study with its matched source files and the needed (table,comparison) tuples from the pre-seeded rows, plus assemble_config.json and add_rows_config.json skeletons; file-match ambiguities (year mismatch, supplement-only/main-text-missing) are surfaced for review.",
+      "files": [],
+      "assertions": [
+        {"id": "jobs_built", "text": "A jobs.json is produced with one entry per unique study, each carrying matched source file paths and the needed (table,comparison) tuples"},
+        {"id": "configs_built", "text": "assemble_config.json and add_rows_config.json skeletons are produced with the files map and a study_info entry per study"},
+        {"id": "matches_flagged", "text": "Ambiguous file matches are surfaced for verification (e.g. a year-mismatch match and a supplement-only / missing-main-text match)"}
+      ]
+    }
+  ]
+}

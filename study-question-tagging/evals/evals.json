@@ -1,0 +1,42 @@
+{
+  "skill_name": "study-question-tagging",
+  "notes": "Fixture = the ASCO HR+/HER2- adjuvant ET project (guideline manuscript + 15 included studies + reference PDFs). Ground-truth matrix (validated with the user): CQ9{30503} CQ10{12301,30503,33451,62760,63131} CQ11{12269,12270,12275,12283,12292,12298,29624,64279} CQ12{12270,12275,12283,12292,29624,32444,64279} CQ13{} CQ14{12275,12283,12298,12304,32444}. Premenopausal trials: 12301,30503,33451,62760,63131,32444. Postmenopausal trials: 12269,12270,12275,12283,12292,12298,29624,64279. CQ9 and CQ14 membership are flagged judgment calls (graded leniently).",
+  "evals": [
+    {
+      "id": 1,
+      "name": "full-tagging-6-questions",
+      "prompt": "I'm building the ASCO stage I-III HR-positive/HER2-negative breast cancer guideline. In this folder you'll find the panel manuscript `HR+_HER2-Neg_Stage_I-III_Manuscript_Panel_Draft_102725.docx`, the included-studies spreadsheet `HR_Adjuvant_ET_included_studies.xlsx`, and a `references/` folder with the full-text PDFs and supplements for each study. Please (1) pull out the ADJUVANT ENDOCRINE THERAPY clinical questions from the manuscript, (2) decide which of the included studies answers each of those questions (reading the publications as needed), and (3) create one Excel file per question, each filtered to just the studies that answer it, keeping the same columns as the included-studies sheet. A study can go in more than one question's file if it answers more than one.",
+      "expected_output": "One .xlsx per adjuvant ET question (6 questions: select-patients, premenopausal-treatment, postmenopausal-treatment, duration, timing-of-initiation, adverse-effects/adherence). Premenopausal-treatment file == {12301,30503,33451,62760,63131}; postmenopausal-treatment file == {12269,12270,12275,12283,12292,12298,29624,64279}; duration file == {12270,12275,12283,12292,29624,32444,64279}; timing file empty/header-only. Population gatekeeper respected. Each file keeps the source sheet's 19 columns.",
+      "files": [
+        "fixture/HR+_HER2-Neg_Stage_I-III_Manuscript_Panel_Draft_102725.docx",
+        "fixture/HR_Adjuvant_ET_included_studies.xlsx",
+        "fixture/references/"
+      ],
+      "assertions": [
+        "Produces ~6 per-question Excel files",
+        "premenopausal-treatment file == {12301,30503,33451,62760,63131}",
+        "postmenopausal-treatment file == {12269,12270,12275,12283,12292,12298,29624,64279}",
+        "duration file == {12270,12275,12283,12292,29624,32444,64279}",
+        "population gatekeeper respected (no cross-population leakage)",
+        "output files preserve the source sheet's columns",
+        "timing-of-initiation question is empty/header-only"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "classify-premeno-vs-duration",
+      "prompt": "Here is an included-studies spreadsheet `HR_Adjuvant_ET_included_studies.xlsx` and a `references/` folder of the publications. For an adjuvant endocrine therapy guideline, I need to know which of these studies answer (a) the question of which adjuvant endocrine TREATMENT to recommend for PREMENOPAUSAL women, and (b) the question of the optimal DURATION of adjuvant endocrine therapy. A study can answer both. Read the abstracts (and the papers where it's not clear) and give me the two lists of study IDs, each with a one-line reason. Save your answer as JSON to `answer.json` in the form {\"premenopausal\": [ids], \"duration\": [ids]}.",
+      "expected_output": "answer.json with premenopausal == {12301,30503,33451,62760,63131} and duration == {12270,12275,12283,12292,29624,32444,64279}. 32444 (Ohashi) belongs to DURATION only (it randomizes ovarian-suppression length on a fixed regimen, so it answers duration, not treatment-choice). No postmenopausal-only trial (12269,12270,12275,12283,12292,12298,29624,64279) appears in the premenopausal list.",
+      "files": [
+        "fixture/HR_Adjuvant_ET_included_studies.xlsx",
+        "fixture/references/"
+      ],
+      "assertions": [
+        "premenopausal list == {12301,30503,33451,62760,63131}",
+        "duration list == {12270,12275,12283,12292,29624,32444,64279}",
+        "32444 (Ohashi) in duration only, NOT premenopausal-treatment (tag by randomized contrast)",
+        "no postmenopausal-only trial in the premenopausal list (gatekeeper)"
+      ]
+    }
+  ]
+}

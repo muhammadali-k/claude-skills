@@ -1,0 +1,63 @@
+{
+ "skill_name": "itable-extraction",
+ "evals": [
+  {
+   "id": 1,
+   "name": "fix-upload-validation",
+   "prompt": "My filled i-table won't import \u2014 the system keeps rejecting it with errors like \"Value 'NA' must be a number\" and \"Value 'Tamoxifen + OFS' must contain only letters\". Here's the filled sheet and the example file that DOES upload cleanly. Figure out the column types from the example and fix my sheet so it imports, without losing data.",
+   "expected_output": "see assertions",
+   "files": [
+    "evals/fixtures/prefilled_with_type_errors.xlsx",
+    "evals/fixtures/example_extractions.xlsx"
+   ],
+   "expectations": [
+    "Output .xlsx exists in the output dir.",
+    "Zero numeric-column cells contain a non-number: cols typed NUMBER from the example (A,H,K,N,T,U,AF,AJ,AK,AO) hold no 'NA'/text.",
+    "Letters-only columns clean: arm-name cols O-S and Authors col J contain only letters+spaces or 'NA' (e.g. 'Tamoxifen + OFS' -> letters like 'Tamoxifen plus OFS').",
+    "Real data preserved: the 9 study rows remain and a type-valid value (e.g. a Total-N such as 1912 or 3966) is unchanged.",
+    "Notes/log explains the derived column types (number vs letters) and the fixes applied."
+   ]
+  },
+  {
+   "id": 2,
+   "name": "extract-two-trials",
+   "prompt": "I need to add two adjuvant endocrine-therapy trials to my evidence table: ASTRRA (Baek 2023) and NSABP B-42 (Mamounas 2019). The input sheet with the columns and the two pre-seeded rows is attached, the example extractions file is attached, and the source PDFs + supplements are in the fixtures folder. Fill in those two rows.",
+   "expected_output": "see assertions",
+   "files": [
+    "evals/fixtures/input_sheet_2rows.xlsx",
+    "evals/fixtures/example_extractions.xlsx",
+    "evals/fixtures/2023_Baek_JCO.pdf",
+    "evals/fixtures/2023_Baek_JCO_Sup.pdf",
+    "evals/fixtures/2019_Mamounas_LancetOnc.pdf",
+    "evals/fixtures/2019_Mamounas_LancetOnc_suppl.pdf"
+   ],
+   "expectations": [
+    "Both rows (ASTRRA 62760 and B-42 29624) are filled with substantive per-arm values, not left blank/NA-only.",
+    "Arm mapping correct: ASTRRA = Tamoxifen+OFS (treatment) vs Tamoxifen-alone (control); B-42 = Letrozole (treatment) vs Placebo (control).",
+    "Anchor values correct to source: ASTRRA randomized N=1282 (635 TAM+OFS / 647 TAM); B-42 total N=3966 (1983/1983).",
+    "A provenance record with page/table/figure citations per value is produced.",
+    "Output passes data-type validation: no 'NA' in numeric columns; arm-name/author columns letters-only.",
+    "No fabrication: baseline characteristics not reported in the provided PDFs are left missing rather than invented."
+   ]
+  },
+  {
+   "id": 3,
+   "name": "no-example-new-project",
+   "prompt": "Starting a brand-new evidence-synthesis project \u2014 no example/gold sheet exists yet. I have a column list (CSV) defining what to extract and three trial PDFs in the fixtures folder. Pull the data from the papers into a filled table for me, and tell me anything you need clarified about the columns or the missing-value/format conventions.",
+   "expected_output": "see assertions",
+   "files": [
+    "evals/fixtures/columns.csv",
+    "evals/fixtures/paperA.pdf",
+    "evals/fixtures/paperB.pdf",
+    "evals/fixtures/paperC.pdf"
+   ],
+   "expectations": [
+    "A filled output table (xlsx/csv) is produced for all three studies with non-empty extracted values.",
+    "The three papers are correctly identified (Ohashi leuprorelin QoL; Ekholm tamoxifen 30-yr; Ruhstaller BIG 1-98) and mapped to rows P01/P02/P03.",
+    "notes.md explicitly raises clarifying questions about column data types and/or missing-value & format conventions (since no example exists).",
+    "Column data types are not silently invented \u2014 assumptions/defaults are stated rather than asserted as known.",
+    "Extracted values carry provenance (a source location per value)."
+   ]
+  }
+ ]
+}
