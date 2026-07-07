@@ -25,6 +25,12 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) �
 |---|---|
 | [`residency-program-finder`](residency-program-finder/) | Searches and verifies internal-medicine residency programs for IMG applicants — roster-confirmed affinity counts, visa/signal/tier tracking, Residency Explorer integration — and renders a verified program list as an Excel workbook and a self-contained interactive HTML apply list. |
 
+## Claude model & workflow tooling
+
+| Skill | What it does |
+|---|---|
+| [`fable5-working-style`](fable5-working-style/) | Teaches a session how Claude Fable 5 thinks and how it differs from Claude Opus 4.8 — behavioral profile, API/effort differences, safety-classifier notes — plus a playbook for making Opus 4.8 adopt Fable-5-style patterns (delegation thresholds, fresh-context verification, memory use, scoped search-first, calibrated autonomy), with research-workflow applications and Fable-quirk countermeasure snippets. |
+
 ## Third-party
 
 | Skill | What it does |
