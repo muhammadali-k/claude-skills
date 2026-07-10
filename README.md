@@ -18,6 +18,7 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) �
 |---|---|
 | [`academic-pptx`](academic-pptx/) | Builds academic-style PowerPoint decks (journal clubs, grand rounds, lectures, conference talks) with restrained publication-quality design — role-based color palette, message-based slide titles, natural speaker notes — on top of the pptx skill. |
 | [`manuscript-srma`](manuscript-srma/) | Drafts, edits, and rubric-evaluates systematic-review / meta-analysis / NMA manuscripts (including living and interactive reviews) with journal-specific adapters, GRADE/PRISMA conventions, and a strict never-fabricate placeholder rule. |
+| [`abstract-review`](abstract-review/) | Peer-reviews a research abstract/manuscript `.docx` — emitting real Word tracked changes + threaded comments under a named reviewer, tailored by a research-type profile (evidence synthesis, RCT, observational, other-clinical, AI/ML/LLM). Does fresh reviews and re-reviews of a revision against the prior round's comments; a proven, self-validating OOXML engine (`scripts/docx_review.py`) keeps the tracked changes/comments Word-clean. The review sibling of `manuscript-srma`. |
 
 ## Residency application
 

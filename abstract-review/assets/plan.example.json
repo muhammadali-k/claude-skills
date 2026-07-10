@@ -1,0 +1,16 @@
+{
+  "_comment": "Edit-plan schema for scripts/docx_review.py `apply`. Paths absolute. `date` is ISO 8601, chosen later than the author's edits. Anchors (find/anchor/target) must lie within ONE plain run; add `context` (a longer same-run substring) or `occurrence` (1-based) to disambiguate. Run `inspect` first to get paragraph indices and run boundaries.",
+  "input": "/absolute/path/to/Manuscript_V4.docx",
+  "output": "/absolute/path/to/Manuscript_V4_MAK_reviewed.docx",
+  "reviewer": "Muhammad Ali Khan",
+  "date": "2026-07-09T18:30:00Z",
+  "edits": [
+    {"type": "replace", "paragraph": 3, "find": "Three", "replace": "Four", "context": "concern. Three Phase"},
+    {"type": "replace", "paragraph": 13, "find": "All three", "replace": "Three of the four"},
+    {"type": "insert_after", "paragraph": 13, "anchor": "spleen volume reduction", "text": ", whereas parsaclisib did not"},
+    {"type": "delete", "paragraph": 11, "find": "of G3 thrombocytopenia "},
+    {"type": "replace", "paragraph": 11, "find": "both these", "replace": "the two"},
+    {"type": "comment_on", "paragraph": 11, "target": "G3 anemia", "context": "lower risk of G3 anemia", "text": "For parallelism with the adjacent outcomes, state how many trials contributed G3 anemia data and whether the parsaclisib trial was evaluable. - MAK"},
+    {"type": "comment_reply", "parent": "52", "text": "Re your question 'How?': a negative TSS mean difference favors the combination (greater symptom reduction); a positive value is numerically worse. Optionally add '(a negative MD favors the combination)'. - MAK"}
+  ]
+}

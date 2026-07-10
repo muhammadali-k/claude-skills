@@ -1,0 +1,45 @@
+{
+  "skill_name": "abstract-review",
+  "notes": "Fixture = the ASH ruxolitinib-combination NMA project: MF_ASH_Umair_V1.docx (author original), MF_ASH_V2_MAK_tracked.docx (reviewer round 1: tracked changes + 12 comments by Muhammad Ali Khan), MF_ASH_Umair_V4.docx (author revision answering those comments, with prior comments + author replies inline). Reviewer name for all markup = Muhammad Ali Khan. Fixture .docx are NOT committed (unpublished author content). Ground truth for eval 1 derives from the validated V4 re-review: the two revision-introduced consistency defects (Intro 'Three'->'Four'; Conclusion 'All three'->'Three of the four ... whereas parsaclisib did not'), the TSS-sign in-thread reply to the author's 'How?', and no tracked edits to unverifiable numbers.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "re-review-v4-consistency-and-threads",
+      "research_type": "evidence synthesis (NMA)",
+      "prompt": "Review Version 4 of this ASH network-meta-analysis abstract (MF_ASH_Umair_V4.docx). I previously reviewed an earlier version with tracked changes and comments; the author has responded inline and revised. Compare V4 against the prior comments: for any that are unresolved, partially addressed, or need clarification, reply in-thread; make tracked changes for any new discrepancies or wording issues. Use Muhammad Ali Khan as the editor name. Return the marked-up .docx.",
+      "assertions": [
+        "Produces a valid .docx that opens without repair; reject-all reproduces MF_ASH_Umair_V4.docx text.",
+        "Adds a tracked change fixing the Introduction trial count from 'Three' to 'Four' (four trials are included).",
+        "Adds a tracked change fixing the Conclusion 'All three ... combinations significantly improved spleen volume reduction' to reflect that only three of the four did (parsaclisib did not).",
+        "Replies IN-THREAD (comment_reply) to the author's 'How?' on the TSS sign convention, explaining that a negative mean difference favors the combination.",
+        "Makes NO tracked edit to any unverifiable numeric result (data-vintage / OS-provenance concerns are comments, not edits).",
+        "All comments authored 'Muhammad Ali Khan'; comment ranges balanced.",
+        "Reports the accepted-body character count against the ASH 4,500 limit."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "fresh-review-overclaim-and-standards",
+      "research_type": "evidence synthesis (NMA)",
+      "prompt": "First-pass review of this NMA abstract (MF_ASH_Umair_V1.docx). Add tracked changes and comments as an expert reviewer; flag methodological gaps and any missing eligible trials. Editor name: Muhammad Ali Khan.",
+      "assertions": [
+        "Flags the star-shaped-network / transitivity limitation (all between-combination comparisons indirect).",
+        "Flags at least one completeness or reporting gap (e.g. search coverage / registries / PROSPERO / RoB / certainty) as a comment.",
+        "Softens or flags any over-strong significance/ranking claim (e.g. an OS 'significant benefit' whose CI touches the null; P-scores read as magnitude).",
+        "Does not fabricate or alter unverifiable numeric results; such concerns are comments.",
+        "Produces a valid marked-up .docx; reject-all reproduces the original."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "profile-routing",
+      "research_type": "mixed",
+      "prompt": "Review this abstract (an RCT / an observational cohort / an LLM-benchmark paper — one per run).",
+      "assertions": [
+        "Loads and applies the correct research-type profile (rct / observational / ai-ml).",
+        "RCT: checks endpoint/alpha-protection and immature-survival framing. Observational: flags causal language on associational data. AI/ML: checks data leakage / split hygiene / baseline fairness.",
+        "Edit-vs-comment discipline respected (unverifiable data -> comment)."
+      ]
+    }
+  ]
+}
