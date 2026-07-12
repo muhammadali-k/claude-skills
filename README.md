@@ -32,6 +32,7 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) �
 | Skill | What it does |
 |---|---|
 | [`fable5-working-style`](fable5-working-style/) | Teaches a session how Claude Fable 5 thinks and how it differs from Claude Opus 4.8 — behavioral profile, API/effort differences, safety-classifier notes — plus a playbook for making Opus 4.8 adopt Fable-5-style patterns (delegation thresholds, fresh-context verification, memory use, scoped search-first, calibrated autonomy), with research-workflow applications and Fable-quirk countermeasure snippets. |
+| [`route`](route/) | On-demand two-model build loop (`/route`): the Claude session (Fable 5 / Opus 4.8) is the boss — it plans, dispatches, and adversarially reviews; OpenAI's GPT-5.6 Sol, driven headlessly via `codex exec`, is the worker — it builds and fixes, looping until the boss approves. Covers any buildable task, not just code. Every CLI invocation live-verified against codex-cli 0.144.x, with the non-obvious traps handled: `codex exec resume` sandbox/workdir re-assertion, exit-0-on-error success checks, session-id capture from stderr, model-id fallback chain, dirty-tree change attribution, non-git file-snapshot review, and never-mutate-real-data review rules. Hardened from the Actionable AI "/route Setup Guide". |
 
 ## Third-party
 
