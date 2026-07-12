@@ -42,6 +42,27 @@ Use the near-templated results sentence: *"X was associated with statistically s
 
 Occasionally (e.g. the NCCN survey) Results uses **thematic, thesis-bearing headers** (*"Finding 1: A governance-strategy paradox"*) instead of neutral variable names — good for a narrative/survey paper.
 
+### Results describe; they do not interpret — this is a hard rule
+
+The Results section is a **pure, descriptive transcription of the exhibits into prose**: report what was measured, in whom, and the value with its exhibit pointer, then stop. Interpretation is quarantined entirely to the Discussion. In Results, **do not**:
+
+- explain *why* a result occurred or propose a mechanism;
+- say a result "suggests," "indicates," "likely reflects," "is consistent with," "may be due to," "because," or "as expected";
+- state clinical significance, importance, or implications;
+- compare a finding to prior literature or to what was hypothesized;
+- editorialize ("notably," "strikingly," "importantly," "surprisingly" belong in the Discussion, not here).
+
+A useful test: **if a Results sentence would still read as a claim with all the numbers deleted, it is interpretation — move it to the Discussion.** Results state the number; the Discussion says what the number means.
+
+### Template-and-swap for parallel strata
+
+This is exactly how he writes multi-stratum results. When the same measure recurs across **subgroups, arms, or disease subtypes**, write the sentence **once and reuse it verbatim** for each stratum — **change only the stratum name and its numbers**, and keep the sentence structure, verb, clause order, and punctuation identical. The strata should line up so the reader could read them column-wise. Report the **overall population first**, then the strata in the **same fixed order every time** they recur — and reuse that same order across the sentence, the table rows, and the figure panels (e.g. the PV → ET → MF order is recycled word-for-word throughout his MPN papers).
+
+**Example of the pattern** (structure held constant, only name + values swapped):
+> "Among patients with **PV**, [predictor] was associated with [outcome] (B: …; p=…). Among patients with **ET**, [predictor] was associated with [outcome] (B: …; p=…). Among patients with **MF**, [predictor] was associated with [outcome] (B: …; p=…)."
+
+When editing a Results draft, enforce this: if two strata are described with differently-shaped sentences, rewrite them onto one shared template so only the name and numbers differ.
+
 ## Discussion
 
 A fixed arc:

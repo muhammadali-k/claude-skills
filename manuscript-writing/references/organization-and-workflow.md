@@ -59,6 +59,8 @@ Do a **dedicated copyedit pass at the end** targeting his recurring slips — th
 - [ ] Filename version-stamped (`_Vn`, venue tag)
 - [ ] Tables/exhibits + supplement built before Results prose
 - [ ] Methods subsections in fixed order; Results subsections titled identically
+- [ ] Results are purely descriptive — zero interpretation (every "suggests / because / likely reflects / consistent with / importantly" moved to the Discussion)
+- [ ] Parallel strata (subgroups/arms/subtypes) written by template-and-swap — one shared sentence shape, only names + numbers differ, same fixed order across prose, table, and figure
 - [ ] Intro funnel written last-paragraph-first; open questions enumerated
 - [ ] Discussion arc complete; every limitation paired with a mitigation
 - [ ] Standalone Conclusion lands on the standing validation/NMA caveat
