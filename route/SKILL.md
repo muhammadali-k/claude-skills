@@ -7,7 +7,10 @@ description: >-
   fixes. The loop repeats build → review → fix until the boss approves. Works for any
   buildable task, not just code: analysis scripts, data-extraction pipelines, document
   or file generation — anything where Sol writes files and the boss can verify the
-  result against a plan. Trigger ONLY when the user types /route, says "route this",
+  result against a plan. Chain of command: the Claude session plans and orchestrates
+  first; every delegated build reroutes to Sol in Ultra Mode (instead of Claude
+  subagents), falling back to an Opus 4.8 subagent only when Sol's usage limit
+  is hit. The boss reviews everything either way. Trigger ONLY when the user types /route, says "route this",
   "run the route loop", "hand this to Sol", or explicitly asks for the Claude+Sol /
   Claude+Codex two-model loop. Do NOT use for ordinary single-model coding, planning,
   refactors, or chat.
@@ -28,6 +31,52 @@ Placeholders used throughout: `<project-dir>` is defined in preflight step 3;
 names for logs and `-o` files — never reuse one, or a stale file from round 1 blinds
 the round-2 success check.
 
+## Worker triage (who plans, who builds)
+
+Chain of command, in order:
+
+1. **The Claude session — Fable 5 (or Opus 4.8) — plans and orchestrates, always
+   first.** The boss role never moves: you write PLAN.md, you dispatch, you
+   review, you approve. Triage below governs only where delegated build work goes;
+   it never demotes you from orchestrating.
+2. **Every delegation of implementation goes to GPT-5.6 Sol in Ultra Mode first**
+   (`-m gpt-5.6-sol -c model_reasoning_effort=ultra`). The moment you would hand
+   build work to one of your own subagents — e.g. an Opus 4.8 agent via the Agent
+   tool — that handoff reroutes to Sol via `codex exec` instead. Never split the
+   build across Claude subagents while Sol is available. (`ultra` is live-verified
+   on codex-cli 0.144.1 with gpt-5.6-sol; if a model/CLI combo ever rejects it with
+   a "Supported values are: … 'xhigh'" error, use `xhigh`, the next tier down.)
+3. **Opus 4.8 subagent** (see "The Opus worker path" below) — only when Sol is
+   unavailable: usage limit hit (window not yet reset), auth outage (see
+   "Detecting an auth failure" below), or the model-fallback chain in preflight
+   step 5 exhausted. Announce the switch to the user the moment it happens, and
+   say why in the report.
+4. **The boss never builds.** If both workers are unavailable, stop and report.
+
+The boss reviews everything, whichever worker built it. A worker never acts as the
+final review gate on its own work.
+
+**Detecting a Sol usage limit:** the dispatch log contains a line like "You've hit
+your usage limit. … try again at <time>" — grep the log case-insensitively for
+`usage limit`, `rate limit`, `429`, or `Too Many Requests`. Codex usage pools are
+windowed (typically 5-hour), so the message usually names a reset time — record it.
+If the limit hits mid-loop (after a successful Sol build), move the remaining fix
+rounds to the Opus worker path, handing the Opus agent PLAN.md, the review
+findings, and the changed-file list (mechanics: the "Mid-loop takeover" case in
+the Opus worker path); only wait out the window instead if the reset time is
+within ~15 minutes. A usage-limit switch does not consume an infrastructure-retry
+or a fix round by itself.
+
+**Detecting an auth failure:** a dispatch log showing `401`, `unauthorized`, or an
+authentication/login prompt — with no usage-limit message — is an auth problem,
+not a usage limit. Run `codex login status` (free, local) to discriminate. Logged
+OUT → the token expired or was revoked mid-run: ask the user to run
+`! codex login` once and resume with Sol — a quick fix, not a worker switch, and
+it consumes no fix round or retry. Logged IN but dispatches keep failing with
+auth/server errors → service-side outage: Sol is unavailable, switch to the Opus
+worker path and say why in the report. (Preflight step 2 is unchanged:
+not-logged-in BEFORE the run always goes to the user.)
+
 ## Preflight (fast, before planning)
 
 1. `codex --version` — if the CLI is missing, stop and tell the user to install it
@@ -43,14 +92,18 @@ the round-2 success check.
    its top level.
 4. **Git state of `<project-dir>`.**
    - Not a git repo → every `codex exec` call (including fix-round resumes) gets
-     `--skip-git-repo-check`; review layer 2 uses its file-snapshot variant and
-     layer 3 is skipped (`codex exec review` needs a repo).
+     `--skip-git-repo-check`; review layer 2 uses its file-snapshot variant, and
+     layer 3's `codex exec review` variant is unavailable (needs a repo) — a
+     second opinion, if taken, uses the Opus-subagent variant scoped to the
+     snapshot file lists (see layer 3).
    - Git repo → run `git status --porcelain`. If the tree is dirty, tell the user
      and recommend committing or stashing first — a clean baseline is the only
      reliable way to attribute changes to Sol. If they choose to proceed dirty,
      save the baseline (`git status --porcelain` output plus
      `git diff > "<scratchpad>/pre-route.diff"`); attribution then happens by file
-     (see review layer 2) and layer 3 is skipped.
+     (see review layer 2), and layer 3's `codex exec review` variant is
+     unavailable (it cannot be scoped to the worker's delta) — use the
+     Opus-subagent variant scoped to the attributed file set instead.
 5. **Worker model:** `gpt-5.6-sol`. Model failures surface only when a dispatch
    actually runs — don't spend a billed probe upfront; let the first build surface
    them. Two failure modes, different fixes:
@@ -60,10 +113,11 @@ the round-2 success check.
      `-m gpt-5.6` (alias routing to Sol). If that is also rejected, run
      `codex update` once (if you haven't already) and retry `gpt-5.6-sol`. Still
      failing → read the `model =` line in `~/.codex/config.toml`; if it names an id
-     you have NOT already tried, try that; otherwise STOP and ask the user for a
-     current model id (free local check: `codex doctor`; the user can also open
-     interactive `codex` and use the `/model` picker). Never just omit `-m` as a
-     fallback: the config default is typically `gpt-5.6-sol` — the exact id that
+     you have NOT already tried, try that; otherwise switch this run to the Opus
+     worker path (announce it) and ask the user in your report to supply a current
+     Sol id for future runs (free local check: `codex doctor`; the user can also
+     open interactive `codex` and use the `/model` picker). Never just omit `-m` as
+     a fallback: the config default is typically `gpt-5.6-sol` — the exact id that
      just failed — so that silently retries the dead model.
 
    Walk this chain once, in order, never restart it. Always state in the final
@@ -106,11 +160,18 @@ find "<project-dir>" -type f | sort > "<scratchpad>/route-files-before.txt"
 touch "<scratchpad>/route-marker"
 ```
 
+Exception — if the previous dispatch died mid-round (usage limit, stall kill,
+crash), do NOT re-snapshot immediately: first run the review-layer-2 `find` and
+`comm` against the EXISTING marker and before-list, and fold anything the dead
+round touched (or deleted) into the current round's review scope; only then re-run
+the two snapshot lines. Re-touching the marker first would erase the dead round's
+tracks from every later inventory.
+
 Dispatch the build (add `--skip-git-repo-check` outside a git repo):
 
 ```bash
 cd "<project-dir>" && codex exec -m gpt-5.6-sol -s workspace-write \
-  -c model_reasoning_effort=high \
+  -c model_reasoning_effort=ultra \
   -o "<scratchpad>/sol-build.txt" \
   "Read PLAN.md at the root of this directory and implement it exactly.
    Do not touch files unrelated to the plan.
@@ -179,17 +240,30 @@ first pass without checking. Three layers, strongest first:
      listed-but-unchanged files mean the build didn't do what it claims. Caveat: in
      synced folders (Dropbox/iCloud) background sync can bump mtimes on unrelated
      files — treat unexpected entries as leads to inspect, not automatic failures.
-3. **Optional second opinion (clean git trees only).** For risky or large changes,
-   run Codex's built-in reviewer against the uncommitted work:
+3. **Optional second opinion.** For risky or large changes. Which variant depends
+   on git state and worker availability:
+   - **Clean git tree AND Sol available** → Codex's built-in reviewer against the
+     uncommitted work:
 
-   ```bash
-   cd "<project-dir>" && codex exec review --uncommitted \
-     -c model_reasoning_effort=xhigh
-   ```
+     ```bash
+     cd "<project-dir>" && codex exec review --uncommitted \
+       -c model_reasoning_effort=ultra
+     ```
 
-   It reviews ALL uncommitted changes and cannot be scoped to Sol's delta, so skip
-   it when the tree was dirty at preflight. Treat its findings as leads to verify,
-   not verdicts.
+     It reviews ALL uncommitted changes and cannot be scoped to the worker's
+     delta — that is why it is clean-tree-only. If preflight step 5 fell back to
+     a different model id, add `-m <that id>` (`codex exec review` accepts `-m`;
+     with no `-m` it inherits the config-default model — typically the dead
+     `gpt-5.6-sol` — and fails with exit 0 and no output). Judge this dispatch
+     like any other: no review text in the output means the dispatch failed, not
+     that there were no findings.
+   - **Any other state** — non-git, dirty tree, or the run is on the Opus worker
+     path → a FRESH Opus 4.8 subagent (never the builder), handed PLAN.md plus
+     the attributed change set from layer 2 (the git diff on a clean tree; the
+     attributed file list on a dirty tree; the changed/deleted snapshot lists on
+     non-git), instructed to review only those files.
+
+   Either way, treat its findings as leads to verify, not verdicts.
 
 ### 4. Fix (Sol, same session)
 
@@ -199,7 +273,7 @@ id (add `--skip-git-repo-check` outside a git repo; `<N>` = 1, 2, 3 per round):
 ```bash
 cd "<project-dir>" && codex exec resume <SESSION_ID> \
   -c sandbox_mode=workspace-write \
-  -c model_reasoning_effort=high \
+  -c model_reasoning_effort=ultra \
   -o "<scratchpad>/sol-fix-<N>.txt" \
   "Fix these review findings, nothing else: <numbered findings>" \
   > "<scratchpad>/sol-fix-<N>.log" 2>&1
@@ -225,19 +299,90 @@ consumes the fix round it replaces, it never adds one.
 
 Repeat build → review → fix. **Caps:** 3 fix rounds; and at most 2 retries per
 infrastructure-failure type per run (stale-CLI update-and-retry, stall
-kill-then-resume-or-split, expired-session fresh restart). The model fallback chain
+kill-then-resume-or-split — either worker, expired-session fresh restart). The model fallback chain
 is walked once. When a cap is exhausted, stop and report honestly what passes, what
 still fails, and why — do not keep billing rounds at a failure that is not
 improving, and do not quietly finish the work yourself.
 
+### The Opus worker path (fallback)
+
+When Worker triage sends the build (or the remaining fix rounds) to Opus 4.8, the
+loop is identical — plan, review layers, caps, and report all stand. Only the
+dispatch mechanics change:
+
+- **Build:** spawn ONE `general-purpose` subagent via the Agent tool with
+  `model: "opus"`. Its prompt is the same contract as the codex build prompt:
+  implement PLAN.md exactly; touch nothing unrelated to the plan; no `git commit`
+  or destructive git commands — leave all changes uncommitted for review; test
+  mutating code only against copies under the scratchpad, never the real data; end
+  by listing every file created or modified. There is no OS-level sandbox on this
+  path — **the prompt is the sandbox** — so state the writable root explicitly:
+  "Write only inside `<project-dir>` and `<scratchpad>`, using absolute paths for
+  every write (relative paths stray when your cwd resets between calls); if you
+  touched ANY path outside those two roots, even accidentally, say so explicitly
+  in your final report." Add: "Do not access the network" unless the user approved
+  network for this run. This full contract goes into EVERY fresh Opus spawn —
+  build, takeover, or replacement. **Save the agent id** the Agent tool returns —
+  write it to `<scratchpad>/opus-agent-id.txt` immediately (the codex session id
+  survives in its log file; this id has no disk artifact unless you make one).
+- **Execution and stalls, adapted:** run the subagent in the background (the
+  harness default) — never synchronously, for the same reason the codex build is
+  never foregrounded — and let the completion notification end the wait. There is
+  no log file to poll here, so the codex silence rule does not apply: if the build
+  has run far longer than the plan warrants, check the agent via TaskGet/TaskList
+  and treat it as stalled only if it shows no progress across two checks ~10
+  minutes apart. Then TaskStop it and either SendMessage the same agent a narrower
+  instruction (the analogue of kill-then-resume) or spawn a fresh agent on a split
+  plan — either way it counts against the same 2-retry stall cap.
+- **Mid-loop takeover (Sol built, Opus fixes):** when triage moves remaining fix
+  rounds here, there is no existing subagent to continue — spawn ONE fresh agent
+  under the full build contract above, but frame it as a fix, not a build: hand it
+  PLAN.md, the changed-file list, and the numbered findings, and instruct it to
+  "apply these numbered findings to the existing implementation only — do not
+  re-implement PLAN.md or rewrite files with no findings against them." This
+  dispatch IS the fix round being retried; the worker switch never adds a round.
+  From then on this agent is the "same subagent" that later fix rounds continue.
+- **Fix rounds:** continue the SAME subagent by its saved id via SendMessage with
+  the numbered findings — the Agent-tool analogue of `codex exec resume`, and it
+  keeps the worker's context. If the agent is gone, spawn a fresh one under the
+  full build contract with PLAN.md plus the findings (this replacement consumes
+  the fix round it replaces, it never adds one — same as a codex fresh restart).
+- **Success check, adapted:** no `-o` file or ERROR-line grep here; instead
+  require the subagent's final report to list its changed files, confirm the
+  expected files actually changed on disk, and save each round's final report
+  verbatim to a per-round scratchpad file (`opus-build.txt`, `opus-fix-<N>.txt`)
+  the moment it returns — the Opus analogue of the `-o` files, and the evidence
+  trail the report cites. The non-git snapshot mechanics and dirty-tree
+  attribution rules carry over as-is, but their COVERAGE does not: under codex
+  the sandbox physically confined writes to `<project-dir>` (plus
+  `/tmp`/`$TMPDIR`), so the snapshot was a complete inventory; the Opus agent has
+  no OS sandbox, so out-of-tree writes are possible and the snapshot or `git
+  diff` will never show them. Compensate at review time: treat any out-of-tree
+  write — self-reported or discovered — as a review finding, and run a cheap
+  sweep of the likely stray zone (`find "$HOME" -maxdepth 2 -type f -newer
+  "<scratchpad>/route-marker" 2>/dev/null | grep -v -e "<project-dir>" -e
+  "<scratchpad>" -e "/Library/"`); on git runs, `touch "<scratchpad>/route-marker"`
+  before each Opus dispatch so the sweep has a reference point. Treat hits as
+  leads to inspect (background processes bump mtimes), not automatic failures.
+- **Second opinion:** a FRESH Opus subagent (never the builder) reviewing the
+  attributed changed-file set adversarially — the diff where one exists, otherwise
+  the changed-file lists per layer 3's scoping rules. Leads to verify, not
+  verdicts.
+- If the Opus path is also unavailable, stop and report — the boss still does not
+  build.
+
 ### 5. Report (you)
 
 - The one-line task and the plan you wrote.
-- What Sol built, what you sent back each round, and what the final state is (the
-  per-round `sol-*.txt` / `sol-*.log` files in the scratchpad are the evidence
-  trail).
+- What the worker built, what you sent back each round, and what the final state
+  is — the per-round `sol-*.txt` / `sol-*.log` files (Sol rounds) and `opus-*.txt`
+  reports (Opus rounds) in the scratchpad are the evidence trail, alongside the
+  run's attribution artifacts (`git diff`, or `route-files-*.txt` /
+  `pre-route.diff` on non-git / dirty-tree runs).
 - Verification evidence: which acceptance criteria you checked and how.
-- Which worker model actually ran (preflight step 5).
+- Which worker built each round — Sol (and which model id, per preflight step 5) or
+  the Opus 4.8 fallback — and, if triage switched mid-run, why (quote the
+  usage-limit message and its reset time if that was the trigger).
 - PLAN.md: after approval, delete it if this run created it (its content lives in
   your report); keep it if it existed before this run or the user asked to keep
   it. If Sol committed it despite instructions, revert that commit (or ask the
@@ -256,7 +401,11 @@ improving, and do not quietly finish the work yourself.
 
 ## Rules
 
-- You (the boss) never write the implementation. Sol does. You plan and review.
+- You (the boss) never write the implementation. A worker does. You plan and review.
+- The chain of command is fixed: you plan and orchestrate first; delegated builds
+  go Sol (Ultra Mode) → Opus 4.8 subagent → stop and report. Never hand build work
+  to your own subagents while Sol is available, and never build it yourself when
+  both workers are unavailable.
 - Loop until you approve. Never accept the first pass unverified.
 - Treat your review as adversarial: assume Sol missed something and go find it.
 - Report failures honestly — a capped-out loop with open findings is a valid
@@ -273,9 +422,11 @@ improving, and do not quietly finish the work yourself.
 - **Codex plugin (optional):** the `openai/codex-plugin-cc` plugin for Claude Code
   adds user-facing commands like `/codex:review` and `/codex:rescue`. This skill
   does not depend on it — everything runs through the codex CLI directly.
-- **Cost awareness:** each build/fix round bills the user's ChatGPT/OpenAI account.
-  Keep the plan tight so one build round usually suffices; don't dispatch
-  exploratory busywork to Sol.
+- **Cost awareness:** each build/fix round bills the user's ChatGPT/OpenAI account,
+  and Ultra Mode draws hard on the windowed (typically 5-hour) Codex usage pool —
+  GPT-5.6-class models are reported to drain it fast. Keep the plan tight so one
+  build round usually suffices; don't dispatch exploratory busywork to Sol. The
+  Opus fallback bills the user's Anthropic side instead.
 
 ## Troubleshooting
 
@@ -284,8 +435,13 @@ improving, and do not quietly finish the work yourself.
 | `requires a newer version of Codex` | Stale CLI — `codex update`, then retry the same dispatch |
 | `model not found` / id rejected | Fallback chain in preflight step 5. Free local check: `codex doctor` (prints config default model, auth, connectivity); user can list valid ids via the `/model` picker in interactive `codex`. To probe a candidate: `cd "<project-dir>" && codex exec -m <id> --skip-git-repo-check -o "<scratchpad>/probe.txt" "reply OK"` — the id works only if the log has no `ERROR:` lines AND the `-o` file was written (exit code is always 0). Never probe by omitting `-m` |
 | `not logged in` | User runs `! codex login` |
+| `You've hit your usage limit` / `429` / rate limit | Sol's usage window is exhausted — switch to the Opus worker path (Worker triage), record the reset time, and note the switch in the report. Later runs go back to Sol first |
+| `Supported values are: … 'xhigh'` (ultra rejected) | This model/CLI combo lacks `ultra` — re-dispatch with `-c model_reasoning_effort=xhigh` |
 | `Not inside a trusted directory` | Add `--skip-git-repo-check` — needed on every call outside a git repo, including resumes; note it exits 0 with no `ERROR:` line, so the missing `-o` file is the tell |
 | Sol says it cannot write files | Build: you forgot `-s workspace-write`. Fix round: you forgot `-c sandbox_mode=workspace-write` (resume has no `-s` flag and can revert to read-only) |
+| `401` / `unauthorized` / auth error mid-run | Run `codex login status` (free, local). Logged out → user runs `! codex login`, then resume Sol — no round or retry consumed. Logged in but dispatches still fail → service-side auth outage: switch to the Opus worker path (Worker triage) and say why in the report |
 | Network errors during build | Sandbox blocks network by default — see escalation rules |
-| Build stalls (log unchanged ~10 min) | Kill it, resume the session by id with a narrower instruction, or split the plan (counts against the 2-retry infrastructure cap) |
+| Codex build stalls (log unchanged ~10 min) | Kill it, resume the session by id with a narrower instruction, or split the plan (counts against the 2-retry infrastructure cap) |
+| Opus build never returns | No log exists on this path — the codex stall row above does not apply. Check the agent via TaskGet/TaskList; stalled = no progress across two checks ~10 min apart. TaskStop it, then SendMessage a narrower instruction or spawn a fresh agent on a split plan (counts against the 2-retry stall cap) |
+| Opus agent's report mentions paths outside `<project-dir>`/`<scratchpad>` | No sandbox enforced the writable root — inspect each path, decide keep/revert with the user, and record it as a finding in the report |
 | Review findings reference code Sol never wrote | Tree was dirty at start — re-check against the preflight baseline (`pre-route.diff`); only send Sol findings on files it actually touched |
