@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# studies-fetch local runtime state (dedup store + dated digests)
+studies-fetch/data/

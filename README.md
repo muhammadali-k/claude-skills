@@ -12,6 +12,12 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) â
 | [`guideline-lit-review`](guideline-lit-review/) | Drafts the narrative literature-review prose for a clinical-practice-guideline question directly from its populated Summary-of-Findings / GRADE tables, inserting the text into the existing .docx (ASCO house style) without altering the tables. |
 | [`lisr-pdf-downloader`](lisr-pdf-downloader/) | Retrieves full-text PDFs and supplements for systematic-review screening rounds (open-access resolution, identifier matching, browser-download playbook, round-by-round status tracking). |
 
+## Literature monitoring
+
+| Skill | What it does |
+|---|---|
+| [`studies-fetch`](studies-fetch/) | Daily cross-sectional literature digest for hematology, oncology, and medical AI. Queries ~44 high-impact journals via the PubMed E-utilities API (stdlib Python, no key), drops any study already shown on a previous day (persistent seen-PMID store + rolling window), and produces a ranked, grouped markdown digest (Heme / Onc / Medical AI) with one-line relevance notes. Journal list is a simple editable JSON with a `check` command to validate abbreviations. |
+
 ## Academic writing & presenting
 
 | Skill | What it does |
