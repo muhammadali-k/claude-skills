@@ -32,6 +32,7 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) �
 | Skill | What it does |
 |---|---|
 | [`residency-program-finder`](residency-program-finder/) | Searches and verifies internal-medicine residency programs for IMG applicants — roster-confirmed affinity counts, visa/signal/tier tracking, Residency Explorer integration — and renders a verified program list as an Excel workbook and a self-contained interactive HTML apply list. |
+| [`eras-authors`](eras-authors/) | Reformats a pasted publication author list into ERAS's `Lastname` + initials, comma-separated format (e.g. `Cameron Blake Smith` → `Smith CB`), and flags Muhammad Ali Khan's own entry as `Khan MA` so it can be selected and bolded with ERAS's "B" button after pasting. |
 
 ## Claude model & workflow tooling
 
