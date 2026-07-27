@@ -10,6 +10,7 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) �
 | [`outcomes-extraction`](outcomes-extraction/) | Extracts time-to-event outcomes (OS, DFS/PFS, RFS) and response outcomes (ORR, pCR) from trial publications into per-comparison outcome tables — hazard ratio + 95% CI, events/N per arm, landmark rates — with provenance. |
 | [`study-question-tagging`](study-question-tagging/) | Assigns included studies to the clinical questions (CQs) of a guideline or systematic review by reading the actual publications, and emits one filtered spreadsheet per question. |
 | [`guideline-lit-review`](guideline-lit-review/) | Drafts the narrative literature-review prose for a clinical-practice-guideline question directly from its populated Summary-of-Findings / GRADE tables, inserting the text into the existing .docx (ASCO house style) without altering the tables. |
+| [`sof-gradepro-export`](sof-gradepro-export/) | Converts per-outcome Summary-of-Findings Excel exports (one file per outcome, or a folder for one PICO) into a single combined GRADEpro GDT JSON-LD file for MAGICapp's beta PICO import. Generates a GRADE-conventions plain-language summary sentence per outcome and writes it both into the JSON-LD and a companion Markdown file for manual pasting. |
 | [`lisr-pdf-downloader`](lisr-pdf-downloader/) | Retrieves full-text PDFs and supplements for systematic-review screening rounds (open-access resolution, identifier matching, browser-download playbook, round-by-round status tracking). |
 
 ## Literature monitoring
