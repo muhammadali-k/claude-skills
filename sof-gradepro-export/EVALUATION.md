@@ -26,16 +26,30 @@ a reasonable future addition if this skill sees heavier use.
 4. **Repo-safety sweep** — every committed file was searched for real trial data, real file paths, and
    real identifiers before commit; none found. Only fictional worked examples (invented drug/outcome names
    and numbers) appear anywhere in this skill's documentation and code comments.
+5. **A real MAGICapp import** — the converter's JSON-LD output was actually uploaded through the beta
+   "Import PICO using a GDT Gradepro file" feature into a real guideline (not just checked against
+   documentation/schema). Population, intervention, comparator, outcome name, relative effect + CI,
+   control-arm risk, and certainty all imported correctly. This live test is what surfaced the three items
+   in "Known gaps" below, and what the absolute-effect-CI transform formula (§`schema_mapping.md`) was
+   reverse-engineered and confirmed against — MAGICapp's own "Calculate estimates" button reproduced this
+   script's independently-computed numbers almost exactly (matching to the expected rounding of the
+   transform formula).
 
-## Known gap found during verification
+## Known gaps found during verification — all three confirmed by the live import, not just reasoned about
 
-The source Excel's intervention-arm absolute rate (e.g. "420 per 1000", fictional) is parsed and used only as an
-internal sanity check (does the arm with the lower/higher rate match the direction the relative-effect
-point estimate implies); it is never written into the output JSON, because GDT's own schema has no field
-for it — `absoluteEffect[0].@type` is `"AutoCalculatedAbsoluteEffect"`, meaning MAGICapp/GDT recomputes
-the intervention arm's risk from `controlRisk` + `relativeEffect` rather than storing it directly. Not a
-bug; documented in `references/schema_mapping.md` so it doesn't look like a silent data-loss defect on a
-later read.
+1. **Intervention-arm absolute rate** always renders blank in MAGICapp's outcome table immediately after
+   import — confirmed live, not assumed. It requires one click on "Calculate estimates" per outcome (see
+   SKILL.md). The source Excel's own stated value is parsed and surfaced in the post-import checklist so
+   that click can be a confirm-the-number step, not a blind one.
+2. **Direction of benefit** is never set by import (confirmed absent from a real GRADEpro GDT export
+   entirely — there's no field for it in that schema, not something this skill failed to populate). A
+   recommended value is computed and put in the checklist for manual selection.
+3. **Plain-language summary** — confirmed both by MAGICapp's own help documentation and by the live import
+   itself that this field is left blank regardless of what the JSON-LD contains.
+
+None of these are bugs to fix by guessing harder — they're genuine platform-level gaps in what the beta
+GDT-import path can currently set, documented in `references/schema_mapping.md` alongside exactly how each
+was confirmed.
 
 ## What hasn't been verified
 
@@ -43,11 +57,13 @@ later read.
   confirmed in both the source Excel format and the one real GDT sample this skill was built against).
   Continuous or non-poolable/narrative outcomes are out of scope for v1 — see the "Scope (v1)" note at the
   top of `references/schema_mapping.md`.
-- The JSON-LD output has **not been confirmed to actually import cleanly through MAGICapp's live beta
-  importer** — field shapes are modeled on one real GDT export sample plus MAGICapp's public API schema,
-  not round-tripped through an actual import. Several `@type` literals for RR/OR outcomes (as opposed to
-  the confirmed HR case) are extrapolated, not directly observed. Treat the first real import as the real
-  test, and expect to file a bug/adjust the converter if MAGICapp rejects something.
+- The live import test used an **HR-type outcome**. The absolute-effect-CI transform's RR and OR branches
+  (`relative_to_risk()` in `scripts/sof_to_gdt.py`) use the standard, textbook risk-ratio/odds-ratio
+  formulas and were checked against hand-derived arithmetic, but — unlike the HR branch — were not
+  independently cross-checked against a live MAGICapp "Calculate estimates" run for an RR or OR outcome.
+  Treat the first real RR/OR import as the real test for those two.
+- Several `@type` literals for RR/OR relative effects (as opposed to the confirmed HR case) are still
+  extrapolated, not directly observed in a real sample.
 
 ## Scaling the rigor
 

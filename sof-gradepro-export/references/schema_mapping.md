@@ -34,7 +34,7 @@ letter — so the converter survives minor header reordering.
 |---|---|---|
 | A ("Outcomes") | Split on `\n`; if the last line matches `^\d+\s+citations?$`, capture that count and drop the line; remaining lines joined = the stratum/subgroup text | `stratum` (used only to cross-check the citation count below — **not written into the output JSON on its own**; any stratum text ends up in the output only via the filename-derived outcome name, per the source format's own convention of repeating it there) |
 | B ("Relative") | `([A-Za-z]{2,4})\s*([\d.]+)` → prefix + point estimate; `([\d.]+)\s*to\s*([\d.]+)` or a parenthesized `(lo–hi)` form → the two CI bounds | `prefix` (HR/RR/OR/… — generic, not hardcoded to HR), `point`, `ci_lo`, `ci_hi` — **kept in source order** (first number = "From", second = "To"), never numerically re-sorted |
-| C ("Intervention") | `([\d.]+)\s*per\s*1000` | `intervention_rate` — parsed but **not written to any output field** (see callout below) |
+| C ("Intervention") | `([\d.]+)\s*per\s*1000` | `intervention_rate` — parsed but **not written to any JSON-LD field** (see callout below); surfaced instead in the companion checklist as the expected post-"Calculate estimates" value |
 | D ("Control") | `([\d.]+)\s*per\s*1000` | `control_rate` |
 | E ("Risk Difference") | `([\d.]+)\s*(fewer|less|more)\s*per\s*1000` | `rd_signed` = **−**value for "fewer"/"less", **+**value for "more" |
 | F ("Certainty of Evidence") | `overall:?\s*(.+)` | `certainty_display` (uppercased, e.g. `"VERY LOW"`), `certainty_key` (lowercased/underscored, e.g. `"very_low"`); anything other than High/Moderate/Low/Very low is a hard parse failure |
@@ -100,7 +100,7 @@ Cross-referenced to its outcome via `forOutcome.@id`, generated in lock-step wit
 | `.forControlRisk.@id` | `"_:cr1"` | matches `controlRisk[0].@id` below |
 | `.value.value` | signed risk difference per 1000 | derived (§1) |
 | `.confidenceLevel.value` | `0.95` | constant / default — assumed to match the relative effect's level; not independently stated anywhere in the source |
-| `.confidenceIntervalFrom` / `.confidenceIntervalTo` | `null` / `null` | **null (deliberate) — see the callout below** |
+| `.confidenceIntervalFrom` / `.confidenceIntervalTo` | computed (§ callout below) | **derived — live-verified**, see the callout below |
 | `.denominator` | `1000` | confirmed, matches the "per 1000" convention used throughout the source |
 | `quality.@type` | `"GradeQuality"` | confirmed |
 | `quality.value` | `null` | confirmed — the real sample also carries `null` here even though `name` states the level |
@@ -113,29 +113,58 @@ Cross-referenced to its outcome via `forOutcome.@id`, generated in lock-step wit
 | `controlRisk[0].@type` | `"LowControlRisk"` — **always this literal**, regardless of the actual rate | confirmed that this label is cosmetic/arbitrary in the real schema; the converter deliberately doesn't try to infer Low/Moderate/High from the number, so don't read anything into it |
 | `controlRisk[0].value` | `control_rate / 10`, rounded to 4 dp | derived — confirmed "per 1000 → per 100" conversion |
 
-### Why `intervention_rate` (column C) never appears in the output
+### Why `intervention_rate` (column C) never appears in the *JSON-LD*, and what to do about it — live-tested
 
 The source Excel states the intervention arm's absolute rate directly (e.g. "420 per 1000", fictional
-example), and the converter does parse it — but GDT's schema has no field to put it in.
-`effectSummary.absoluteEffect[0].@type` is `"AutoCalculatedAbsoluteEffect"` (confirmed against the real
-sample), meaning GDT/MAGICapp derives the intervention arm's risk itself from `controlRisk` +
-`relativeEffect` rather than storing it as its own number. So `intervention_rate` is parsed, used only to
-confirm the row makes internal sense (lower rate + HR&lt;1 = favors intervention, etc. — a sanity check,
-not a written field), and then dropped. This isn't a bug or an oversight; there's genuinely nowhere in the
-target schema for it to go. If MAGICapp's import ever displays the intervention arm's rate incorrectly
-after import, it's being recomputed from `controlRisk` and the relative effect, not read from this value —
-worth knowing if a post-import number looks off.
+example), and the converter does parse it — but there is genuinely no confirmed JSON-LD field to put it in
+that MAGICapp's importer reads. This was **live-tested**, not just inferred from the schema: a JSON-LD file
+built by this converter (with `effectSummary.absoluteEffect[0].@type: "AutoCalculatedAbsoluteEffect"`, the
+same type confirmed in a real GDT sample) was actually imported into a real MAGICapp guideline via the beta
+"Import PICO using a GDT Gradepro file" feature. Result: the outcome table's intervention-arm cell rendered
+completely blank — not auto-calculated, not populated from anything in the JSON. The importer reads
+`controlRisk` and `relativeEffect` correctly (both showed up right), but does not run the "auto-calculate"
+step on import despite the field's name implying it should.
 
-### Why the absolute-effect CI is left null
+Opening that same outcome's edit panel in MAGICapp revealed the real mechanism: an **"Auto-calculated"
+checkbox** plus a **"Calculate estimates" button**, under "Expected difference and result with intervention
+(calculated)." Clicking it computed the intervention rate and its CI **client-side, in the browser**, from
+just the two values that *did* import correctly (`controlRisk` + `relativeEffect`) — confirming this is a
+MAGICapp UI action, not something a JSON-LD file can trigger on import. (A raw text search of a genuine
+GRADEpro GDT export for `auto`, `calc`, `Manual`, `direction`, or `favor` — case-insensitive — found zero
+occurrences anywhere in the file, confirming GRADEpro's own schema has no field for this at all; it isn't
+something this skill failed to find, it isn't there.)
 
-The source Excel gives exactly three numbers for the absolute effect: the intervention arm's rate, the
-control arm's rate, and the (already-computed) signed risk difference. **None of those, alone or
-together, determine a confidence interval on the risk difference.** Computing one honestly would require
-either the per-arm events/N (not in this export) or converting the *relative*-effect CI through GDT's own
-absolute-risk-transform formula (not confirmed by this skill's research). A symmetric-offset guess around
-the point value would also be provably wrong whenever the underlying relative-effect CI is asymmetric —
-which HR/RR/OR confidence intervals almost always are. So the converter leaves both bounds `null` rather
-than fabricate numbers that would look authoritative in MAGICapp but aren't derivable from anything.
+So `intervention_rate` is parsed, used to build the companion checklist's expected-value line (see below),
+and not written into the JSON-LD itself — there's nowhere confirmed for it to go, and after import you (or
+your collaborator) need one click per outcome regardless of what the JSON contains.
+
+### Absolute-effect CI — now computed, reverse-engineered from that same live test
+
+Clicking "Calculate estimates" also revealed the CI transform. Using fictional numbers to illustrate (the
+actual live test used real project data, not reproduced here): for a hypothetical HR 0.60 (95% CI
+0.35–1.05) against a control risk of 650/1000, MAGICapp computed an intervention rate and a difference
+range consistent with `interventionRisk = 1 - (1 - controlRisk) ** HR` — the standard constant-hazard/
+exponential-survival transform for converting a hazard ratio against a baseline risk (applying it here:
+control 0.650, HR 0.60 → intervention ≈467/1000, i.e. ≈183 fewer per 1000; applying the same formula to
+the CI bounds 0.35 and 1.05 gives a difference range of roughly 343 fewer to 18 more per 1000). This
+reproduced MAGICapp's own live-computed numbers almost exactly in the real test this was derived from. It
+is a real, textbook, standard-methodology formula (Cochrane's own guidance for computing absolute risk
+from a hazard ratio) — not a fabrication or a guess:
+
+```
+HR:  interventionRisk = 1 - (1 - controlRisk) ** HR
+RR:  interventionRisk = controlRisk * RR
+OR:  interventionOdds = (controlRisk / (1 - controlRisk)) * OR
+     interventionRisk = interventionOdds / (1 + interventionOdds)
+```
+
+`scripts/sof_to_gdt.py`'s `relative_to_risk()` / `compute_absolute_effect_ci()` implement this and now fill
+`effectSummary.absoluteEffect[0].confidenceIntervalFrom/To` for HR/RR/OR outcomes (still `null` for an
+unrecognized prefix — nothing honest to compute there). **This does not by itself fix the blank
+intervention-arm cell** — that's still a required one-click "Calculate estimates" per outcome after import,
+per the section above — but it does mean the JSON-LD is no longer silently missing data that genuinely can
+be computed, and it means the companion checklist can tell you the exact number to expect rather than
+leaving you to guess whether what MAGICapp computes after your click is even right.
 
 ## 5. Fields intentionally left `null` — quick-scan list
 

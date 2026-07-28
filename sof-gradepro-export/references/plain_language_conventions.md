@@ -1,9 +1,11 @@
 # GRADE plain-language summary conventions
 
 The rules `scripts/sof_to_gdt.py` implements to turn `(relative effect, 95% CI, certainty, absolute
-effect)` into one GRADE-conventions plain-language sentence per outcome — deterministically, no LLM call.
-This is a standalone reference: a future session or engineer should be able to follow it, or re-implement
-the generator from scratch, without re-deriving GRADE methodology.
+effect)` into one GRADE-conventions plain-language sentence **and** a recommended MAGICapp
+"Direction of benefit" value per outcome — deterministically, no LLM call, from a single shared decision
+tree so the two outputs can never disagree with each other. This is a standalone reference: a future
+session or engineer should be able to follow it, or re-implement the generator from scratch, without
+re-deriving GRADE methodology.
 
 ## Sources
 
@@ -80,7 +82,31 @@ classifying **both CI bounds** (not just the point estimate) against the magnitu
 
 The fourth row is the one GRADE itself treats as a judgment call, not a formula — the generator produces
 grammatically valid output for it, but every such outcome is marked `[NEEDS HUMAN REVIEW]` in the
-companion `.md` file specifically so it doesn't get pasted into MAGICapp unread.
+companion checklist file specifically so it doesn't get pasted into MAGICapp unread.
+
+## 3a. Direction of benefit (MAGICapp's own field — same branching, different output)
+
+MAGICapp's outcome edit panel has a "Direction of benefit" selector: Intervention favourable / Comparator
+favourable / No important difference / High uncertainty. It has no equivalent anywhere in GRADEpro's own
+schema (confirmed absent from a real GDT export — see `schema_mapping.md`), so this skill can't set it via
+the JSON-LD; instead it recommends a value using the *same* branches as the sentence generator above:
+
+| Case (from §3 / §1's branches) | Direction of benefit |
+|---|---|
+| Very low certainty | `UNCERTAIN` ("High uncertainty") |
+| CI crosses null, both bounds trivial | `NO_DIFF` |
+| CI crosses null, one bound trivial / one important (the hedge case) | `UNCERTAIN` |
+| CI crosses null, both bounds important, opposite directions | `UNCERTAIN` |
+| CI doesn't cross null, magnitude trivial | `NO_DIFF` |
+| CI doesn't cross null, magnitude small/moderate/large | `INT_BETTER` if the point estimate's direction matches `--favorable-direction` (default `reduction`), else `COMP_BETTER` |
+
+The last row is the only place an assumption gets made: **this skill's v1 scope is dichotomous/
+time-to-event outcomes (OS/DFS/PFS/RFS-style), where the "event" is something undesirable — death,
+progression, recurrence — so a reduction in the event rate is assumed favourable to the intervention.**
+That's a safe default for this scope, but it is an assumption, not something read from the source Excel
+(which never states outcome valence). Pass `--favorable-direction increase` for the rare outcome where a
+higher rate is the desirable direction; get it wrong and every clean-cut outcome in the run will recommend
+the opposite of what a reviewer would pick.
 
 ## 4. How the generator assembles a sentence (matches `sof_to_gdt.py` exactly)
 
@@ -110,37 +136,40 @@ companion `.md` file specifically so it doesn't get pasted into MAGICapp unread.
 
 ## 5. Worked examples
 
-All numbers below are **invented for illustration** — not from any real trial or real evidence file.
+All numbers below are **invented for illustration** — not from any real trial or real evidence file. Each
+includes the paired Direction-of-benefit output (default `--favorable-direction reduction`, correct for all
+of these since they're death/progression/event-type outcomes).
 
 **High certainty, large effect (no crossing).**
 Input: Drug A vs. Placebo, mortality, RR 0.55 (95% CI 0.45 to 0.68), high certainty, "120 fewer per 1000".
 `|1−0.55|×100 = 45%` → large; CI doesn't cross 1.
 > *"Drug A results in a large reduction in mortality (RR 0.55, 95% CI 0.45 to 0.68; 120 fewer per 1000;
-> high-certainty evidence)."*
+> high-certainty evidence)."* — Direction of benefit: **Intervention favourable**.
 
 **Moderate certainty, small effect (no crossing).**
 Input: Drug B vs. standard care, disease progression, RR 0.88 (95% CI 0.79 to 0.98), moderate certainty,
 "30 fewer per 1000". `|1−0.88|×100 = 12%` → small; CI doesn't cross 1.
 > *"Drug B probably reduces disease progression slightly (RR 0.88, 95% CI 0.79 to 0.98; 30 fewer per 1000;
-> moderate-certainty evidence)."*
+> moderate-certainty evidence)."* — Direction of benefit: **Intervention favourable**.
 
 **Low certainty, trivial effect, narrow null-crossing (both bounds trivial).**
 Input: Drug C vs. Placebo, minor adverse events, RR 0.98 (95% CI 0.96 to 1.04), low certainty, "2 fewer
 per 1000". Both bounds are within 5% of the null (4% and 4%) → both trivial.
 > *"Drug C may result in little to no difference in minor adverse events (RR 0.98, 95% CI 0.96 to 1.04;
-> 2 fewer per 1000; low-certainty evidence)."*
+> 2 fewer per 1000; low-certainty evidence)."* — Direction of benefit: **No important difference**.
 
 **Very low certainty (magnitude not evaluated).**
 Input: Drug D vs. Placebo, overall survival, HR 0.80 (95% CI 0.45 to 1.55), very low certainty.
 > *"The evidence is very uncertain about the effect of Drug D on overall survival (HR 0.8, 95% CI 0.45 to
-> 1.55; very low-certainty evidence)."*
+> 1.55; very low-certainty evidence)."* — Direction of benefit: **High uncertainty**.
 
 **Moderate certainty, one bound trivial / one important (hedge).**
 Input: Drug E vs. Placebo, "Readmission (Drug E vs Placebo)", RR 0.99 (95% CI 0.97 to 1.35), moderate
 certainty, "3 fewer per 1000". Lower bound trivial (3%); upper bound reaches "moderate" magnitude (35%,
 direction = increase).
 > *"Drug E probably results in little to no difference in Readmission, but may increase Readmission
-> (RR 0.99, 95% CI 0.97 to 1.35; 3 fewer per 1000; moderate-certainty evidence)."*
+> (RR 0.99, 95% CI 0.97 to 1.35; 3 fewer per 1000; moderate-certainty evidence)."* — Direction of benefit:
+> **High uncertainty**.
 Note the mechanical repetition of the outcome name — this is exactly what the algorithm produces (§4,
 step 2); it reads slightly awkwardly but is the templated, deterministic output. Light copyedit before
 pasting into MAGICapp if you want smoother prose.
@@ -152,8 +181,8 @@ important, opposite directions.
 > *"Drug F may reduce major cardiovascular events, but it may also increase it — the evidence does not
 > allow a clear conclusion about the direction of the effect (HR 0.62, 95% CI 0.3 to 1.55; approximately
 > 140 fewer per 1000 at the point estimate, but the interval is compatible with either a large reduction
-> or an increase in events; moderate-certainty evidence)."*
-Flagged `[NEEDS HUMAN REVIEW]` in the companion file.
+> or an increase in events; moderate-certainty evidence)."* — Direction of benefit: **High uncertainty**.
+Flagged `[NEEDS HUMAN REVIEW]` in the companion checklist.
 
 ## 6. Known simplifications (spot-check these, don't silently trust them)
 
@@ -166,10 +195,12 @@ Flagged `[NEEDS HUMAN REVIEW]` in the companion file.
   PICO mixes outcomes that genuinely need different MIDs (e.g. a hard endpoint like mortality vs. a
   patient-reported outcome), run the converter separately per group, or accept that the magnitude words
   ("slightly," "large," …) are calibrated the same generic way for all of them.
-- **The generator never sees the absolute-effect's own confidence interval** (it's left `null` — see
-  `references/schema_mapping.md`), so it cannot classify magnitude on the absolute scale at all; every
-  magnitude judgment in these sentences is made on the **relative** effect (HR/RR/OR) only. The absolute
-  per-1000 number is quoted for context, not independently classified.
+- **The sentence/direction generator does not use the absolute-effect CI** (which `sof_to_gdt.py` computes
+  separately for the JSON-LD — see `schema_mapping.md`) to classify magnitude; every magnitude judgment in
+  these sentences is made on the **relative** effect (HR/RR/OR) only, per §2 above. The absolute per-1000
+  number is quoted in the parenthetical for context, not independently classified — the two computations
+  (plain-language magnitude, and the absolute-effect CI written into the JSON) are separate code paths that
+  happen to share the same relative-effect CI as an input, not the same classification logic.
 - **Numbers are printed with trailing zeros stripped** (the source's `0.80` becomes `0.8` in the sentence,
   `0.30` becomes `0.3`, as in the worked examples above) — a formatting quirk from parsing cell text to
   `float`, not a transcription error if you're comparing sentence output back against the source cell.
