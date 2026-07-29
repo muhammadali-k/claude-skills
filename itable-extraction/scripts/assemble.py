@@ -117,18 +117,54 @@ def main():
             ps.append([str(st.get("id") or st.get("paper_id")), cell["col"], sc.get("header_path", ""), sc.get("arm", ""),
                        cell.get("value", ""), cell.get("source", "")])
     fs = pwb.create_sheet("Arm_Mapping_and_Flags")
-    fs.append(["Study ID", "N arms", "Arm mapping", "Flags", "Verifier note", "Reconcile changes"])
+    fs.append(["Study ID", "N arms", "Arm mapping", "Flags", "Senior confidence"])
     for st in studies:
+        # "confidence" is the senior reviewer's note; "verify_note" is the pre-2026 verifier key,
+        # kept so results files from the old extractor->verifier pipeline still assemble.
         fs.append([str(st.get("id") or st.get("paper_id")), st.get("n_arms", ""),
                    json.dumps(st.get("arm_mapping", {}), ensure_ascii=False),
-                   " | ".join(st.get("flags", []) or []), st.get("verify_note", "") or "",
-                   json.dumps(st.get("reconcile_changes", []), ensure_ascii=False)])
+                   " | ".join(st.get("flags", []) or []),
+                   st.get("confidence") or st.get("verify_note") or ""])
+
+    # One row per adjudicated cell. agreed_with == "neither" is the number that matters: those are
+    # values a two-reviewer-only design would have shipped wrong.
+    ad = pwb.create_sheet("Adjudications")
+    ad.append(["Study ID", "Col", "Reviewer A", "Reviewer B", "Senior value", "Agreed with", "Reason"])
+    for st in studies:
+        sid = str(st.get("id") or st.get("paper_id"))
+        for a in st.get("adjudications", st.get("reconcile_changes", [])) or []:
+            ad.append([sid, a.get("col", ""), a.get("value_a", a.get("from", "")),
+                       a.get("value_b", ""), a.get("senior_value", a.get("to", "")),
+                       a.get("agreed_with", ""), a.get("reason", a.get("note", ""))])
+
+    # Cells the senior could not settle from the sources. These need a human before the table is used.
+    un = pwb.create_sheet("Unresolved")
+    un.append(["Study ID", "Col", "Why unresolved"])
+    for st in studies:
+        sid = str(st.get("id") or st.get("paper_id"))
+        for u in st.get("unresolved", []) or []:
+            un.append([sid, u.get("col", ""), u.get("why", "")])
+
     ss = pwb.create_sheet("Summary")
-    ss.append(["Study ID", "Cells written", "Missing-filled"])
+    ss.append(["Study ID", "Cells written", "Missing-filled", "Reviewer concordance",
+               "Discordant", "Adjudications", "Senior overrode both", "Unresolved"])
     for st in studies:
         sid = str(st.get("id") or st.get("paper_id")).strip()
-        ss.append([sid, written.get(sid, 0), na_filled.get(sid, "")])
+        conc = st.get("concordance") or {}
+        adjs = st.get("adjudications", []) or []
+        ss.append([sid, written.get(sid, 0), na_filled.get(sid, ""),
+                   conc.get("rate", ""), conc.get("discordant", ""), len(adjs),
+                   sum(1 for a in adjs if a.get("agreed_with") == "neither"),
+                   len(st.get("unresolved", []) or [])])
     pwb.save(prov)
+
+    n_unres = sum(len(st.get("unresolved", []) or []) for st in studies)
+    n_both = sum(1 for st in studies for a in (st.get("adjudications", []) or [])
+                 if a.get("agreed_with") == "neither")
+    if n_both:
+        print(f"  senior overrode BOTH reviewers on {n_both} cell(s) - see the Adjudications sheet")
+    if n_unres:
+        print(f"  {n_unres} cell(s) UNRESOLVED and left missing - a human must settle these before use")
 
     long_csv = base + "_long.csv"
     with open(long_csv, "w", newline="") as f:

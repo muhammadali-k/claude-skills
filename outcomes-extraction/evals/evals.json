@@ -48,6 +48,31 @@
         {"id": "configs_built", "text": "assemble_config.json and add_rows_config.json skeletons are produced with the files map and a study_info entry per study"},
         {"id": "matches_flagged", "text": "Ambiguous file matches are surfaced for verification (e.g. a year-mismatch match and a supplement-only / missing-main-text match)"}
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "Fill both my pairwise and network outcome sheets for these perioperative RCC trials — Extraction/Outcomes extraction/PWMA/pwma_template.xlsx and NMA/nma_template.xlsx — from the reference PDFs.",
+      "expected_output": "Both sheets filled from the same extraction, each mapped by field ID (PWMA 3069-3089, NMA 21972-21993) rather than column letter. Crucially the counts are written per family: PWMA gets Et=events-treatment / Nt=N-treatment / Ec=events-control / Nc=N-control, while NMA gets Ec T1=event count / Et T1=participants in T1 and Ec T2 / Et T2 for the comparator, with T1 = the treatment arm and T2 = the active comparator. QC reports zero events-exceed-denominator rows.",
+      "files": [],
+      "assertions": [
+        {"id": "ec_et_not_swapped", "text": "In the NMA sheet the event counts sit in Ec T1/Ec T2 and the participant totals in Et T1/Et T2 — no row has an event count exceeding its own arm's denominator"},
+        {"id": "same_numbers_both_sheets", "text": "For a study present in both sheets, the treatment-arm event count and N are identical across the PWMA and NMA rows despite the different column labels"},
+        {"id": "nma_arm_order", "text": "NMA Regimen T1 is the experimental/treatment arm and Regimen T2 is the active comparator (usually the trial's control)"},
+        {"id": "overall_population", "text": "Both sheets carry the overall ITT population only — no subgroup estimate appears on either"}
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Now do the subgroup sheet — Extraction/Outcomes extraction/PWMA/pwma_subgroup_template.xlsx — for the risk-group strata, so I can run the subgroup and interaction analyses.",
+      "expected_output": "One row per (study x comparison x subgroup level), with the level in col F, 'Extraction Possible' answered in col G, the comparison in col H, and the effect/rates/counts extracted within that subgroup using the subgroup's own denominators. The number of levels varies by study (not fixed at four). Strata the paper does not report are marked Extraction Possible = No with every data field NA and a flag — not blanked, not deleted, not invented.",
+      "files": [],
+      "assertions": [
+        {"id": "row_per_subgroup", "text": "Rows are keyed by (study, comparison, subgroup level) with the subgroup label copied verbatim into col F"},
+        {"id": "variable_levels", "text": "The number of subgroup rows differs between studies where the sheet/paper supports different level sets — no study is padded to a fixed count"},
+        {"id": "extraction_possible", "text": "Every subgroup row answers 'Extraction Possible'; rows answering No have all data fields NA and no effect estimate"},
+        {"id": "subgroup_denominators", "text": "Counts on a subgroup row are the subgroup's own events/N, not the trial's overall ITT numbers"},
+        {"id": "no_leakage", "text": "No overall-population estimate is written onto a subgroup row and no subgroup estimate is written onto the main PWMA/NMA sheets"}
+      ]
     }
   ]
 }

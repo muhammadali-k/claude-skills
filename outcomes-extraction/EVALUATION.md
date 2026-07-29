@@ -14,8 +14,36 @@ The bundled scripts were validated by reproducing the approved deliverables: run
 produced output **byte-identical** to the hand-finished, user-approved OS/DFS/RFS files (12 / 14 / 17
 rows; 0 empty cells; 0 HR-sanity violations; 144 provenance entries; 210 flags/changes).
 
+## Refinement (iteration 3) — three template families
+Extended from the single OS/DFS/RFS layout to three families, after inspecting the actual
+Living-Periop-RCC templates with openpyxl:
+- **`pwma`** (`pwma_template.xlsx`, A–Y, IDs 3069–3089) — also covers the legacy `*_to_extract.xlsx`.
+- **`nma`** (`nma_template.xlsx`, A–X, IDs 21972–21993) — no "(0 selected)"; `Regimen T1/T2`,
+  `Measure`, `Survival T1/T2`, `Ec T1/Et T1/Ec T2/Et T2`.
+- **`pwma_subgroup`** (`pwma_subgroup_template.xlsx`, A–AA, IDs 9432–9452) — inserts `Subgroup` (F)
+  and `Extraction Possible` (G), shifting every data field two letters right.
+
+Two things this iteration is really about:
+1. **The Ec/Et divergence.** `Et` is an event COUNT in `pwma` and a PARTICIPANT TOTAL in `nma`. The
+   fix is structural, not just documentary: `scripts/families.py` holds the one label→role table and
+   uses unambiguous internal names (`events_t`/`n_t`/`events_c`/`n_c`), the result JSON keeps PWMA
+   semantics in every family, `assemble.py` relabels for NMA once at write time, and `qc.py` (plus a
+   tripwire in the workflow script) flags any row where an event count exceeds its denominator.
+2. **The row rule is now conditional on family.** SKILL.md Phase 2 previously said, in bold, "overall
+   population only, never a row per subgroup" — correct for the main sheets, and exactly wrong for
+   the subgroup template whose purpose is one row per (study × comparison × level). Phase 2 and
+   conventions.md now state both rules side by side and say they must never mix.
+
+Toolchain re-validated on copies of the three real templates: family auto-detection (24/25/27 cols),
+NMA `T1`/`T2` label disambiguation via the row-2 group banner, scaffolding of family-stamped jobs,
+`add_rows.py` inserting a **variable** number of subgroup rows per study (and skipping ones that
+already exist), assemble writing PWMA counts into NMA `Ec/Et` correctly, and `qc.py` firing on a
+deliberately swapped NMA row. The workflow script's concordance/metric logic was exercised against a
+stubbed runtime: subgroup rows key distinctly, and the two-reviewer + senior architecture is unchanged.
+
 ## Test cases
-`evals/evals.json` has four realistic prompts: (1) full three-table pipeline, (2) multi-arm row
+`evals/evals.json` has six realistic prompts (5 and 6 cover the NMA Ec/Et semantics and the
+variable-length subgroup sheet); the first four are: (1) full three-table pipeline, (2) multi-arm row
 verification/repair, (3) a quick single-study fill, (4) scaffolding the per-project job/config setup.
 Assertions are objective (HR within CI, Arms = total arm count, RFS substitutions flagged, no fabrication
 for outcome-less trials, provenance present, jobs/configs scaffolded with flagged file matches).
@@ -29,6 +57,12 @@ a supplement-only match where the main text is named by submission year). SKILL.
 
 ## Suggested manual checks when running on a new batch
 - Spot-check 2–3 HRs against the source PDFs (direction + value).
+- **Open one filled NMA row next to its PWMA twin** and confirm the same trial's treatment-arm event
+  count and N appear in `Ec T1`/`Et T1` and `Et`/`Nt` respectively — i.e. the counts were relabelled,
+  not swapped. `qc.py` only catches a swap when it makes events exceed N; a swap between two similar
+  numbers survives the arithmetic check and needs an eye.
 - Confirm shared control arms show identical events/N across a trial's comparison rows.
+- On the subgroup sheet, read the `Extraction Possible = No` rows: they should be the strata the
+  papers genuinely don't report, and they are a result the analyst needs, not a to-do list.
 - Read the provenance `Flags_and_Changes` sheet end-to-end — that's where arm flips, endpoint
   substitutions, figure-reads, and descriptive-only HRs surface for human sign-off.

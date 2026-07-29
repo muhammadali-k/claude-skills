@@ -1,8 +1,47 @@
-# Extraction conventions (extractor brief)
+# Extraction conventions (reviewer brief)
 
-This is the brief the extractor and verifier agents work from. It is a **starting template** — reconcile
-each rule against what the `*_extraction_examples.xlsx` file actually does, and confirm project-specific
-calls with the user, before extracting.
+This is the brief both independent reviewers and the senior adjudicator work from. It is a **starting
+template** — reconcile each rule against what the seeded/example rows in the actual template do, and
+confirm project-specific calls with the user, before extracting.
+
+## Know which template family you are filling — BEFORE you read a number
+Three families, three different meanings for the same-looking columns (full layouts in
+`table-layout.md`):
+
+| Family | Row identity | Population | Counts columns |
+|---|---|---|---|
+| `pwma` | study × comparison | **overall / ITT only** | Et, Nt, Ec, Nc |
+| `nma` | study × comparison | **overall / ITT only** | Ec T1, Et T1, Ec T2, Et T2 |
+| `pwma_subgroup` | study × comparison × **subgroup level** | one row per subgroup level | Et, Nt, Ec, Nc |
+
+Every job item states its `family`. If it doesn't, stop and ask — you cannot fill counts correctly
+without knowing which family the row belongs to.
+
+## ⚠️ THE `Ec` / `Et` TRAP — read this before writing any count ⚠️
+
+```
+pwma / pwma_subgroup     Et = EVENTS in treatment     Nt = N in treatment
+                         Ec = EVENTS in control       Nc = N in control
+
+nma                      Ec T1 = EVENT COUNT in T1    Et T1 = EVENT TOTAL (participants) in T1
+                         Ec T2 = EVENT COUNT in T2    Et T2 = EVENT TOTAL (participants) in T2
+```
+
+**`Et` is an event COUNT in pwma and a participant TOTAL in nma.** Carrying one convention into the
+other swaps numerator and denominator; the row still looks plausible and nothing downstream catches
+it. Guardrails:
+
+- **The result JSON always uses PWMA semantics, in every family.** You return `et` = events in
+  treatment, `nt` = N in treatment, `ec` = events in control, `nc` = N in control — *even for an NMA
+  row*. `assemble.py` does the NMA relabelling (events → `Ec T?`, N → `Et T?`) once, at write time.
+  Never re-map it yourself.
+- **NMA arm semantics: T1 = the treatment arm, T2 = the active comparator** (usually the trial's
+  control arm). So `treatment_name` → Regimen T1, `control_name` → Regimen T2, `et`/`nt` → T1's
+  event count / total, `ec`/`nc` → T2's.
+- **Denominators are intention-to-treat / as-randomised** in both families. If only an as-analysed
+  (full analysis / evaluable) set is reported, use it and **flag the denominator choice**.
+- The events count must never exceed its own arm's N. `scripts/qc.py` flags any row where it does and
+  names the two columns to swap — if that check fires, a convention was crossed.
 
 ## Golden rules
 1. **Provided sources only.** Extract strictly from the source documents for this study (main text +
@@ -15,11 +54,12 @@ calls with the user, before extracting.
    figure-read values, denominator choices (ITT vs as-analysed), population caveats (e.g. "adapted"
    analyses, ER+ subgroups), and descriptive-only HRs.
 
-## Verification re-reads everything (do not shortcut)
-The verifier **re-opens and re-reads every source PDF and supplement IN FULL, independently** — every
-page, again, from scratch. It never relies on the extractor's quoted snippets, a cached/partial read, or
-"it's probably right". **Consult all the PDFs again even when it costs more tokens — that token spend is
-the point.** Two failure modes this catches:
+## The senior re-reads everything (do not shortcut)
+The senior adjudicator **re-opens and re-reads every source PDF and supplement IN FULL, from scratch,
+before looking at either reviewer's draft** — every page, again — and re-derives every value,
+including the ones both reviewers agreed on. It never relies on a reviewer's quoted snippets, a
+cached/partial read, or "it's probably right". **Consult all the PDFs again even when it costs more
+tokens — that token spend is the point.** Two failure modes this catches:
 - **Image-only values.** Many HRs and 95% CIs appear ONLY inside KM-curve or forest-plot figures (and
   supplementary figures) that a text dump can't surface. Render/OCR the figure before concluding a value
   is "not reported".
@@ -56,10 +96,13 @@ the point.** Two failure modes this catches:
   events instead of an event-free rate, report `100 − incidence` and flag the conversion. `NA` if not
   reported.
 - **Events / N** — `et`/`ec` = events in treatment/control (deaths for OS; DFS events; the recurrence
-  events matching `endpoint_used` for RFS). `nt`/`nc` = N per arm. Prefer ITT / as-randomised
-  denominators; if only an as-analysed (full analysis) set is given, use it and flag. Integers; `NA`
-  if not reported. A shared control arm across two comparisons of the same trial should show the **same**
-  control events/N in both rows — a useful internal check.
+  events matching `endpoint_used` for RFS). `nt`/`nc` = N per arm. **These four JSON keys carry the
+  PWMA meaning in every family** — for an NMA row, `et`/`nt` are T1's events/participants and
+  `ec`/`nc` are T2's; `assemble.py` writes them into `Ec T1 / Et T1 / Ec T2 / Et T2`. Prefer ITT /
+  as-randomised denominators; if only an as-analysed (full analysis) set is given, use it and flag.
+  Integers; `NA` if not reported. Sanity check before you commit: **events ≤ N, always.** A shared
+  control arm across two comparisons of the same trial should show the **same** control events/N in
+  both rows — another useful internal check.
 - **Median survival** — almost always `NA` (not reached in adjuvant trials). Fill only if explicitly
   reported.
 - **Arm names** — short labels as the paper names them (`"Tamoxifen plus ovarian function suppression"`,
@@ -71,10 +114,12 @@ that trial in the dataset), **F** if it is a long-term follow-up / "N-year updat
 of an earlier-reported trial. This is a judgment call — decide from the title/abstract wording and **flag
 it**. When an example file already codes a given study, match the example for that study.
 
-## OVERALL POPULATION ONLY — one row per study (the critical rule)
+## The row rule is CONDITIONAL ON TEMPLATE FAMILY
+
+### Main sheets (`pwma`, `nma`) — OVERALL POPULATION ONLY
 Extract outcomes for the trial's **overall / ITT (full) population ONLY**. Do **NOT** extract or create
-separate rows for **biomarker or clinical SUBGROUPS** — e.g. TNBC vs HR+, PD-L1+/−, Recurrence-Score
-groups, PAM50/luminal subtypes, nodal/menopausal strata. A subgroup HR/rate is never its own row.
+separate rows for **biomarker or clinical SUBGROUPS** — e.g. risk groups, M1-NED vs M0, PD-L1+/−,
+histology, nodal strata. On these sheets a subgroup HR/rate is never its own row.
 - **One row per study** is the default. A 2-arm trial = exactly ONE row (treatment vs control), even when
   the paper reports that single comparison broken down by subgroup or across several related endpoints.
 - **Do NOT split one comparison across multiple rows for different endpoints.** Within a table, pick the
@@ -85,11 +130,44 @@ groups, PAM50/luminal subtypes, nodal/menopausal strata. A subgroup HR/rate is n
   a common comparator) — then emit one row per experimental-arm-vs-control comparison (next section).
   Subgroups, sensitivity analyses, and multiple endpoints are NOT reasons for extra rows.
 
+### Subgroup sheet (`pwma_subgroup`) — ONE ROW PER SUBGROUP LEVEL
+This template exists **precisely to hold what the main sheets exclude.** The rule above is inverted,
+not relaxed: here you emit **one row per (study × comparison × subgroup level)**, with the level named
+in **col F "Subgroup"** and the comparison in **col H "Treatment Arm"**. Extract the effect estimate,
+rates and counts **within that subgroup**, not the overall population.
+- **The number of levels varies by study and by subgroup type.** Never assume a fixed set. The seeded
+  Living-Periop-RCC sheet mostly uses four risk-group levels (`Risk group: High`,
+  `Risk group: Intermediate-to-high`, `Risk group: M0 High`, `Risk group: M1 NED`), but one study
+  carries two and another carries four levels for each of its two comparisons. The job spec tells you
+  which levels are required for this study; produce exactly those.
+- **Subgroup labels are copied verbatim** from the job spec / the pre-seeded col F, including the
+  `Type: Level` form (`Risk group: M1 NED`). The label is part of the row key — a re-worded label
+  silently creates a new row and orphans the intended one.
+- **Never blend levels.** If the paper reports "intermediate-high and high combined" but the sheet asks
+  for them separately, you cannot split it: mark both rows not extractable (below) and flag it. Do not
+  put the combined estimate on one of them.
+- **Counts still use the PWMA meaning** (Et = events treatment, Nt = N treatment, Ec = events control,
+  Nc = N control) — the subgroup sheet is a `pwma` sheet with two extra left-hand columns.
+- Denominators are the **subgroup's own** ITT N, not the trial's.
+
+### "Extraction Possible" (col G, subgroup sheet only) — where an honest "no" goes
+A subgroup result that the paper does not report is **common and expected**: a trial may report a
+forest plot for two of four risk strata, or none at all. Record that fact rather than hiding it.
+- Set `extraction_possible` = **`Yes`** when the subgroup result is reported and you extracted it.
+- Set **`No`** when the paper does not report that subgroup at all, reports it only in a form that
+  can't be used (combined with another level; a p-value for interaction with no per-level estimate;
+  a figure too coarse to read), and set every data field on that row to `NA`.
+- A `No` row is a **finding**, not a gap: it tells the analyst the interaction test can't include that
+  level. Never leave the row blank, never delete it, and never invent a value to fill it.
+- `qc.py` flags any row where the flag is unanswered, and any row that says `No` while still carrying
+  an effect estimate.
+
 ## Multi-arm trials → one row per arm-comparison (overall population)
 A trial with **≥2 experimental treatment arms** vs a common comparator contributes **one row per
-experimental-arm-vs-control comparison**, each in the OVERALL population, distinguished by the col-F
-"Treatment Arm" label (e.g. ALTERNATE: "fulvestrant vs anastrozole" AND "anastrozole+fulvestrant vs
-anastrozole"). If several experimental arms are **pooled by the paper** into a single primary comparison
+experimental-arm-vs-control comparison**, each in the OVERALL population, distinguished by the
+"Treatment Arm" label (col F on `pwma`/`nma`, **col H** on `pwma_subgroup`) — e.g. SORCE: "Primary"
+(1-year sorafenib) AND "3 year Sorafenib". On the subgroup sheet each of those comparisons then gets
+its own set of subgroup rows. If several experimental arms are **pooled by the paper** into a single primary comparison
 (e.g. PALLET pools 3 palbociclib+letrozole sequencing arms into one "palbociclib+letrozole" group vs
 letrozole), that is ONE comparison → ONE row; flag the pooling. Key cautions, learned the hard way:
 - **Only comparisons with a reported HR can be filled.** If the trial's multi-arm result is a *global*
@@ -108,8 +186,10 @@ letrozole), that is ONE comparison → ONE row; flag the pooling. Key cautions, 
   fill arm names + N where given, `NA` the effect cells, and flag (the survival result may live in a
   separate primary publication not provided).
 - **Effect estimate only in a figure** (KM landmark, forest plot with no printed numeric HR) → read it,
-  mark the `source` as a figure read so the verifier double-checks, and note calibration; if unreadable,
-  `NA`.
+  mark the `source` as a figure read so the senior double-checks, and note calibration; if unreadable,
+  `NA`. Subgroup results in particular usually live **only** in a forest plot — render it.
+- **A subgroup the paper never reports** → on the subgroup sheet that is `Extraction Possible = No`
+  with the row `NA`'d, not an omission and not a question for a human.
 - **Long-term follow-ups** that omit per-arm event counts (report only a pooled total or cumulative
   incidence) → fill what's reported, `NA` the rest, flag.
 
