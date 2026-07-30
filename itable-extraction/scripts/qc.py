@@ -2,13 +2,24 @@
 """QC a filled i-table against the reconciled results + structural integrity.
 
   python qc.py --sheet filled.xlsx --results _work/extraction_results.json --schema _work/column_schema.json \
-      [--template original.xlsx] [--id-col A]
+      [--template original.xlsx] [--id-col A] [--vocabulary <project>_node_vocabulary.json]
 
 Checks: (1) round-trip — every written value equals the reconciled result; (2) structure — column count and
-merged-header count match the original template (if --template given); (3) metadata preserved; then prints
-fill-rates and ALL flagged judgment calls for the user to review.
+merged-header count match the original template (if --template given); (3) metadata preserved; (4) NODE
+LABELS, with --vocabulary — every treatment- and control-arm label resolved against the project's
+controlled vocabulary, and the RUN FAILS (exit 1) on any rejection; then prints fill-rates and ALL flagged
+judgment calls for the user to review.
+
+*** NODE LABELS (--vocabulary) ***
+netmeta joins arms by STRING EQUALITY of their labels, so "NIVO + IPI" and "NIVO+IPI" are two nodes rather
+than one, and the resulting network is either disconnected or — worse — quietly missing an edge. The i-table
+is where this usually starts: its arm columns are written by a different pass from the outcomes sheets, and
+in the reference project the two disagreed for the SAME trials (Atezolezumab / Atezolizumab; Everolimus /
+Everoilmus; Nivolumab + Iplimumab / Nivolumab plus iplimumab / Nivulumab + ipililumab). Every rejection
+prints nodes.py's own diagnosis and its suggested fix verbatim. Alias hits are reported as accepted-but-
+non-canonical rather than passed silently, so a sheet full of legacy wording is visible as such.
 """
-import argparse, json
+import argparse, json, os, sys
 
 def main():
     ap = argparse.ArgumentParser()
@@ -17,6 +28,8 @@ def main():
     ap.add_argument("--schema", required=True)
     ap.add_argument("--template")
     ap.add_argument("--id-col", default="A")
+    ap.add_argument("--vocabulary", help="project controlled node vocabulary (JSON); "
+                                        "without it, arm labels are NOT validated")
     a = ap.parse_args()
     import openpyxl
     from openpyxl.utils import column_index_from_string, get_column_letter
@@ -77,14 +90,52 @@ def main():
             for f in fl:
                 print("   -", f)
 
+    # --- node labels -------------------------------------------------------
+    node_fail = 0
+    print("\n=== NODE LABELS ===")
+    if not a.vocabulary:
+        print("  NOT VALIDATED — no --vocabulary supplied.")
+        print("  Arm labels written here feed the outcomes sheets and then netmeta, which joins arms by")
+        print("  string equality. One variant spelling becomes a second node and the network silently")
+        print("  fragments. Pass --vocabulary <project>_node_vocabulary.json to check them.")
+    else:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from nodes import Vocabulary
+        vocab = Vocabulary.load(a.vocabulary)
+        # Arm-bearing cells are those the schema marks as arm labels, plus anything the
+        # reconciled results recorded in arm_mapping.
+        checked = accepted_alias = 0
+        for st in studies:
+            sid = str(st.get("id") or st.get("paper_id")).strip()
+            for role, raw in (st.get("arm_mapping") or {}).items():
+                checked += 1
+                label, note = vocab.resolve(raw)
+                if label is None and note != "empty":
+                    node_fail += 1
+                    print(f"  REJECTED  [{sid}] {role}: {note}")
+                elif note:
+                    accepted_alias += 1
+                    print(f"  ACCEPTED  [{sid}] {role}: {raw!r} -> {label}   ({note})")
+        if not checked:
+            print("  no arm labels found in the reconciled results (arm_mapping empty)")
+        elif node_fail == 0 and accepted_alias == 0:
+            print(f"  OK — {checked} arm label(s), all canonical.")
+        else:
+            print(f"  {checked} checked, {node_fail} rejected, {accepted_alias} accepted via alias "
+                  f"(non-canonical — rewrite before these reach an analysis sheet).")
+
     print("\n=== QC RESULT ===")
     print(f"round-trip mismatches: {mism}")
+    if node_fail:
+        print(f"node-label rejections: {node_fail}")
     if problems:
         print(f"PROBLEMS ({len(problems)}):")
         for p in problems[:40]:
             print("  !", p)
     else:
         print("OK — written values match reconciled data; structure intact.")
+    if node_fail:
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

@@ -10,16 +10,23 @@ export const meta = {
 
 // ---------------------------------------------------------------------------
 // Config. Pass either the bare jobs array (back-compatible) or:
-//   { jobs: [...], models: { a: 'opus', b: 'sonnet', senior: 'opus' } }
+//   { vocabulary: '/abs/..._node_vocabulary.json',
+//     jobs: [...], models: { a: 'opus', b: 'sonnet', senior: 'opus' } }
 //
 // The senior adjudicator is pinned to Opus rather than inheriting the session
 // model. Adjudication means reading verbatim clinical trial text and quoting it
 // back; models with heavier response filtering can decline or soften that, and a
 // senior that hedges is worse than useless because everything downstream trusts
 // it. Pin it, don't inherit it.
+//
+// `vocabulary` is the project's controlled node vocabulary. All three roles are
+// given the path and read the file themselves - a workflow script cannot read
+// files, the agents it spawns can. Without it the run emits whatever wording each
+// agent read off the page, and netmeta turns each spelling into its own node.
 // ---------------------------------------------------------------------------
 const cfg = Array.isArray(args) ? { jobs: args } : (args || {});
 const jobs = cfg.jobs || [];
+const VOCAB = cfg.vocabulary || null;
 const MODELS = Object.assign({ a: 'opus', b: 'sonnet', senior: 'opus' }, cfg.models || {});
 
 // Fields compared between the two reviewers to compute concordance.
@@ -30,6 +37,45 @@ const DATA_FIELDS = [
   'median_treatment', 'median_control',
   'et', 'nt', 'ec', 'nc', 'extraction_possible',
 ];
+
+// The node-label rules, in the brief every role reads. They are stated here and in
+// references/node-vocabulary.md; the machine-checkable version is scripts/nodes.py, which qc.py runs
+// over the finished sheet.
+const NODE_RULES = `
+*** NODE LABELS ARE A CONTROLLED VOCABULARY - NOT THE PAPER'S WORDING ***
+treatment_name and control_name are NODE LABELS. A network meta-analysis joins arms by STRING EQUALITY,
+so "Nivolumab + Ipilimumab" and "Nivolumab plus iplimumab" are TWO nodes, not one: the network fragments,
+or keeps a connection while an edge silently disappears, or splits one regimen's evidence across two
+underpowered nodes and inverts the ranking. NONE of this is visible in the extraction sheet - every cell
+looks fine and the failure only surfaces as a wrong league table. Long labels also wreck league tables
+and network plots, which are n x n grids of node names.
+${VOCAB
+  ? `READ THE VOCABULARY FIRST (Read tool), BEFORE you write any arm label:\n    ${VOCAB}\nUse ONLY labels it defines. Its \`aliases\` map translates a paper's own wording (and known\nmisspellings) into the canonical label - use it rather than composing a label yourself.`
+  : `NO VOCABULARY FILE WAS SUPPLIED for this run. Apply the rules below, keep labels SHORT and\nUPPERCASE, and FLAG every arm label you emit so a human can canonicalise it. Do not invent an\nabbreviation you are not confident about.`}
+THE RULES
+  1. AGENT labels are UPPERCASE, 3-5 characters, no punctuation:
+        SUN SOR PAZO AXI EVE PEM NIVO IPI ATEZO BELZ GIREN DURVA TREME
+  2. COMBINATIONS join with a bare "+" and NO SPACES:
+        NIVO+IPI      never "NIVO + IPI", never "NIVO plus IPI", never "Nivo+Ipi"
+     Whitespace is FORBIDDEN, not normalised: a trailing or non-breaking space pasted out of a PDF is
+     visually identical in a spreadsheet cell, so nobody can see it - not you, not a reviewer.
+  3. COMPONENT ORDER is fixed by the vocabulary's \`combinations\` list. It is NOT derived from a rule -
+     "backbone first" and "alphabetical" disagree. Look the string up; do not compose it.
+  4. The POOLED COMPARATOR is ONE label (default NOADJ) whatever the trial actually used - placebo,
+     observation, surgery alone. What it actually was goes in the separate control_actual field, so a
+     blinding/control-type sensitivity analysis can still separate them. ONE EXCEPTION: a trial whose
+     control arm is an ACTIVE REGIMEN (an add-on design) does NOT get NOADJ - it gets that regimen's
+     own label, because it genuinely is a different node.
+  5. DOSE, DURATION and SETTING variants are HYPHEN-SUFFIXED and the suffix is PART OF THE NODE IDENTITY:
+        SOR-1Y  SOR-3Y  SOR-NEO  PAZO-600  PAZO-800  NIVO-PERI
+     Never reuse the base label for a variant - that silently merges two nodes.
+A LABEL YOU CANNOT RESOLVE IS A FLAG, NEVER A GUESS. If the paper's wording matches no label and no
+alias, put the paper's wording in a flag, say what you think it should be, and let the reviewer who owns
+the vocabulary decide. Do not invent a label and do not extend the vocabulary yourself - inventing a
+label at extraction time and backfilling later is exactly how the second spelling of a regimen gets in.
+NOT a node label: the "comparison" label you are given for each item (e.g. "Primary", "3 year
+Sorafenib") is the sheet's ROW KEY. Echo it verbatim; never canonicalise it.
+`;
 
 const BRIEF = `
 You are extracting survival/recurrence OUTCOME data from a single randomized controlled trial publication
@@ -71,7 +117,7 @@ The relabelling into the nma sheet's Ec/Et columns happens later, in code. Do no
 Denominators are INTENTION-TO-TREAT / as-randomised (or the subgroup's ITT N on subgroup rows); if only
 an as-analysed set is reported, use it and FLAG it. Before you return: check et <= nt and ec <= nc in
 every result. An event count above its denominator means you crossed the conventions.
-
+${NODE_RULES}
 GOLDEN RULES
 1. SOURCES ONLY. Use only the provided files (main text + supplements). Never use outside knowledge or other
    papers. If a value is not in these files, return "NA" (do NOT guess). The design/anchor numbers in your task
@@ -101,8 +147,9 @@ GOLDEN RULES
    if not reported. A shared control arm across two comparisons of the same trial must show the SAME control et/nc.
    These four keys keep the pwma meaning in EVERY family - see THE Ec/Et TRAP above. et <= nt and ec <= nc, always.
 8. MEDIAN survival: almost always "NA" (not reached). Fill only if explicitly reported.
-9. Formats: HR/CI/rates as reported (e.g. "0.82", "76.1"); arm names short as the paper names them; literal "NA"
-   for anything not reported.
+9. Formats: HR/CI/rates as reported (e.g. "0.82", "76.1"); treatment_name/control_name = the CANONICAL NODE
+   LABEL from the vocabulary (e.g. "NIVO+IPI", "SOR-1Y", "NOADJ"), never the paper's prose - see NODE LABELS
+   above; literal "NA" for anything not reported.
 10. FLAG every judgment call: arm/direction changes, HR inversion, non-95% CI levels, endpoint substitution,
    figure-read values, denominator (ITT vs analysed) choices, population caveats, descriptive-only HRs.
 
@@ -122,7 +169,8 @@ subgroup label EXACTLY on pwma_subgroup items; "NA" on main-sheet items), extrac
 pwma_subgroup items; "NA" on main-sheet items), endpoint_used, treatment_name, control_name, hr, ci_lower,
 ci_upper, surv_treatment, surv_control, surv_timepoint, median_treatment, median_control, et, nt, ec, nc,
 flags[], provenance[]. "NA" for any unreported value. The comparison + subgroup labels are the row key - echo
-them verbatim; a re-worded label orphans the row.`;
+them verbatim; a re-worded label orphans the row. treatment_name and control_name are CANONICAL NODE LABELS
+from the vocabulary (not the paper's wording, no spaces, "+" for combinations); an unresolvable one is a flag.`;
 
 const RESULT_ITEM = {
   type: 'object', additionalProperties: false,
@@ -235,6 +283,22 @@ function compareReviews(a, b) {
 // ---------------------------------------------------------------------------
 log(`Outcomes extraction: ${jobs.length} papers, ${jobs.reduce((a, j) => a + j.needed.length, 0)} required rows.`);
 log(`Reviewers: A=${MODELS.a}, B=${MODELS.b}, senior=${MODELS.senior || 'session model'}. Senior re-derives every value.`);
+if (VOCAB) log(`Node vocabulary: ${VOCAB} - all three roles read it and emit canonical labels only.`);
+else log(`WARNING: no node vocabulary supplied. Arm labels will be whatever wording each agent read off the page, and netmeta turns each spelling into a separate node. Pass { vocabulary: '/abs/..._node_vocabulary.json', jobs: [...] } and validate with qc.py --vocabulary.`);
+
+// Shape check for a node label, mirroring CANON_RE in scripts/nodes.py. Shape only: whether a label is
+// actually IN the vocabulary is checked by nodes.py via qc.py, which can read the file. This catches the
+// failures that need no vocabulary to spot - whitespace, lowercase, word joiners, prose.
+const CANON_RE = /^[A-Z0-9]{2,6}(-[A-Z0-9]{1,5})?(\+[A-Z0-9]{2,6}(-[A-Z0-9]{1,5})?)*$/;
+function labelProblem(v) {
+  const s = String(v ?? '').trim();
+  if (s === '' || /^(na|n\/a|nr)$/i.test(s)) return null;      // genuine missingness, not a label error
+  if (CANON_RE.test(s)) return null;
+  if (/\s/.test(s)) return 'contains whitespace';
+  if (/\bplus\b|\band\b|\/|&|,/i.test(s)) return 'uses a word or symbol joiner instead of a bare "+"';
+  if (s !== s.toUpperCase()) return 'is not uppercase';
+  return 'is not a canonical label shape';
+}
 
 // Each item announces its FAMILY (and, for subgroup rows, the exact level) so the role filling it
 // knows whether it is extracting the ITT population or one stratum, and which arm semantics apply.
@@ -247,7 +311,8 @@ function neededBlock(job) {
           ? 'OVERALL ITT population; T1=Treatment, T2=Control/active comparator'
           : 'OVERALL ITT population');
     return `  [${i + 1}] table=${n.table} | family=${fam} | comparison="${n.comparison}" | ${pop}\n` +
-           `      default Treatment="${n.treatment}" vs Control="${n.control}" | note: ${n.note || ''}`;
+           `      default Treatment="${n.treatment}" vs Control="${n.control}" (canonical node labels - ` +
+           `confirm/flip against the paper, but emit them in this canonical form) | note: ${n.note || ''}`;
   }).join('\n');
 }
 
@@ -301,6 +366,14 @@ STEP 4. Before returning, run the family checks on YOUR results: every "pwma"/"n
         population (no subgroup estimate smuggled in); every "pwma_subgroup" row is that named level only,
         with its own denominators, and answers extraction_possible; et <= nt and ec <= nc everywhere (an
         event count above its denominator means the Ec/Et conventions were crossed - see the brief).
+STEP 5. ADJUDICATE THE ARM LABELS - this is part of the job, not a formatting afterthought. Check every
+        treatment_name and control_name against the vocabulary: exact canonical string, "+" with NO spaces,
+        component order as the \`combinations\` list has it, the single pooled comparator label unless the
+        control is an ACTIVE regimen, the right hyphen variant suffix. A reviewer's prose wording is an
+        ERROR TO CORRECT, not a value to carry through - log it as an adjudication. A label that neither the
+        vocabulary nor its aliases resolve goes to unresolved[] with the cell "NA"; do not guess one.
+        netmeta joins arms by string equality, so a variant spelling silently becomes a second node and
+        nothing in the finished sheet shows it.
 
 SOURCE FILES (read all again, in full):
 ${job.files.map(f => '  - ' + f).join('\n')}
@@ -375,10 +448,17 @@ const totals = final.reduce((acc, p) => {
     if ((et !== null && nt !== null && et > nt) || (ec !== null && nc !== null && ec > nc)) {
       acc.events_exceed_denominator.push(`${p.paper_id}|${r.table}|${r.comparison}|${r.subgroup ?? 'NA'}`);
     }
+    // node-label shape tripwire; membership in the vocabulary is enforced by qc.py --vocabulary
+    for (const f of ['treatment_name', 'control_name']) {
+      acc.labels_checked++;
+      const why = labelProblem(r[f]);
+      if (why) acc.non_canonical_labels.push(`${p.paper_id}|${r.table}|${r.comparison}|${f}="${r[f]}" ${why}`);
+    }
   }
   return acc;
 }, { fields: 0, concordant: 0, discordant: 0, adjudications: 0, senior_overrode_both: 0, unresolved: 0,
-     rows_by_family: {}, subgroups_not_extractable: 0, events_exceed_denominator: [] });
+     rows_by_family: {}, subgroups_not_extractable: 0, events_exceed_denominator: [],
+     labels_checked: 0, non_canonical_labels: [] });
 totals.concordance_rate = totals.fields ? Math.round((totals.concordant / totals.fields) * 1000) / 1000 : null;
 
 log(`DONE: ${final.length}/${jobs.length} papers. Rows by family: ${JSON.stringify(totals.rows_by_family)}.`);
@@ -387,5 +467,7 @@ log(`Senior overrode BOTH reviewers on ${totals.senior_overrode_both} field(s) -
 if (totals.unresolved) log(`${totals.unresolved} field(s) need a human decision - see unresolved[] per paper.`);
 if (totals.subgroups_not_extractable) log(`${totals.subgroups_not_extractable} subgroup row(s) marked extraction_possible="No" - a finding, not a gap.`);
 if (totals.events_exceed_denominator.length) log(`WARNING: ${totals.events_exceed_denominator.length} row(s) have an event count above its denominator - the Ec/Et conventions were crossed: ${totals.events_exceed_denominator.join(', ')}`);
+if (totals.non_canonical_labels.length) log(`WARNING: ${totals.non_canonical_labels.length}/${totals.labels_checked} arm label(s) are not canonical node labels - each one becomes its own node in netmeta: ${totals.non_canonical_labels.join('; ')}`);
+else log(`Node labels: ${totals.labels_checked} checked, all canonical in shape (membership is verified by qc.py --vocabulary).`);
 
 return { papers: final, run_metrics: totals };

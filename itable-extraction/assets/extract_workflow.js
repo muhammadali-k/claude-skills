@@ -25,6 +25,10 @@ export const meta = {
 // it. Pin it, don't inherit it.
 // ---------------------------------------------------------------------------
 const { guidePath, conventionsPath, studies } = args
+// Project controlled node vocabulary. A workflow script cannot read files; the agents it spawns can,
+// so all three roles are handed the path and read it themselves. Without it each agent writes whatever
+// wording it read off the page and netmeta turns every spelling into its own node.
+const vocabularyPath = args.vocabularyPath || null
 const MODELS = Object.assign({ a: 'opus', b: 'sonnet', senior: 'opus' }, args.models || {})
 
 const CELL = { type: 'object', additionalProperties: false,
@@ -129,6 +133,7 @@ function reviewerPrompt(s) {
     `  col = the column letter for the right variable AND arm slot. value = formatted per the conventions.`,
     `  source = page/table/figure + a short verbatim snippet. Omit anything not reported (it becomes the`,
     `  column's missing marker). Always fill the identifying/characteristic columns you can.`,
+    vocabularyPath ? `STEP ${s.calibration ? 6 : 5} — ARM LABELS ARE A CONTROLLED VOCABULARY. Read ${vocabularyPath} and emit ONLY canonical labels: UPPERCASE 3-5 chars, combinations joined by a bare '+' with NO SPACES (NIVO+IPI, never 'NIVO + IPI' or 'NIVO plus IPI'), component order exactly as the vocabulary's combinations list gives it, the pooled comparator as its single label whatever the trial called it, and dose/duration/setting variants hyphen-suffixed (SOR-1Y, PAZO-600, NIVO-PERI). An ACTIVE control arm takes that regimen's own label, not the comparator label. Where the paper's wording differs, use the vocabulary's aliases. Where no alias exists, FLAG it - never invent a label. netmeta joins arms by string equality, so one invented spelling becomes a second node and the network fault is invisible in the sheet.` : ``,
     `Return the StructuredOutput object. Be exhaustive but never fabricate; flag every judgment call.`,
   ].filter(Boolean).join('\n')
 }
@@ -216,11 +221,13 @@ const totals = out.reduce((acc, p) => {
   acc.unresolved += p.unresolved.length
   return acc
 }, { fields: 0, concordant: 0, discordant: 0, adjudications: 0, senior_overrode_both: 0, unresolved: 0 })
+totals.vocabulary_enforced = Boolean(vocabularyPath)
 totals.concordance_rate = totals.fields ? Math.round((totals.concordant / totals.fields) * 1000) / 1000 : null
 
 log(`DONE: ${out.length}/${studies.length} studies.`)
 log(`Reviewer concordance ${totals.concordant}/${totals.fields} (${totals.concordance_rate}).`)
 log(`Senior overrode BOTH reviewers on ${totals.senior_overrode_both} cell(s) - these are the values a two-reviewer-only design would have gotten wrong.`)
 if (totals.unresolved) log(`${totals.unresolved} cell(s) need a human decision - see unresolved[] per study.`)
+if (!vocabularyPath) log(`WARNING: no vocabularyPath supplied - arm labels are UNVALIDATED. Run qc.py with --vocabulary before these labels reach any analysis sheet.`)
 
 return { studies: out, run_metrics: totals }

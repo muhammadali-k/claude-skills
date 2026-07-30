@@ -103,6 +103,43 @@ Three defences, already built in — do not work around them:
 If you hand-fill an NMA sheet, read the header out loud first: *Ec T1 is the number of events; Et T1
 is the number of patients.*
 
+## ⚠️ NODE LABELS ARE A CONTROLLED VOCABULARY, NOT FREE TEXT ⚠️
+
+**`netmeta` joins arms by STRING EQUALITY.** "Nivolumab + Ipilimumab" and "Nivolumab plus iplimumab" are
+two nodes, not one. The network then either reports as disconnected (the lucky case), or stays connected
+while an edge silently disappears, or splits one regimen's evidence across two underpowered nodes and
+inverts the ranking. **None of this is visible in the extraction sheet** — every cell looks fine; the
+failure surfaces as a wrong league table. A secondary reason that matters more than it sounds: long
+labels wreck league tables and network plots, which are n×n grids of node names.
+
+The five rules — full rationale and the vocabulary-file shape in **`references/node-vocabulary.md`**:
+
+1. **Agent labels are UPPERCASE, 3–5 characters, no punctuation** — `SUN SOR PAZO AXI EVE PEM NIVO IPI
+   ATEZO BELZ GIREN DURVA TREME`.
+2. **Combinations join with a bare `+` and NO SPACES** — `NIVO+IPI`. Never `NIVO + IPI`, `NIVO plus IPI`,
+   `Nivo+Ipi`. Whitespace is **forbidden outright rather than normalised**, because a trailing or
+   non-breaking space pasted out of a PDF is visually identical in a spreadsheet cell.
+3. **Component order is fixed by the vocabulary's `combinations` list, not derived from a rule.**
+   "Backbone first" and "alphabetical" disagree; a lookup table cannot drift, a rule can.
+4. **The pooled comparator is ONE label** (default `NOADJ`) whatever the trial actually used; what it
+   actually was — placebo, observation, surgery alone — goes in the separate `control_actual` field.
+   **Exception:** a trial whose control is an **active regimen** (an add-on design) gets that regimen's
+   label, not `NOADJ`.
+5. **Dose / duration / setting variants are hyphen-suffixed and are part of the node identity** —
+   `SOR-1Y SOR-3Y SOR-NEO PAZO-600 PAZO-800 NIVO-PERI`. Merging two variants is then a deliberate
+   relabelling instead of an accident.
+
+The vocabulary governs the **Treatment/Control** and **Regimen T1/T2** data columns. It does **not**
+govern the col-F (col-H on subgroup sheets) **"Treatment Arm" comparison label** — that is a row key
+(`Primary`, `3 year Sorafenib`) copied verbatim from the sheet; re-writing it orphans the row.
+
+Each **project supplies its own `*_node_vocabulary.json`**; this skill supplies the rules and the
+validator. `scripts/nodes.py` resolves a label and rejects it with a diagnosis and a "did you mean"
+suggestion; `scripts/qc.py --vocabulary <file>` runs it over a filled sheet and **fails the run** on any
+rejection. Where a paper's wording differs from the canonical label, use the vocabulary's `aliases`
+mapping — and where no alias exists, **FLAG it; never invent a label** and never backfill the vocabulary
+afterwards, which is exactly how the second spelling gets in.
+
 ## Inputs you will receive
 
 - **The templates to fill** — `pwma_template.xlsx`, `nma_template.xlsx`,
@@ -137,6 +174,13 @@ Ec/Et divergence, the all-TEXT rule) and **`references/conventions.md`** (the re
 direction, landmark choice, O/F, endpoint→table matching, multi-arm rows, subgroup labels, the
 "Extraction Possible" flag, missing values). Reconcile the brief against what the seeded rows actually
 do and confirm any project-specific calls with the user.
+
+**Load the node vocabulary now, before anything is extracted.** Ask the user for the project's
+`*_node_vocabulary.json` (in the Living Periop RCC project it sits next to the templates) and print it
+with `python scripts/nodes.py <vocab.json>`; read `references/node-vocabulary.md` for the rules. Every
+treatment- and control-arm label the run produces must already exist in that file. If the project has
+no vocabulary yet, build one **first** — inventing labels during extraction and backfilling afterwards
+is precisely how a second spelling of a regimen gets in, and a second spelling is a second node.
 
 ### Phase 2 — Decide the rows (CRITICAL — the rule is CONDITIONAL ON FAMILY)
 
@@ -192,7 +236,10 @@ error-prone plumbing; you then do only the parts that need judgment:
   different year (e.g. by submission year), or a supplement-only match where the main text wasn't found.
   A wrong file→paper match poisons a whole row, so confirm them.
 - For each paper, fill the `design` note (headline HRs/rates/events from the abstract make great anchors)
-  and the default `treatment`/`control` arms (on `nma` items, treatment = T1, control = T2).
+  and the default `treatment`/`control` arms (on `nma` items, treatment = T1, control = T2). **These
+  defaults must be canonical node labels** from the vocabulary (`ATEZO`, `NIVO+IPI`, `SOR-1Y`, `NOADJ`) —
+  they are what the agent echoes into the sheet, so a prose default becomes a prose node. Set the
+  job list's **`vocabulary`** path at the same time.
 - **Check every `needed` item carries a `family`**, and every `pwma_subgroup` item a `subgroup` label
   copied verbatim. A reviewer without the family can't know whether it is extracting the ITT population
   or one stratum.
@@ -201,8 +248,9 @@ error-prone plumbing; you then do only the parts that need judgment:
 The jobs schema + a worked example are in `references/workflow.md`.
 
 ### Phase 4 — Two independent reviewers + senior adjudication (the core)
-Run `assets/extract_outcomes.js` with the Workflow tool, passing `jobs` via `args` (workflow scripts
-can't read files; the agents they spawn can). Three roles per paper:
+Run `assets/extract_outcomes.js` with the Workflow tool, passing `{vocabulary, jobs, models}` via `args`
+(workflow scripts can't read files; the agents they spawn can — which is why the **vocabulary is passed
+as a path** and all three roles read it themselves). Three roles per paper:
 
 - **Reviewer A and Reviewer B** extract the paper **concurrently and independently**, from the same
   sources, with the identical brief. Neither is told what the other found; neither ever sees the other's
@@ -235,7 +283,9 @@ three roles render and read those figures rather than concluding "not reported" 
 Full orchestration, prompts, JSON schemas, and the model-assignment config are in
 `references/workflow.md` — read it before launching. Save the workflow's returned
 `{papers:[...], run_metrics:{...}}` to `_work/extraction_results.json`, and **report `run_metrics` to
-the user** — concordance rate, how often the senior overrode both reviewers, and the unresolved count.
+the user** — concordance rate, how often the senior overrode both reviewers, the unresolved count, and
+`non_canonical_labels` (a shape check on every arm label emitted; membership in the vocabulary is
+enforced later by `qc.py --vocabulary`).
 
 If the Workflow tool isn't available in your context (e.g. you are yourself a sub-agent), run the same
 three roles **inline**, one paper at a time — but preserve the independence: produce reviewer A's full
@@ -255,8 +305,15 @@ long-format sheet whose count columns are named unambiguously). Rows are matched
 `NO RESULT MATCHED` rather than landing in the wrong row.
 
 ### Phase 6 — QC
-Run `scripts/qc.py <filled files...>`. Per family it confirms the expected column count + intact
-headers, **no empty data cell**, NA-rate per column, **effect sanity** (lower ≤ TE ≤ upper), and:
+Run `scripts/qc.py <filled files...> --vocabulary <project>_node_vocabulary.json`. Per family it
+confirms the expected column count + intact headers, **no empty data cell**, NA-rate per column,
+**effect sanity** (lower ≤ TE ≤ upper), and:
+- **NODE LABELS** — every treatment- and control-arm label is resolved against the vocabulary and the
+  **run fails** on any rejection, printing the validator's diagnosis and its "did you mean" suggestion.
+  An alias hit passes but is **reported as accepted-but-non-canonical**, so a sheet still carrying
+  legacy or paper-prose spellings is visible as such. **Always pass `--vocabulary`**: without it the
+  labels are unchecked, and a variant spelling is invisible in the sheet and in every check below —
+  it surfaces only as a wrong league table, after the analysis has been run and read.
 - **⚠️ EVENTS > DENOMINATOR** — the Ec/Et guard. Any row whose event count exceeds its own arm's N is
   reported with the two columns to swap. This is the one arithmetic fact a crossed convention always
   breaks, and it is the only automated defence against a PWMA↔NMA count swap. Never wave it through.
@@ -301,13 +358,18 @@ that's the normal mode.
 
 ## Files in this skill
 - `scripts/families.py` — template-family detection + the single label→role table (incl. the Ec/Et map)
+- `scripts/nodes.py` — the controlled node vocabulary loader + label validator (rejects with a diagnosis).
+  **Byte-identical to `itable-extraction/scripts/nodes.py`** — change both together or neither
 - `scripts/scaffold.py` — match sources to studies and emit jobs.json + assemble/add_rows config skeletons
 - `scripts/inspect_tables.py` — dump family, field-ID map, counts semantics, rows, subgroup levels
 - `scripts/assemble.py` — write results into the sheets by header role (backup, NA-fill, provenance)
 - `scripts/add_rows.py` — insert comparison rows, and a variable number of subgroup rows per study
-- `scripts/qc.py` — structure + no-empty + effect-sanity + **events>denominator** + subgroup checks
+- `scripts/qc.py` — structure + no-empty + effect-sanity + **events>denominator** + subgroup checks,
+  and **`--vocabulary` node-label validation that fails the run**
 - `assets/extract_outcomes.js` — the two-reviewer + senior-adjudicator Workflow script (via `args`)
 - `references/table-layout.md` — all three layouts, map-by-ID rule, per-family ID sets, the Ec/Et trap
+- `references/node-vocabulary.md` — the node-label rules, why string equality makes them non-negotiable,
+  the vocabulary-file shape, and what to do when a new trial arrives
 - `references/conventions.md` — reviewer brief: family-conditional row rule, HR direction, landmark,
   O/F, endpoint→table, multi-arm, subgroup labels, "Extraction Possible"
 - `references/workflow.md` — orchestration: jobs.json schema, agent prompts, output schemas, configs

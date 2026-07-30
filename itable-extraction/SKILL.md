@@ -161,6 +161,52 @@ Two checks, both important:
 Then hand the user the filled sheet, the provenance file, and a short summary of fill-rates and flagged
 decisions (arm mappings, figure-read values, denominator choices). Surface judgment calls — don't bury them.
 
+## Node labels are a controlled vocabulary, not free text
+
+The arm-name columns in an i-table are not decorative. They are read downstream, they end up as node
+labels in a network meta-analysis, and **`netmeta` joins arms by string equality**. "Nivolumab +
+Ipilimumab" and "Nivolumab plus iplimumab" are two nodes, not one. The network then either reports as
+disconnected — the lucky case, because you find out — or stays connected while an edge silently
+disappears, or splits one regimen's evidence across two underpowered nodes and inverts the ranking.
+Nothing in the sheet looks wrong. It surfaces as a wrong league table.
+
+**The i-table is usually where this starts,** because its arm columns are filled by a different pass
+from the outcomes sheets. In the reference project the two disagreed for the *same trials*:
+`Atezolezumab` against `Atezolizumab`, `Everolimus` against `Everoilmus`, and CheckMate 914's single
+combination arm written four different ways across two files, three of them misspelled.
+
+The rules, in full in `references/node-vocabulary.md`:
+
+1. **Agent labels UPPERCASE, 3–5 characters, no punctuation** — `SUN SOR PAZO AXI EVE PEM NIVO IPI
+   ATEZO BELZ GIREN DURVA TREME`. Short enough that a league table fits on a page.
+2. **Combinations join with a bare `+`, no spaces** — `NIVO+IPI`. Never `NIVO + IPI`, never
+   `NIVO plus IPI`, never `Nivo+Ipi`. Whitespace is forbidden outright rather than normalised,
+   because a trailing or non-breaking space is **visually identical** in a spreadsheet cell.
+3. **Component order is fixed by the vocabulary's list, not derived.** "Backbone first" and
+   "alphabetical" disagree, and two people applying a rule resolve it differently.
+4. **The pooled comparator is ONE label** (default `NOADJ`) whatever the trial used; what it actually
+   was goes in a separate field. A trial whose control is an **active** regimen — an add-on design —
+   gets that regimen's label instead, because it genuinely is a different node.
+5. **Dose, duration and setting variants are hyphen-suffixed** — `SOR-1Y`, `PAZO-600`, `NIVO-PERI` —
+   and the suffix is part of the node identity, so merging two variants is a deliberate act.
+
+Each project supplies its own `*_node_vocabulary.json`; the skill supplies the rules and the validator.
+Load it in **Phase 2** alongside the conventions, and enforce it in **Phase 6**:
+
+```bash
+python scripts/nodes.py <project>_node_vocabulary.json            # print it
+python scripts/nodes.py <project>_node_vocabulary.json "NIVO + IPI"   # resolve specific labels
+python scripts/qc.py --sheet filled.xlsx ... --vocabulary <project>_node_vocabulary.json
+```
+
+`qc.py` **fails the run** on any rejection. Rejections carry a diagnosis and a suggested fix, not just
+a complaint. If no vocabulary is passed, `qc.py` says so loudly rather than passing silently — an
+unvalidated arm column is a network failure waiting to happen.
+
+`scripts/nodes.py` is **byte-identical** to the copy in `outcomes-extraction`. That is deliberate: two
+skills writing labels into the same downstream analysis must not be able to disagree about what a valid
+label is, and two subtly different validators would be a worse bug than none.
+
 ## Scaling the rigor
 Two independent reviewers + senior adjudication + provenance is the default, because it materially
 reduces wrong values and because the senior-override count tells you how much you should trust the
@@ -179,8 +225,10 @@ rather than assuming it.
 - `scripts/match_sources.py` — auto-match source files to pre-seeded rows
 - `scripts/assemble.py` — write results into the sheet (in place or generate), fill missing, emit provenance
 - `scripts/validate_types.py` — enforce per-column data types for clean upload
-- `scripts/qc.py` — round-trip + structure + fill-rate + flags
+- `scripts/qc.py` — round-trip + structure + fill-rate + flags + node-label validation (`--vocabulary`)
+- `scripts/nodes.py` — controlled node vocabulary loader + validator (identical to the outcomes-extraction copy)
 - `assets/extract_workflow.js` — the two-reviewer + senior-adjudicator Workflow script (via `args`)
 - `references/workflow.md` — multi-agent orchestration: agent prompts, JSON schemas, model assignment
 - `references/conventions.md` — extractor brief: value formats, arm rule, missing values, endpoint→row map
 - `references/data_types.md` — upload data-type validation: how to derive types and fix violations
+- `references/node-vocabulary.md` — the node-label rules and why string equality makes them non-negotiable

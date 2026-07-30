@@ -18,6 +18,27 @@ it from each file's header and stamps it on every `needed` item. **Never let a j
 without a `family`** — the reviewers need it to know whether they are extracting the ITT population
 or a subgroup, and the senior needs it to check the counts.
 
+## The node vocabulary — one path, declared once
+Every job list carries a **`vocabulary`** path: the project's `*_node_vocabulary.json`. Pass the jobs
+wrapped in the config object so it has somewhere to live:
+
+```json
+{ "vocabulary": "/abs/Extraction/periopRCC_node_vocabulary.json",
+  "models": { "a": "opus", "b": "sonnet", "senior": "opus" },
+  "jobs": [ ... ] }
+```
+
+Both reviewers and the senior are given that path and **read the file first**. `netmeta` joins arms by
+string equality, so `NIVO + IPI` and `NIVO+IPI` are two nodes and the sheet gives no sign of it —
+labels are looked up, never composed. Rules (full text in `node-vocabulary.md`): UPPERCASE 3–5-char
+agent labels; combinations joined by a bare `+` with **no spaces**; component order taken from the
+vocabulary's `combinations` list rather than derived; **one** pooled comparator label (default `NOADJ`)
+with the actual control recorded separately; dose/duration/setting variants hyphen-suffixed and part of
+the node identity. A label an agent cannot resolve is a **FLAG, never a guess**.
+
+Omitting `vocabulary` is allowed but the script warns: the run then emits whatever wording each agent
+read off the page, and the mismatch is only caught later by `qc.py --vocabulary`, if at all.
+
 ## jobs.json — one entry per UNIQUE paper
 **`scripts/scaffold.py` generates this file** (plus `assemble_config.json` and `add_rows_config.json`)
 as a skeleton from the template files + sources dir: it matches source files to each study by
@@ -37,20 +58,20 @@ hand if you skip the scaffolder):
     "design": "Adjuvant atezolizumab vs placebo, resected RCC at increased risk. 2 arms, ITT 390/388. DFS HR 0.93 (0.75-1.15). Anchors help you LOCATE values - still confirm in the text.",
     "needed": [
       {"table":"PWMA","family":"pwma","comparison":"Primary",
-       "treatment":"Atezolizumab","control":"Placebo",
+       "treatment":"ATEZO","control":"NOADJ",
        "note":"Overall ITT DFS HR/CI, events/N per arm, landmark DFS rate."},
 
       {"table":"NMA","family":"nma","comparison":"Primary",
-       "treatment":"Atezolizumab","control":"Placebo",
-       "note":"T1=atezolizumab, T2=placebo. Same ITT numbers as the PWMA row."},
+       "treatment":"ATEZO","control":"NOADJ",
+       "note":"T1=ATEZO, T2=NOADJ (actual control: placebo). Same ITT numbers as the PWMA row."},
 
       {"table":"SUB","family":"pwma_subgroup","comparison":"Primary",
        "subgroup":"Risk group: M1 NED",
-       "treatment":"Atezolizumab","control":"Placebo",
+       "treatment":"ATEZO","control":"NOADJ",
        "note":"M1-NED stratum only. If not reported for this stratum, extraction_possible=No + all NA."},
       {"table":"SUB","family":"pwma_subgroup","comparison":"Primary",
        "subgroup":"Risk group: High",
-       "treatment":"Atezolizumab","control":"Placebo","note":""}
+       "treatment":"ATEZO","control":"NOADJ","note":""}
     ]
   }
 ]
@@ -61,13 +82,18 @@ hand if you skip the scaffolder):
   that sheet is (paper_id, comparison, subgroup); a re-worded label orphans the row.
 - **List one item per required subgroup level.** The number of levels **varies by study** — take it
   from the sheet (scaffold does), never from a fixed list.
-- `treatment`/`control` are *defaults*; the agent confirms/flips against the paper. On `nma`,
-  treatment = T1 and control = T2 (the active comparator).
+- `treatment`/`control` are *defaults* and **must be canonical node labels from the vocabulary**
+  (`ATEZO`, `NIVO+IPI`, `SOR-1Y`, `NOADJ`) — not the paper's prose. They are what the agent echoes back
+  into the sheet, so a prose default is a prose node. The agent still confirms/flips them against the
+  paper. On `nma`, treatment = T1 and control = T2 (the active comparator). A control that is an
+  **active regimen** (add-on design) takes that regimen's label, not `NOADJ`.
 - `files` are absolute paths; include supplements. Convert `.docx` first: `textutil -convert txt`.
 
 ## Passing jobs to the workflow
 `extract_outcomes.js` accepts either the bare jobs array or
-`{ jobs: [...], models: { a: 'opus', b: 'sonnet', senior: 'opus' } }` as the Workflow `args`. For a
+`{ vocabulary: '/abs/..._node_vocabulary.json', jobs: [...], models: { a: 'opus', b: 'sonnet',
+senior: 'opus' } }` as the Workflow `args` (the bare-array form stays supported and simply has no
+vocabulary, which the script warns about). For a
 large job list (or to make the run resumable), bake it into a copy of the script instead — replace
 `const cfg = ...` input with the JSON — and run that file via `scriptPath`. Save the workflow's
 returned `{papers:[...], run_metrics:{...}}` to `_work/extraction_results.json` (it's in the task
@@ -87,6 +113,10 @@ et, nt, ec, nc, flags[], provenance[{field, source, snippet}]
 N-control — *in every family, including `nma`*. `assemble.py` performs the NMA relabelling
 (events → `Ec T?`, N → `Et T?`) once, at write time. No agent ever holds two conventions.
 
+**`treatment_name`/`control_name` are canonical node labels** from the vocabulary, not prose. The script
+shape-checks every one it gets back and reports `non_canonical_labels` in `run_metrics`; membership in
+the vocabulary is checked authoritatively later by `qc.py --vocabulary`, which fails the run.
+
 The **senior** returns the same object plus `adjudications[]` (one entry per field where any of the
 three differ, with `value_a`, `value_b`, `senior_value`, `agreed_with` ∈ A/B/both/neither, `reason`),
 `unresolved[]` (`table`, `comparison`, `subgroup`, `field`, `why` — for a **human**, with the cell
@@ -100,14 +130,21 @@ left `NA`), and `confidence`. Assembly uses the senior's `results[]`.
   set the endpoint, HR as treatment-vs-control (invert + flag if reversed), landmark event-free
   rates, events/N per arm using the PWMA key meaning, medians (usually NA). On subgroup rows answer
   `extraction_possible` honestly and NA the row when it is `No`. Emit per-field provenance with
-  snippets; `NA` anything unreported; flag every judgment call. Also judge O/F."
+  snippets; `NA` anything unreported; flag every judgment call. Also judge O/F. **Read the node
+  vocabulary first and set `treatment_name`/`control_name` to canonical labels from it — never the
+  paper's wording; a label you cannot resolve is a FLAG, never a guess.**"
 - **Senior:** "STEP 1 — re-open and read EVERY source file IN FULL, from scratch, **before** looking
   at either draft; render and read KM curves and forest plots, many HRs/CIs exist only as images.
   STEP 2 — derive EVERY required value yourself, including ones both reviewers agreed on; agreement
   means a value was legible, not that it is correct. STEP 3 — only then compare against the two
   drafts and log an adjudication for every field where any of the three differ. Do NOT split the
   difference; anything you cannot prove from source goes to `unresolved[]` for a human with the value
-  left `NA`. Check events ≤ N in every row before returning."
+  left `NA`. Check events ≤ N in every row before returning. **Adjudicating the arm labels is part of
+  the job:** re-check every `treatment_name`/`control_name` against the vocabulary — exact canonical
+  string, `+` with no spaces, component order as the `combinations` list has it, the single pooled
+  comparator label unless the control is an active regimen, the right variant suffix. A reviewer's
+  prose wording is an error to correct, not a value to carry through; a label neither the vocabulary
+  nor its aliases resolve goes to `unresolved[]`."
 
 Use `effort: 'high'` for all three — these reads are dense (KM curves, forest plots, supplementary tables).
 

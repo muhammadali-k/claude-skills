@@ -78,6 +78,48 @@ tokens — that token spend is the point.** Two failure modes this catches:
 - If a trial has no clear control (e.g. two active strategies), use the comparison the paper frames as
   primary and flag the choice.
 
+## ⚠️ Node labels — a controlled vocabulary, never the paper's own wording ⚠️
+
+The `treatment_name` / `control_name` values are **node labels**, and `netmeta` joins arms by **string
+equality**. "Nivolumab + Ipilimumab" and "Nivolumab plus iplimumab" become two nodes: the network
+fragments, or keeps an edge that quietly vanished, or splits one regimen's evidence in half. Nothing in
+the sheet looks wrong — the failure only appears in the league table. Long labels are the secondary
+problem: a league table is an n×n grid of node names, and prose regimen names make it unreadable.
+
+The project supplies a `*_node_vocabulary.json`; read it before extracting. The rules:
+
+1. **Agent labels: UPPERCASE, 3–5 characters, no punctuation** — `SUN SOR PAZO AXI EVE PEM NIVO IPI
+   ATEZO BELZ GIREN DURVA TREME`.
+2. **Combinations join with a bare `+` and NO SPACES** — `NIVO+IPI`, never `NIVO + IPI`, `NIVO plus
+   IPI`, `Nivo+Ipi`. Whitespace is forbidden outright rather than normalised: a trailing or
+   non-breaking space pasted from a PDF is **visually identical** in a spreadsheet cell.
+3. **Component order comes from the vocabulary's `combinations` list**, not from a rule you apply.
+   "Backbone first" and "alphabetical" disagree; look the string up, don't derive it.
+4. **The pooled comparator is ONE label** (default `NOADJ`) whatever the trial used — placebo,
+   observation, surgery alone. What it actually was is recorded separately (`control_actual` in the
+   vocabulary's `arms` map), so a blinding/control-type sensitivity analysis can still separate them.
+   **Exception:** an add-on trial whose control is an **active regimen** gets that regimen's label, not
+   `NOADJ` — that is what chains the add-on onto the right node instead of dangling it off the
+   comparator.
+5. **Dose, duration and setting variants are hyphen-suffixed and are part of the node identity** —
+   `SOR-1Y SOR-3Y SOR-NEO PAZO-600 PAZO-800 NIVO-PERI`. Never reuse the base label for a variant; that
+   silently merges two nodes.
+
+**Emit the canonical label, never the trial's prose wording.** Where the paper's wording differs, use
+the vocabulary's `aliases` mapping to get the canonical string. **Where no alias exists, FLAG it — do
+not invent a label**, do not guess at a plausible abbreviation, and do not add it to the vocabulary
+yourself. An unresolvable arm name is a decision for the reviewer who owns the vocabulary; a guessed
+one is a phantom node.
+
+`scripts/qc.py --vocabulary <file>` resolves every label in the filled sheet and **fails the run** on
+any rejection; an alias hit passes but is reported as accepted-but-non-canonical. Full rationale and
+the vocabulary-file shape are in `node-vocabulary.md`.
+
+**What is *not* a node label:** the col-F (col-H on subgroup sheets) **"Treatment Arm" comparison
+label** — `Primary`, `3 year Sorafenib` — is a **row key** copied verbatim from the sheet. Leave it
+exactly as the sheet has it; re-writing it to a canonical label orphans the row. The vocabulary governs
+`treatment_name` / `control_name` (the Treatment/Control and Regimen T1/T2 data columns) only.
+
 ## Endpoint → table matching (match the name; flag the fallback)
 - **OS table** = overall survival (death from any cause).
 - **DFS table** = disease-free / invasive-DFS / progression-free survival (the recurrence + second
@@ -105,8 +147,11 @@ tokens — that token spend is the point.** Two failure modes this catches:
   both rows — another useful internal check.
 - **Median survival** — almost always `NA` (not reached in adjuvant trials). Fill only if explicitly
   reported.
-- **Arm names** — short labels as the paper names them (`"Tamoxifen plus ovarian function suppression"`,
-  `"Letrozole"`, `"Placebo"`). These columns are TEXT, so `+`, digits, and parentheses are fine.
+- **Arm names** — the **canonical node label from the project vocabulary** (`"NIVO+IPI"`, `"SOR-1Y"`,
+  `"NOADJ"`), not the paper's prose (`"Nivolumab plus ipilimumab"`, `"one year sorafenib"`,
+  `"Placebo"`). These columns are TEXT, so `+`, digits and hyphens are fine — but a space, a word
+  joiner or a different capitalisation creates a second node. See "Node labels" above; if the paper's
+  wording maps to no alias, flag it rather than inventing a label.
 
 ## O/F — Original vs Follow-up
 `of` = **O** if this publication is the trial's original / pivotal efficacy report (or the only report of

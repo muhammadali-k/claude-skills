@@ -54,3 +54,24 @@ Fill cells by **column letter / id** using the column→meaning map in `_work/fi
 ## Output
 Return the structured object the workflow expects (see `workflow.md`): identifiers, arm mapping, the list
 of filled cells each with `{col, value, source}`, and `flags`. Be exhaustive but never fabricate.
+
+## Node labels: canonical only, never the paper's own wording
+
+Arm names are a **controlled vocabulary**, not prose. Emit the canonical label from the project's
+`*_node_vocabulary.json` and nothing else.
+
+- UPPERCASE, 3–5 characters, no punctuation: `SUN SOR PAZO AXI EVE PEM NIVO IPI ATEZO BELZ GIREN`
+- Combinations join with a bare `+` and **no spaces**: `NIVO+IPI`
+- Component order comes from the vocabulary's `combinations` list; do not sort it yourself
+- The pooled comparator is one label (`NOADJ` by default) whatever the trial called it; record what it
+  actually was — placebo, observation, surgery alone — in the separate control-description field
+- An **active** control arm (add-on design) is NOT `NOADJ`; it takes that regimen's own label
+- Dose, duration and setting variants are hyphen-suffixed: `SOR-1Y`, `PAZO-600`, `NIVO-PERI`
+
+Where the paper's wording differs from the canonical label, use the vocabulary's `aliases` mapping.
+**Where no alias exists, FLAG it — do not invent a label.** An invented label is how a second node
+gets created, and the resulting network fault is invisible in the sheet. A flagged unknown costs one
+line in the handover; a silent invention costs a wrong league table.
+
+Full rationale in `references/node-vocabulary.md`.
+
