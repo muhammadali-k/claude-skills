@@ -2,16 +2,20 @@
 name: lisr-pdf-downloader
 description: >-
   Bulk-download full-text PDFs (and supplementary materials) for a list of LISR study IDs,
-  using LibKey + institutional (Mayo, library 964) access driven through Chrome. Use this
-  whenever the user has a spreadsheet or list of LISR study/reference IDs (e.g. a
-  "pending_studies" / reference list for a systematic review or living evidence project) and
-  wants the actual article PDFs pulled down and organized — phrasings like "download the full
-  texts for these studies", "get the PDFs for my reference list", "fetch the full text + supplements
-  for these LISR IDs", "pull these papers from the screening list", or pointing at the LISR
-  dashboard (app.lisr.org) and an Excel of IDs. Triggers even when the user doesn't say "LibKey"
-  or "skill" — the signal is a set of LISR numeric IDs plus a desire for downloaded full-text
-  files. Also handles resolving Embase/Ovid/PMID identifiers to DOIs, open-access fetching,
-  per-publisher quirks (Wiley, Atypon, Cloudflare walls), and producing a download-status sheet.
+  using LibKey + institutional (Mayo, library 964) access driven through a Chrome browser
+  session. Use this whenever the user has a spreadsheet or list of LISR study/reference IDs
+  (e.g. a "pending_studies" / reference list for a systematic review or living evidence
+  project) and wants the actual article PDFs pulled down and organized — phrasings like
+  "download the full texts for these studies", "get the PDFs for my reference list", "fetch
+  the full text + supplements for these LISR IDs", "pull these papers from the screening
+  list", or pointing at the LISR dashboard (app.lisr.org) and an Excel of IDs. The trigger
+  signal is a set of LISR numeric IDs plus a desire for downloaded full-text files — not the
+  word "LibKey" or "skill", and NOT the mere mention of Chrome/browser. Do NOT trigger just
+  because the user runs `/chrome`, connects/opens the Claude-in-Chrome extension, or asks to
+  browse/navigate generally with no LISR ID list and no full-text-download request in play —
+  those are plain browser actions, not this workflow. Also handles resolving Embase/Ovid/PMID
+  identifiers to DOIs, open-access fetching, per-publisher quirks (Wiley, Atypon, Cloudflare
+  walls), and producing a download-status sheet.
 ---
 
 # LISR full-text + supplement downloader
