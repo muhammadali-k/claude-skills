@@ -32,6 +32,7 @@ Personal collection of [Claude skills](https://code.claude.com/docs/en/skills) �
 
 | Skill | What it does |
 |---|---|
+| [`new-im-programs`](new-im-programs/) | Tracks **newly ACGME-accredited categorical Internal Medicine residency programs** from the authoritative ACGME ADS public data system (browser-assisted, robots-respectful) — classifies each as apply-now-first-class / apply-now-still-new / pre-accreditation watchlist by original accreditation date, diffs against the last run to flag what's new, and renders a sortable/filterable HTML tracker. The discovery front-end to `residency-program-finder`. Live-validated (64 programs on 2026-08-29). |
 | [`residency-program-finder`](residency-program-finder/) | Searches and verifies internal-medicine residency programs for IMG applicants — roster-confirmed affinity counts, visa/signal/tier tracking, Residency Explorer integration — and renders a verified program list as an Excel workbook and a self-contained interactive HTML apply list. |
 | [`eras-authors`](eras-authors/) | Reformats a pasted publication author list into ERAS's `Lastname` + initials, comma-separated format (e.g. `Cameron Blake Smith` → `Smith CB`), and flags Muhammad Ali Khan's own entry as `Khan MA` so it can be selected and bolded with ERAS's "B" button after pasting. |
 
