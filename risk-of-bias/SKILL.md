@@ -73,7 +73,10 @@ Domain triggers that DO justify going above Low (RoB 2):
 - **D1** — no/opaque randomization or allocation concealment, or baseline imbalances that
   suggest a randomization problem.
 - **D2** — substantial non-protocol deviations that affected the outcome, or a non-ITT
-  (as-treated/per-protocol) analysis used for the effect of *assignment*.
+  (as-treated/per-protocol) analysis used for the effect of *assignment*. An **open-label
+  trial is not itself a D2 concern** for the effect of assignment: with awareness of
+  assignment (2.1/2.2 = Yes) but no deviations arising from the trial context (2.3 = No)
+  and an appropriate ITT analysis (2.6 = Yes), D2 is **Low**.
 - **D3** — meaningful outcome data missing **and** missingness plausibly depends on the true
   outcome. Near-complete follow-up for OS/DFS/RFS ⇒ Low.
 - **D4** — the outcome is **subjective and assessed by unblinded assessors** in a way that

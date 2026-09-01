@@ -203,15 +203,29 @@ def rob2_d1(answers):
 
 
 def rob2_d2_assignment_part1(g):
-    """Part 1 (SQ 2.1-2.5): bias from deviations arising because of trial context."""
-    if rob_no(g("2.1")) and rob_no(g("2.2")):                  # both N/PN
+    """Part 1 (SQ 2.1-2.5): bias from deviations arising because of trial context.
+
+    Official RoB 2 (effect of *assignment*): awareness of assignment (2.1/2.2) matters
+    only insofar as it led to deviations that arose because of the trial context (2.3).
+    An open-label trial with NO such deviations is Low on this part — being unblinded is
+    not itself a source of assignment-effect bias. Path:
+      both 2.1,2.2 N/PN                      -> low
+      2.3 N/PN  (aware, but no trial-context deviations)  -> low
+      2.3 NI    (unknown whether deviations occurred)     -> some concerns
+      2.3 Y/PY  -> 2.4 N/PN (did not affect outcome)      -> low
+                  2.4 Y/PY/NI -> 2.5 Y/PY (balanced)      -> some concerns
+                              -> 2.5 N/PN/NI (not/unknown)-> high
+    """
+    if rob_no(g("2.1")) and rob_no(g("2.2")):                  # not aware of assignment
         return "low"
     q23 = g("2.3")
-    if rob_no(q23) or rob_ni(q23):                            # 2.3 N/PN/NI
+    if rob_no(q23):                                       # aware, but no trial-context deviations
+        return "low"
+    if rob_ni(q23):                                       # unknown whether deviations occurred
         return "some concerns"
-    if rob_no(g("2.4")):                                   # 2.3 Y/PY, 2.4 N/PN
-        return "some concerns"
-    if rob_yes(g("2.5")):                                   # 2.4 Y/PY/NI, 2.5 Y/PY
+    if rob_no(g("2.4")):                                   # 2.3 Y/PY, deviations did not affect outcome
+        return "low"
+    if rob_yes(g("2.5")):                                   # 2.4 Y/PY/NI, deviations balanced between groups
         return "some concerns"
     return "high"                                      # 2.5 N/PN/NI
 
