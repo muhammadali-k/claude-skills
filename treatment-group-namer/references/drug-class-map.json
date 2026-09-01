@@ -1,0 +1,24 @@
+{
+  "_comment": "Single source of truth for treatment-group naming. Each key under 'classes' is the EXACT label to emit for the treatment group (casing and acronym-vs-spelled-out are deliberate: 'SERM' stays an acronym, the others are spelled out). Its value is the list of individual drug names that map to that label, lowercased for matching. 'passthrough' tokens are emitted verbatim (canonical casing preserved) because they do not resolve to a more specific named agent. To extend the skill, add a drug to an existing class, add a new class, or add a passthrough token here — nothing else needs to change.",
+
+  "classes": {
+    "SERM": ["tamoxifen", "toremifene", "raloxifene"],
+    "Aromatase Inhibitor": ["anastrozole", "letrozole", "exemestane"],
+    "Estrogen Receptor Degrader": ["fulvestrant", "elacestrant"],
+    "CDK4/6 Inhibitor": ["palbociclib", "ribociclib", "abemaciclib"],
+    "Ovarian Function Suppression": ["goserelin", "leuprolide", "triptorelin"],
+    "mTOR Inhibitor": ["everolimus"],
+    "PI3K Inhibitor": ["alpelisib", "inavolisib"],
+    "AKT Inhibitor": ["capivasertib"],
+    "PARP Inhibitor": ["olaparib", "talazoparib"]
+  },
+
+  "passthrough": [
+    "Ovarian Function Suppression",
+    "No Systemic Treatment",
+    "Placebo",
+    "Best Supportive Care",
+    "Observation",
+    "Anthracycline/Cyclophosphamide followed by Taxane"
+  ]
+}
