@@ -1,0 +1,453 @@
+{
+  "tool": "ROBINS-I",
+  "full_name": "Risk Of Bias In Non-randomised Studies - of Interventions",
+  "applies_to": "Non-randomised studies of the effects of interventions (cohort, case-control, quasi-randomized, etc.)",
+  "source": "Sterne JAC, Hernan MA, Reeves BC, et al. ROBINS-I: a tool for assessing risk of bias in non-randomised studies of interventions. BMJ 2016;355:i4919. Tool reproduced from riskofbias.info.",
+  "judgements": [
+    "low",
+    "moderate",
+    "serious",
+    "critical",
+    "no information"
+  ],
+  "response_options": {
+    "Y": "Yes",
+    "PY": "Probably yes",
+    "PN": "Probably no",
+    "N": "No",
+    "NI": "No information",
+    "NA": "Not applicable"
+  },
+  "assessed_per": "result (outcome), for a specified target trial and effect of interest",
+  "domain_order": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7"
+  ],
+  "domains": {
+    "D1": {
+      "name": "Bias due to confounding",
+      "phase": "pre-intervention",
+      "signalling_questions": {
+        "1.1": {
+          "text": "Is there potential for confounding of the effect of intervention in this study?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N"
+          ]
+        },
+        "1.2": {
+          "text": "If N/PN to 1.1: [proceed to domain judgement, low risk]. Was the analysis based on splitting participants' follow-up time according to intervention received?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N"
+          ]
+        },
+        "1.3": {
+          "text": "If Y/PY to 1.2: Were intervention discontinuations or switches likely to be related to factors that are prognostic for the outcome?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "1.4": {
+          "text": "Did the authors use an appropriate analysis method that controlled for all the important confounding domains?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "1.5": {
+          "text": "If Y/PY to 1.4: Were confounding domains that were controlled for measured validly and reliably by the variables available in this study?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "1.6": {
+          "text": "Did the authors control for any post-intervention variables that could have been affected by the intervention?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "1.7": {
+          "text": "If Y/PY to 1.2: Did the authors use an appropriate analysis method that controlled for all the important confounding domains and for time-varying confounding?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "1.8": {
+          "text": "If Y/PY to 1.7: Were the confounding domains that were controlled for measured validly and reliably by the variables available in this study?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    },
+    "D2": {
+      "name": "Bias in selection of participants into the study",
+      "phase": "pre-intervention",
+      "signalling_questions": {
+        "2.1": {
+          "text": "Was selection of participants into the study (or into the analysis) based on participant characteristics observed after the start of intervention?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "2.2": {
+          "text": "If Y/PY to 2.1: Were the post-intervention variables that influenced selection likely to be associated with intervention?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "2.3": {
+          "text": "If Y/PY to 2.2: Were the post-intervention variables that influenced selection likely to be influenced by the outcome or a cause of the outcome?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "2.4": {
+          "text": "Do start of follow-up and start of intervention coincide for most participants?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "2.5": {
+          "text": "If Y/PY to 2.2 and 2.3, or N/PN to 2.4: Were adjustment techniques used that are likely to correct for the presence of selection biases?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    },
+    "D3": {
+      "name": "Bias in classification of interventions",
+      "phase": "at-intervention",
+      "signalling_questions": {
+        "3.1": {
+          "text": "Were intervention groups clearly defined?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "3.2": {
+          "text": "Was the information used to define intervention groups recorded at the start of the intervention?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "3.3": {
+          "text": "Could classification of intervention status have been affected by knowledge of the outcome or risk of the outcome?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    },
+    "D4": {
+      "name": "Bias due to deviations from intended interventions",
+      "phase": "post-intervention",
+      "signalling_questions": {
+        "4.1": {
+          "text": "Were there deviations from the intended intervention beyond what would be expected in usual practice?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "4.2": {
+          "text": "If Y/PY to 4.1: Were these deviations from intended intervention unbalanced between groups and likely to have affected the outcome?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "4.3": {
+          "text": "[Effect of adhering] Were important co-interventions balanced across intervention groups?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "4.4": {
+          "text": "[Effect of adhering] Was the intervention implemented successfully for most participants?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "4.5": {
+          "text": "[Effect of adhering] Did study participants adhere to the assigned intervention regimen?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "4.6": {
+          "text": "If N/PN to 4.3, 4.4 or 4.5: Was an appropriate analysis used to estimate the effect of adhering to the intervention?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    },
+    "D5": {
+      "name": "Bias due to missing data",
+      "phase": "post-intervention",
+      "signalling_questions": {
+        "5.1": {
+          "text": "Were outcome data available for all, or nearly all, participants?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "5.2": {
+          "text": "Were participants excluded due to missing data on intervention status?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "5.3": {
+          "text": "Were participants excluded due to missing data on other variables needed for the analysis?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "5.4": {
+          "text": "If PN/N to 5.1, or Y/PY to 5.2 or 5.3: Are the proportion of participants and reasons for missing data similar across interventions?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "5.5": {
+          "text": "If PN/N to 5.1, or Y/PY to 5.2 or 5.3: Is there evidence that results were robust to the presence of missing data?",
+          "responses": [
+            "NA",
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    },
+    "D6": {
+      "name": "Bias in measurement of outcomes",
+      "phase": "post-intervention",
+      "signalling_questions": {
+        "6.1": {
+          "text": "Could the outcome measure have been influenced by knowledge of the intervention received?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "6.2": {
+          "text": "Were outcome assessors aware of the intervention received by study participants?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "6.3": {
+          "text": "Were the methods of outcome assessment comparable across intervention groups?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "6.4": {
+          "text": "Were any systematic errors in measurement of the outcome related to intervention received?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    },
+    "D7": {
+      "name": "Bias in selection of the reported result",
+      "phase": "post-intervention",
+      "signalling_questions": {
+        "7.1": {
+          "text": "Is the reported effect estimate likely to be selected, on the basis of the results, from multiple outcome measurements within the outcome domain?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "7.2": {
+          "text": "Is the reported effect estimate likely to be selected, on the basis of the results, from multiple analyses of the intervention-outcome relationship?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        },
+        "7.3": {
+          "text": "Is the reported effect estimate likely to be selected, on the basis of the results, from different subgroups?",
+          "responses": [
+            "Y",
+            "PY",
+            "PN",
+            "N",
+            "NI"
+          ]
+        }
+      }
+    }
+  },
+  "domain_short": {
+    "D1": "Confounding",
+    "D2": "Selection of participants",
+    "D3": "Classification of interventions",
+    "D4": "Deviations from intended interventions",
+    "D5": "Missing data",
+    "D6": "Measurement of outcomes",
+    "D7": "Selection of the reported result"
+  },
+  "overall_rule": {
+    "order": [
+      "critical",
+      "serious",
+      "no information",
+      "moderate",
+      "low"
+    ],
+    "low": "Low risk of bias for all domains.",
+    "moderate": "Low or moderate risk of bias for all domains (at least one moderate; none serious/critical).",
+    "serious": "Serious risk of bias in at least one domain, but not critical in any domain.",
+    "critical": "Critical risk of bias in at least one domain.",
+    "no information": "No clear indication of serious/critical risk of bias, but a lack of information in one or more key domains (a judgement is required)."
+  }
+}
