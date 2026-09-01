@@ -53,6 +53,40 @@ Assess each outcome (or outcome class) you will use in the synthesis. For RoB 2 
 the **effect of interest**: `assignment` (intention-to-treat) or `adhering` (per-protocol)
 — this selects the D2 variant.
 
+## Calibration — default to the algorithm; downgrade only on strong, domain-specific evidence
+
+Two rules, held together:
+
+1. **Answer each signalling question faithfully from the text and let the crib-sheet
+   algorithm (`kernel.py`) decide the domain and overall judgement.** You do **not** need a
+   strong reason to record a *low-risk* answer — a clean, unremarkable description is enough
+   (this matches the original crib sheet and the completed examples). Do not invent concerns.
+
+2. You **do** need a strong, domain-specific, defensible reason before answering a signalling
+   question in the direction that pushes a domain above Low. **Most well-conducted trials are
+   low risk of bias.** Do not raise "Some concerns"/"High" out of generic caution: open-label
+   design, industry funding, a subgroup/secondary publication, or an abstract-only source are
+   **not**, by themselves, reasons to downgrade. Downgrade only when a specific domain
+   mechanism is actually present and evidenced.
+
+Domain triggers that DO justify going above Low (RoB 2):
+- **D1** — no/opaque randomization or allocation concealment, or baseline imbalances that
+  suggest a randomization problem.
+- **D2** — substantial non-protocol deviations that affected the outcome, or a non-ITT
+  (as-treated/per-protocol) analysis used for the effect of *assignment*.
+- **D3** — meaningful outcome data missing **and** missingness plausibly depends on the true
+  outcome. Near-complete follow-up for OS/DFS/RFS ⇒ Low.
+- **D4** — the outcome is **subjective and assessed by unblinded assessors** in a way that
+  could differ by arm. Objective outcomes — death (OS), and DFS/RFS/PFS by blinded independent
+  central review or a documented protocol definition — stay Low even in open-label trials.
+  Grade 3+/grade 5 treatment-related AEs are treated as objective here.
+- **D5** — the reported result was selected from multiple measurements/analyses, or the
+  analysis was not pre-specified. A *pre-specified* subgroup is not a D5 problem.
+
+**Anchor:** well-conducted phase-3 adjuvant/perioperative RCTs reporting OS/DFS/RFS and grade
+3+/5 TRAEs are Low risk on every domain (see the completed reviewer examples). Reproduce that
+baseline unless a domain trigger above is genuinely met.
+
 ## Workflow
 
 ### 1. Ingest the publication(s)
@@ -123,6 +157,48 @@ with `save_artifacts` and embed them for the user.
 Recommended machine-readable outputs (matching a typical review's convention):
 `*_traffic_light.csv` (trial, D1…, OVERALL), a per-domain table (trial, domain,
 judgement, rule_suggested, rationale, evidence), and a full JSON of the `assess_*` dicts.
+
+## Project mode: filling reviewer templates (e.g. Living Perioperative RCC)
+
+When the deliverable is a pre-built reviewer workbook (`rob_reviewer_1.xlsx` /
+`rob_reviewer_2.xlsx`) rather than free-form output, fill it with `template_io.py` and
+**never restructure it**. The layout is one worksheet per outcome (`outcome_id`) and one
+pre-seeded row per study (`paper_id`); form_data + RoB 2 signalling columns
+`d1q1…d5q3` (each followed by a `description` column), per-domain `direction_of_bias` +
+`assessor_judgement`, and overall `assessor_judgement` + `overall_description`.
+
+Hard constraints (the host system re-imports these files by their embedded IDs):
+- **Do not add or rename worksheets, columns, or header rows, and do not create new studies.**
+  A new sheet/column/row has no IDs and will fail re-upload. Write only into existing data
+  rows of existing sheets.
+- Preserve the data-validation dropdowns (openpyxl load→save preserves them; `template_io`
+  relies on this — verify the validation count is unchanged after writing).
+- Assess only the outcomes that are **resolved** for a study (per the project's study→outcome
+  matrix); leave every other seeded row untouched.
+- **Vocabulary must match the dropdowns** — answers `Yes` / `Probably Yes` / `Probably No` /
+  `No` / `No Information`, and `NA` for questions the flowchart does not reach; judgements
+  `Low risk` / `Some concerns` / `High risk`; direction `Favours experimental` /
+  `Favours comparator` / `No direction`.
+- **Match the completed examples:** fill the signalling answers, the five per-domain
+  `assessor_judgement` cells and the overall `assessor_judgement`; leave every `description`
+  cell and `direction_of_bias` blank unless the user asks otherwise.
+- RoB 2 answers are **trial-level**: within one trial they apply to all of its resolved
+  outcomes (survival + TRAE are objective). Assess each trial once, then replicate across its
+  resolved-outcome rows and across the trial's other publications (paper_ids).
+
+**Dual-reviewer + adjudicator** (the standard way to run this): two reviewers assess each
+trial **independently** from full text + supplements — one fills `rob_reviewer_1.xlsx`, the
+other `rob_reviewer_2.xlsx`; a third **adjudicator** reconciles any per-domain disagreement,
+writes the reconciled judgement to both files, and reports the disagreements. Any
+intermediate/consensus workbook is a per-run convenience — delete it afterwards if only the
+two reviewer files are wanted. **Do not** make sheet/file deletion a skill default.
+
+`template_io.py` API (loaded alongside `kernel.py`):
+- `write_study(xlsx_path, paper_id, {sheet_name: assess_rob2_result, …}, comparator=, experimental=, effect='assignment', out_path=None)` — fill one study's resolved-outcome rows in one workbook, in place, preserving everything else. `sheet`→result may instead be a dict `{'result':…, 'comparator':…, 'experimental':…, 'effect':…, 'overall_description':…}` to override per sheet.
+- `write_assessment_ws(ws, paper_id, result, …)` — write one result into one open worksheet (`create_row_if_missing=False` by default, so it never fabricates rows).
+- `assessment_to_template_values(result, comparator=, experimental=, effect=)` — canonical → template-vocabulary renderer.
+- `build_column_map(ws)` — rebuilds the column map from the header block (robust to shifts).
+- `read_row(ws, paper_id)` / `list_seeded_studies(xlsx_path, sheet='OS')` — read a filled row back to canonical form / enumerate seeded studies.
 
 ## `kernel.py` API
 
