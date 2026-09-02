@@ -1,0 +1,7329 @@
+{
+"source": "Tiered_IMG_IM_national_Khan_FINAL.xlsx (2026-07-19 national sweep)",
+"programs": [
+{
+"program": "Trinity Health Livonia Hospital / Wayne State University Program",
+"city": "Livonia",
+"state": "MI",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community (Trinity Health Livonia is a 304-bed community hospital academically affiliated with Wayne State University and Michigan State ...",
+"priority_rank": 1,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "LSU Health Shreveport (Louisiana State University Shreveport) Internal Medicine Residency",
+"city": "Shreveport",
+"state": "LA",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 59.4,
+"type": "university",
+"priority_rank": 2,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "United Health Services (UHS) Hospitals — Wilson/Binghamton Internal Medicine Residency",
+"city": "Johnson City",
+"state": "NY",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 90.9,
+"type": "community (non-university-affiliated teaching hospital system)",
+"priority_rank": 3,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Montefiore St. Luke's Cornwall Program (ACGME 1403500001)",
+"city": "Newburgh",
+"state": "NY",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 96.8,
+"type": "community (Montefiore-affiliated community teaching hospital in Newburgh, NY; not university-based)",
+"priority_rank": 4,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Capital Health Regional Medical Center",
+"city": "Trenton",
+"state": "NJ",
+"tier": "1",
+"visa": "unstated",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 5,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NYC Health + Hospitals / Metropolitan — New York Medical College (Manhattan)",
+"city": "New York (East Harlem), NY",
+"state": "NY",
+"tier": "1",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 95.2,
+"type": "university-affiliated (NYC municipal/public hospital, NYMC academic affiliation)",
+"priority_rank": 7,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Cleveland Clinic Foundation",
+"city": "Cleveland",
+"state": "OH",
+"tier": "1",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 89.5,
+"type": "university-affiliated",
+"priority_rank": 8,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Cleveland Clinic Foundation / Fairview Hospital",
+"city": "Cleveland",
+"state": "OH",
+"tier": "1",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 89.5,
+"type": "community/system-affiliated academic medical center (Fairview Hospital is a Cleveland Clinic Health System community hospital site; resid...",
+"priority_rank": 9,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "White River Health System Internal Medicine Residency",
+"city": "Batesville",
+"state": "AR",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 93.3,
+"type": "community (UAMS-affiliated; partners with the University of Arkansas for Medical Sciences College of Medicine)",
+"priority_rank": 12,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Cleveland Clinic Foundation / Akron General Program (IM)",
+"city": "Akron",
+"state": "OH",
+"tier": "1",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 66.7,
+"type": "university-affiliated",
+"priority_rank": 15,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Tower Health Program (Reading Hospital)",
+"city": "West Reading",
+"state": "PA",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 48.9,
+"type": "community",
+"priority_rank": 16,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Tower Health / Phoenixville Hospital Internal Medicine Residency",
+"city": "Phoenixville",
+"state": "PA",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community (community-based residency academically affiliated with Drexel University College of Medicine)",
+"priority_rank": 20,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Chicago Medical School / Rosalind Franklin University (Internal Medicine, FHCC North Chicago / Capt. James A. Lovell Federal Health Care Center)",
+"city": "North Chicago",
+"state": "IL",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 71.4,
+"type": "university",
+"priority_rank": 28,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "WVU SOM/Camden Clark Medical Center Internal Medicine Residency",
+"city": "Parkersburg",
+"state": "WV",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 72.2,
+"type": "community",
+"priority_rank": 31,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Health Education Services/Northwest Healthcare (Tucson) Program - Internal Medicine",
+"city": "Tucson",
+"state": "AZ",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 62.2,
+"type": "community",
+"priority_rank": 51,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Health Education Services / North Knoxville Medical Center IM Residency (Tennova Health)",
+"city": "Powell (Knoxville)",
+"state": "TN",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 92,
+"type": "community",
+"priority_rank": 68,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "New York Medical College/Landmark Medical Center Program (Prime Healthcare) - Internal Medicine",
+"city": "Woonsocket",
+"state": "RI",
+"tier": "1",
+"visa": "J-1",
+"non_us_img_pct": 76,
+"type": "community",
+"priority_rank": 244,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Rochester General Hospital (Rochester Regional Health)",
+"city": "Rochester",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 97.4,
+"type": "community",
+"priority_rank": 6,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Maimonides Medical Center (Brooklyn)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 85.9,
+"type": "community teaching hospital (independent academic medical center, major Brooklyn safety-net/teaching site)",
+"priority_rank": 10,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UPMC Medical Education / Mercy",
+"city": "Pittsburgh",
+"state": "PA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 82.5,
+"type": "university-affiliated",
+"priority_rank": 11,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NYC Health + Hospitals / Lincoln Medical Center (Bronx)",
+"city": "Bronx",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 98.4,
+"type": "community (NYC Health + Hospitals municipal hospital; academically affiliated with New York Medical College)",
+"priority_rank": 13,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "MedStar Health Georgetown University/Washington Hospital Center Program - Internal Medicine Residency",
+"city": "Washington",
+"state": "DC",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "university-affiliated",
+"priority_rank": 14,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Bassett Medical Center (Cooperstown)",
+"city": "Cooperstown",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 92.3,
+"type": "community (Columbia University College of Physicians and Surgeons-affiliated teaching hospital)",
+"priority_rank": 17,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Harlem Hospital Center Program (NYC H+H/Harlem, Columbia-affil.)",
+"city": "New York",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 100,
+"type": "university-affiliated",
+"priority_rank": 18,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Mobile Infirmary Medical Center Internal Medicine Residency",
+"city": "Mobile",
+"state": "AL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 84.4,
+"type": "community",
+"priority_rank": 19,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Jacobi Medical Center/Albert Einstein College of Medicine Program",
+"city": "Bronx",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 92.9,
+"type": "university-affiliated (NYC Health + Hospitals public safety-net hospital affiliated with Albert Einstein College of Medicine)",
+"priority_rank": 21,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University at Buffalo — Catholic Health System / Sisters of Charity",
+"city": "Buffalo",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 89.5,
+"type": "community",
+"priority_rank": 22,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Guthrie / Robert Packer Hospital Internal Medicine Residency Program",
+"city": "Sayre",
+"state": "PA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 23,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Corewell Health East — Dearborn",
+"city": "Dearborn",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 97,
+"type": "university-affiliated",
+"priority_rank": 24,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Baptist Hospitals of Southeast Texas (Internal Medicine)",
+"city": "Beaumont",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 87.2,
+"type": "community",
+"priority_rank": 25,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Rochester Regional Health / Unity Hospital",
+"city": "Rochester",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 98,
+"type": "community",
+"priority_rank": 26,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Nazareth Hospital Program (Trinity Health Mid-Atlantic)",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 27,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Rutgers Health / Monmouth Medical Center (RWJBarnabas)",
+"city": "Long Branch",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "university-affiliated",
+"priority_rank": 29,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai / NYC H+H Elmhurst (Queens)",
+"city": "Elmhurst",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 91.9,
+"type": "community (NYC H+H public hospital) with university (Icahn School of Medicine at Mount Sinai) academic affiliation",
+"priority_rank": 30,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Albany Medical Center",
+"city": "Albany",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 60.7,
+"type": "university",
+"priority_rank": 32,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Texas Tech University Permian Basin - Internal Medicine Residency",
+"city": "Odessa",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "university",
+"priority_rank": 33,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Saint Agnes Medical Center Internal Medicine Residency",
+"city": "Fresno",
+"state": "CA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 94.4,
+"type": "community-affiliated",
+"priority_rank": 34,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Henry Ford Health / Henry Ford Jackson Hospital",
+"city": "Jackson",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 87.5,
+"type": "community",
+"priority_rank": 35,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Nuvance Health Consortium (Vassar Brothers Medical Center) Program - Internal Medicine",
+"city": "Poughkeepsie",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 93.2,
+"type": "university-affiliated",
+"priority_rank": 36,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Texas Tech University Amarillo (IM)",
+"city": "Amarillo",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 94.9,
+"type": "university-affiliated",
+"priority_rank": 37,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Saint Mary's Hospital Program (Trinity Health Of New England)",
+"city": "Waterbury",
+"state": "CT",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 38,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "UPMC Medical Education (Harrisburg) Program - UPMC Central PA allopathic Internal Medicine",
+"city": "Harrisburg",
+"state": "PA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 39,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Henry Ford Health / Henry Ford Macomb Hospital",
+"city": "Clinton Township",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 86.8,
+"type": "community",
+"priority_rank": 40,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Rutgers Health / Trinitas Regional Medical Center (RWJBarnabas)",
+"city": "Elizabeth",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 41,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Nevada, Reno (UNR) School of Medicine",
+"city": "Reno",
+"state": "NV",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 60.6,
+"type": "university-affiliated",
+"priority_rank": 42,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Allegheny Health Network Medical Education Consortium (AGH)",
+"city": "Pittsburgh",
+"state": "PA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 56.1,
+"type": "community (AHN Medical Education Consortium; community/academic-community hospital-based system, not a university-owned program)",
+"priority_rank": 43,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "UConn-Waterbury Internal Medicine Residency Program (Waterbury Hospital; formerly Yale-Waterbury IM; sponsorship transferred from Yale to UConn School of Medicine effective Sept 1, 2025)",
+"city": "Waterbury",
+"state": "CT",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 96.8,
+"type": "university-affiliated (UConn School of Medicine-sponsored categorical/preliminary IM program based at a community hospital, Waterbury Hos...",
+"priority_rank": 44,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Canton Medical Education Foundation (CMEF) / NEOMED",
+"city": "Canton",
+"state": "OH",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 84.8,
+"type": "community (university-affiliated via NEOMED)",
+"priority_rank": 45,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Parkview Health Internal Medicine Residency",
+"city": "Fort Wayne",
+"state": "IN",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 64.6,
+"type": "community",
+"priority_rank": 46,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Trinity Health System",
+"city": "Steubenville",
+"state": "OH",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 73.7,
+"type": "community (Trinity Health System is described by aggregators as 'community-based, university-affiliated'; young program, first class matr...",
+"priority_rank": 47,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Corewell Health William Beaumont University Hospital (Royal Oak)",
+"city": "Royal Oak",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 55.4,
+"type": "university-affiliated",
+"priority_rank": 48,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Health Education Services / Crestwood Medical Center Internal Medicine Residency",
+"city": "Huntsville",
+"state": "AL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 82.9,
+"type": "community",
+"priority_rank": 49,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Hackensack Meridian Health / Jersey Shore University Medical Center",
+"city": "Neptune",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 59.1,
+"type": "university-affiliated (community teaching hospital affiliated with Hackensack Meridian School of Medicine)",
+"priority_rank": 50,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Memorial Healthcare System Internal Medicine Residency",
+"city": "Hollywood",
+"state": "FL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 56.8,
+"type": "community-based, university-affiliated",
+"priority_rank": 52,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Texas Health Resources HEB (Bedford/Denton) Internal Medicine Residency",
+"city": "Bedford (Hurst-Euless-Bedford), TX; rotations at Texas Health Presbyterian Hospital Denton",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 59.3,
+"type": "community (university-affiliated academically via Anne Burnett Marion School of Medicine at TCU, but non-university sponsoring institution)",
+"priority_rank": 53,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Marshall Community Health Consortium Rural Internal Medicine Residency (Marshall/Holzer)",
+"city": "Huntington (PGY1) / Gallipolis, OH (PGY2-3, Holzer Health System)",
+"state": "WV",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "university-affiliated (Marshall University JCESOM) / community rural track (Holzer Health System)",
+"priority_rank": 54,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Rutgers Health / Newark Beth Israel Medical Center (RWJBarnabas)",
+"city": "Newark",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 75,
+"type": "community-hospital with university (Rutgers) affiliation/sponsorship",
+"priority_rank": 55,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UMKC School of Medicine Internal Medicine Residency (University Health Truman Medical Center + Saint Luke's Hospital)",
+"city": "Kansas City",
+"state": "MO",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 83.1,
+"type": "university-affiliated",
+"priority_rank": 56,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "WellSpan Health / York Hospital",
+"city": "York",
+"state": "PA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 65.7,
+"type": "community",
+"priority_rank": 57,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Rutgers Health / Community Medical Center Program (RWJBarnabas)",
+"city": "Toms River",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 85.7,
+"type": "community (Rutgers institutional sponsorship; described on-site as community-affiliated, 592-bed acute care hospital)",
+"priority_rank": 58,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Connecticut (UConn Health)",
+"city": "Farmington",
+"state": "CT",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 54.1,
+"type": "university",
+"priority_rank": 59,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mass General Brigham/Salem Hospital Program",
+"city": "Salem",
+"state": "MA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 96.4,
+"type": "community",
+"priority_rank": 60,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Texas Tech University HSC Lubbock (IM)",
+"city": "Lubbock",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 79.5,
+"type": "university",
+"priority_rank": 61,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Toledo",
+"city": "Toledo",
+"state": "OH",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 52.6,
+"type": "university",
+"priority_rank": 62,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "TMC Health Medical Education Program, Inc. (THMEP) - Tucson Medical Center",
+"city": "Tucson",
+"state": "AZ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 66.7,
+"type": "community (UA-affiliated; partnership with University of Arizona since 1963)",
+"priority_rank": 63,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Roger Williams Medical Center Program (BU affiliation; CharterCare)",
+"city": "Providence",
+"state": "RI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 72.3,
+"type": "university-affiliated",
+"priority_rank": 64,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Riverside Regional Medical Center Internal Medicine Residency (UVA Health affiliate)",
+"city": "Newport News",
+"state": "VA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 51.5,
+"type": "community (UVA Health-affiliated community hospital program; new program launched 2024)",
+"priority_rank": 65,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Quinnipiac University Frank H. Netter MD School of Medicine / St. Vincent's Medical Center Program (Hartford HealthCare, ex-Ascension/ex-Quinnipiac-affiliated, formerly casually referenced as Quinnipiac-St Vincent's)",
+"city": "Bridgeport",
+"state": "CT",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 88.9,
+"type": "university-affiliated (community hospital affiliated with Quinnipiac University Frank H. Netter MD School of Medicine)",
+"priority_rank": 66,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hackensack Meridian Health / Englewood Hospital (Englewood Health) Internal Medicine Residency",
+"city": "Englewood",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 84.6,
+"type": "community (teaching hospital of Hackensack Meridian Health, affiliated with Hackensack Meridian School of Medicine)",
+"priority_rank": 67,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prime West Consortium/Centinela Hospital Medical Center Program - Internal Medicine",
+"city": "Inglewood",
+"state": "CA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 97.2,
+"type": "community (Prime Healthcare community hospital), academically affiliated with California University of Science and Medicine (CUSM)",
+"priority_rank": 69,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Detroit Medical Center / Wayne State University — Sinai-Grace",
+"city": "Detroit",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 87.5,
+"type": "community/university (FREIDA lists setting as \"Community/University\")",
+"priority_rank": 70,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Chicago Medical School/Rosalind Franklin University/Northwestern Medicine McHenry Hospital - Internal Medicine Residency",
+"city": "McHenry",
+"state": "IL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 94.9,
+"type": "university-affiliated",
+"priority_rank": 71,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Lahey Hospital & Medical Center Program (Beth Israel Lahey Health) - Internal Medicine Residency",
+"city": "Burlington",
+"state": "MA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 78.9,
+"type": "community-based academic (Beth Israel Lahey Health system; university-affiliated, non-university-owned)",
+"priority_rank": 72,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Zucker School of Medicine at Hofstra/Northwell at Danbury Hospital (Nuvance Health Consortium) - Internal Medicine Residency",
+"city": "Danbury",
+"state": "CT",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 94.3,
+"type": "community (Zucker School of Medicine at Hofstra/Northwell academic affiliation; Nuvance Health Consortium)",
+"priority_rank": 73,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Griffin Hospital Program",
+"city": "Derby",
+"state": "CT",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 75,
+"type": "community-affiliated (residencymatch.ai lists it as \"Community-based university affiliated\")",
+"priority_rank": 76,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Wellstar Health System Spalding Program (Internal Medicine Residency)",
+"city": "Griffin",
+"state": "GA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community (new program, launched 2022; core faculty hold Assistant Clinical Professor appointments at Medical College of Georgia/Augusta ...",
+"priority_rank": 77,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "East Carolina / Brody SOM (ECU Health Medical Center/East Carolina University Program, IM)",
+"city": "Greenville",
+"state": "NC",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 58.7,
+"type": "university",
+"priority_rank": 78,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "San Juan Regional Medical Center",
+"city": "Farmington",
+"state": "NM",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 79,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "TriHealth (Good Samaritan Hospital) - Internal Medicine Residency",
+"city": "Cincinnati",
+"state": "OH",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 83.9,
+"type": "community (UC-affiliated per prior discovery lead; TriHealth/Good Samaritan Hospital is a community teaching hospital, not a university-o...",
+"priority_rank": 80,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "NYC H+H North Central Bronx (Jacobi Medical Center/North Central Bronx Hospital Program), ACGME 1403500002",
+"city": "Bronx",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 80,
+"type": "community (university-affiliated with Albert Einstein College of Medicine)",
+"priority_rank": 82,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "TTUHSC El Paso / Hospitals of Providence Transmountain Campus - Internal Medicine Residency",
+"city": "El Paso",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 65,
+"type": "university-affiliated (TTUHSC Paul L. Foster School of Medicine academic program based at a community hospital partner, The Hospitals of ...",
+"priority_rank": 83,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Oklahoma HSC (OU College of Medicine) Internal Medicine Residency",
+"city": "Oklahoma City",
+"state": "OK",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 39,
+"type": "university",
+"priority_rank": 85,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hamilton Medical Center Program",
+"city": "Dalton",
+"state": "GA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 86,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Nuvance Health Consortium (Norwalk Hospital/Yale University) Program",
+"city": "Norwalk",
+"state": "CT",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 85,
+"type": "university-affiliated (academically affiliated with Yale School of Medicine; also noted elsewhere as affiliated with Zucker School of Med...",
+"priority_rank": 88,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of South Alabama (USA Health) Internal Medicine Residency",
+"city": "Mobile",
+"state": "AL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 28.9,
+"type": "university-affiliated",
+"priority_rank": 89,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hackensack Meridian Health / Ocean University Medical Center Internal Medicine Residency",
+"city": "Brick",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community",
+"priority_rank": 90,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Charleston Area Medical Center (CAMC) Institute for Academic Medicine / WVU-Charleston Division Internal Medicine Residency Program",
+"city": "Charleston",
+"state": "WV",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 63,
+"type": "university-affiliated (WVU School of Medicine - Charleston Division / CAMC Institute for Academic Medicine, community teaching hospital b...",
+"priority_rank": 92,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Willis-Knighton Health System Internal Medicine Residency",
+"city": "Shreveport",
+"state": "LA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 73.3,
+"type": "community",
+"priority_rank": 93,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "St. John's Episcopal Hospital - South Shore Program (Internal Medicine)",
+"city": "Far Rockaway",
+"state": "NY",
+"tier": "2",
+"visa": "unstated",
+"non_us_img_pct": 96.7,
+"type": "community",
+"priority_rank": 94,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Zucker School of Medicine at Hofstra/Northwell at Mather Hospital Program - Internal Medicine",
+"city": "Port Jefferson",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 37.7,
+"type": "community (Zucker School of Medicine at Hofstra/Northwell academic affiliation; community teaching hospital)",
+"priority_rank": 97,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Tift Regional Health System Program (Southwell)",
+"city": "Tifton",
+"state": "GA",
+"tier": "2",
+"visa": "unstated",
+"non_us_img_pct": 87.5,
+"type": "community",
+"priority_rank": 98,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Boston Medical Center – Brighton (formerly St. Elizabeth's Medical Center) Internal Medicine Residency",
+"city": "Boston (Brighton)",
+"state": "MA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 82,
+"type": "community (university-affiliated: Boston University Chobanian & Avedisian School of Medicine and Tufts University School of Medicine teac...",
+"priority_rank": 99,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mount Auburn Hospital Program (Harvard-affiliated)",
+"city": "Cambridge",
+"state": "MA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 67.4,
+"type": "university-affiliated",
+"priority_rank": 100,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "New York Medical College at St. Michael's Medical Center",
+"city": "Newark",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 76,
+"type": "community",
+"priority_rank": 101,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Trinity Health Ann Arbor (St. Joseph Mercy)",
+"city": "Ann Arbor (Ypsilanti)",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 46.3,
+"type": "community",
+"priority_rank": 103,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Westchester Medical Center Program (NYMC)",
+"city": "Valhalla",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 37,
+"type": "university-affiliated",
+"priority_rank": 106,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Augusta Health Internal Medicine Residency",
+"city": "Fishersville",
+"state": "VA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 77.27,
+"type": "community",
+"priority_rank": 107,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Southeast Health Internal Medicine Residency",
+"city": "Dothan",
+"state": "AL",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 89,
+"type": "community",
+"priority_rank": 113,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Piedmont Athens Regional Program",
+"city": "Athens",
+"state": "GA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 115,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Advocate Health Care / Advocate Illinois Masonic Medical Center",
+"city": "Chicago",
+"state": "IL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 82.8,
+"type": "community",
+"priority_rank": 118,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Mayo Clinic Alix School of Medicine / Mayo Clinic Arizona (Scottsdale/Phoenix) Internal Medicine Residency",
+"city": "Scottsdale/Phoenix",
+"state": "AZ",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 28.26,
+"type": "university",
+"priority_rank": 119,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Aiken Regional Medical Centers Program",
+"city": "Aiken",
+"state": "SC",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 90,
+"type": "community",
+"priority_rank": 121,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NYC Health + Hospitals / Woodhull Internal Medicine Residency Program",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 80,
+"type": "community (safety-net public hospital; NYU Grossman academic affiliate)",
+"priority_rank": 123,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "WVU SOM Eastern Campus (Berkeley Medical Center) Internal Medicine Residency",
+"city": "Martinsburg",
+"state": "WV",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 75,
+"type": "university-affiliated",
+"priority_rank": 124,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "SUNY Upstate Medical University (Syracuse) Internal Medicine Residency",
+"city": "Syracuse",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 70,
+"type": "university",
+"priority_rank": 126,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "TidalHealth (Peninsula Regional) Internal Medicine Residency",
+"city": "Salisbury",
+"state": "MD",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 83,
+"type": "community",
+"priority_rank": 130,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Northeast Georgia Medical Center Program",
+"city": "Gainesville",
+"state": "GA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 56.5,
+"type": "community",
+"priority_rank": 134,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Hurley Medical Center / Michigan State University",
+"city": "Flint",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community-based with major academic affiliation (Hurley describes itself as \"a community-based residency program with a major affiliation...",
+"priority_rank": 141,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Yale-New Haven Medical Center Program (Yale Internal Medicine - Traditional & Primary Care Tracks)",
+"city": "New Haven",
+"state": "CT",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 35.2,
+"type": "university",
+"priority_rank": 142,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Jefferson Health Medical Education / Jefferson Einstein Philadelphia Hospital",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 59,
+"type": "community (university-affiliated via Sidney Kimmel Medical College/Thomas Jefferson University)",
+"priority_rank": 151,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Marshall University (Joan C. Edwards School of Medicine) Internal Medicine Residency",
+"city": "Huntington",
+"state": "WV",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 51,
+"type": "university",
+"priority_rank": 153,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Missouri-Columbia Internal Medicine Residency",
+"city": "Columbia",
+"state": "MO",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 27.3,
+"type": "university",
+"priority_rank": 158,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "South Central Regional Medical Center Internal Medicine Residency",
+"city": "Laurel",
+"state": "MS",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 54.5,
+"type": "community",
+"priority_rank": 159,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Miami / Jackson Health System",
+"city": "Miami",
+"state": "FL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 41.4,
+"type": "university",
+"priority_rank": 165,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Arkansas for Medical Sciences (UAMS) College of Medicine - Internal Medicine Residency (Little Rock)",
+"city": "Little Rock",
+"state": "AR",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 47,
+"type": "university",
+"priority_rank": 168,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Macon & Joan Brock Virginia Health Sciences at Old Dominion University (EVMS) Internal Medicine Residency",
+"city": "Norfolk",
+"state": "VA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 39,
+"type": "university-affiliated (EVMS academic medical center now administratively under Old Dominion University; community teaching hospitals: Sen...",
+"priority_rank": 171,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Unity Health-White County Medical Center Internal Medicine Residency",
+"city": "Searcy",
+"state": "AR",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 68,
+"type": "community",
+"priority_rank": 172,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai / NYC H+H Queens (Queens Hospital Center)",
+"city": "Jamaica (Queens)",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 62,
+"type": "community (municipal hospital, academically affiliated with Icahn School of Medicine at Mount Sinai)",
+"priority_rank": 173,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Pennsylvania Hospital / UPenn Health System Program",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 47.7,
+"type": "university-affiliated (Penn Medicine community/university-based hospital within UPenn Health System; FREIDA lists it as university-based)",
+"priority_rank": 176,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Wellstar Health System/Wellstar Cobb Hospital Program",
+"city": "Austell",
+"state": "GA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 76,
+"type": "community",
+"priority_rank": 181,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Mary Washington Healthcare Internal Medicine Residency",
+"city": "Fredericksburg",
+"state": "VA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 45.2,
+"type": "community",
+"priority_rank": 186,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Jewish Hospital of Cincinnati (Mercy Health) - Internal Medicine Residency",
+"city": "Cincinnati",
+"state": "OH",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 60,
+"type": "community",
+"priority_rank": 188,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Jefferson Health Medical Education/Jefferson Einstein Montgomery Hospital Program",
+"city": "East Norriton",
+"state": "PA",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 45,
+"type": "community (Jefferson Health/Einstein Healthcare Network community teaching hospital; sponsoring institution Jefferson Health Medical Educ...",
+"priority_rank": 189,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Oregon Health & Science University (OHSU Health)/Hillsboro Medical Center Internal Medicine Residency",
+"city": "Hillsboro",
+"state": "OR",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 34.8,
+"type": "community (OHSU-affiliated)",
+"priority_rank": 191,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Kern Medical Center Internal Medicine Residency",
+"city": "Bakersfield",
+"state": "CA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 50,
+"type": "university-affiliated",
+"priority_rank": 193,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HCA Florida Healthcare/USF Morsani College of Medicine GME - Medical Center Trinity Internal Medicine Residency",
+"city": "Trinity",
+"state": "FL",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 51,
+"type": "community-based, academically affiliated with University of South Florida Morsani College of Medicine",
+"priority_rank": 194,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hennepin Healthcare Internal Medicine Residency",
+"city": "Minneapolis",
+"state": "MN",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 41.9,
+"type": "university-affiliated (county safety-net hospital; core UMN teaching affiliate)",
+"priority_rank": 199,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "LSU Health Sciences Center / University Hospital and Clinics (Lafayette) Internal Medicine Residency",
+"city": "Lafayette",
+"state": "LA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 37.5,
+"type": "university-affiliated",
+"priority_rank": 201,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Tulane University Internal Medicine Residency",
+"city": "New Orleans",
+"state": "LA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 20.3,
+"type": "university",
+"priority_rank": 216,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NewYork-Presbyterian/Queens Program (Weill Cornell affil.) - Internal Medicine Residency",
+"city": "Flushing",
+"state": "NY",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 25.6,
+"type": "community (Weill Cornell-affiliated teaching hospital, not a university/academic medical center itself)",
+"priority_rank": 221,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Texas Tech University HSC El Paso (Internal Medicine)",
+"city": "El Paso",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 66,
+"type": "university-affiliated",
+"priority_rank": 224,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "MercyOne Des Moines/PHC Consortium Internal Medicine Residency",
+"city": "Des Moines",
+"state": "IA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 44.7,
+"type": "community",
+"priority_rank": 228,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Our Lady of Lourdes Memorial Hospital Internal Medicine Residency (Guthrie Lourdes Hospital, formerly Ascension Lourdes)",
+"city": "Binghamton",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 100,
+"type": "community (Ascension-founded, hospital now operated as part of The Guthrie Clinic's GME system since a 2023-2024 Guthrie-Ascension Lourde...",
+"priority_rank": 234,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Memorial Hospital at Gulfport Internal Medicine Residency",
+"city": "Gulfport",
+"state": "MS",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 38,
+"type": "community",
+"priority_rank": 247,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Southern Illinois University (SIU) School of Medicine - Internal Medicine Residency",
+"city": "Springfield",
+"state": "IL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 63,
+"type": "university",
+"priority_rank": 254,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Florida Atlantic University Charles E. Schmidt College of Medicine - Internal Medicine Residency",
+"city": "Boca Raton",
+"state": "FL",
+"tier": "2",
+"visa": "unstated",
+"non_us_img_pct": 24.5,
+"type": "university",
+"priority_rank": 259,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of South Dakota Sanford SOM",
+"city": "Sioux Falls",
+"state": "SD",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 70.4,
+"type": "university",
+"priority_rank": 264,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Saint Peter's University Hospital / Rutgers Robert Wood Johnson Medical School",
+"city": "New Brunswick",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 82.4,
+"type": "university-affiliated",
+"priority_rank": 266,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Loyola Medicine MacNeal Hospital Internal Medicine Residency",
+"city": "Berwyn",
+"state": "IL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 97.6,
+"type": "community (Loyola-affiliated teaching hospital)",
+"priority_rank": 287,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai / Valley Health System Program - Internal Medicine",
+"city": "Paramus",
+"state": "NJ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 61.1,
+"type": "university-affiliated",
+"priority_rank": 290,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Midwestern University GME Consortium / Canyon Vista Medical Center - Internal Medicine Residency",
+"city": "Sierra Vista",
+"state": "AZ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community-based, university-affiliated (Midwestern University GME Consortium sponsoring institution; per imgprep.com aggregator listing '...",
+"priority_rank": 298,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Arizona College of Medicine - Phoenix / Banner Del Webb Program - Internal Medicine",
+"city": "Sun City West",
+"state": "AZ",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 79.5,
+"type": "community (academic community-based, university-affiliated via UArizona College of Medicine-Phoenix)",
+"priority_rank": 301,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Piedmont Macon Medical Center Program (Internal Medicine Residency)",
+"city": "Macon",
+"state": "GA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 81,
+"type": "community (former HCA/Coliseum Medical Centers program, affiliated with Mercer University School of Medicine, now under Piedmont Healthcare)",
+"priority_rank": 303,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Illinois College of Medicine at Peoria Internal Medicine",
+"city": "Peoria",
+"state": "IL",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 68.4,
+"type": "university-affiliated",
+"priority_rank": 305,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Central Michigan University College of Medicine / CMU Medical Education Partners",
+"city": "Saginaw",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 84.2,
+"type": "university-affiliated",
+"priority_rank": 312,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Trinity Health Muskegon Internal Medicine Residency",
+"city": "Muskegon",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 61.5,
+"type": "community",
+"priority_rank": 328,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Henry Ford Health / Henry Ford Hospital (Detroit)",
+"city": "Detroit",
+"state": "MI",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 27.4,
+"type": "university-affiliated",
+"priority_rank": 342,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Texas Health Presbyterian Hospital of Plano (Internal Medicine)",
+"city": "Plano",
+"state": "TX",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 34.8,
+"type": "community",
+"priority_rank": 346,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "San Joaquin General Hospital Internal Medicine Residency",
+"city": "French Camp",
+"state": "CA",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 61,
+"type": "community (county hospital, non-university-affiliated)",
+"priority_rank": 350,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Zucker School of Medicine at Hofstra/Northwell at South Shore University Hospital Program (ACGME 1403500003)",
+"city": "Bay Shore",
+"state": "NY",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 33.3,
+"type": "community (university-affiliated via Zucker School of Medicine at Hofstra/Northwell)",
+"priority_rank": 352,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Indiana University School of Medicine (Indianapolis)",
+"city": "Indianapolis",
+"state": "IN",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 23.8,
+"type": "university",
+"priority_rank": 353,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Howard University",
+"city": "Washington",
+"state": "DC",
+"tier": "2",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 30,
+"type": "university",
+"priority_rank": 361,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HCA Healthcare/Mercer University School of Medicine/Trident Medical Center Program",
+"city": "North Charleston (Charleston area)",
+"state": "SC",
+"tier": "2",
+"visa": "J-1",
+"non_us_img_pct": 36,
+"type": "community",
+"priority_rank": 378,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Doctors Hospital at Renaissance / DHR Health - Internal Medicine Residency",
+"city": "Edinburg",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "university-affiliated (community hospital-based, affiliated with UTRGV School of Medicine)",
+"priority_rank": 74,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Joseph's University Medical Center",
+"city": "Paterson",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 90,
+"type": "community (university-affiliated via New York Medical College academic affiliation)",
+"priority_rank": 75,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "One Brooklyn Health / Interfaith Medical Center (Brooklyn)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 81,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Nassau University Medical Center (NUMC) - Internal Medicine Residency",
+"city": "East Meadow",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 89,
+"type": "community",
+"priority_rank": 84,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Shannon Medical Center Internal Medicine Residency",
+"city": "San Angelo",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 90,
+"type": "community",
+"priority_rank": 87,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "SUNY Downstate Health Sciences University (Brooklyn) — Categorical IM",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 81,
+"type": "university",
+"priority_rank": 91,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Maryland Medical Center (UMMC) Midtown Campus Internal Medicine Residency",
+"city": "Baltimore",
+"state": "MD",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "university-affiliated (community-based, university-affiliated per aggregator; program's own site describes a 'university-affiliated hospi...",
+"priority_rank": 95,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Barnabas Hospital (SBH Health System) - Internal Medicine Residency",
+"city": "Bronx",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 97,
+"type": "community",
+"priority_rank": 96,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prime West Consortium/West Anaheim Medical Center Program (Internal Medicine)",
+"city": "Anaheim",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 94.4,
+"type": "community",
+"priority_rank": 102,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UPMC Medical Education / McKeesport Hospital",
+"city": "McKeesport",
+"state": "PA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 87,
+"type": "community",
+"priority_rank": 104,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Montefiore Medical Center / Albert Einstein College of Medicine (Wakefield Campus) — Internal Medicine",
+"city": "Bronx",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 78,
+"type": "university-affiliated (community-based Einstein/Montefiore campus)",
+"priority_rank": 105,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Michigan Health–Sparrow / Michigan State University",
+"city": "East Lansing / Lansing",
+"state": "MI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 74,
+"type": "university-affiliated",
+"priority_rank": 108,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Marshfield Clinic (Marshfield Medical Center) Internal Medicine Residency",
+"city": "Marshfield",
+"state": "WI",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 94,
+"type": "community",
+"priority_rank": 109,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UM Capital Region Health (Prince George's Hospital Center) Internal Medicine Residency",
+"city": "Largo",
+"state": "MD",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 90,
+"type": "community-based, university-affiliated",
+"priority_rank": 110,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "KPC Global Medical Centers Internal Medicine Residency (Hemet Global Medical Center)",
+"city": "Hemet",
+"state": "CA",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 93.3,
+"type": "community",
+"priority_rank": 111,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "John H. Stroger, Jr. Hospital of Cook County (Cook County Health) Internal Medicine Residency",
+"city": "Chicago",
+"state": "IL",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 69,
+"type": "university-affiliated (community safety-net hospital affiliated with Rush Medical College)",
+"priority_rank": 114,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "MedStar Health Georgetown Univ (Baltimore) IM Residency (Union Memorial/Franklin Square)",
+"city": "Baltimore",
+"state": "MD",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 88,
+"type": "community",
+"priority_rank": 116,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Arkansas College of Osteopathic Medicine (ARCOM)/Mercy Internal Medicine Residency",
+"city": "Fort Smith",
+"state": "AR",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 88,
+"type": "community",
+"priority_rank": 117,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA Florida Westside/Northwest Hospital Internal Medicine Residency (HCA East Florida Division GME)",
+"city": "Plantation",
+"state": "FL",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 73,
+"type": "community",
+"priority_rank": 120,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Health Education Services / Northwest Health (Porter)",
+"city": "Valparaiso",
+"state": "IN",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 122,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "BronxCare Health System (Bronx)",
+"city": "Bronx",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 74,
+"type": "community (academically affiliated with Icahn School of Medicine at Mount Sinai via the Mount Sinai/BronxCare collaboration and GME conso...",
+"priority_rank": 125,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Trinity Health Oakland / Wayne State University",
+"city": "Pontiac",
+"state": "MI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 89,
+"type": "community",
+"priority_rank": 128,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "AdventHealth Florida (Orlando) Internal Medicine Residency",
+"city": "Orlando",
+"state": "FL",
+"tier": "3",
+"visa": "H-1B",
+"non_us_img_pct": 86,
+"type": "community-based, university-affiliated",
+"priority_rank": 129,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Atlantic Health System / Morristown Medical Center",
+"city": "Morristown",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 70,
+"type": "community",
+"priority_rank": 131,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Prime South GME Consortium/Southern Regional Medical Center Program",
+"city": "Riverdale",
+"state": "GA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 132,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "UT RGV (Knapp) (IM) -- program identity in transition, see notes",
+"city": "Weslaco",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 91,
+"type": "community",
+"priority_rank": 133,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Carle Foundation Hospital Internal Medicine",
+"city": "Urbana",
+"state": "IL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 89,
+"type": "community (major regional community teaching hospital; primary clinical site for Carle Illinois College of Medicine, a UIUC-affiliated en...",
+"priority_rank": 135,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Ascension Saint Agnes Hospital Internal Medicine Residency",
+"city": "Baltimore",
+"state": "MD",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 86,
+"type": "community",
+"priority_rank": 136,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Conemaugh Memorial Medical Center",
+"city": "Johnstown",
+"state": "PA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 88,
+"type": "community",
+"priority_rank": 137,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Wright Center for Graduate Medical Education Program A",
+"city": "Scranton",
+"state": "PA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 88,
+"type": "community (community health center / FQHC-affiliated model)",
+"priority_rank": 138,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ascension Illinois / Saint Joseph (Chicago)",
+"city": "Chicago",
+"state": "IL",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 84,
+"type": "community",
+"priority_rank": 139,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "One Brooklyn Health / Brookdale University Hospital (Brooklyn)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 67,
+"type": "community",
+"priority_rank": 140,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Berkshire Medical Center Program (UMass Chan affiliate)",
+"city": "Pittsfield",
+"state": "MA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 72,
+"type": "community (UMass Chan Medical School teaching affiliate; also affiliated with University of New England COM and Boston University Chobani...",
+"priority_rank": 143,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Midwestern University GME Consortium / Verde Valley Medical Center",
+"city": "Cottonwood",
+"state": "AZ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community",
+"priority_rank": 144,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Sinai Hospital of Baltimore (LifeBridge Health) Internal Medicine Residency",
+"city": "Baltimore",
+"state": "MD",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community (university-affiliated via Johns Hopkins core/elective rotations and GWU SMHS regional medical campus)",
+"priority_rank": 145,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Geisinger Northeast Program / Geisinger Wyoming Valley (Geisinger Health System - Wilkes-Barre) Internal Medicine Residency",
+"city": "Wilkes-Barre",
+"state": "PA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 62,
+"type": "community",
+"priority_rank": 146,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "New York Medical College / St. Mary's and Saint Clare's Program (Prime Healthcare NJ)",
+"city": "Denville (also Dover/Passaic sites)",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 81,
+"type": "university-affiliated (community hospital consortium - Saint Clare's Denville/Dover + St. Mary's General Passaic - academically affiliate...",
+"priority_rank": 147,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ascension Illinois / Saint Francis — now Prime Midwest GME Consortium / Saint Francis Hospital (Evanston) Internal Medicine",
+"city": "Evanston",
+"state": "IL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 89,
+"type": "community",
+"priority_rank": 148,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "North East Medical Services (NEMS) Internal Medicine Residency Program (Seton Medical Center)",
+"city": "Daly City",
+"state": "CA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 86.7,
+"type": "community",
+"priority_rank": 149,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prime West Consortium (Shasta Regional Medical Center) - Internal Medicine",
+"city": "Redding",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 89,
+"type": "community",
+"priority_rank": 150,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Richmond University Medical Center (Staten Island) - Internal Medicine Residency",
+"city": "Staten Island",
+"state": "NY",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 71,
+"type": "community",
+"priority_rank": 152,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Saint Vincent Hospital Program (Tenet)",
+"city": "Worcester",
+"state": "MA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 99,
+"type": "community",
+"priority_rank": 154,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Rutgers Health / Jersey City Medical Center (RWJBarnabas)",
+"city": "Jersey City",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 76,
+"type": "community",
+"priority_rank": 155,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "North Alabama Medical Center Internal Medicine Residency",
+"city": "Florence",
+"state": "AL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 82,
+"type": "community",
+"priority_rank": 156,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Staten Island University Hospital / Northwell (Zucker-Hofstra) - Internal Medicine Residency",
+"city": "Staten Island",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 53,
+"type": "university-affiliated (academic-community; Zucker School of Medicine at Hofstra/Northwell)",
+"priority_rank": 157,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Kansas (Wichita) Internal Medicine Residency Program",
+"city": "Wichita",
+"state": "KS",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 66,
+"type": "university-affiliated (KU School of Medicine-Wichita branch campus; residents train at Wesley Medical Center, Ascension Via Christi, and ...",
+"priority_rank": 160,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Luminis Health Anne Arundel Medical Center Internal Medicine Residency",
+"city": "Annapolis",
+"state": "MD",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 60,
+"type": "community (relatively new IM program, established ~2022; described elsewhere as university-affiliated via UM/GW/JHU medical student rotat...",
+"priority_rank": 161,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "SSM St. Mary's Hospital-St. Louis Internal Medicine Residency (SLU-affiliated)",
+"city": "St. Louis",
+"state": "MO",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 67,
+"type": "community (SSM Health St. Mary's Hospital), described in program branding as 'SLU-affiliated'",
+"priority_rank": 162,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Atlantic Health System / Overlook Medical Center",
+"city": "Summit",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 73,
+"type": "community (academic affiliation with Sidney Kimmel Medical College - Thomas Jefferson University)",
+"priority_rank": 164,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "MetroWest Medical Center Program (Tenet/Tufts)",
+"city": "Framingham",
+"state": "MA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 74,
+"type": "community (Tenet-owned, Tufts University School of Medicine academic affiliate)",
+"priority_rank": 166,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Elizabeth Youngstown Hospital / NEOMED Internal Medicine Residency",
+"city": "Youngstown",
+"state": "OH",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 56,
+"type": "community (NEOMED-affiliated teaching site; community hospital-based, not a university-owned academic medical center)",
+"priority_rank": 167,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Jamaica Hospital Medical Center (Queens) - Internal Medicine Residency",
+"city": "Jamaica (Richmond Hill)",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community",
+"priority_rank": 169,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Miami Hospital and Clinics/Holy Cross Hospital Program - Internal Medicine",
+"city": "Fort Lauderdale",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 47.7,
+"type": "university-affiliated (community hospital, Holy Cross, academically affiliated with University of Miami Miller School of Medicine)",
+"priority_rank": 170,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "East Liverpool City Hospital Program (IM)",
+"city": "East Liverpool",
+"state": "OH",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 60,
+"type": "community",
+"priority_rank": 174,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Florida International University / Baptist Health South Florida Internal Medicine Residency",
+"city": "Miami",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 48.1,
+"type": "university-affiliated",
+"priority_rank": 175,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Bridgeport Hospital/Yale University Program",
+"city": "Bridgeport",
+"state": "CT",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 71,
+"type": "university-affiliated (community hospital affiliated with Yale University School of Medicine, part of Yale New Haven Health)",
+"priority_rank": 177,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Baton Rouge General Internal Medicine Residency Program",
+"city": "Baton Rouge",
+"state": "LA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 100,
+"type": "community",
+"priority_rank": 179,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Central Florida (UCF)/HCA Florida Healthcare (Greater Orlando/Osceola) Internal Medicine Residency Program",
+"city": "Kissimmee, FL (training site: HCA Florida Osceola Hospital; also Orlando VA Medical Center)",
+"state": "FL",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 52,
+"type": "community (HCA Florida Osceola Hospital + Orlando VA Medical Center), university-affiliated with UCF College of Medicine",
+"priority_rank": 180,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "NYC Health + Hospitals / Coney Island — South Brooklyn Health (Brooklyn)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 56,
+"type": "community",
+"priority_rank": 182,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mercy Catholic Medical Center Program (Trinity Health / MCMC)",
+"city": "Darby",
+"state": "PA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 74,
+"type": "community",
+"priority_rank": 183,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Greenwich Hospital/Yale University Program",
+"city": "Greenwich",
+"state": "CT",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 34.6,
+"type": "university-affiliated (community hospital with 50+ year Yale School of Medicine academic affiliation; residents are Yale-affiliated but t...",
+"priority_rank": 184,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UCHealth Parkview Medical Center Internal Medicine Residency",
+"city": "Pueblo",
+"state": "CO",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 73,
+"type": "community",
+"priority_rank": 185,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prime South GME Consortium - Harlingen Medical Center (IM)",
+"city": "Harlingen",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 69,
+"type": "community",
+"priority_rank": 187,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Abington Memorial Hospital / Jefferson Abington",
+"city": "Abington",
+"state": "PA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 39,
+"type": "community (Jefferson-affiliated academic-community hospital; not a university-based program itself, though tied into Sidney Kimmel Medica...",
+"priority_rank": 190,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Western Reserve Hospital Program (IM)",
+"city": "Cuyahoga Falls",
+"state": "OH",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 53.8,
+"type": "community",
+"priority_rank": 192,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Montefiore Medical Center/Albert Einstein College of Medicine (New Rochelle) Program",
+"city": "New Rochelle",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 51,
+"type": "community",
+"priority_rank": 195,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Western Michigan University Homer Stryker MD School of Medicine (WMed) Internal Medicine Residency",
+"city": "Kalamazoo",
+"state": "MI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 47,
+"type": "university",
+"priority_rank": 197,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ramon Betances Hospital-Mayaguez Medical Center/Ponce School of Medicine Consortium Program (Internal Medicine)",
+"city": "Mayaguez",
+"state": "PR",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 78,
+"type": "community",
+"priority_rank": 198,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Connecticut Institute For Communities (CIFC) Health Program - Internal Medicine Residency",
+"city": "Danbury",
+"state": "CT",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 63,
+"type": "community (Teaching Health Center - first and only THC in Connecticut; community health center-based, not university-owned; inpatient tra...",
+"priority_rank": 200,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Wyckoff Heights Medical Center (Brooklyn/Queens border)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 56,
+"type": "community",
+"priority_rank": 202,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Palmetto General Hospital Internal Medicine Residency",
+"city": "Hialeah",
+"state": "FL",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 70,
+"type": "community",
+"priority_rank": 203,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Baptist Memorial Medical Education (Columbus) IM Residency - Baptist Golden Triangle",
+"city": "Columbus",
+"state": "MS",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 66,
+"type": "community",
+"priority_rank": 205,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Garden City Hospital (MSU-affiliated) Internal Medicine Residency",
+"city": "Garden City",
+"state": "MI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 60,
+"type": "community (MSU/COGMET academic affiliation for didactics; Wayne State runs weekly Grand Rounds)",
+"priority_rank": 206,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ballad Health / Wellmont Health System - Norton Community Hospital Internal Medicine Residency",
+"city": "Norton",
+"state": "VA",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 82,
+"type": "community",
+"priority_rank": 208,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Morehouse School of Medicine / CHI St. Vincent's (Hot Springs) Internal Medicine Residency Program",
+"city": "Hot Springs",
+"state": "AR",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 68,
+"type": "community",
+"priority_rank": 209,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Hawaii Internal Medicine Residency (Hawaii Residency Programs / Queen's Medical Center)",
+"city": "Honolulu",
+"state": "HI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 27.9,
+"type": "university-affiliated",
+"priority_rank": 211,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Hawaii JABSOM Primary Care Internal Medicine Residency",
+"city": "Honolulu",
+"state": "HI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 33.3,
+"type": "university-affiliated",
+"priority_rank": 212,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Kansas SOM (Olathe) Internal Medicine Residency",
+"city": "Olathe",
+"state": "KS",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 41.7,
+"type": "community-affiliated (community-based residency affiliated with University of Kansas School of Medicine and The University of Kansas Heal...",
+"priority_rank": 213,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "St. Luke's Hospital Internal Medicine Residency",
+"city": "Chesterfield",
+"state": "MO",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 44,
+"type": "community, university-affiliated (affiliated with Saint Louis University School of Medicine; also uses Mercy Medical Center)",
+"priority_rank": 214,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Henry Ford Warren Hospital Internal Medicine Residency (formerly Ascension Macomb-Oakland Hospital)",
+"city": "Warren",
+"state": "MI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 49,
+"type": "community (hospital-based, part of Henry Ford Health system; formerly Ascension Macomb-Oakland Hospital)",
+"priority_rank": 217,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Kettering Health / Kettering Medical Center Main Campus (Internal Medicine)",
+"city": "Kettering",
+"state": "OH",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 35,
+"type": "community",
+"priority_rank": 218,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Baptist Memorial Medical Education (Oxford) IM Residency - Baptist North Mississippi",
+"city": "Oxford",
+"state": "MS",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 55,
+"type": "community",
+"priority_rank": 223,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of California, Riverside School of Medicine / St. Bernardine Medical Center - Dignity Health (Internal Medicine Residency)",
+"city": "San Bernardino",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 38,
+"type": "community (university-affiliated via UC Riverside School of Medicine, community hospital base at Dignity Health St. Bernardine Medical Ce...",
+"priority_rank": 227,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mount Sinai Medical Center of Florida - Internal Medicine Residency",
+"city": "Miami Beach",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 48.3,
+"type": "community (independent academic-community, Icahn School of Medicine at Mount Sinai regional affiliate)",
+"priority_rank": 229,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "AdventHealth Florida (Tampa) Internal Medicine Residency",
+"city": "Tampa",
+"state": "FL",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 60,
+"type": "community (AdventHealth Tampa hospital-based; not a university program, though it may carry academic/GME affiliations)",
+"priority_rank": 230,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Inspira Health Network / Inspira Medical Center Vineland Program - Internal Medicine",
+"city": "Vineland",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 31,
+"type": "university-affiliated",
+"priority_rank": 231,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prime West Consortium/Desert Valley Hospital Internal Medicine Residency Program",
+"city": "Victorville",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 63,
+"type": "community",
+"priority_rank": 232,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Washington State University Elson S. Floyd College of Medicine Internal Medicine Residency - Everett (Providence Regional Medical Center Everett)",
+"city": "Everett",
+"state": "WA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 43,
+"type": "community (Providence Regional Medical Center Everett; university-affiliated with WSU Elson S. Floyd College of Medicine)",
+"priority_rank": 235,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Appalachian Regional Healthcare (ARH) Internal Medicine Residency",
+"city": "Whitesburg / Harlan / Prestonsburg (Highlands ARH)",
+"state": "KY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 53,
+"type": "community",
+"priority_rank": 239,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mount Sinai Hospital Medical Center of Chicago",
+"city": "Chicago",
+"state": "IL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 38,
+"type": "community",
+"priority_rank": 241,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Cape Fear Valley Health Program",
+"city": "Fayetteville",
+"state": "NC",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 54,
+"type": "community-affiliated / community-based, university (Campbell University) affiliated",
+"priority_rank": 245,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Insight Hospital and Medical Center Chicago (former Mercy) Internal Medicine",
+"city": "Chicago",
+"state": "IL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 44,
+"type": "community",
+"priority_rank": 248,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Medical City Arlington UNT-TCU GME (Internal Medicine)",
+"city": "Arlington",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 38,
+"type": "community (HCA hospital-based, university-affiliated via UNT Health Science Center / TCU School of Medicine academic partnership)",
+"priority_rank": 249,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Greater Baltimore Medical Center (GBMC) Internal Medicine Residency",
+"city": "Towson",
+"state": "MD",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 55,
+"type": "community",
+"priority_rank": 252,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Florida JFK Hospital / University of Miami Miller School of Medicine GME Consortium - Internal Medicine",
+"city": "Atlantis",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 34,
+"type": "community (HCA Healthcare GME consortium, university-affiliated with University of Miami Miller SOM)",
+"priority_rank": 255,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Geisinger Health System (Danville) - Internal Medicine Residency (Central)",
+"city": "Danville",
+"state": "PA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 22,
+"type": "university-affiliated",
+"priority_rank": 260,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "West Virginia University Internal Medicine Residency",
+"city": "Morgantown",
+"state": "WV",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 22,
+"type": "university",
+"priority_rank": 261,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Thomas Hospital Internal Medicine Residency (Infirmary Health)",
+"city": "Fairhope",
+"state": "AL",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 24.4,
+"type": "community",
+"priority_rank": 263,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Bernards Medical Center Internal Medicine Residency",
+"city": "Jonesboro",
+"state": "AR",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 38,
+"type": "community",
+"priority_rank": 265,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Florida Healthcare/USF Morsani College of Medicine GME - Sarasota Doctors Hospital Internal Medicine Residency",
+"city": "Sarasota",
+"state": "FL",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 45,
+"type": "community (HCA Healthcare system, GME partnership with USF Morsani College of Medicine)",
+"priority_rank": 267,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai — Morningside/West (Manhattan)",
+"city": "New York",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 23,
+"type": "university-affiliated",
+"priority_rank": 269,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Virtua Health Program (Voorhees) - Internal Medicine Residency",
+"city": "Voorhees (program centered at Virtua Our Lady of Lourdes Hospital, Camden)",
+"state": "NJ",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 42,
+"type": "community (large south-NJ health system; new IM program, established ~2021, academically affiliated with Rowan-Virtua School of Osteopath...",
+"priority_rank": 270,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Legacy Health / Salmon Creek Medical Center Internal Medicine Residency",
+"city": "Vancouver",
+"state": "WA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 37.5,
+"type": "community-affiliated (unopposed community program within Legacy Health system, first class matriculated 2022)",
+"priority_rank": 271,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "St. Mary Medical Center Program (Internal Medicine, Trinity Health Mid-Atlantic)",
+"city": "Langhorne",
+"state": "PA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 39,
+"type": "community",
+"priority_rank": 274,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai/Beth Israel Program (MSBI)",
+"city": "New York",
+"state": "NY",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 28,
+"type": "university-affiliated (historically; hospital now closed)",
+"priority_rank": 277,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Mary Medical Center Internal Medicine Residency (Dignity Health)",
+"city": "Long Beach",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 24,
+"type": "community (UCLA-affiliated; teaching faculty hold UCLA academic appointments; close ties to Harbor-UCLA Medical Center)",
+"priority_rank": 278,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Bayhealth Medical Center Internal Medicine Residency",
+"city": "Dover",
+"state": "DE",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 26,
+"type": "community",
+"priority_rank": 279,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Samaritan Medical Center Program, ACGME 1403500926",
+"city": "Watertown",
+"state": "NY",
+"tier": "3",
+"visa": "H-1B",
+"non_us_img_pct": 50,
+"type": "community",
+"priority_rank": 282,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Broward Health North Internal Medicine Residency",
+"city": "Deerfield Beach",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 31,
+"type": "community",
+"priority_rank": 291,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hackensack Meridian Health / Palisades Medical Center Internal Medicine Residency",
+"city": "North Bergen",
+"state": "NJ",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 47,
+"type": "community",
+"priority_rank": 294,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Kentucky (Bowling Green) Internal Medicine Residency Program (Med Center Health)",
+"city": "Bowling Green",
+"state": "KY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 33,
+"type": "university-affiliated",
+"priority_rank": 295,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Augusta University/University of Georgia Medical Partnership Internal Medicine Residency Program (now operating under UGA School of Medicine, in partnership with St. Mary's Health Care System / Trinity Health Mid-Atlantic)",
+"city": "Athens",
+"state": "GA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 32.4,
+"type": "university-affiliated (UGA School of Medicine academic program, clinical training based at St. Mary's Hospital, a Trinity Health Mid-Atla...",
+"priority_rank": 296,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Sierra View Medical Center Internal Medicine Residency",
+"city": "Porterville",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 38,
+"type": "community",
+"priority_rank": 297,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Loma Linda University Medical Center - Murrieta (Internal Medicine Residency)",
+"city": "Murrieta",
+"state": "CA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 27,
+"type": "community-based, university-affiliated (per residencyprograms.io aggregator: \"Community-based university affiliated\")",
+"priority_rank": 299,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Campbell University/Harnett Health Program (Internal Medicine Residency)",
+"city": "Dunn",
+"state": "NC",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 32,
+"type": "community (community hospital system - Cape Fear Valley Health/Harnett Health - academically affiliated with Campbell University School o...",
+"priority_rank": 300,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Baylor Scott & White Round Rock (IM) — now officially branded \"Internal Medicine Residency in Greater Austin\" (Texas A&M Health Science Center College of Medicine – Scott & White Internal Medicine Residency)",
+"city": "Round Rock",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 23,
+"type": "university-affiliated (Texas A&M Health Science Center College of Medicine academic affiliation; community hospital-based training site)",
+"priority_rank": 304,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Ballad Health Internal Medicine Residency - Johnston Memorial Hospital",
+"city": "Abingdon",
+"state": "VA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 27.8,
+"type": "community",
+"priority_rank": 313,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Inspira Health Network / Inspira Medical Center Mullica Hill Program - Internal Medicine Residency",
+"city": "Mullica Hill",
+"state": "NJ",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 39,
+"type": "community",
+"priority_rank": 315,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare/Mercer Univ SOM - Orange Park Medical Center IM",
+"city": "Orange Park",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 23,
+"type": "community",
+"priority_rank": 316,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Southeastern Regional Medical Center Program (UNC Health Southeastern)",
+"city": "Lumberton",
+"state": "NC",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 34,
+"type": "community",
+"priority_rank": 320,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA/USF Morsani GME - Blake Medical Center IM (HCA Florida Healthcare/USF Morsani College of Medicine GME - Tampa South/Blake Hospital Program)",
+"city": "Bradenton",
+"state": "FL",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 27,
+"type": "university-affiliated (USF Morsani College of Medicine-affiliated community program, per official site)",
+"priority_rank": 322,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Larkin Community Hospital Palm Springs Campus - Internal Medicine Residency",
+"city": "Hialeah",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 95.8,
+"type": "community",
+"priority_rank": 326,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Santa Barbara Cottage Hospital Internal Medicine Residency",
+"city": "Santa Barbara",
+"state": "CA",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 36,
+"type": "community",
+"priority_rank": 327,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare Kansas City/Overland Park Regional Medical Center Internal Medicine Residency",
+"city": "Overland Park",
+"state": "KS",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 22,
+"type": "community",
+"priority_rank": 329,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UT RGV (VBMC) - Valley Baptist Medical Center Internal Medicine Residency",
+"city": "Harlingen",
+"state": "TX",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 38,
+"type": "university-affiliated (community hospital site of UTRGV School of Medicine GME)",
+"priority_rank": 331,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Larkin Community Hospital - Internal Medicine Residency (South Miami campus)",
+"city": "South Miami",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 90,
+"type": "community",
+"priority_rank": 332,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Cayuga Medical Center Program",
+"city": "Ithaca",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 93.3,
+"type": "community",
+"priority_rank": 334,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Central Florida (UCF)/HCA Healthcare GME Consortium – HCA Florida North Florida Hospital Internal Medicine Residency",
+"city": "Gainesville",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 80,
+"type": "community (university-affiliated via UCF College of Medicine/HCA Healthcare GME Consortium)",
+"priority_rank": 336,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Internal Medicine Residency at Ascension Sacred Heart Pensacola (now sponsored by Florida State University College of Medicine as of July 1, 2025; historically listed on ERAS/ACGME as \"University of Florida College of Medicine (Pensacola) Program in Internal Medicine\")",
+"city": "Pensacola",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 76.9,
+"type": "community (hospital-based, university-affiliated via FSU College of Medicine sponsorship as of 7/1/2025; historically UF College of Medic...",
+"priority_rank": 337,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Detroit Medical Center (Huron Valley-Sinai)",
+"city": "Commerce Township",
+"state": "MI",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 75,
+"type": "community",
+"priority_rank": 347,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of North Dakota Internal Medicine Residency (Fargo/Sanford)",
+"city": "Fargo",
+"state": "ND",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 44.4,
+"type": "university-affiliated (university-sponsored, community-based at Sanford Health)",
+"priority_rank": 348,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Henry Ford St. John Hospital (renamed from Ascension St. John Hospital) - Internal Medicine Residency",
+"city": "Grosse Pointe Woods",
+"state": "MI",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 38,
+"type": "community (Henry Ford Health community teaching hospital; formerly Ascension St. John, acquired/rebranded under Henry Ford Health)",
+"priority_rank": 357,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "The Brooklyn Hospital Center (Brooklyn)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 52,
+"type": "community",
+"priority_rank": 362,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "NewYork-Presbyterian Brooklyn Methodist (Brooklyn)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 33,
+"type": "university-affiliated",
+"priority_rank": 365,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "MercyOne North Iowa Medical Center Internal Medicine Residency",
+"city": "Mason City",
+"state": "IA",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 33.3,
+"type": "community",
+"priority_rank": 369,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Corpus Christi Medical Center - Bay Area (Internal Medicine)",
+"city": "Corpus Christi",
+"state": "TX",
+"tier": "3",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 39,
+"type": "community",
+"priority_rank": 372,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Orlando Health (ORMC) Internal Medicine Residency",
+"city": "Orlando",
+"state": "FL",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 25,
+"type": "community (academic-community; large community-based teaching hospital, Level I trauma center, not a university-owned program)",
+"priority_rank": 373,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Creighton University School of Medicine Internal Medicine Residency (Omaha)",
+"city": "Omaha",
+"state": "NE",
+"tier": "3",
+"visa": "J-1",
+"non_us_img_pct": 22,
+"type": "university-affiliated",
+"priority_rank": 384,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Leonard J. Chabert Medical Center Internal Medicine Residency (SLMA)",
+"city": "Houma",
+"state": "LA",
+"tier": "3",
+"visa": "unstated",
+"non_us_img_pct": 38,
+"type": "community",
+"priority_rank": 385,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Tennessee College of Medicine at Chattanooga IM Residency (Erlanger)",
+"city": "Chattanooga",
+"state": "TN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 18.2,
+"type": "university-affiliated",
+"priority_rank": 112,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Kirk Kerkorian School of Medicine at UNLV",
+"city": "Las Vegas",
+"state": "NV",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 16.4,
+"type": "university",
+"priority_rank": 127,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Lehigh Valley Health Network Program",
+"city": "Allentown",
+"state": "PA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 16.7,
+"type": "university-affiliated (academic medical center + community hospital network, now part of Jefferson enterprise post-2024 merger)",
+"priority_rank": 163,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Temple University Hospital",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 10.2,
+"type": "university-affiliated",
+"priority_rank": 178,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UPMC Medical Education Program (University of Pittsburgh) — incl. International Scholars Track",
+"city": "Pittsburgh",
+"state": "PA",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 13,
+"type": "university",
+"priority_rank": 196,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Case Western Reserve University / University Hospitals Cleveland Medical Center Program (IM)",
+"city": "Cleveland",
+"state": "OH",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 20,
+"type": "university",
+"priority_rank": 207,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "SSM Health/Saint Louis University SOM Internal Medicine Residency",
+"city": "St. Louis",
+"state": "MO",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 14.3,
+"type": "university-affiliated",
+"priority_rank": 210,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Trinity Health Grand Rapids",
+"city": "Grand Rapids",
+"state": "MI",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 16.7,
+"type": "university-affiliated",
+"priority_rank": 215,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "George Washington University Internal Medicine Residency",
+"city": "Washington",
+"state": "DC",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 19.3,
+"type": "university",
+"priority_rank": 219,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Minnesota (Minneapolis)",
+"city": "Minneapolis",
+"state": "MN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 13.3,
+"type": "university",
+"priority_rank": 222,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Hackensack University Medical Center (Hackensack Meridian Health)",
+"city": "Hackensack",
+"state": "NJ",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 12.5,
+"type": "university-affiliated (Hackensack Meridian School of Medicine teaching hospital)",
+"priority_rank": 225,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Baylor College of Medicine (IM)",
+"city": "Houston",
+"state": "TX",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 11.7,
+"type": "university",
+"priority_rank": 226,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "UT Health Science Center at Tyler (Internal Medicine)",
+"city": "Tyler",
+"state": "TX",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 15,
+"type": "university (UT Tyler School of Medicine / UT Health Science Center at Tyler)",
+"priority_rank": 233,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Dartmouth-Hitchcock/Mary Hitchcock Memorial Hospital Program (Internal Medicine Residency)",
+"city": "Lebanon",
+"state": "NH",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 11.7,
+"type": "university",
+"priority_rank": 237,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Mercyhealth GME Consortium Internal Medicine",
+"city": "Rockford",
+"state": "IL",
+"tier": "4",
+"visa": "H-1B",
+"non_us_img_pct": 20,
+"type": "university-affiliated",
+"priority_rank": 240,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University at Buffalo Program (Jacobs School of Medicine and Biomedical Sciences), Internal Medicine, ACGME 1403531252",
+"city": "Buffalo",
+"state": "NY",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 11,
+"type": "university-affiliated",
+"priority_rank": 242,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Advocate Health Care / Advocate Lutheran General Hospital Internal Medicine",
+"city": "Park Ridge",
+"state": "IL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 19,
+"type": "community-based, university-affiliated; dually accredited ACGME/AOA (aggregator: 'Community-based university affiliated')",
+"priority_rank": 246,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UMass Chan — Baystate",
+"city": "Springfield",
+"state": "MA",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 11.3,
+"type": "university-affiliated",
+"priority_rank": 250,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Baptist Health Program (ex-Brookwood Baptist Health; Princeton Baptist + Grandview) — now Orlando Health-affiliated",
+"city": "Birmingham",
+"state": "AL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 16,
+"type": "community",
+"priority_rank": 257,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "East Tennessee State University / Quillen College of Medicine Internal Medicine Residency",
+"city": "Johnson City",
+"state": "TN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 19.6,
+"type": "university",
+"priority_rank": 258,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Penn State Milton S. Hershey Medical Center Program",
+"city": "Hershey",
+"state": "PA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 10,
+"type": "university",
+"priority_rank": 262,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Luke's University Hospital Program",
+"city": "Bethlehem",
+"state": "PA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 17.1,
+"type": "community",
+"priority_rank": 268,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Zucker School of Medicine at Hofstra/Northwell at Lenox Hill Hospital Program",
+"city": "New York",
+"state": "NY",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 10,
+"type": "university-affiliated (Zucker School of Medicine at Hofstra/Northwell academic affiliate; community-based teaching hospital)",
+"priority_rank": 275,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Cleveland Clinic Florida (Weston) Internal Medicine Residency",
+"city": "Weston",
+"state": "FL",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 20,
+"type": "university-affiliated",
+"priority_rank": 286,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Swedish Hospital (Endeavor Health) Internal Medicine Residency",
+"city": "Chicago",
+"state": "IL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 16.7,
+"type": "community",
+"priority_rank": 289,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "The MetroHealth System / Case Western Reserve University Program (IM)",
+"city": "Cleveland",
+"state": "OH",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 19,
+"type": "university-affiliated",
+"priority_rank": 292,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Rutgers Health / New Jersey Medical School (NJMS)",
+"city": "Newark",
+"state": "NJ",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 13,
+"type": "university",
+"priority_rank": 293,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Cooper Medical School of Rowan University / Cooper University Hospital",
+"city": "Camden",
+"state": "NJ",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 16,
+"type": "university-affiliated",
+"priority_rank": 306,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Jefferson Health Northeast Program (Torresdale/Frankford)",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 19,
+"type": "community (Jefferson Health Northeast; Sidney Kimmel Medical College-affiliated community program)",
+"priority_rank": 307,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Christ Hospital (IM)",
+"city": "Cincinnati",
+"state": "OH",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 15,
+"type": "community (Christ Hospital is described elsewhere as UC-affiliated per discovery-lead note, but official site frames it as a community te...",
+"priority_rank": 309,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA Healthcare/USF Morsani GME - Brandon Regional Hospital (HCA Florida Brandon Hospital) Internal Medicine Residency",
+"city": "Brandon",
+"state": "FL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 14,
+"type": "community (HCA/USF Morsani GME affiliated)",
+"priority_rank": 310,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "North Mississippi Medical Center Internal Medicine Residency",
+"city": "Tupelo",
+"state": "MS",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 19,
+"type": "community",
+"priority_rank": 314,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Texas Health Presbyterian Dallas (Internal Medicine)",
+"city": "Dallas",
+"state": "TX",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 10.5,
+"type": "community (hospital-based, non-university-affiliated tertiary community hospital); ~50-year-old program with >100 full/part-time faculty",
+"priority_rank": 317,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Cambridge Health Alliance Program (Harvard affiliate)",
+"city": "Cambridge",
+"state": "MA",
+"tier": "4",
+"visa": "H-1B",
+"non_us_img_pct": 19.2,
+"type": "university-affiliated",
+"priority_rank": 321,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Ascension St. Vincent Hospital Indianapolis Internal Medicine Residency",
+"city": "Indianapolis",
+"state": "IN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 10.6,
+"type": "community-based (academically oriented, non-university)",
+"priority_rank": 323,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HCA Florida Healthcare/USF Morsani College of Medicine GME - Tampa North/Oak Hill Hospital Program (Internal Medicine)",
+"city": "Brooksville",
+"state": "FL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 15,
+"type": "community (HCA GME site academically affiliated with USF Morsani College of Medicine)",
+"priority_rank": 324,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "UCSF Fresno IM Residency (Community Regional Medical Center)",
+"city": "Fresno",
+"state": "CA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 10,
+"type": "university-affiliated",
+"priority_rank": 330,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Broward Health Medical Center - Internal Medicine Residency",
+"city": "Fort Lauderdale",
+"state": "FL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 14,
+"type": "community (university-affiliated per ResidencyMatch.ai classification: 'community-based university affiliated')",
+"priority_rank": 333,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HCA Florida Kendall Hospital Internal Medicine Residency (HCA East Florida GME)",
+"city": "Miami",
+"state": "FL",
+"tier": "4",
+"visa": "unstated",
+"non_us_img_pct": 12,
+"type": "community-affiliated (community-based, university-affiliated with University of South Florida Morsani College of Medicine)",
+"priority_rank": 338,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Philadelphia College of Osteopathic Medicine (PCOM) Program - Internal Medicine",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 11,
+"type": "community/university-affiliated (osteopathic recognition; training sites Temple Health-Chestnut Hill Hospital and Jefferson Abington Hosp...",
+"priority_rank": 340,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Alameda Health System - Highland Hospital Internal Medicine Residency",
+"city": "Oakland",
+"state": "CA",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 11.3,
+"type": "community",
+"priority_rank": 341,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Billings Clinic Program",
+"city": "Billings",
+"state": "MT",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 10,
+"type": "community (academic-community; not university-based)",
+"priority_rank": 343,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare / TriStar Nashville (Centennial Medical Center) Internal Medicine Residency",
+"city": "Nashville",
+"state": "TN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 11.1,
+"type": "community (HCA Healthcare community teaching hospital program; site self-describes as 'TriStar Centennial Academic Medical Center' but is...",
+"priority_rank": 344,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Vanderbilt University Medical Center (Lebanon) - Wilson County Primary Care-Internal Medicine Residency",
+"city": "Lebanon",
+"state": "TN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 12.5,
+"type": "university-affiliated (VUMC-sponsored community hospital site; primary training at Vanderbilt Wilson County Hospital with rotations at Va...",
+"priority_rank": 349,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "AdventHealth Redmond Program",
+"city": "Rome",
+"state": "GA",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 10,
+"type": "community",
+"priority_rank": 354,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Naples Comprehensive Health (NCH) Internal Medicine Residency",
+"city": "Naples",
+"state": "FL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 15,
+"type": "community (GME collaboration with Northwestern Medicine, Chicago, for academic affiliation; not university-owned)",
+"priority_rank": 355,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "CHRISTUS Good Shepherd/Texas A&M (IM)",
+"city": "Longview",
+"state": "TX",
+"tier": "4",
+"visa": "unstated",
+"non_us_img_pct": 10.3,
+"type": "university-affiliated (community hospital - CHRISTUS Good Shepherd Medical Center - Longview - academically affiliated with Texas A&M Nar...",
+"priority_rank": 356,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UT Southwestern Medical Center (IM)",
+"city": "Dallas",
+"state": "TX",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 13.5,
+"type": "university",
+"priority_rank": 359,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Henry Ford Providence / Michigan State University College of Human Medicine (formerly Ascension Providence-MSUCHM) Internal Medicine Residency",
+"city": "Southfield/Novi",
+"state": "MI",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 17.9,
+"type": "community-based academic residency affiliated with Michigan State University College of Human Medicine",
+"priority_rank": 364,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Arizona College of Medicine - Phoenix / Banner Desert Medical Center",
+"city": "Mesa",
+"state": "AZ",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 15,
+"type": "community (academic community-based; UA Phoenix-affiliated)",
+"priority_rank": 367,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Hospital Episcopal San Lucas/Ponce School of Medicine Program (Internal Medicine)",
+"city": "Ponce",
+"state": "PR",
+"tier": "4",
+"visa": "unstated",
+"non_us_img_pct": 12,
+"type": "university-affiliated (Ponce Health Sciences University School of Medicine affiliate)",
+"priority_rank": 370,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Tennessee Medical Center at Knoxville Internal Medicine Residency",
+"city": "Knoxville",
+"state": "TN",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 15.4,
+"type": "university-affiliated",
+"priority_rank": 371,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare/Mercer University School of Medicine/Memorial Health University Medical Center Program",
+"city": "Savannah",
+"state": "GA",
+"tier": "4",
+"visa": "unstated",
+"non_us_img_pct": 10,
+"type": "community (HCA Healthcare/Mercer University School of Medicine academic-community affiliation)",
+"priority_rank": 375,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "FSU COM IM (Tallahassee Memorial HealthCare)",
+"city": "Tallahassee",
+"state": "FL",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 18.2,
+"type": "university-affiliated (community teaching hospital - Tallahassee Memorial HealthCare - with FSU COM academic affiliation)",
+"priority_rank": 377,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Gundersen Lutheran Medical Foundation Internal Medicine Residency",
+"city": "La Crosse",
+"state": "WI",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 12,
+"type": "community-based (Gundersen Medical Foundation, non-university teaching hospital; ACGME-accredited independent academic medical center)",
+"priority_rank": 379,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Kent Hospital/Brown University Program (Care New England)",
+"city": "Warwick",
+"state": "RI",
+"tier": "4",
+"visa": "J-1",
+"non_us_img_pct": 18,
+"type": "community (university-affiliated with The Warren Alpert Medical School of Brown University; also affiliated with University of New Englan...",
+"priority_rank": 380,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Mercy Hospital St. Louis Internal Medicine Residency",
+"city": "St. Louis",
+"state": "MO",
+"tier": "4",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 16,
+"type": "community",
+"priority_rank": 386,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Atrium Health Navicent The Medical Center/Mercer University School of Medicine Program",
+"city": "Macon",
+"state": "GA",
+"tier": "4",
+"visa": "unstated",
+"non_us_img_pct": 16,
+"type": "community (academic-community, Mercer University School of Medicine affiliated); ACGME-accredited since 1986",
+"priority_rank": 388,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Wisconsin Hospitals and Clinics Internal Medicine Residency",
+"city": "Madison",
+"state": "WI",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.7,
+"type": "university",
+"priority_rank": 204,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "McGaw Medical Center of Northwestern University Internal Medicine",
+"city": "Chicago",
+"state": "IL",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 5,
+"type": "university",
+"priority_rank": 220,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Corewell Health West — Grand Rapids / Michigan State University",
+"city": "Grand Rapids",
+"state": "MI",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.7,
+"type": "university-affiliated",
+"priority_rank": 236,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Ohio State University Hospital Program (IM)",
+"city": "Columbus",
+"state": "OH",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 5.9,
+"type": "university",
+"priority_rank": 238,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mayo Clinic College of Medicine and Science (Jacksonville) - Internal Medicine Residency",
+"city": "Jacksonville",
+"state": "FL",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 7.79,
+"type": "university-affiliated (Mayo Clinic College of Medicine and Science, academic medical center)",
+"priority_rank": 243,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Boston University Medical Center (BMC) Program - Internal Medicine Residency",
+"city": "Boston",
+"state": "MA",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 9,
+"type": "university",
+"priority_rank": 251,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Cincinnati Medical Center / College of Medicine",
+"city": "Cincinnati",
+"state": "OH",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.5,
+"type": "university",
+"priority_rank": 253,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Mayo Clinic (Rochester) Internal Medicine Residency",
+"city": "Rochester",
+"state": "MN",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 8,
+"type": "university",
+"priority_rank": 256,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Baylor University Medical Center (Internal Medicine Residency)",
+"city": "Dallas",
+"state": "TX",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.1,
+"type": "community (academic-community flagship of Baylor Scott & White Health; not a university-owned/LCME-affiliated academic medical center)",
+"priority_rank": 272,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Utah Health Program",
+"city": "Salt Lake City",
+"state": "UT",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 5.5,
+"type": "university",
+"priority_rank": 273,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "VCU Health System Internal Medicine Residency",
+"city": "Richmond",
+"state": "VA",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6,
+"type": "university",
+"priority_rank": 276,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Montefiore Medical Center/Albert Einstein College of Medicine (Moses and Weiler Campuses) Program, ACGME 1403521287",
+"city": "Bronx",
+"state": "NY",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 9,
+"type": "university",
+"priority_rank": 280,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Alabama Medical Center (UAB Tinsley Harrison Internal Medicine Residency Program)",
+"city": "Birmingham",
+"state": "AL",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8.9,
+"type": "university",
+"priority_rank": 281,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "MaineHealth Maine Medical Center Program",
+"city": "Portland",
+"state": "ME",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 9.3,
+"type": "university-affiliated",
+"priority_rank": 283,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UT Medical Branch Hospitals (IM)",
+"city": "Galveston",
+"state": "TX",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 9.4,
+"type": "university",
+"priority_rank": 284,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Wright State University (Boonshoft)",
+"city": "Dayton",
+"state": "OH",
+"tier": "5",
+"visa": "unstated",
+"non_us_img_pct": 6.3,
+"type": "university-affiliated",
+"priority_rank": 285,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Stony Brook Medicine/University Hospital Program",
+"city": "Stony Brook",
+"state": "NY",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8.8,
+"type": "university",
+"priority_rank": 288,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Main Line Health / Lankenau Medical Center Program",
+"city": "Wynnewood",
+"state": "PA",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8.96,
+"type": "university-affiliated (community-based academic program affiliated with Thomas Jefferson University; Lankenau Institute for Medical Resea...",
+"priority_rank": 302,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UT Health San Antonio Long School of Medicine (Joe and Teresa Lozano Long School of Medicine) - Internal Medicine Residency",
+"city": "San Antonio",
+"state": "TX",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8.1,
+"type": "university",
+"priority_rank": 308,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Tufts Medical Center Program",
+"city": "Boston",
+"state": "MA",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.1,
+"type": "university",
+"priority_rank": 311,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Illinois College of Medicine at Chicago (UIC) Internal Medicine",
+"city": "Chicago",
+"state": "IL",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6,
+"type": "university",
+"priority_rank": 318,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "McLaren Health Care/Macomb/MSU (Internal Medicine)",
+"city": "Mount Clemens",
+"state": "MI",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 7,
+"type": "community (MSU-affiliated)",
+"priority_rank": 319,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Washington University/B-JH/SLCH Consortium Internal Medicine Residency",
+"city": "St. Louis",
+"state": "MO",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.06,
+"type": "university",
+"priority_rank": 325,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Florida Healthcare/USF Morsani College of Medicine GME - Tampa South/Largo Hospital Program (Internal Medicine) [legacy name: HCA/USF Morsani GME - Largo Hospital IM; legacy: Largo Medical Center IM]",
+"city": "Largo",
+"state": "FL",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8,
+"type": "community (university-affiliated via USF Morsani College of Medicine and Nova Southeastern University COM)",
+"priority_rank": 335,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Morehouse School of Medicine Program",
+"city": "Atlanta",
+"state": "GA",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 9.6,
+"type": "university-affiliated",
+"priority_rank": 339,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HCA Healthcare/Los Robles Regional Medical Center Internal Medicine Residency",
+"city": "Thousand Oaks",
+"state": "CA",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 7,
+"type": "community",
+"priority_rank": 345,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Vanderbilt University Medical Center",
+"city": "Nashville",
+"state": "TN",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8.3,
+"type": "university",
+"priority_rank": 351,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Southwest Healthcare MEC IM (Temecula Valley Hospital, UHS) / UHS Southern California Medical Education Consortium (SoCal MEC) Internal Medicine Residency Program",
+"city": "Temecula",
+"state": "CA",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 7,
+"type": "community",
+"priority_rank": 358,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare/Mercer University School of Medicine/Grand Strand Medical Center Program",
+"city": "Myrtle Beach",
+"state": "SC",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8,
+"type": "community",
+"priority_rank": 360,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Pennsylvania Health System Program (HUP)",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 5.2,
+"type": "university",
+"priority_rank": 363,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Damas Hospital Program (Internal Medicine)",
+"city": "Ponce",
+"state": "PR",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 5,
+"type": "community",
+"priority_rank": 366,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Loyola University Medical Center (Stritch) Internal Medicine",
+"city": "Maywood",
+"state": "IL",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 7,
+"type": "university",
+"priority_rank": 368,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Medical College of Georgia / Augusta University (Internal Medicine Residency)",
+"city": "Augusta",
+"state": "GA",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 5.7,
+"type": "university",
+"priority_rank": 374,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Providence St. Vincent Hospital and Medical Center Internal Medicine Residency",
+"city": "Portland",
+"state": "OR",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6.25,
+"type": "community",
+"priority_rank": 376,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Louisville School of Medicine Internal Medicine Residency",
+"city": "Louisville",
+"state": "KY",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 5,
+"type": "university",
+"priority_rank": 381,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "San Ysidro Health IM Residency (FQHC THC; Scripps Mercy inpatient site)",
+"city": "San Diego",
+"state": "CA",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 6,
+"type": "community",
+"priority_rank": 382,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Houston Methodist Hospital TMC (IM)",
+"city": "Houston",
+"state": "TX",
+"tier": "5",
+"visa": "J-1",
+"non_us_img_pct": 8,
+"type": "university-affiliated (Houston Methodist Hospital, Texas Medical Center; academic teaching hospital, non-university-owned)",
+"priority_rank": 383,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "OPTI West/Valley Hospital (Las Vegas) Program - Internal Medicine",
+"city": "Las Vegas",
+"state": "NV",
+"tier": "5",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 5,
+"type": "community (osteopathic-heritage, OPTI West is an Osteopathic Postdoctoral Training Institution; distinct ACGME ID 1403100499 from the sep...",
+"priority_rank": 387,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HonorHealth Four Peaks Internal Medicine Residency (formerly Midwestern University GME Consortium / Mountain Vista Medical Center)",
+"city": "Mesa",
+"state": "AZ",
+"tier": "5",
+"visa": "unstated",
+"non_us_img_pct": 7.1,
+"type": "community",
+"priority_rank": 389,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Baptist Health-UAMS Internal Medicine Residency",
+"city": "North Little Rock",
+"state": "AR",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 90.9,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Flushing Hospital Medical Center - Internal Medicine Residency",
+"city": "Flushing (Queens)",
+"state": "NY",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 83.3,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hackensack Meridian Health / Hackensack University Medical Center (Mountainside) - Internal Medicine Residency",
+"city": "Montclair",
+"state": "NJ",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 81.5,
+"type": "community (university-affiliated via Hackensack Meridian School of Medicine, but Mountainside site itself is a community hospital program)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "AtlantiCare Regional Medical Center Program",
+"city": "Atlantic City",
+"state": "NJ",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 80,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Indiana University School of Medicine / Ball Memorial",
+"city": "Muncie",
+"state": "IN",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 81.8,
+"type": "university-affiliated (community-based IU School of Medicine regional campus program)",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "BayCare - St. Anthony's Hospital IM - NEW",
+"city": "St. Petersburg",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 75.6,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Coffee Regional Medical Center Program",
+"city": "Douglas",
+"state": "GA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 80,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "BayCare Health System (St. Joseph's Hospital-South) - Internal Medicine",
+"city": "Riverview",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 90,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "McLaren Health Care / Oakland / Michigan State University",
+"city": "Pontiac",
+"state": "MI",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 88,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "McLaren Health Care / Flint / Michigan State University",
+"city": "Flint",
+"state": "MI",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 97,
+"type": "community (McLaren Flint teaching hospital, MSU College of Human Medicine academic affiliation)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Aurora Health Care (Advocate Aurora / Advocate Health) Internal Medicine Residency",
+"city": "Milwaukee",
+"state": "WI",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 45.9,
+"type": "university-affiliated, community-based (UW School of Medicine and Public Health Milwaukee clinical campus, at Aurora Sinai and Aurora St....",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hunt Regional Healthcare / ARCOM (IM)",
+"city": "Greenville",
+"state": "TX",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "BayCare - Morton Plant North Bay Hospital IM - NEW",
+"city": "New Port Richey",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 70,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University Hospitals Regional (Chardon / Parma) Consortium Programs (IM)",
+"city": "Chardon / Parma",
+"state": "OH",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 41.7,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Health Education Services/Poplar Bluff Regional Medical Center Internal Medicine Residency",
+"city": "Poplar Bluff",
+"state": "MO",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 80,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "South Texas Health System GME Consortium (Internal Medicine)",
+"city": "McAllen",
+"state": "TX",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 90,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Dignity Health — St. Rose Dominican Hospitals — Internal Medicine Residency",
+"city": "Henderson / Las Vegas",
+"state": "NV",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 58,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NewYork-Presbyterian / Weill Cornell (Manhattan) — flagship",
+"city": "New York",
+"state": "NY",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 1.4,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Franciscan Health Olympia Fields Internal Medicine",
+"city": "Olympia Fields",
+"state": "IL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 41.7,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Iredell Health System Program",
+"city": "Statesville",
+"state": "NC",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 57.1,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "TIGMER (UIW) Laredo Internal Medicine Residency (Laredo Medical Center)",
+"city": "Laredo",
+"state": "TX",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 66,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Valley Health System GME Consortium — Internal Medicine Residency (Valley Hospital Medical Center)",
+"city": "Las Vegas",
+"state": "NV",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 64,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Sidney Kimmel Medical College at Thomas Jefferson University / Christiana Care Health Services (ChristianaCare) Internal Medicine Residency",
+"city": "Newark",
+"state": "DE",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 2.4,
+"type": "university-affiliated (community-based teaching hospital affiliated with Sidney Kimmel Medical College at Thomas Jefferson University)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "BayCare - Mease Countryside Hospital IM - NEW",
+"city": "Safety Harbor",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 45,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Sidney Kimmel Medical College / Thomas Jefferson University Hospital Program",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0.9,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Lakeland Regional Health Internal Medicine Residency",
+"city": "Lakeland",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 38.3,
+"type": "community (Nova Southeastern University - Kiran C. Patel College of Osteopathic Medicine academic affiliation; large 910-bed community te...",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Columbia University / NewYork-Presbyterian (Manhattan) — flagship",
+"city": "New York",
+"state": "NY",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Creighton University School of Medicine - Phoenix (St. Joseph's / Valleywise / Dignity - Arizona Health Education Alliance)",
+"city": "Phoenix",
+"state": "AZ",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Colorado Program (CU Anschutz / UCHealth)",
+"city": "Aurora",
+"state": "CO",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Mississippi Medical Center Internal Medicine Residency",
+"city": "Jackson",
+"state": "MS",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 2.7,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "West Suburban Medical Center Internal Medicine",
+"city": "Oak Park",
+"state": "IL",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 63,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Rutgers Health / Robert Wood Johnson Medical School (university flagship)",
+"city": "New Brunswick",
+"state": "NJ",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Providence St. Mary Medical Center Internal Medicine Residency",
+"city": "Apple Valley",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 40,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Rush University Medical Center Internal Medicine",
+"city": "Chicago",
+"state": "IL",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 1,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ascension Wisconsin (Columbia St. Mary's) Internal Medicine Residency",
+"city": "Milwaukee",
+"state": "WI",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Medical College of Wisconsin Affiliated Hospitals",
+"city": "Milwaukee",
+"state": "WI",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Mercy Health - St. Rita's Medical Center Internal Medicine Residency",
+"city": "Lima",
+"state": "OH",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 18.9,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Houston Healthcare/University of Houston (Kingwood) - Internal Medicine Residency",
+"city": "Kingwood",
+"state": "TX",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 43,
+"type": "community (university-affiliated with University of Houston Tilman J. Fertitta Family College of Medicine)",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "San Juan City Hospital Program (Internal Medicine)",
+"city": "San Juan",
+"state": "PR",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 3,
+"type": "community (aggregator label: \"community-based university affiliated\")",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NYC Health + Hospitals / Kings County (SUNY Downstate-affiliated, Brooklyn) — Categorical Internal Medicine (SUNY Downstate Dept. of Medicine Program)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "university-affiliated (SUNY Downstate Dept. of Medicine categorical IM residency, training across University Hospital of Brooklyn, Kings ...",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Wellington Regional Medical Center Internal Medicine Residency Program (UHS)",
+"city": "Wellington",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 45,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Michigan (Ann Arbor)",
+"city": "Ann Arbor",
+"state": "MI",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Advocate Health Care/Advocate Christ Medical Center Internal Medicine",
+"city": "Oak Lawn",
+"state": "IL",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 4.8,
+"type": "community-academic (community-based, Level 1 trauma center, UIC academic affiliation)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Arizona College of Medicine - Tucson (South Campus) Program - Internal Medicine",
+"city": "Tucson",
+"state": "AZ",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "UPMC Community Osteopathic IM Program (UPMC Central PA osteopathic track)",
+"city": "Harrisburg",
+"state": "PA",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Washington [Boise] Internal Medicine Residency",
+"city": "Boise",
+"state": "ID",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 11.4,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Corewell Health (Trenton) Internal Medicine Residency",
+"city": "Trenton",
+"state": "MI",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "community (osteopathic-affiliated; Michigan State University College of Osteopathic Medicine affiliated)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Tennessee College of Medicine (Memphis) IM Residency - UTHSC",
+"city": "Memphis",
+"state": "TN",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 23.9,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Cleveland Clinic Foundation / South Pointe Hospital Program (IM)",
+"city": "Warrensville Heights",
+"state": "OH",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "community (DO-track, ACGME accredited with Osteopathic Recognition)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Magnolia Regional Health Center Internal Medicine Residency",
+"city": "Corinth",
+"state": "MS",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 20.8,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "College Medical Center Internal Medicine Residency Program",
+"city": "Long Beach",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 38,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Henry Ford Genesys Hospital Internal Medicine Residency",
+"city": "Grand Blanc",
+"state": "MI",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 65.8,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai/South Nassau Program - Internal Medicine, ACGME 1403500930",
+"city": "Oceanside",
+"state": "NY",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community (Mount Sinai Health System-affiliated teaching hospital)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Sutter Health/Alta Bates Summit Medical Center Internal Medicine Residency",
+"city": "Oakland",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 21,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Sutter Health/Sutter Roseville Medical Center Internal Medicine Residency",
+"city": "Roseville",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 15,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "LSU School of Medicine (Baton Rouge) Internal Medicine Residency (Our Lady of the Lake)",
+"city": "Baton Rouge",
+"state": "LA",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "university-affiliated (LSU School of Medicine academic program with core clinical training at Our Lady of the Lake Regional Medical Cente...",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Maryland Medical Center IM Residency (main)",
+"city": "Baltimore",
+"state": "MD",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Corewell Health Lakeland (IM)",
+"city": "Saint Joseph",
+"state": "MI",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA Healthcare/USF Morsani College of Medicine GME - Tampa South Program (Northside Hospital)",
+"city": "St. Petersburg",
+"state": "FL",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 4,
+"type": "community (university-affiliated via USF Morsani College of Medicine)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Riverside University Health System Internal Medicine Residency",
+"city": "Moreno Valley",
+"state": "CA",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UND SMHS Internal Medicine Residency - Bismarck (Sanford Bismarck)",
+"city": "Bismarck",
+"state": "ND",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "university-affiliated (community-based, sponsored by UND SMHS, based at Sanford Health Bismarck)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Abrazo Health Network (Abrazo Central/Arrowhead) Internal Medicine Residency",
+"city": "Glendale/Phoenix",
+"state": "AZ",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "BayCare - St. Joseph's Hospital Internal Medicine Residency",
+"city": "Tampa",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 16,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mercy Health - St. Vincent Medical Center / Mercy Health Partners Program (IM)",
+"city": "Toledo",
+"state": "OH",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 72,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of Tennessee (Nashville) IM Residency - Ascension Saint Thomas",
+"city": "Nashville",
+"state": "TN",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 3.7,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. John's Riverside Hospital Program",
+"city": "Yonkers",
+"state": "NY",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 9.4,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA/USF Morsani GME - Citrus Hospital Internal Medicine Residency (aka HCA Florida Healthcare/USF Morsani College of Medicine GME - Tampa North/Citrus Hospital Program)",
+"city": "Inverness",
+"state": "FL",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 2,
+"type": "university-affiliated (HCA Healthcare GME in academic affiliation with USF Morsani College of Medicine; community hospital site - Citrus ...",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Hackensack Meridian Health / JFK University Medical Center Program (Internal Medicine) (incl. former Raritan Bay IM)",
+"city": "Edison",
+"state": "NJ",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 18,
+"type": "community (hospital-based, university-affiliated via Hackensack Meridian School of Medicine)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare / Eastern Idaho Regional Medical Center (EIRMC) Internal Medicine Residency",
+"city": "Idaho Falls",
+"state": "ID",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Wellstar Health System/Wellstar Kennestone Regional Medical Center Program",
+"city": "Marietta",
+"state": "GA",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 4,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Wayne State University School of Medicine Internal Medicine Residency Program (Henry Ford Rochester, formerly Ascension Providence Rochester)",
+"city": "Rochester Hills",
+"state": "MI",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "ThedaCare Regional Medical Center-Neenah (MCW Affiliated) Internal Medicine Residency",
+"city": "Neenah",
+"state": "WI",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (MCW-affiliated); brand-new program, first class matriculated July 1, 2026",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Archbold Medical Center Program (Medical College of Georgia - Archbold Internal Medicine Residency)",
+"city": "Thomasville",
+"state": "GA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 31,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UCF/HCA Florida Capital Hospital Internal Medicine Residency (Tallahassee) - NEW 2026",
+"city": "Tallahassee",
+"state": "FL",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Holy Name Medical Center Program",
+"city": "Teaneck",
+"state": "NJ",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NYMC / Lower Bucks Hospital Program (Prime Healthcare PA)",
+"city": "Bristol",
+"state": "PA",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HES / Mountain View Regional Medical Center Program (MVRMC)",
+"city": "Las Cruces",
+"state": "NM",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (HCA-affiliated, non-university; academic affiliation with Burrell College of Osteopathic Medicine for facilities/library/sim c...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prisma Health/USC SOM Columbia Program",
+"city": "Columbia",
+"state": "SC",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 2.1,
+"type": "university-affiliated (academic-based, USC School of Medicine Columbia, Level I Trauma Center)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Corry Memorial Hospital of LECOM Health Program - Internal Medicine Residency",
+"city": "Corry",
+"state": "PA",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community (unopposed, rural, critical-access hospital)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA Healthcare/Tufts University School of Medicine: Portsmouth Regional Hospital Program",
+"city": "Portsmouth",
+"state": "NH",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Prime South GME Consortium/St. Joseph Medical Center IM Residency",
+"city": "Kansas City",
+"state": "MO",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (Prime Healthcare community hospital; academic affiliation with California University of Science and Medicine [CUSM], an LCME-a...",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "MUSC Health Lancaster Medical Center Program (MUSC Regional Network) - Internal Medicine",
+"city": "Lancaster",
+"state": "SC",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Manatee Memorial Hospital Internal Medicine Residency (UHS)",
+"city": "Bradenton",
+"state": "FL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 13,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Baptist Memorial Medical Education (Jackson) IM Residency - Mississippi Baptist Medical Center",
+"city": "Jackson",
+"state": "MS",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Southwest Healthcare MEC IM - Palmdale (Palmdale Regional, UHS)",
+"city": "Palmdale",
+"state": "CA",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "OPTI West / San Antonio Regional Hospital Internal Medicine Residency",
+"city": "Upland",
+"state": "CA",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "University of Rochester Medical Center (Strong Memorial)",
+"city": "Rochester",
+"state": "NY",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 1.3,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Riverside Community Hospital (HCA Healthcare) Internal Medicine Residency",
+"city": "Riverside",
+"state": "CA",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "community (HCA Healthcare-sponsored; clinical affiliation/clerkship site for UC Riverside School of Medicine, but not a university-sponso...",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Dignity Health East Valley / CUEVA (Chandler Regional + Mercy Gilbert; sponsored by Creighton University School of Medicine - Phoenix)",
+"city": "Chandler/Gilbert",
+"state": "AZ",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "St. Joseph's Medical Center IM Residency (Dignity Health)",
+"city": "Stockton",
+"state": "CA",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 3,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "NYMC / Hudson Regional Health - Bayonne University Hospital Internal Medicine Residency (formerly CarePoint Health - Bayonne Medical Center)",
+"city": "Bayonne",
+"state": "NJ",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "WashU/B-JH/SLCH Consortium at Missouri Baptist Medical Center IM Residency",
+"city": "St. Louis",
+"state": "MO",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (WashU-academic-affiliated; new consortium site, initially accredited April 2024)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "McLeod Regional Medical Center Program",
+"city": "Florence",
+"state": "SC",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Rutgers Health/Cooperman Barnabas Medical Center Program",
+"city": "Livingston",
+"state": "NJ",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "university-affiliated (community teaching hospital affiliated with Rutgers Health/Rutgers New Jersey Medical School)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "PCOM / Redeemer Health System Program (Holy Redeemer Hospital) - Internal Medicine",
+"city": "Meadowbrook",
+"state": "PA",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mercy Health Fairfield Hospital Internal Medicine Residency [NEW 2025]",
+"city": "Fairfield",
+"state": "OH",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UT RGV (HCA) - Valley Regional Brownsville + Rio Grande Regional McAllen (IM)",
+"city": "McAllen/Brownsville",
+"state": "TX",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (HCA-affiliated, university-sponsored)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Las Palmas Del Sol (IM)",
+"city": "El Paso",
+"state": "TX",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 14,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "University of Chicago (Endeavor Health – NorthShore Hospitals) Internal Medicine",
+"city": "Evanston",
+"state": "IL",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 4,
+"type": "university-affiliated community (self-described: 'university-affiliated community residency, sponsored by the University of Chicago Pritz...",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "UNC Health Blue Ridge Program",
+"city": "Morganton",
+"state": "NC",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 4.2,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "NYU Langone Hospital—Suffolk (NYU Grossman Long Island, Patchogue)",
+"city": "Patchogue",
+"state": "NY",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "NYU Grossman Long Island School of Medicine Program in Internal Medicine (ex-Winthrop)",
+"city": "Mineola",
+"state": "NY",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Hannibal Regional Healthcare System Internal Medicine Residency",
+"city": "Hannibal",
+"state": "MO",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Still OPTI/Northeast Regional Medical Center Internal Medicine Residency",
+"city": "Kirksville",
+"state": "MO",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA East Florida Division GME - Lawnwood Hospital IM",
+"city": "Fort Pierce",
+"state": "FL",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Health Education Services / Flowers Hospital Internal Medicine Residency",
+"city": "Dothan",
+"state": "AL",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ochsner Clinic Foundation Internal Medicine Residency",
+"city": "New Orleans",
+"state": "LA",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Methodist Healthcare System of San Antonio (HCA) - Internal Medicine",
+"city": "San Antonio",
+"state": "TX",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 0,
+"type": "community (HCA-affiliated, non-university-based teaching hospital program)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Arrowhead Regional Medical Center Internal Medicine Residency",
+"city": "Colton",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 2,
+"type": "community (safety-net county hospital; university-affiliated academic core, per residencymatch.ai self-description as 'University-based',...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ascension St. Vincent Evansville Internal Medicine Residency (ACGME/ERAS name: Ascension St. Vincent Indianapolis (Southern Region))",
+"city": "Evansville",
+"state": "IN",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (new ACGME-accredited community-based program at Ascension St. Vincent Evansville; sponsoring institution filed under 'Ascensio...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Medical University of South Carolina Program (Internal Medicine)",
+"city": "Charleston",
+"state": "SC",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 2.8,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Community Memorial Health System Internal Medicine Residency",
+"city": "Ventura",
+"state": "CA",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 4,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Zucker School of Medicine at Hofstra/Northwell — Internal Medicine Residency at North Shore University Hospital & Long Island Jewish Medical Center (NS/LIJ) — flagship",
+"city": "Manhasset / New Hyde Park",
+"state": "NY",
+"tier": "U",
+"visa": "J-1+H-1B",
+"non_us_img_pct": null,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Saint Joseph Hospital Program (Intermountain Health)",
+"city": "Denver",
+"state": "CO",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 0,
+"type": "university-affiliated (academic-community; Intermountain Health community hospital with affiliations to National Jewish Health, Kaiser Pe...",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Franciscan Health Indianapolis Internal Medicine Residency",
+"city": "Indianapolis",
+"state": "IN",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA HealthONE / Sky Ridge Medical Center Program",
+"city": "Lone Tree",
+"state": "CO",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 2,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Three Crosses Regional Hospital Program (TCRH)",
+"city": "Las Cruces",
+"state": "NM",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Mercy Health - Anderson Hospital (IM) [NEW 2025]",
+"city": "Cincinnati",
+"state": "OH",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Methodist Le Bonheur Healthcare Internal Medicine Residency Program (Methodist University Hospital)",
+"city": "Memphis",
+"state": "TN",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (independent, non-university-owned teaching hospital system; affiliated academically with UTHSC but MLH is the ACGME sponsoring...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Sutter Health/Memorial Medical Center Internal Medicine Residency",
+"city": "Modesto",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare Sunrise Health GME / MountainView Program — Internal Medicine (also uses Sunrise & Southern Hills Hospital sites)",
+"city": "Las Vegas",
+"state": "NV",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 3,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "McLaren Bay Region (IM) [NEW 2024]",
+"city": "Bay City",
+"state": "MI",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Southeast Georgia Health System Program (Internal Medicine)",
+"city": "Brunswick",
+"state": "GA",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Summa Health System / NEOMED Program (IM)",
+"city": "Akron",
+"state": "OH",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 3.1,
+"type": "university-affiliated (community teaching hospital affiliated with NEOMED)",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "NYU Grossman School of Medicine (Manhattan) — flagship",
+"city": "New York",
+"state": "NY",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 1,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "University of New Mexico School of Medicine Program (UNM)",
+"city": "Albuquerque",
+"state": "NM",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "university",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Drexel University College of Medicine / Hahnemann University Hospital Program (STATUS: closed)",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "OhioHealth / Riverside Methodist Hospital Program (IM)",
+"city": "Columbus",
+"state": "OH",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Medical University of South Carolina Regional Network (Florence) Program (MUSC Health Florence Medical Center)",
+"city": "Florence",
+"state": "SC",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "HCA Florida Aventura Hospital Internal Medicine Residency",
+"city": "Aventura",
+"state": "FL",
+"tier": "X",
+"visa": "J-1",
+"non_us_img_pct": 4,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Family Health Center at NYU Langone Program (Sunset Park)",
+"city": "Brooklyn",
+"state": "NY",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 3,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Prime West Consortium/St. Francis Medical Center IM",
+"city": "Lynwood",
+"state": "CA",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Northern Westchester Hospital IM Residency (Northwell) / Zucker School of Medicine at Hofstra-Northwell at Northern Westchester Hospital",
+"city": "Mount Kisco",
+"state": "NY",
+"tier": "X",
+"visa": "J-1+H-1B",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Paris Regional Health / TCOM Internal Medicine Residency Program",
+"city": "Paris",
+"state": "TX",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Trios Health Internal Medicine Residency",
+"city": "Kennewick",
+"state": "WA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 6.7,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Cone Health Program (Moses H. Cone Memorial Hospital, affiliated with UNC School of Medicine)",
+"city": "Greensboro",
+"state": "NC",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 0,
+"type": "community (community-based, university-affiliated with UNC School of Medicine at Chapel Hill)",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Northside Hospital Gwinnett Program (Internal Medicine Residency)",
+"city": "Lawrenceville",
+"state": "GA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 13,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Francis-Emory Healthcare Program",
+"city": "Columbus",
+"state": "GA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Sutter Health/California Pacific Medical Center Internal Medicine Residency",
+"city": "San Francisco",
+"state": "CA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "UCSF Health - St. Mary's Hospital (Stanyan Hospital) Internal Medicine Residency",
+"city": "San Francisco",
+"state": "CA",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 0,
+"type": "community (formerly Dignity Health St. Mary's Medical Center / St. Francis, rebranded as UCSF Health Stanyan Hospital and St. Francis/Hyd...",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Riverside Medical Center Internal Medicine Residency Program",
+"city": "Kankakee",
+"state": "IL",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Louis A. Weiss Memorial Hospital Internal Medicine — CLOSED / DEFUNCT",
+"city": "Chicago",
+"state": "IL",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Crozer-Chester Medical Center Program",
+"city": "Upland",
+"state": "PA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "OPTI West - Benefis Hospital Program",
+"city": "Great Falls",
+"state": "MT",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "MountainStar Healthcare / Ogden Regional Medical Center Program (Internal Medicine)",
+"city": "Ogden",
+"state": "UT",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "NYMC/Roxborough Memorial Hospital Program (Prime PA; sites: Roxborough Memorial Hospital + Suburban Community Hospital, East Norriton)",
+"city": "Philadelphia",
+"state": "PA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community (Prime Healthcare community hospital; opposed program — hospital also runs a Family Medicine residency, per FAQ page: 'Roxborou...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Clair Health Graduate Medical Education Program - Internal Medicine",
+"city": "Pittsburgh (Mt. Lebanon)",
+"state": "PA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA Healthcare KC/Centerpoint Medical Center Internal Medicine Residency",
+"city": "Independence",
+"state": "MO",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Sentara Health (Sentara Northern Virginia Medical Center) Internal Medicine Residency",
+"city": "Woodbridge",
+"state": "VA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Bon Secours St. Francis Program (Internal Medicine Residency at St. Francis Downtown)",
+"city": "Greenville",
+"state": "SC",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Lexington Medical Center Program (Internal Medicine Residency)",
+"city": "West Columbia",
+"state": "SC",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Health Education Services/Physicians Regional Medical Center - Pine Ridge Internal Medicine Residency",
+"city": "Naples",
+"state": "FL",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Health First (Holmes Regional Medical Center) Internal Medicine Residency - NEW program",
+"city": "Melbourne",
+"state": "FL",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Prime South GME Consortium - Knapp Medical Center (IM)",
+"city": "Weslaco",
+"state": "TX",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Internal Medicine Residency Program - Bakersfield Memorial Hospital (Morehouse School of Medicine / More In Common Alliance, CommonSpirit Health / Dignity Health)",
+"city": "Bakersfield",
+"state": "CA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community (new program; academic partnership with Morehouse School of Medicine via the More In Common Alliance - MICA; hospital-based com...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Universidad Central del Caribe SOM (Cayetano Coll & Toste Hospital) Program / Hospital Pavia Arecibo (Internal Medicine)",
+"city": "Arecibo",
+"state": "PR",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "university-affiliated",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Houston Methodist The Woodlands (IM)",
+"city": "The Woodlands",
+"state": "TX",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "HonorHealth (Scottsdale Thompson Peak / Four Peaks)",
+"city": "Scottsdale (+ Mesa Four Peaks)",
+"state": "AZ",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 4,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Indiana University School of Medicine-Bloomington Internal Medicine Residency",
+"city": "Bloomington",
+"state": "IN",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community-based (in an academic/university setting) — IU Health Bloomington Hospital with IU School of Medicine sponsorship",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "St. David's Medical Center HCA GME (Internal Medicine Residency)",
+"city": "Austin",
+"state": "TX",
+"tier": "U",
+"visa": "J-1",
+"non_us_img_pct": null,
+"type": "community (HCA Healthcare GME; St. David's HealthCare GME programs are based at St. David's South Austin Medical Center, 344 beds)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Samaritan Health Services Internal Medicine Residency (Good Samaritan Regional Medical Center)",
+"city": "Corvallis",
+"state": "OR",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Kettering Health Network / Grandview Medical Center Program (IM)",
+"city": "Dayton",
+"state": "OH",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community (osteopathic-recognition community teaching hospital program)",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "HCA/USF Morsani GME - Regional Medical Center Bayonet Point IM (HCA Florida Bayonet Point Hospital Internal Medicine Residency)",
+"city": "Hudson",
+"state": "FL",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "UTHSC-Maury Internal Medicine Residency Program (Maury Regional Medical Center)",
+"city": "Columbia",
+"state": "TN",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community (UTHSC academic affiliation) - described as 'community-based training model in partnership with University of Tennessee Health ...",
+"priority_rank": null,
+"grad_cutoff_risk": "HARD"
+},
+{
+"program": "Mercy Hospital Springfield IM Residency (Mercy GME Springfield)",
+"city": "Springfield",
+"state": "MO",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "unknown (community hospital system; Mercy Hospital Springfield lists an academic affiliation with University of Missouri-Columbia School ...",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Valley Health System (Winchester Medical Center) Internal Medicine Residency",
+"city": "Winchester",
+"state": "VA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community (new ACGME-accredited program; flagship hospital Winchester Medical Center, 495-bed tertiary referral center; not university-ow...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "WakeMed Health and Hospitals Program",
+"city": "Raleigh",
+"state": "NC",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "South Georgia Medical Center Program",
+"city": "Valdosta",
+"state": "GA",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": null,
+"type": "community (Mercer University School of Medicine academic affiliation; ACGME-accredited since 2021, community teaching hospital, not a uni...",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "St. Francis Medical Center Internal Medicine Residency Program (FMOLHS / FMOL Health)",
+"city": "Monroe",
+"state": "LA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Ochsner Lafayette General Medical Center IM Residency (in development)",
+"city": "Lafayette",
+"state": "LA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Carrollton Regional Medical Center Internal Medicine Residency Program",
+"city": "Carrollton",
+"state": "TX",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Kaweah Health (KDHCD) IM Residency",
+"city": "Visalia",
+"state": "CA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": null,
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Mercy San Juan Medical Center Internal Medicine Residency (Dignity Health / CommonSpirit Health, ACGME sponsor: St Joseph's Medical Center Program)",
+"city": "Carmichael",
+"state": "CA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Martin Luther King, Jr. Community Hospital Internal Medicine Residency",
+"city": "Los Angeles",
+"state": "CA",
+"tier": "X",
+"visa": "unstated",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "United Health Centers of the San Joaquin Valley Internal Medicine Residency",
+"city": "Fresno",
+"state": "CA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "MultiCare Spokane Internal Medicine Residency (Deaconess Hospital)",
+"city": "Spokane",
+"state": "WA",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "none"
+},
+{
+"program": "Kaiser Permanente Hawaii Internal Medicine Residency",
+"city": "Honolulu",
+"state": "HI",
+"tier": "X",
+"visa": "none",
+"non_us_img_pct": 0,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Centro Medico Menonita Cayey Program (Internal Medicine)",
+"city": "Cayey",
+"state": "PR",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+},
+{
+"program": "Hospital de la Concepcion Program (Internal Medicine)",
+"city": "San German",
+"state": "PR",
+"tier": "U",
+"visa": "unstated",
+"non_us_img_pct": null,
+"type": "community",
+"priority_rank": null,
+"grad_cutoff_risk": "soft"
+}
+],
+"excluded": [
+{
+"program": "Baptist Health-UAMS Internal Medicine Residency",
+"city": "North Little Rock",
+"state": "AR",
+"why": "no visa sponsorship"
+},
+{
+"program": "Flushing Hospital Medical Center - Internal Medicine Residency",
+"city": "Flushing (Queens)",
+"state": "NY",
+"why": "no visa sponsorship"
+},
+{
+"program": "Hackensack Meridian Health / Hackensack University Medical Center (Mountainside) - Internal Medicine Residency",
+"city": "Montclair",
+"state": "NJ",
+"why": "no visa sponsorship"
+},
+{
+"program": "AtlantiCare Regional Medical Center Program",
+"city": "Atlantic City",
+"state": "NJ",
+"why": "no visa sponsorship"
+},
+{
+"program": "Indiana University School of Medicine / Ball Memorial",
+"city": "Muncie",
+"state": "IN",
+"why": "no visa sponsorship"
+},
+{
+"program": "BayCare - St. Anthony's Hospital IM - NEW",
+"city": "St. Petersburg",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Coffee Regional Medical Center Program",
+"city": "Douglas",
+"state": "GA",
+"why": "no visa sponsorship"
+},
+{
+"program": "BayCare Health System (St. Joseph's Hospital-South) - Internal Medicine",
+"city": "Riverview",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "McLaren Health Care / Oakland / Michigan State University",
+"city": "Pontiac",
+"state": "MI",
+"why": "no visa sponsorship"
+},
+{
+"program": "McLaren Health Care / Flint / Michigan State University",
+"city": "Flint",
+"state": "MI",
+"why": "no visa sponsorship"
+},
+{
+"program": "Aurora Health Care (Advocate Aurora / Advocate Health) Internal Medicine Residency",
+"city": "Milwaukee",
+"state": "WI",
+"why": "no visa sponsorship"
+},
+{
+"program": "Hunt Regional Healthcare / ARCOM (IM)",
+"city": "Greenville",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "BayCare - Morton Plant North Bay Hospital IM - NEW",
+"city": "New Port Richey",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "University Hospitals Regional (Chardon / Parma) Consortium Programs (IM)",
+"city": "Chardon / Parma",
+"state": "OH",
+"why": "no visa sponsorship"
+},
+{
+"program": "Health Education Services/Poplar Bluff Regional Medical Center Internal Medicine Residency",
+"city": "Poplar Bluff",
+"state": "MO",
+"why": "no visa sponsorship"
+},
+{
+"program": "South Texas Health System GME Consortium (Internal Medicine)",
+"city": "McAllen",
+"state": "TX",
+"why": "no visa sponsorship"
+},
+{
+"program": "Dignity Health — St. Rose Dominican Hospitals — Internal Medicine Residency",
+"city": "Henderson / Las Vegas",
+"state": "NV",
+"why": "no visa sponsorship"
+},
+{
+"program": "NewYork-Presbyterian / Weill Cornell (Manhattan) — flagship",
+"city": "New York",
+"state": "NY",
+"why": "non-US IMG 1% < 5%"
+},
+{
+"program": "Franciscan Health Olympia Fields Internal Medicine",
+"city": "Olympia Fields",
+"state": "IL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Iredell Health System Program",
+"city": "Statesville",
+"state": "NC",
+"why": "no visa sponsorship"
+},
+{
+"program": "TIGMER (UIW) Laredo Internal Medicine Residency (Laredo Medical Center)",
+"city": "Laredo",
+"state": "TX",
+"why": "no visa sponsorship"
+},
+{
+"program": "Valley Health System GME Consortium — Internal Medicine Residency (Valley Hospital Medical Center)",
+"city": "Las Vegas",
+"state": "NV",
+"why": "no visa sponsorship"
+},
+{
+"program": "Sidney Kimmel Medical College at Thomas Jefferson University / Christiana Care Health Services (ChristianaCare) Internal Medicine Residency",
+"city": "Newark",
+"state": "DE",
+"why": "non-US IMG 2% < 5%"
+},
+{
+"program": "BayCare - Mease Countryside Hospital IM - NEW",
+"city": "Safety Harbor",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Sidney Kimmel Medical College / Thomas Jefferson University Hospital Program",
+"city": "Philadelphia",
+"state": "PA",
+"why": "non-US IMG 1% < 5%"
+},
+{
+"program": "Lakeland Regional Health Internal Medicine Residency",
+"city": "Lakeland",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Columbia University / NewYork-Presbyterian (Manhattan) — flagship",
+"city": "New York",
+"state": "NY",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Creighton University School of Medicine - Phoenix (St. Joseph's / Valleywise / Dignity - Arizona Health Education Alliance)",
+"city": "Phoenix",
+"state": "AZ",
+"why": "no composition data"
+},
+{
+"program": "University of Colorado Program (CU Anschutz / UCHealth)",
+"city": "Aurora",
+"state": "CO",
+"why": "no composition data"
+},
+{
+"program": "University of Mississippi Medical Center Internal Medicine Residency",
+"city": "Jackson",
+"state": "MS",
+"why": "non-US IMG 3% < 5%"
+},
+{
+"program": "West Suburban Medical Center Internal Medicine",
+"city": "Oak Park",
+"state": "IL",
+"why": "program closed"
+},
+{
+"program": "Rutgers Health / Robert Wood Johnson Medical School (university flagship)",
+"city": "New Brunswick",
+"state": "NJ",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Providence St. Mary Medical Center Internal Medicine Residency",
+"city": "Apple Valley",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "Rush University Medical Center Internal Medicine",
+"city": "Chicago",
+"state": "IL",
+"why": "non-US IMG 1% < 5%"
+},
+{
+"program": "Ascension Wisconsin (Columbia St. Mary's) Internal Medicine Residency",
+"city": "Milwaukee",
+"state": "WI",
+"why": "no composition data"
+},
+{
+"program": "Medical College of Wisconsin Affiliated Hospitals",
+"city": "Milwaukee",
+"state": "WI",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Mercy Health - St. Rita's Medical Center Internal Medicine Residency",
+"city": "Lima",
+"state": "OH",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA Houston Healthcare/University of Houston (Kingwood) - Internal Medicine Residency",
+"city": "Kingwood",
+"state": "TX",
+"why": "no visa sponsorship"
+},
+{
+"program": "San Juan City Hospital Program (Internal Medicine)",
+"city": "San Juan",
+"state": "PR",
+"why": "non-US IMG 3% < 5%"
+},
+{
+"program": "NYC Health + Hospitals / Kings County (SUNY Downstate-affiliated, Brooklyn) — Categorical Internal Medicine (SUNY Downstate Dept. of Medicine Program)",
+"city": "Brooklyn",
+"state": "NY",
+"why": "no composition data"
+},
+{
+"program": "Wellington Regional Medical Center Internal Medicine Residency Program (UHS)",
+"city": "Wellington",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "University of Michigan (Ann Arbor)",
+"city": "Ann Arbor",
+"state": "MI",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Advocate Health Care/Advocate Christ Medical Center Internal Medicine",
+"city": "Oak Lawn",
+"state": "IL",
+"why": "non-US IMG 5% < 5%"
+},
+{
+"program": "University of Arizona College of Medicine - Tucson (South Campus) Program - Internal Medicine",
+"city": "Tucson",
+"state": "AZ",
+"why": "no composition data"
+},
+{
+"program": "UPMC Community Osteopathic IM Program (UPMC Central PA osteopathic track)",
+"city": "Harrisburg",
+"state": "PA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "University of Washington [Boise] Internal Medicine Residency",
+"city": "Boise",
+"state": "ID",
+"why": "no visa sponsorship"
+},
+{
+"program": "Corewell Health (Trenton) Internal Medicine Residency",
+"city": "Trenton",
+"state": "MI",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "University of Tennessee College of Medicine (Memphis) IM Residency - UTHSC",
+"city": "Memphis",
+"state": "TN",
+"why": "no visa sponsorship"
+},
+{
+"program": "Cleveland Clinic Foundation / South Pointe Hospital Program (IM)",
+"city": "Warrensville Heights",
+"state": "OH",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Magnolia Regional Health Center Internal Medicine Residency",
+"city": "Corinth",
+"state": "MS",
+"why": "no visa sponsorship"
+},
+{
+"program": "College Medical Center Internal Medicine Residency Program",
+"city": "Long Beach",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "Henry Ford Genesys Hospital Internal Medicine Residency",
+"city": "Grand Blanc",
+"state": "MI",
+"why": "no visa sponsorship"
+},
+{
+"program": "Icahn School of Medicine at Mount Sinai/South Nassau Program - Internal Medicine, ACGME 1403500930",
+"city": "Oceanside",
+"state": "NY",
+"why": "no visa sponsorship"
+},
+{
+"program": "Sutter Health/Alta Bates Summit Medical Center Internal Medicine Residency",
+"city": "Oakland",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "Sutter Health/Sutter Roseville Medical Center Internal Medicine Residency",
+"city": "Roseville",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "LSU School of Medicine (Baton Rouge) Internal Medicine Residency (Our Lady of the Lake)",
+"city": "Baton Rouge",
+"state": "LA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "University of Maryland Medical Center IM Residency (main)",
+"city": "Baltimore",
+"state": "MD",
+"why": "no composition data"
+},
+{
+"program": "Corewell Health Lakeland (IM)",
+"city": "Saint Joseph",
+"state": "MI",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "HCA Healthcare/USF Morsani College of Medicine GME - Tampa South Program (Northside Hospital)",
+"city": "St. Petersburg",
+"state": "FL",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "Riverside University Health System Internal Medicine Residency",
+"city": "Moreno Valley",
+"state": "CA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "UND SMHS Internal Medicine Residency - Bismarck (Sanford Bismarck)",
+"city": "Bismarck",
+"state": "ND",
+"why": "no composition data"
+},
+{
+"program": "Abrazo Health Network (Abrazo Central/Arrowhead) Internal Medicine Residency",
+"city": "Glendale/Phoenix",
+"state": "AZ",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "BayCare - St. Joseph's Hospital Internal Medicine Residency",
+"city": "Tampa",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Mercy Health - St. Vincent Medical Center / Mercy Health Partners Program (IM)",
+"city": "Toledo",
+"state": "OH",
+"why": "no visa sponsorship"
+},
+{
+"program": "University of Tennessee (Nashville) IM Residency - Ascension Saint Thomas",
+"city": "Nashville",
+"state": "TN",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "St. John's Riverside Hospital Program",
+"city": "Yonkers",
+"state": "NY",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA/USF Morsani GME - Citrus Hospital Internal Medicine Residency (aka HCA Florida Healthcare/USF Morsani College of Medicine GME - Tampa North/Citrus Hospital Program)",
+"city": "Inverness",
+"state": "FL",
+"why": "non-US IMG 2% < 5%"
+},
+{
+"program": "Hackensack Meridian Health / JFK University Medical Center Program (Internal Medicine) (incl. former Raritan Bay IM)",
+"city": "Edison",
+"state": "NJ",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA Healthcare / Eastern Idaho Regional Medical Center (EIRMC) Internal Medicine Residency",
+"city": "Idaho Falls",
+"state": "ID",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Wellstar Health System/Wellstar Kennestone Regional Medical Center Program",
+"city": "Marietta",
+"state": "GA",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "Wayne State University School of Medicine Internal Medicine Residency Program (Henry Ford Rochester, formerly Ascension Providence Rochester)",
+"city": "Rochester Hills",
+"state": "MI",
+"why": "no composition data"
+},
+{
+"program": "ThedaCare Regional Medical Center-Neenah (MCW Affiliated) Internal Medicine Residency",
+"city": "Neenah",
+"state": "WI",
+"why": "no composition data"
+},
+{
+"program": "Archbold Medical Center Program (Medical College of Georgia - Archbold Internal Medicine Residency)",
+"city": "Thomasville",
+"state": "GA",
+"why": "no visa sponsorship"
+},
+{
+"program": "UCF/HCA Florida Capital Hospital Internal Medicine Residency (Tallahassee) - NEW 2026",
+"city": "Tallahassee",
+"state": "FL",
+"why": "no composition data"
+},
+{
+"program": "Holy Name Medical Center Program",
+"city": "Teaneck",
+"state": "NJ",
+"why": "no composition data"
+},
+{
+"program": "NYMC / Lower Bucks Hospital Program (Prime Healthcare PA)",
+"city": "Bristol",
+"state": "PA",
+"why": "no composition data"
+},
+{
+"program": "HES / Mountain View Regional Medical Center Program (MVRMC)",
+"city": "Las Cruces",
+"state": "NM",
+"why": "no composition data"
+},
+{
+"program": "Prisma Health/USC SOM Columbia Program",
+"city": "Columbia",
+"state": "SC",
+"why": "non-US IMG 2% < 5%"
+},
+{
+"program": "Corry Memorial Hospital of LECOM Health Program - Internal Medicine Residency",
+"city": "Corry",
+"state": "PA",
+"why": "no composition data"
+},
+{
+"program": "HCA Healthcare/Tufts University School of Medicine: Portsmouth Regional Hospital Program",
+"city": "Portsmouth",
+"state": "NH",
+"why": "no composition data"
+},
+{
+"program": "Prime South GME Consortium/St. Joseph Medical Center IM Residency",
+"city": "Kansas City",
+"state": "MO",
+"why": "no composition data"
+},
+{
+"program": "MUSC Health Lancaster Medical Center Program (MUSC Regional Network) - Internal Medicine",
+"city": "Lancaster",
+"state": "SC",
+"why": "no composition data"
+},
+{
+"program": "Manatee Memorial Hospital Internal Medicine Residency (UHS)",
+"city": "Bradenton",
+"state": "FL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Baptist Memorial Medical Education (Jackson) IM Residency - Mississippi Baptist Medical Center",
+"city": "Jackson",
+"state": "MS",
+"why": "no composition data"
+},
+{
+"program": "Southwest Healthcare MEC IM - Palmdale (Palmdale Regional, UHS)",
+"city": "Palmdale",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "OPTI West / San Antonio Regional Hospital Internal Medicine Residency",
+"city": "Upland",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "University of Rochester Medical Center (Strong Memorial)",
+"city": "Rochester",
+"state": "NY",
+"why": "non-US IMG 1% < 5%"
+},
+{
+"program": "Riverside Community Hospital (HCA Healthcare) Internal Medicine Residency",
+"city": "Riverside",
+"state": "CA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Dignity Health East Valley / CUEVA (Chandler Regional + Mercy Gilbert; sponsored by Creighton University School of Medicine - Phoenix)",
+"city": "Chandler/Gilbert",
+"state": "AZ",
+"why": "no visa sponsorship"
+},
+{
+"program": "St. Joseph's Medical Center IM Residency (Dignity Health)",
+"city": "Stockton",
+"state": "CA",
+"why": "non-US IMG 3% < 5%"
+},
+{
+"program": "NYMC / Hudson Regional Health - Bayonne University Hospital Internal Medicine Residency (formerly CarePoint Health - Bayonne Medical Center)",
+"city": "Bayonne",
+"state": "NJ",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "WashU/B-JH/SLCH Consortium at Missouri Baptist Medical Center IM Residency",
+"city": "St. Louis",
+"state": "MO",
+"why": "no composition data"
+},
+{
+"program": "McLeod Regional Medical Center Program",
+"city": "Florence",
+"state": "SC",
+"why": "no composition data"
+},
+{
+"program": "Rutgers Health/Cooperman Barnabas Medical Center Program",
+"city": "Livingston",
+"state": "NJ",
+"why": "no composition data"
+},
+{
+"program": "PCOM / Redeemer Health System Program (Holy Redeemer Hospital) - Internal Medicine",
+"city": "Meadowbrook",
+"state": "PA",
+"why": "no composition data"
+},
+{
+"program": "Mercy Health Fairfield Hospital Internal Medicine Residency [NEW 2025]",
+"city": "Fairfield",
+"state": "OH",
+"why": "no composition data"
+},
+{
+"program": "UT RGV (HCA) - Valley Regional Brownsville + Rio Grande Regional McAllen (IM)",
+"city": "McAllen/Brownsville",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "HCA Las Palmas Del Sol (IM)",
+"city": "El Paso",
+"state": "TX",
+"why": "no visa sponsorship"
+},
+{
+"program": "University of Chicago (Endeavor Health – NorthShore Hospitals) Internal Medicine",
+"city": "Evanston",
+"state": "IL",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "UNC Health Blue Ridge Program",
+"city": "Morganton",
+"state": "NC",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "NYU Langone Hospital—Suffolk (NYU Grossman Long Island, Patchogue)",
+"city": "Patchogue",
+"state": "NY",
+"why": "no visa sponsorship"
+},
+{
+"program": "NYU Grossman Long Island School of Medicine Program in Internal Medicine (ex-Winthrop)",
+"city": "Mineola",
+"state": "NY",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Hannibal Regional Healthcare System Internal Medicine Residency",
+"city": "Hannibal",
+"state": "MO",
+"why": "no composition data"
+},
+{
+"program": "Still OPTI/Northeast Regional Medical Center Internal Medicine Residency",
+"city": "Kirksville",
+"state": "MO",
+"why": "no composition data"
+},
+{
+"program": "HCA East Florida Division GME - Lawnwood Hospital IM",
+"city": "Fort Pierce",
+"state": "FL",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Health Education Services / Flowers Hospital Internal Medicine Residency",
+"city": "Dothan",
+"state": "AL",
+"why": "no composition data"
+},
+{
+"program": "Ochsner Clinic Foundation Internal Medicine Residency",
+"city": "New Orleans",
+"state": "LA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Methodist Healthcare System of San Antonio (HCA) - Internal Medicine",
+"city": "San Antonio",
+"state": "TX",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Arrowhead Regional Medical Center Internal Medicine Residency",
+"city": "Colton",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "Ascension St. Vincent Evansville Internal Medicine Residency (ACGME/ERAS name: Ascension St. Vincent Indianapolis (Southern Region))",
+"city": "Evansville",
+"state": "IN",
+"why": "no composition data"
+},
+{
+"program": "Medical University of South Carolina Program (Internal Medicine)",
+"city": "Charleston",
+"state": "SC",
+"why": "non-US IMG 3% < 5%"
+},
+{
+"program": "Community Memorial Health System Internal Medicine Residency",
+"city": "Ventura",
+"state": "CA",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "Zucker School of Medicine at Hofstra/Northwell — Internal Medicine Residency at North Shore University Hospital & Long Island Jewish Medical Center (NS/LIJ) — flagship",
+"city": "Manhasset / New Hyde Park",
+"state": "NY",
+"why": "no composition data"
+},
+{
+"program": "Saint Joseph Hospital Program (Intermountain Health)",
+"city": "Denver",
+"state": "CO",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Franciscan Health Indianapolis Internal Medicine Residency",
+"city": "Indianapolis",
+"state": "IN",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA HealthONE / Sky Ridge Medical Center Program",
+"city": "Lone Tree",
+"state": "CO",
+"why": "non-US IMG 2% < 5%"
+},
+{
+"program": "Three Crosses Regional Hospital Program (TCRH)",
+"city": "Las Cruces",
+"state": "NM",
+"why": "no composition data"
+},
+{
+"program": "Mercy Health - Anderson Hospital (IM) [NEW 2025]",
+"city": "Cincinnati",
+"state": "OH",
+"why": "no composition data"
+},
+{
+"program": "Methodist Le Bonheur Healthcare Internal Medicine Residency Program (Methodist University Hospital)",
+"city": "Memphis",
+"state": "TN",
+"why": "no composition data"
+},
+{
+"program": "Sutter Health/Memorial Medical Center Internal Medicine Residency",
+"city": "Modesto",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA Healthcare Sunrise Health GME / MountainView Program — Internal Medicine (also uses Sunrise & Southern Hills Hospital sites)",
+"city": "Las Vegas",
+"state": "NV",
+"why": "no visa sponsorship"
+},
+{
+"program": "McLaren Bay Region (IM) [NEW 2024]",
+"city": "Bay City",
+"state": "MI",
+"why": "no composition data"
+},
+{
+"program": "Southeast Georgia Health System Program (Internal Medicine)",
+"city": "Brunswick",
+"state": "GA",
+"why": "no composition data"
+},
+{
+"program": "Summa Health System / NEOMED Program (IM)",
+"city": "Akron",
+"state": "OH",
+"why": "non-US IMG 3% < 5%"
+},
+{
+"program": "NYU Grossman School of Medicine (Manhattan) — flagship",
+"city": "New York",
+"state": "NY",
+"why": "non-US IMG 1% < 5%"
+},
+{
+"program": "University of New Mexico School of Medicine Program (UNM)",
+"city": "Albuquerque",
+"state": "NM",
+"why": "no composition data"
+},
+{
+"program": "Drexel University College of Medicine / Hahnemann University Hospital Program (STATUS: closed)",
+"city": "Philadelphia",
+"state": "PA",
+"why": "no composition data"
+},
+{
+"program": "OhioHealth / Riverside Methodist Hospital Program (IM)",
+"city": "Columbus",
+"state": "OH",
+"why": "no visa sponsorship"
+},
+{
+"program": "Medical University of South Carolina Regional Network (Florence) Program (MUSC Health Florence Medical Center)",
+"city": "Florence",
+"state": "SC",
+"why": "no composition data"
+},
+{
+"program": "HCA Florida Aventura Hospital Internal Medicine Residency",
+"city": "Aventura",
+"state": "FL",
+"why": "non-US IMG 4% < 5%"
+},
+{
+"program": "Family Health Center at NYU Langone Program (Sunset Park)",
+"city": "Brooklyn",
+"state": "NY",
+"why": "non-US IMG 3% < 5%"
+},
+{
+"program": "Prime West Consortium/St. Francis Medical Center IM",
+"city": "Lynwood",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "Northern Westchester Hospital IM Residency (Northwell) / Zucker School of Medicine at Hofstra-Northwell at Northern Westchester Hospital",
+"city": "Mount Kisco",
+"state": "NY",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Paris Regional Health / TCOM Internal Medicine Residency Program",
+"city": "Paris",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "Trios Health Internal Medicine Residency",
+"city": "Kennewick",
+"state": "WA",
+"why": "no visa sponsorship"
+},
+{
+"program": "Cone Health Program (Moses H. Cone Memorial Hospital, affiliated with UNC School of Medicine)",
+"city": "Greensboro",
+"state": "NC",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Northside Hospital Gwinnett Program (Internal Medicine Residency)",
+"city": "Lawrenceville",
+"state": "GA",
+"why": "no visa sponsorship"
+},
+{
+"program": "St. Francis-Emory Healthcare Program",
+"city": "Columbus",
+"state": "GA",
+"why": "no visa sponsorship"
+},
+{
+"program": "Sutter Health/California Pacific Medical Center Internal Medicine Residency",
+"city": "San Francisco",
+"state": "CA",
+"why": "no visa sponsorship"
+},
+{
+"program": "UCSF Health - St. Mary's Hospital (Stanyan Hospital) Internal Medicine Residency",
+"city": "San Francisco",
+"state": "CA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Riverside Medical Center Internal Medicine Residency Program",
+"city": "Kankakee",
+"state": "IL",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "Louis A. Weiss Memorial Hospital Internal Medicine — CLOSED / DEFUNCT",
+"city": "Chicago",
+"state": "IL",
+"why": "no visa sponsorship"
+},
+{
+"program": "Crozer-Chester Medical Center Program",
+"city": "Upland",
+"state": "PA",
+"why": "no composition data"
+},
+{
+"program": "OPTI West - Benefis Hospital Program",
+"city": "Great Falls",
+"state": "MT",
+"why": "no composition data"
+},
+{
+"program": "MountainStar Healthcare / Ogden Regional Medical Center Program (Internal Medicine)",
+"city": "Ogden",
+"state": "UT",
+"why": "no composition data"
+},
+{
+"program": "NYMC/Roxborough Memorial Hospital Program (Prime PA; sites: Roxborough Memorial Hospital + Suburban Community Hospital, East Norriton)",
+"city": "Philadelphia",
+"state": "PA",
+"why": "no composition data"
+},
+{
+"program": "St. Clair Health Graduate Medical Education Program - Internal Medicine",
+"city": "Pittsburgh (Mt. Lebanon)",
+"state": "PA",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA Healthcare KC/Centerpoint Medical Center Internal Medicine Residency",
+"city": "Independence",
+"state": "MO",
+"why": "no composition data"
+},
+{
+"program": "Sentara Health (Sentara Northern Virginia Medical Center) Internal Medicine Residency",
+"city": "Woodbridge",
+"state": "VA",
+"why": "no composition data"
+},
+{
+"program": "Bon Secours St. Francis Program (Internal Medicine Residency at St. Francis Downtown)",
+"city": "Greenville",
+"state": "SC",
+"why": "no visa sponsorship"
+},
+{
+"program": "Lexington Medical Center Program (Internal Medicine Residency)",
+"city": "West Columbia",
+"state": "SC",
+"why": "no visa sponsorship"
+},
+{
+"program": "Health Education Services/Physicians Regional Medical Center - Pine Ridge Internal Medicine Residency",
+"city": "Naples",
+"state": "FL",
+"why": "no composition data"
+},
+{
+"program": "Health First (Holmes Regional Medical Center) Internal Medicine Residency - NEW program",
+"city": "Melbourne",
+"state": "FL",
+"why": "no composition data"
+},
+{
+"program": "Prime South GME Consortium - Knapp Medical Center (IM)",
+"city": "Weslaco",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "Internal Medicine Residency Program - Bakersfield Memorial Hospital (Morehouse School of Medicine / More In Common Alliance, CommonSpirit Health / Dignity Health)",
+"city": "Bakersfield",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "Universidad Central del Caribe SOM (Cayetano Coll & Toste Hospital) Program / Hospital Pavia Arecibo (Internal Medicine)",
+"city": "Arecibo",
+"state": "PR",
+"why": "no visa sponsorship"
+},
+{
+"program": "Houston Methodist The Woodlands (IM)",
+"city": "The Woodlands",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "HonorHealth (Scottsdale Thompson Peak / Four Peaks)",
+"city": "Scottsdale (+ Mesa Four Peaks)",
+"state": "AZ",
+"why": "no visa sponsorship"
+},
+{
+"program": "Indiana University School of Medicine-Bloomington Internal Medicine Residency",
+"city": "Bloomington",
+"state": "IN",
+"why": "no composition data"
+},
+{
+"program": "St. David's Medical Center HCA GME (Internal Medicine Residency)",
+"city": "Austin",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "Samaritan Health Services Internal Medicine Residency (Good Samaritan Regional Medical Center)",
+"city": "Corvallis",
+"state": "OR",
+"why": "no visa sponsorship"
+},
+{
+"program": "Kettering Health Network / Grandview Medical Center Program (IM)",
+"city": "Dayton",
+"state": "OH",
+"why": "no visa sponsorship"
+},
+{
+"program": "HCA/USF Morsani GME - Regional Medical Center Bayonet Point IM (HCA Florida Bayonet Point Hospital Internal Medicine Residency)",
+"city": "Hudson",
+"state": "FL",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "UTHSC-Maury Internal Medicine Residency Program (Maury Regional Medical Center)",
+"city": "Columbia",
+"state": "TN",
+"why": "no composition data"
+},
+{
+"program": "Mercy Hospital Springfield IM Residency (Mercy GME Springfield)",
+"city": "Springfield",
+"state": "MO",
+"why": "no composition data"
+},
+{
+"program": "Valley Health System (Winchester Medical Center) Internal Medicine Residency",
+"city": "Winchester",
+"state": "VA",
+"why": "no composition data"
+},
+{
+"program": "WakeMed Health and Hospitals Program",
+"city": "Raleigh",
+"state": "NC",
+"why": "no visa sponsorship"
+},
+{
+"program": "South Georgia Medical Center Program",
+"city": "Valdosta",
+"state": "GA",
+"why": "no visa sponsorship"
+},
+{
+"program": "St. Francis Medical Center Internal Medicine Residency Program (FMOLHS / FMOL Health)",
+"city": "Monroe",
+"state": "LA",
+"why": "no composition data"
+},
+{
+"program": "Ochsner Lafayette General Medical Center IM Residency (in development)",
+"city": "Lafayette",
+"state": "LA",
+"why": "no composition data"
+},
+{
+"program": "Carrollton Regional Medical Center Internal Medicine Residency Program",
+"city": "Carrollton",
+"state": "TX",
+"why": "no composition data"
+},
+{
+"program": "Kaweah Health (KDHCD) IM Residency",
+"city": "Visalia",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "Mercy San Juan Medical Center Internal Medicine Residency (Dignity Health / CommonSpirit Health, ACGME sponsor: St Joseph's Medical Center Program)",
+"city": "Carmichael",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "Martin Luther King, Jr. Community Hospital Internal Medicine Residency",
+"city": "Los Angeles",
+"state": "CA",
+"why": "non-US IMG 0% < 5%"
+},
+{
+"program": "United Health Centers of the San Joaquin Valley Internal Medicine Residency",
+"city": "Fresno",
+"state": "CA",
+"why": "no composition data"
+},
+{
+"program": "MultiCare Spokane Internal Medicine Residency (Deaconess Hospital)",
+"city": "Spokane",
+"state": "WA",
+"why": "no composition data"
+},
+{
+"program": "Kaiser Permanente Hawaii Internal Medicine Residency",
+"city": "Honolulu",
+"state": "HI",
+"why": "no visa sponsorship"
+},
+{
+"program": "Centro Medico Menonita Cayey Program (Internal Medicine)",
+"city": "Cayey",
+"state": "PR",
+"why": "no composition data"
+},
+{
+"program": "Hospital de la Concepcion Program (Internal Medicine)",
+"city": "San German",
+"state": "PR",
+"why": "no composition data"
+}
+]
+}

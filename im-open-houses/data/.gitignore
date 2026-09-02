@@ -1,0 +1,3 @@
+# local-only: registration profile with personal IDs — never commit
+profile.local.json
+*.local.json

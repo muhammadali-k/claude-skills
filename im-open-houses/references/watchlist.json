@@ -1,0 +1,170 @@
+[
+ {
+  "program": "UNMC Internal Medicine Residency",
+  "state": "NE",
+  "url": "https://www.unmc.edu/intmed/education/residencies/im-residency/council/virtualopenhouse.html",
+  "priority": 1
+ },
+ {
+  "program": "MaineHealth Maine Medical Center Internal Medicine Residency",
+  "state": "ME",
+  "url": "https://www.mainehealth.org/maine-medical-center/education-research/graduate-medical-education/residency-programs/internal-medicine-residency/apply-contact-internal-medicine-residency",
+  "priority": 1
+ },
+ {
+  "program": "Massachusetts General Hospital Internal Medicine Residency",
+  "state": "MA",
+  "url": "https://imresidency.massgeneral.org/",
+  "priority": 2
+ },
+ {
+  "program": "NewYork-Presbyterian / Weill Cornell Internal Medicine Residency",
+  "state": "NY",
+  "url": "https://events.weill.cornell.edu/event/internal-medicine-residency-virtual-open-house",
+  "priority": 2
+ },
+ {
+  "program": "Mayo Clinic Florida Internal Medicine Residency",
+  "state": "FL",
+  "url": "https://college.mayo.edu/academics/residencies-and-fellowships/internal-medicine-residency-florida/",
+  "priority": 2
+ },
+ {
+  "program": "Carilion Clinic / Virginia Tech Carilion Internal Medicine Residency",
+  "state": "VA",
+  "url": "https://gme.carilionclinic.org/internal-medicine-residency/im-apply",
+  "priority": 2
+ },
+ {
+  "program": "University of Washington Internal Medicine Residency",
+  "state": "WA",
+  "url": "https://uwmedres.uw.edu/applicants/recruitment_events",
+  "priority": 1
+ },
+ {
+  "program": "University of Miami / Jackson Memorial Internal Medicine Residency",
+  "state": "FL",
+  "url": "https://www.jmhmedicine.com/webinars",
+  "priority": 1
+ },
+ {
+  "program": "Augusta Health Internal Medicine Residency",
+  "state": "VA",
+  "url": "https://www.augustahealth.com/medical-education/internal-medicine-residency/virtualopenhouse/",
+  "priority": 1
+ },
+ {
+  "program": "New Mexico Internal Medicine Residencies (consortium)",
+  "state": "NM",
+  "url": "https://newmexicoresidencies.org/feed/",
+  "priority": 2
+ },
+ {
+  "program": "Keck School of Medicine of USC Internal Medicine Residency",
+  "state": "CA",
+  "url": "https://keck.usc.edu/calendar/event/ksom-of-usc-internal-medicine-residency-open-house/",
+  "priority": 2
+ },
+ {
+  "program": "Prisma Health Greenville Internal Medicine Residency",
+  "state": "SC",
+  "url": "https://academics.prismahealth.org/graduate-medical-education/residencies/internal-medicine-greenville",
+  "priority": 2
+ },
+ {
+  "program": "UNC Internal Medicine Residency",
+  "state": "NC",
+  "url": "https://www.med.unc.edu/medicine/education/residency/applicants-1/",
+  "priority": 2
+ },
+ {
+  "program": "UConn Internal Medicine Residency",
+  "state": "CT",
+  "url": "https://health.uconn.edu/graduate-medical-education/internal-medicine-residency-program/",
+  "priority": 1
+ },
+ {
+  "program": "Yale Internal Medicine Residency (Traditional)",
+  "state": "CT",
+  "url": "https://medicine.yale.edu/internal-medicine/education/residency/traditional/apply/interviews/",
+  "priority": 2
+ },
+ {
+  "program": "HCA Riverside Community Hospital Internal Medicine Residency",
+  "state": "CA",
+  "url": "https://imriverside.com/",
+  "priority": 2
+ },
+ {
+  "program": "Mobile Infirmary Internal Medicine Residency",
+  "state": "AL",
+  "url": "https://www.infirmaryhealth.org/classes-events/event-details/?event=44394",
+  "priority": 2
+ },
+ {
+  "program": "UMass Chan Internal Medicine Residency",
+  "state": "MA",
+  "url": "https://www.umassmed.edu/internal-medicine-residency/open-house/",
+  "priority": 2
+ },
+ {
+  "program": "USF Health Internal Medicine Residency",
+  "state": "FL",
+  "url": "https://health.usf.edu/medicine/internalmedicine/residency/application-information",
+  "priority": 2
+ },
+ {
+  "program": "University of Maryland Capital Region Internal Medicine Residency",
+  "state": "MD",
+  "url": "https://www.umms.org/capital/pros/gme/residency-programs/internal-medicine-residency/internal-medicine-application",
+  "priority": 2
+ },
+ {
+  "program": "George Washington University Internal Medicine Residency",
+  "state": "DC",
+  "url": "https://medicineresidency.smhs.gwu.edu/gw-resident-recruitment-2027",
+  "priority": 1
+ },
+ {
+  "program": "University of Vermont Internal Medicine Residency",
+  "state": "VT",
+  "url": "https://www.med.uvm.edu/medicine/residency",
+  "priority": 2
+ },
+ {
+  "program": "Baystate Medical Center Internal Medicine Residency",
+  "state": "MA",
+  "url": "https://www.baystatehealth.org/healthcare-education/academic-programs/umass-chan-medical-school-baystate/residencies/internal-medicine",
+  "priority": 2
+ },
+ {
+  "program": "Creighton University Phoenix Internal Medicine Residency",
+  "state": "AZ",
+  "url": "https://medschool.creighton.edu/graduate-medical-education/residency-programs/internal-medicine-residency-phoenix",
+  "priority": 1
+ },
+ {
+  "program": "Beebe Healthcare Internal Medicine Residency",
+  "state": "DE",
+  "url": "https://www.beebehealthcare.org/graduate-medical-education",
+  "priority": 2
+ },
+ {
+  "program": "Reading Hospital \u2013 Tower Health Internal Medicine Residency",
+  "state": "PA",
+  "url": "https://towerhealth.org/academic-affairs/residency-programs/internal-medicine-residency-rh/how-apply-internal-medicine",
+  "priority": 1
+ },
+ {
+  "program": "Hillsboro Medical Center Internal Medicine Residency",
+  "state": "OR",
+  "url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+  "priority": 2
+ },
+ {
+  "program": "Providence St. Vincent Internal Medicine Residency",
+  "state": "OR",
+  "url": "https://gme.providence.org/oregon/providence-st-vincent-internal-medicine-residency",
+  "priority": 2
+ }
+]

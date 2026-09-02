@@ -4,3 +4,7 @@ __pycache__/
 
 # studies-fetch local runtime state (dedup store + dated digests)
 studies-fetch/data/
+
+# im-open-houses: personal registration profile (IDs, phone) stays local
+im-open-houses/data/profile.local.json
+im-open-houses/data/*.local.json

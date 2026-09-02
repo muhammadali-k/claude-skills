@@ -1,0 +1,442 @@
+{
+ "run_date": "2026-09-01",
+ "auto_candidates": [
+  {
+   "program": "University of Nebraska Medical Center Internal Medicine Residency",
+   "state": "NE",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-09-02",
+   "date_tbd": false,
+   "time": null,
+   "end_time": null,
+   "timezone": null,
+   "registration_url": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=QImihGS0w0G6O7T6ZmW8BcxUaJPCQT5Eru0uD1Ne87BUQVZVS0RETjZCNEFMR1QzMFkzMUQxU0JWSC4u&route=shorturl",
+   "platform": "microsoft_form",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 5; date as listed: 'Wed, Sep 2'"
+  },
+  {
+   "program": "MaineHealth Maine Medical Center Internal Medicine Residency",
+   "state": "ME",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-09-09",
+   "date_tbd": false,
+   "time": null,
+   "end_time": null,
+   "timezone": null,
+   "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ki-9rGx04kmPK6PNliCIU2ztKapoYYdGvxRrB8o3pBZUN1VZMjlQWUEzNDEwTjNaNVBCTU84WjZTRS4u",
+   "platform": "microsoft_form",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 6; date as listed: 'Wed, Sep 9'"
+  },
+  {
+   "program": "Creighton University Phoenix Internal Medicine Residency",
+   "state": "AZ",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-09-02",
+   "date_tbd": false,
+   "time": "7:00 PM",
+   "end_time": null,
+   "timezone": "MT",
+   "registration_url": "https://blueq.co1.qualtrics.com/jfe/form/SV_9vll8BMTtKVk4vA",
+   "platform": "qualtrics",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 10; date as listed: 'Wed, Sep 2, 2026 • 6:00–7:00 PM MT'"
+  },
+  {
+   "program": "Beebe Healthcare Internal Medicine Residency (pending accreditation)",
+   "state": "DE",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-10-02",
+   "date_tbd": false,
+   "time": "5:00 PM",
+   "end_time": null,
+   "timezone": null,
+   "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+   "platform": "microsoft_form",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'"
+  },
+  {
+   "program": "Providence St. Vincent Internal Medicine Residency",
+   "state": "OR",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-09-02",
+   "date_tbd": false,
+   "time": "6:30 PM",
+   "end_time": null,
+   "timezone": "PDT",
+   "registration_url": "https://gme.providence.org/oregon/providence-st-vincent-internal-medicine-residency/",
+   "platform": "website",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 68; date as listed: 'Wednesday, September 2, 2026, 5:30-6:30 PM PDT'"
+  },
+  {
+   "program": "Hillsboro Medical Center (Internal Medicine)",
+   "title": "Hillsboro Medical Center (Internal Medicine) - Virtual Open House",
+   "event_type": "virtual open house",
+   "date": "2026-09-09",
+   "time": "17:00",
+   "timezone": "America/Los_Angeles",
+   "registration_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "platform": "eventbrite",
+   "source_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "source_kind": "eventbrite",
+   "notes": "Eventbrite online search hit; open the event page to confirm program + state"
+  },
+  {
+   "program": "Hillsboro Medical Center (Internal Medicine) -",
+   "title": "Hillsboro Medical Center (Internal Medicine) - Virtual Open House",
+   "date": "2026-09-09",
+   "time": "17:00",
+   "timezone": "-07:00",
+   "registration_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "platform": "eventbrite",
+   "source_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "source_kind": "program_site",
+   "notes": "schema.org Event JSON-LD; location type VirtualLocation"
+  }
+ ],
+ "leads": [
+  {
+   "url": "https://www.augustahealth.com/medical-education/internal-medicine-residency/virtualopenhouse/",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "Internal Medicine Residency: Virtual Open House 2026",
+   "pubdate": "Sun, 30 Aug 2026 10:40:00 GMT",
+   "snippet": "Internal Medicine Residency Internal Medicine Residency: Virtual Open House 2026 Internal Medicine Residency: Virtual Open House 2026 Topic: Augusta Health Internal Medicine Virtual Open House Time: Aug 24, 2026 07:00 PM Eastern Time (US and Canada) Join Zoom Meeting: https://zoom.us/j/99034608341?p",
+   "why": "search hit mentioning IM + open house/info session"
+  },
+  {
+   "url": "https://newmexicoresidencies.org/2026/07/15/2026-nm-internal-medicine-residencies-virtual-open-house/",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "2026 NM Internal Medicine Residencies Virtual Open House",
+   "pubdate": "Thu, 13 Aug 2026 14:35:00 GMT",
+   "snippet": "Discover where your future in internal medicine could take you during the New Mexico Internal Medicine Residencies Virtual Open House. Representatives from New Mexico’s four internal medicine residency programs will share what makes their training experiences unique and help you explore the opportun",
+   "why": "search hit mentioning IM + open house/info session"
+  },
+  {
+   "url": "https://imresidency.massgeneral.org/",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "Massachusetts General Hospital Internal Medicine Residency Program",
+   "pubdate": "Tue, 01 Sep 2026 11:49:00 GMT",
+   "snippet": "2026 MGH Internal Medicine Residency Virtual Information Session and Q&A Interested in learning more about the MGH Internal Medicine Residency program? We invite all 2026-2027 applicants to join us for a virtual information session and informal Q&A with current residents Tuesday August 25, 2026 7:00",
+   "why": "search hit mentioning IM + open house/info session"
+  },
+  {
+   "url": "https://gme.carilionclinic.org/internal-medicine-residency/im-apply",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "IM Apply | Internal Medicine Residency | Graduate Medical Education ...",
+   "pubdate": "Sun, 30 Aug 2026 04:21:00 GMT",
+   "snippet": "Virtual Open House 2026-2027 Our Virtual Open House is scheduled for Aug 28, 2026 @ 4 p.m. EST on YouTube Live. Please feel free to come with any questions and enter them in the Youtube Live Chat during the session.",
+   "why": "search hit mentioning IM + open house/info session"
+  },
+  {
+   "url": "https://keck.usc.edu/medicine/training-education/residency-programs/ksom-internal-medicine-residency-program/",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "Keck School of Medicine of USC Internal Medicine Residency Program",
+   "pubdate": "Mon, 31 Aug 2026 14:07:00 GMT",
+   "snippet": "Upcoming Virtual Open House Join our KSOM USC Internal Medicine Residency Program virtually to meet our residents and faculty and learn about our training program. Monday, August 31, 2026 3:00 PM Virtual via Zoom Zoom Link View Event Details",
+   "why": "search hit mentioning IM + open house/info session"
+  },
+  {
+   "url": "https://www.marywashingtonhealthcare.com/events-calendar/event-details/?event=29348",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "Internal Medicine Residency Program Virtual Open House for Medical ...",
+   "pubdate": "Tue, 01 Sep 2026 15:38:00 GMT",
+   "snippet": "Mary Washington Healthcare Internal Medicine Program is hosting a virtual open house. Join us to learn about our program’s focus on resident wellness, excellent education, and developing the highest quality physicians.",
+   "why": "search hit mentioning IM + open house/info session"
+  },
+  {
+   "url": "https://openresidency.org/internal-medicine-openings/",
+   "source": "bing",
+   "query": "\"internal medicine\" residency \"virtual open house\" 2026",
+   "title": "Internal Medicine Residency & Fellowship Positions",
+   "pubdate": "Tue, 01 Sep 2026 04:47:00 GMT",
+   "snippet": "Join the Vandalia Health CAMC Internal Medicine Residency for a virtual open house!Hear from program leadership and our residents as they discuss the program and residency life at CAMC.",
+   "why": "search hit mentioning IM + open house/info session"
+  }
+ ],
+ "watch_changes": [
+  {
+   "url": "https://www.unmc.edu/intmed/education/residencies/im-residency/council/virtualopenhouse.html",
+   "program": "UNMC Internal Medicine Residency",
+   "state": "NE",
+   "first_check": true,
+   "dates_found": [
+    "2026-09-02"
+   ],
+   "passage": "Virtual Open House | Department of Internal Medicine | University of Nebraska Medical Center \n UNMC \n Extraordinary Culture and Environment \n Virtual Open House \n Virtual Open House\n In this section\n Extraordinary Culture and Environment \n Virtual Open House \n Extraordinary Culture and Environment Residency Council \n Visiting Student Externship Fund \n Virtual Open House \n We host virtual open house events to provide an opportunity to learn about the UNMC Internal Medicine residency program. Meet some of our program directors, faculty and residents and get answers to your questions.\n Find out what it’s like to live in Omaha.\n Discover program initiatives.\n Our next virtual open house event will be held on Wednesday, Sept. 2, at 6 pm CST. \n Sign up to join the virtual open house \n Back to Top ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.mainehealth.org/maine-medical-center/education-research/graduate-medical-education/residency-programs/internal-medicine-residency/apply-contact-internal-medicine-residency",
+   "program": "MaineHealth Maine Medical Center Internal Medicine Residency",
+   "state": "ME",
+   "first_check": true,
+   "dates_found": [
+    "2026-09-09"
+   ],
+   "passage": " Apply & Contact | Internal Medicine Residency \n MaineHealth Maine Medical Center (MHMMC) Department of Medical Education Open House Sessions \n The Graduate Medical Education Office at MHMMC invites current 4th year medical students, current residents, and others looking to apply to MHMMC programs this fall, to join us for an Open House Session. Join us for a Q&A session with current residents to learn more about our programs.\n MHMMC IM Residency Virtual Open House Sessions\n The MHMMC Internal Medicine Residency Program is excited to meet prospective applicants for 2026! We will be hosting a Virtual Open House on Zoom to offer applicants an opportunity to learn a little more about the program and what life in Maine is like as a trainee. The session will be hosted by current Chief Residents in addition to several interns and residents in the program.\n Session Dates (All times Eastern)\n Wednesday, September 9th: 6:00 – 7:00 pm\n Virtual Open House 2026 Signup \n Application Process",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://imresidency.massgeneral.org/",
+   "program": "Massachusetts General Hospital Internal Medicine Residency",
+   "state": "MA",
+   "first_check": true,
+   "dates_found": [
+    "2026-08-25"
+   ],
+   "passage": " How to Apply \n 2026 MGH Internal Medicine Residency Virtual Information Session and Q&A \n Interested in learning more about the MGH Internal Medicine Residency program? We invite all 2026-2027 applicants to join us for a virtual information session and informal Q&A with current residents\n Tuesday August 25, 2026 \n 7:00 – 8:00 pm EST \n Zoom webinar link \n Have a question? Submit here before the session\n If you miss our Virtual Open House or still have questions about our program, please always feel free to reach out to our general inbox: mghimresidency@mgh.harvard.edu \n Contact Us ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://events.weill.cornell.edu/event/internal-medicine-residency-virtual-open-house",
+   "program": "NewYork-Presbyterian / Weill Cornell Internal Medicine Residency",
+   "state": "NY",
+   "first_check": true,
+   "dates_found": [
+    "2024-09-05"
+   ],
+   "passage": "Internal Medicine Residency Virtual Open House - Weill Cornell Medicine Events \n -->\n Past Events \n Internal Medicine Residency Virtual Open House\n Clear message \n Internal Medicine Residency Virtual Open House\n Thursday, September 5, 2024 7:00pm to 8:30pm EDT \n I'm Interested \n Share Internal Medicine Residency Virtual Open House \n Share Internal Medicine Residency Virtual Open House on Facebook \n Share Internal Medicine Residency Virtual Open House on X \n Share Internal Medicine Residency Virtual Open House on LinkedIn \n I'm Interested \n Event Type\n Information Session \n Departments\n Grand Rounds \n Information Session \n Lecture/Seminar ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://college.mayo.edu/academics/residencies-and-fellowships/internal-medicine-residency-florida/",
+   "program": "Mayo Clinic Florida Internal Medicine Residency",
+   "state": "FL",
+   "first_check": true,
+   "dates_found": [
+    "2026-08-27"
+   ],
+   "passage": " The Jacksonville campus of Mayo Clinic offers a one-year Internal Medicine Preliminary Residency .\n Virtual residency open house\n Join us on Thursday, August 27, at 4 .p.m. Eastern for a virtual open house led by the program director, chief residents, and current residents! Register here and submit questions in advance here .\n Get social",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://gme.carilionclinic.org/internal-medicine-residency/im-apply",
+   "program": "Carilion Clinic / Virginia Tech Carilion Internal Medicine Residency",
+   "state": "VA",
+   "first_check": true,
+   "dates_found": [
+    "2026-08-28"
+   ],
+   "passage": " While we preferentially review applications from those who signal our program, we also consider applicants who do not signal us. While signaling a program in ERAS indicates a strong interest, it does not guarantee that the applicant will receive an interview.\n Virtual Open House 2026-2027\n Our Virtual Open House is scheduled for Aug 28, 2026 @ 4 p.m. EST on YouTube Live. Please feel free to come with any questions and enter them in the Youtube Live Chat during the session. \n YouTube Live ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://uwmedres.uw.edu/applicants/recruitment_events",
+   "program": "University of Washington Internal Medicine Residency",
+   "state": "WA",
+   "first_check": true,
+   "dates_found": [
+    "2026-08-25"
+   ],
+   "passage": "Recruitment Events | Internal Medicine Residency Program \n Skip to main content\n Application Info \n Recruitment Events \n Menu\n Recruitment Events \n This is unpublished\n Pre-Application Sessions\n IM Program 2026 Match Info Sessions\n The UW Internal Medicine Residency program hosts a virtual pre-application information session to provide a brief overview of the program and to answer questions for medical students who are considering applying. This is completely optional and will in no way impact consideration of applicants and their application if they choose to apply.\n Tuesday, August 25, 2026 at 11 AM Pacific Time \n The UW Internal Medicine’s Resident Diversity Committee (RDC) hosts a casual residents-only virtual happy hour! Inviting applicants to meet the community of residents focused on fostering belonging and building community within our program, while sharing about the work they do.\n Physician Scientist Information Sessions \n These sessions are designed for candidates committed to or highly considering research-intensive careers. During each session, the Associate Program Director for Research & Scholarship will provide an overview of our research training options, including the ABIM Research Pathway and Research Career Pathway, and answer audience member questions.\n Primary Care Information Sessions \n Welcoming applicants who are considering a primary care career (including geriatrics, women’s health, and HIV-primary care) to join! In these sessions leadership will:",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.jmhmedicine.com/webinars",
+   "program": "University of Miami / Jackson Memorial Internal Medicine Residency",
+   "state": "FL",
+   "first_check": true,
+   "dates_found": [
+    "2026-09-01"
+   ],
+   "passage": "Webinars — UM/JMH Internal Medicine Residency \n 0 \n ∙ Contact Us\n Informational webinars for 2026-2027 Match season\nRegistration/attendance/participation in webinars is optional and does not influence application review or the likelihood of receiving an interview invitation. Attendance is not logged or reviewed.\n Session 1\n September 1, 2026 (time TBD but expected to be 7:00PM EST) - General informational webinar - check back for registration links.\n Session 2",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.augustahealth.com/medical-education/internal-medicine-residency/virtualopenhouse/",
+   "program": "Augusta Health Internal Medicine Residency",
+   "state": "VA",
+   "first_check": true,
+   "dates_found": [
+    "2026-09-08"
+   ],
+   "passage": "Internal Medicine Residency: Virtual Open House 2026 - Augusta Health \n Measles Prevention and Information \n Internal Medicine Residency \n Internal Medicine Residency: Virtual Open House 2026 \n Internal Medicine Residency: Virtual Open House 2026\n Topic: Augusta Health Internal Medicine Virtual Open House\nTime: Sep 8, 2026 07:00 PM Eastern Time (US and Canada)",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://newmexicoresidencies.org/feed/",
+   "program": "New Mexico Internal Medicine Residencies (consortium)",
+   "state": "NM",
+   "first_check": true,
+   "dates_found": [],
+   "passage": " 256314758 \n 2026 NM Internal Medicine Residencies Virtual Open House \n https://newmexicoresidencies.org/2026/07/15/2026-nm-internal-medicine-residencies-virtual-open-house/ \n https://newmexicoresidencies.org/?p=6028 \n Continue reading \"2026 NM Internal Medicine Residencies Virtual Open House\" ]]> \n Discover where your future in internal medicine could take you during the New Mexico Internal Medicine Residencies Virtual Open House . Representatives from New Mexico’s four internal medicine residency programs will share what makes their training experiences unique and help you explore the opportunities available across the state.\n Connect with residents and program leaders, learn more about each program, and get an inside look at training and living in New Mexico. From distinct clinical settings to different communities and program cultures, this event can help you find the residency experience that fits your goals.\n 6036 \n 2026 NM Family Medicine Residencies Virtual Open House \n https://newmexicoresidencies.org/2026/06/16/2026-nm-family-medicine-residencies-virtual-open-house/ \n https://newmexicoresidencies.org/?p=6021 \n Continue reading \"2026 NM Family Medicine Residencies Virtual Open House\" ]]> \n Registration is now open for our New Mexico Family Medicine Residencies Virtual Open House ! Join residents and program directors from family medicine programs across the state to explore your training options, hear what residency life is really like in New Mexico, and get answers ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://keck.usc.edu/calendar/event/ksom-of-usc-internal-medicine-residency-open-house/",
+   "program": "Keck School of Medicine of USC Internal Medicine Residency",
+   "state": "CA",
+   "first_check": true,
+   "dates_found": [
+    "2026-08-31"
+   ],
+   "passage": "Keck School of Medicine of USC Internal Medicine Residency Open House - Events Calendar \n Skip to content \n This event has passed.\n Keck School of Medicine of USC Internal Medicine Residency Open House\n August 31 @ 3:00 pm - 4:00 pm \n Free \n « MPH Information Session (online program) \n Meet PPHS Career Services » \n **Join us for our Virtual Open House**\n Meet our residents and faculty, learn about our training and resident life, and get a glimpse of what makes our program special.\n Virtual Event \n « MPH Information Session (online program) \n Meet PPHS Career Services » ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://academics.prismahealth.org/graduate-medical-education/residencies/internal-medicine-greenville",
+   "program": "Prisma Health Greenville Internal Medicine Residency",
+   "state": "SC",
+   "first_check": true,
+   "dates_found": [
+    "2026-08-05"
+   ],
+   "passage": " Support our Residents \n Recruitment Virtual Open House Event\n Meet our leadership team and residents on August 5th, 2026 12:30-1:30 EST to learn more about our program! Registration is required.",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.med.unc.edu/medicine/education/residency/applicants-1/",
+   "program": "UNC Internal Medicine Residency",
+   "state": "NC",
+   "first_check": true,
+   "dates_found": [
+    "2026-07-23"
+   ],
+   "passage": " How to Apply \n Virtual First Look Dates Announced: We will host virtual First Looks on the evenings of July 23rd and August 6th. Registration is required.\n Application Information\n It is our sincere goal to make the entire interview process a personal one that follows the “UNC Way” – even in the virtual world!\n Virtual Open House 2026: July 23rd & August 6th \n In Summary\n We will host virtual First Looks on the evenings of July 23rd and August 6th (registration required).\n We do not send invitations before we have the MSPE.",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://health.uconn.edu/graduate-medical-education/internal-medicine-residency-program/",
+   "program": "UConn Internal Medicine Residency",
+   "state": "CT",
+   "first_check": true,
+   "dates_found": [
+    "2026-09-14"
+   ],
+   "passage": " Internal Medicine Residency Program\n Residency Open House\n September 14 th , 6:30-7:30 PM EST ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://medicine.yale.edu/internal-medicine/education/residency/traditional/apply/interviews/",
+   "program": "Yale Internal Medicine Residency (Traditional)",
+   "state": "CT",
+   "first_check": true,
+   "dates_found": [
+    "2027-01-15"
+   ],
+   "passage": " 333 Cedar Street, Sterling Hall of Medicine (Beaumont Room, 2nd Floor, L221-A)\n We do not require interviews for the preliminary track. We will offer an information session for those that would like additional information about the preliminary year. \n Contact for Internal Medicine-Traditional Program Preliminary Track Applicants\n Friday, January 15\n The Pre-Interview Webinar\n 6:30 p.m. – The evening before each interview day\n The Yale Welcoming Committee (YWC) was created to provide an opportunity for you to get to know the residents and for the residents to share information with you. We are here to answer all questions regarding the every day nitty-gritty of what life is like inside and outside the hospital. As you progress through your interview season, we hope you will consider us a resource in addition to the Chief Residents and the Program Director. While we work closely with the administration during the interview season, your questions and comments are confidential and the residents involved in the YWC do not participate in the applicant selection process. \n Please feel free to email yaleimwelcome@yale.edu with any questions that come up during your interview season and match process, or if you would simply like to connect with more residents after your interview. We always have someone on call to answer emails, and we are determined to get back to you within 48 hours. Please also check out our resident testimonials for more insight into the culture of our program. W",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://imriverside.com/",
+   "program": "HCA Riverside Community Hospital Internal Medicine Residency",
+   "state": "CA",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.infirmaryhealth.org/classes-events/event-details/?event=44394",
+   "program": "Mobile Infirmary Internal Medicine Residency",
+   "state": "AL",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "Mobile Infirmary Internal Medicine Residency Program | Virtual Open House \n Open Accessibility Menu \n Event Details\n Mobile Infirmary Internal Medicine Residency Program | Virtual Open House\n Categories: \n Details: \n Join the Mobile Infirmary Internal Medicine Residency Program for a virtual open house to learn more about the program. Participants will have the opportunity to hear from program leadership, faculty, residents!\n Event Coordinator ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.umassmed.edu/internal-medicine-residency/open-house/",
+   "program": "UMass Chan Internal Medicine Residency",
+   "state": "MA",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "Open House \n Skip to main content \n Visa Information \n Open House\n This is an official page of UMass Chan Medical School ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://health.usf.edu/medicine/internalmedicine/residency/application-information",
+   "program": "USF Health Internal Medicine Residency",
+   "state": "FL",
+   "first_check": true,
+   "dates_found": [],
+   "passage": " How to Apply\n The USF Internal Medicine Residency Program accepts applications through the Electronic Residency Application Service (ERAS). We host a virtual open house around August. Follow our social media accounts to stay tuned for the details.\n Click to Expand ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.umms.org/capital/pros/gme/residency-programs/internal-medicine-residency/internal-medicine-application",
+   "program": "University of Maryland Capital Region Internal Medicine Residency",
+   "state": "MD",
+   "first_check": true,
+   "dates_found": [],
+   "passage": " Our interview season will be virtual in keeping with AAIM and COPA recommendations\n We will have an opportunity for virtual open houses. These will be led by residents and not attended by faculty. Attendance will not be taken and attendance at these events has no influence on our rank list.\n Given the volume of applications, it is highly unlikely that your application will be reviewed if it is not submitted on the day ERAS opens to programs.",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://medicineresidency.smhs.gwu.edu/gw-resident-recruitment-2027",
+   "program": "George Washington University Internal Medicine Residency",
+   "state": "DC",
+   "first_check": true,
+   "dates_found": [],
+   "passage": " Excellence in Graduate Medical Education \n Virtual Residency Open House - TBD\n Meet our residents, program directors and leaders, and learn more about diversity, anti-racism, advocacy, and other opportunities at GW. ",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.med.uvm.edu/medicine/residency",
+   "program": "University of Vermont Internal Medicine Residency",
+   "state": "VT",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.beebehealthcare.org/graduate-medical-education",
+   "program": "Beebe Healthcare Internal Medicine Residency",
+   "state": "DE",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "program": "Hillsboro Medical Center Internal Medicine Residency",
+   "state": "OR",
+   "first_check": true,
+   "dates_found": [
+    "2026-09-09",
+    "2026-09-10"
+   ],
+   "passage": "Hillsboro Medical Center (Internal Medicine) - Virtual Open House Tickets, Thursday, September 10 • 12 AM - 1 AM UTC | Eventbrite Eventbrite Eventbrite \n Search events \n Share this event \n Hillsboro Medical Center (Internal Medicine) - Virtual Open House\n By HMC - Internal Medicine Residency Program \n Overview\n Join us for an informative open house event for the Internal Medicine Residency Program at Hillsboro Medical Center.\n Open House - Hillsboro Medical Center (Internal Medicine Residency Program) \n Join us on September 9, 2026 at 5:00 PM PDT for an informative open house event. This is an excellent opportunity to meet some of the current residents and learn more about our Internal Medicine residency program.\n You will also have the chance to meet the chief resident and ask any questions you may have about the program, residency life, and training opportunities. Open House - Hillsboro Medical Center (Internal Medicine Residency Program) \n Join us on September 9, 2026 at 5:00 PM PDT for an informative open house event. This is an excellent opportunity to meet some of the current residents and learn more about our Internal Medicine residency program.\n You will also have the chance to meet the chief resident and ask any questions you may have about the program, residency life, and training opportunities.",
+   "why": "first check of watchlist page"
+  }
+ ],
+ "errors": [
+  {
+   "url": "https://www.advocatehealth.com/health-services/graduate-medical-education/advocate-lutheran-general-hospital/internal-medicine-residency",
+   "error": "HTTP 404"
+  },
+  {
+   "url": "https://www.baystatehealth.org/education-research/gme/residencies/internal-medicine",
+   "error": "HTTP 404"
+  },
+  {
+   "url": "https://medschool.creighton.edu/graduate-medical-education/residency-programs/internal-medicine-residency-phoenix",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://www.towerhealth.org/education/graduate-medical-education/reading-hospital/residencies/internal-medicine",
+   "error": "HTTP 404"
+  }
+ ]
+}
