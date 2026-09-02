@@ -495,6 +495,43 @@
    "seen_count": 1,
    "registration": null,
    "announced_on": "2026-09-01"
+  },
+  "oh_370a6a2e33": {
+   "id": "oh_370a6a2e33",
+   "program": "Valley Health / Winchester Medical Center Internal Medicine Residency",
+   "state": "VA",
+   "title": "Virtual Internal Medicine Residency Open House",
+   "event_type": "virtual open house",
+   "date": "2026-09-03",
+   "date_tbd": false,
+   "start": "2026-09-03T19:00:00-04:00",
+   "end": "2026-09-03T20:00:00-04:00",
+   "all_day": false,
+   "timezone": "America/New_York",
+   "start_phoenix": "2026-09-03T16:00:00-07:00",
+   "registration_url": null,
+   "platform": "unknown",
+   "source_url": "https://www.facebook.com/ValleyHealthCareers/posts/join-us-for-our-virtual-internal-medicine-residency-open-house-on-sept-3-at-7-pm/1363133632487432/",
+   "source_kind": "facebook",
+   "audience": null,
+   "notes": "Found by the cloud routine test run 2026-09-01 from a Valley Health Careers Facebook post ('Sept 3 at 7 PM'). Brand-new program (first class July 2026, Winchester VA). Registration link not captured — the Facebook post and valleyhealthlink.com block automated fetches (403); open the post in Chrome to get the link",
+   "match": {
+    "on_my_list": true,
+    "tier": "U",
+    "priority_rank": null,
+    "visa": "unstated",
+    "grad_cutoff_risk": "soft",
+    "excluded_why": null,
+    "list_program": "Valley Health System (Winchester Medical Center) Internal Medicine Residency",
+    "state": "VA"
+   },
+   "match_score": 1.15,
+   "status": "announced",
+   "first_seen": "2026-09-01",
+   "last_seen": "2026-09-01",
+   "seen_count": 1,
+   "registration": null,
+   "announced_on": "2026-09-01"
   }
  },
  "runs": [
@@ -502,6 +539,13 @@
    "date": "2026-09-01",
    "candidates": 13,
    "new": 13,
+   "updated": 0,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-01",
+   "candidates": 1,
+   "new": 1,
    "updated": 0,
    "duplicates": 0
   }
