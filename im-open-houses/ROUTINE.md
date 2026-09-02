@@ -7,7 +7,7 @@ it is ever deleted (routines can be deleted only at https://claude.ai/code/routi
 |---|---|
 | Name | IM virtual open houses — daily 8 AM scan |
 | Schedule | `0 15 * * *` (UTC) = **08:00 America/Phoenix every day** (Arizona has no DST, so this never drifts) |
-| Model | `claude-opus-4-8` |
+| Model | `claude-fable-5-1` (switched from `claude-opus-4-8` on 2026-09-02 — the scan is judgment-heavy web research) |
 | Environment | Default Anthropic cloud (`env_01UnLGxvEXW88TxLRLjxDq6T`) |
 | Repository | https://github.com/muhammadali-k/claude-skills (cloned; the skill lives at `im-open-houses/`) |
 | Connectors | Gmail (permitted: send_message, create_draft, search_threads, get_message), Google-Calendar (permitted: create_event, list_calendars, search_events, list_events, get_event, update_event) |
@@ -37,7 +37,7 @@ Rules: everything in the digest must carry the URL it was read from; never inven
 
 ## Test run 2026-09-01 (session cse_01XoTH94ZyjSpr3wypHZei5o) — what worked and what the user must fix
 - Worked: clone, scripts, 25 WebSearch queries, Gmail send (digest delivered), commit-run, push notification.
-- **Egress proxy blocked every program website** (harvest.py: 39× "Tunnel connection failed: 403"; WebFetch: EGRESS_BLOCKED). Only WebSearch (server-side) worked, so the run assigned a wrong tentative date to Carilion from a search snippet. **Fix (user):** in the Default cloud environment settings at claude.ai/code → Environments, set *Network access* to **Full** (the default "Trusted" allowlist only covers package registries/GitHub). Until then, discovery is search-snippet-only and the prompt rule above forces `date_tbd`.
+- **Egress proxy blocked every program website** (harvest.py: 39× "Tunnel connection failed: 403"; WebFetch: EGRESS_BLOCKED). Only WebSearch (server-side) worked, so the run assigned a wrong tentative date to Carilion from a search snippet. **Fixed 2026-09-02:** Default cloud environment *Network access* set to **Full** (claude.ai/code → environment chip "Default" → gear → Network access; the default "Trusted" allowlist only covers package registries/GitHub). If it reverts, discovery is search-snippet-only and the prompt rule above forces `date_tbd`.
 - **Google Calendar connector exposed only `search_events`** inside the routine (no create). The routine's `mcp_connections` now lists `permitted_tools` including `create_event`; re-test. If it still cannot create, calendar entries are added from the laptop (`/im-open-houses scan --local`), and `calendar-json` keeps queueing them.
 - **GitHub push denied (403)**: "Claude doesn't have GitHub access to muhammadali-k/claude-skills". **Fix (user):** install the Claude GitHub App for the `muhammadali-k` account with access to `claude-skills` (https://github.com/apps/claude/installations/select_target) or reconnect GitHub at https://claude.ai/customize/connectors?auth_start=github. Until then the state file is not persisted by the cloud run, so a newly found event will be re-reported each morning until it is ingested from the laptop.
 
