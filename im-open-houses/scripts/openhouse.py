@@ -7,6 +7,7 @@ Stdlib only (Python 3.9+). Every command is idempotent.
     python3 openhouse.py ingest  CANDIDATES.json [--run-date YYYY-MM-DD]
     python3 openhouse.py digest  [--run-date YYYY-MM-DD] [--out PATH]
     python3 openhouse.py calendar-json [--run-date ...]      # events to add to Google Calendar
+    python3 openhouse.py ics [--run-date ...] [--out PATH]   # .ics of all upcoming events (email attachment)
     python3 openhouse.py mark    EVENT_ID registered|declined|attended [--note TEXT]
     python3 openhouse.py match   "program name"               # fuzzy lookup in my_programs.json
     python3 openhouse.py queries [--run-date ...]             # the daily search-query bank
@@ -487,6 +488,42 @@ def cmd_calendar_json(run_date):
     print(json.dumps(out, indent=1))
 
 
+def cmd_ics(run_date, out):
+    """Write an .ics with every upcoming, non-excluded event (for email attachment / import)."""
+    st = load_state()
+    today = dt.date.fromisoformat(run_date)
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//im-open-houses//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH"]
+    n = 0
+    for e in st["events"].values():
+        if not e.get("start") or e["status"] in ("declined", "past", "cancelled") or e["match"].get("excluded_why"):
+            continue
+        s_ = dt.datetime.fromisoformat(e["start"])
+        if s_.date() < today:
+            continue
+        en = dt.datetime.fromisoformat(e["end"]) if e.get("end") else s_ + dt.timedelta(hours=1)
+        def esc(t):
+            return (t or "").replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+        desc = (f"{e['title']}\nProgram: {e['program']} ({e.get('state') or ''})\n{tier_badge(e['match'])}\n"
+                f"Register: {e.get('registration_url') or 'see source'}\nSource: {e['source_url']}\nStatus: {e['status']}\nevent id: {e['id']}")
+        lines += ["BEGIN:VEVENT", f"UID:{e['id']}@im-open-houses",
+                  "DTSTAMP:" + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")]
+        if e.get("all_day"):
+            lines += ["DTSTART;VALUE=DATE:" + s_.strftime("%Y%m%d"), "DTEND;VALUE=DATE:" + (s_.date() + dt.timedelta(days=1)).strftime("%Y%m%d")]
+        else:
+            lines += ["DTSTART:" + s_.astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ"),
+                      "DTEND:" + en.astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")]
+        lines += [f"SUMMARY:{esc('[IM open house] ' + e['program'] + ' — ' + e['title'])}", f"DESCRIPTION:{esc(desc)}",
+                  f"URL:{e.get('registration_url') or e['source_url']}", "BEGIN:VALARM", "TRIGGER:-PT60M", "ACTION:DISPLAY",
+                  "DESCRIPTION:IM open house in 1 hour", "END:VALARM", "END:VEVENT"]
+        n += 1
+    lines.append("END:VCALENDAR")
+    path = out or os.path.join(RUNS, f"{run_date}.ics")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\r\n".join(lines) + "\r\n")
+    print(f"ICS_PATH={path}\nICS_EVENTS={n}")
+
+
 def cmd_mark(eid, status, note, extra):
     st = load_state()
     e = st["events"].get(eid)
@@ -559,6 +596,7 @@ def main():
     p = sub.add_parser("digest"); p.add_argument("--run-date", default=today); p.add_argument("--out")
     p = sub.add_parser("commit-run"); p.add_argument("--run-date", default=today)
     p = sub.add_parser("calendar-json"); p.add_argument("--run-date", default=today)
+    p = sub.add_parser("ics"); p.add_argument("--run-date", default=today); p.add_argument("--out")
     p = sub.add_parser("mark"); p.add_argument("id"); p.add_argument("status"); p.add_argument("--note")
     p.add_argument("--calendar-added", action="store_true"); p.add_argument("--confirmation")
     p = sub.add_parser("match"); p.add_argument("name"); p.add_argument("--state")
@@ -577,6 +615,8 @@ def main():
         cmd_commit_run(a.run_date)
     elif a.cmd == "calendar-json":
         cmd_calendar_json(a.run_date)
+    elif a.cmd == "ics":
+        cmd_ics(a.run_date, a.out)
     elif a.cmd == "mark":
         extra = {}
         if a.calendar_added: extra["calendar_added"] = True
