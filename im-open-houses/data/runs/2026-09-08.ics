@@ -1,0 +1,90 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//im-open-houses//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oh_b3704fa298@im-open-houses
+DTSTAMP:20260908T151718Z
+DTSTART:20260908T230000Z
+DTEND:20260909T000000Z
+SUMMARY:[IM open house] Augusta Health Internal Medicine Residency — Virtual Open House 2026
+DESCRIPTION:Virtual Open House 2026\nProgram: Augusta Health Internal Medicine Residency (VA)\nTier 2 · ★ priority #107 · visa: J-1\nRegister: https://zoom.us/j/99034608341?pwd=J7bnD1J6GKWLAazGNhxMSkdwlTHgGv.1\nSource: https://www.augustahealth.com/medical-education/internal-medicine-residency/virtualopenhouse/\nStatus: registered\nevent id: oh_b3704fa298
+URL:https://zoom.us/j/99034608341?pwd=J7bnD1J6GKWLAazGNhxMSkdwlTHgGv.1
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_a8aa34f193@im-open-houses
+DTSTAMP:20260908T151718Z
+DTSTART:20260908T230000Z
+DTEND:20260909T000000Z
+SUMMARY:[IM open house] University of Miami / Jackson Memorial Hospital Internal Medicine Residency — Informational webinar — special session for international medical graduates
+DESCRIPTION:Informational webinar — special session for international medical graduates\nProgram: University of Miami / Jackson Memorial Hospital Internal Medicine Residency (FL)\nTier 2 · ★ priority #52 · visa: J-1 · ⚠️ grad-year cutoff\nRegister: https://miami.zoom.us/webinar/register/WN_lqbE0GZLQwWDKRym5XowdA\nSource: https://www.jmhmedicine.com/webinars\nStatus: announced\nevent id: oh_a8aa34f193
+URL:https://miami.zoom.us/webinar/register/WN_lqbE0GZLQwWDKRym5XowdA
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_e63ab8ea94@im-open-houses
+DTSTAMP:20260908T151718Z
+DTSTART:20260909T220000Z
+DTEND:20260909T230000Z
+SUMMARY:[IM open house] MaineHealth Maine Medical Center Internal Medicine Residency — Virtual Open House
+DESCRIPTION:Virtual Open House\nProgram: MaineHealth Maine Medical Center Internal Medicine Residency (ME)\nTier 5 · ★ priority #283 · visa: J-1\nRegister: https://forms.office.com/Pages/ResponsePage.aspx?id=ki-9rGx04kmPK6PNliCIU2ztKapoYYdGvxRrB8o3pBZUN1VZMjlQWUEzNDEwTjNaNVBCTU84WjZTRS4u\nSource: https://www.mainehealth.org/maine-medical-center/education-research/graduate-medical-education/residency-programs/internal-medicine-residency/apply-contact-internal-medicine-residency\nStatus: announced\nevent id: oh_e63ab8ea94
+URL:https://forms.office.com/Pages/ResponsePage.aspx?id=ki-9rGx04kmPK6PNliCIU2ztKapoYYdGvxRrB8o3pBZUN1VZMjlQWUEzNDEwTjNaNVBCTU84WjZTRS4u
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_6dc6dcae13@im-open-houses
+DTSTAMP:20260908T151718Z
+DTSTART:20260910T000000Z
+DTEND:20260910T010000Z
+SUMMARY:[IM open house] Hillsboro Medical Center Internal Medicine Residency — Virtual Open House
+DESCRIPTION:Virtual Open House\nProgram: Hillsboro Medical Center Internal Medicine Residency (OR)\nTier 2 · ★ priority #191 · visa: J-1\nRegister: https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208\nSource: https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208\nStatus: announced\nevent id: oh_6dc6dcae13
+URL:https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_e6aaf12f4a@im-open-houses
+DTSTAMP:20260908T151718Z
+DTSTART:20260914T223000Z
+DTEND:20260914T233000Z
+SUMMARY:[IM open house] UConn Health Internal Medicine Residency — Residency Open House
+DESCRIPTION:Residency Open House\nProgram: UConn Health Internal Medicine Residency (CT)\nTier 2 · ★ priority #44 · visa: J-1\nRegister: https://teams.microsoft.com/meet/214196996070331?p=L7xbkn6YgUk0k6noTo\nSource: https://health.uconn.edu/graduate-medical-education/internal-medicine-residency-program/\nStatus: registered\nevent id: oh_e6aaf12f4a
+URL:https://teams.microsoft.com/meet/214196996070331?p=L7xbkn6YgUk0k6noTo
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_373691416e@im-open-houses
+DTSTAMP:20260908T151718Z
+DTSTART:20260914T230000Z
+DTEND:20260915T000000Z
+SUMMARY:[IM open house] University of Miami / Jackson Memorial Hospital Internal Medicine Residency — Informational webinar — general session (Session 2) for 2026-2027 Match season
+DESCRIPTION:Informational webinar — general session (Session 2) for 2026-2027 Match season\nProgram: University of Miami / Jackson Memorial Hospital Internal Medicine Residency (FL)\nTier 2 · ★ priority #52 · visa: J-1 · ⚠️ grad-year cutoff\nRegister: https://miami.zoom.us/webinar/register/WN_DxmjdrTvTnSVGPZPNIsgWw\nSource: https://www.jmhmedicine.com/webinars\nStatus: new\nevent id: oh_373691416e
+URL:https://miami.zoom.us/webinar/register/WN_DxmjdrTvTnSVGPZPNIsgWw
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR

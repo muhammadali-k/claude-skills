@@ -1,0 +1,131 @@
+{
+ "run_date": "2026-09-08",
+ "auto_candidates": [
+  {
+   "program": "MaineHealth Maine Medical Center Internal Medicine Residency",
+   "state": "ME",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-09-09",
+   "date_tbd": false,
+   "time": null,
+   "end_time": null,
+   "timezone": null,
+   "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ki-9rGx04kmPK6PNliCIU2ztKapoYYdGvxRrB8o3pBZUN1VZMjlQWUEzNDEwTjNaNVBCTU84WjZTRS4u",
+   "platform": "microsoft_form",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 6; date as listed: 'Wed, Sep 9'"
+  },
+  {
+   "program": "Beebe Healthcare Internal Medicine Residency (pending accreditation)",
+   "state": "DE",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-10-02",
+   "date_tbd": false,
+   "time": "5:00 PM",
+   "end_time": null,
+   "timezone": null,
+   "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+   "platform": "microsoft_form",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'"
+  },
+  {
+   "program": "Hillsboro Medical Center (Internal Medicine)",
+   "title": "Hillsboro Medical Center (Internal Medicine) - Virtual Open House",
+   "event_type": "virtual open house",
+   "date": "2026-09-09",
+   "time": "17:00",
+   "timezone": "America/Los_Angeles",
+   "registration_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "platform": "eventbrite",
+   "source_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "source_kind": "eventbrite",
+   "notes": "Eventbrite online search hit; open the event page to confirm program + state"
+  },
+  {
+   "program": "Hillsboro Medical Center (Internal Medicine) -",
+   "title": "Hillsboro Medical Center (Internal Medicine) - Virtual Open House",
+   "date": "2026-09-09",
+   "time": "17:00",
+   "timezone": "-07:00",
+   "registration_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "platform": "eventbrite",
+   "source_url": "https://www.eventbrite.com/e/hillsboro-medical-center-internal-medicine-virtual-open-house-tickets-1997500313208",
+   "source_kind": "program_site",
+   "notes": "schema.org Event JSON-LD; location type VirtualLocation"
+  }
+ ],
+ "leads": [
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1vgf0xj/looking_for_imgfriendly_virtual_open_house/",
+   "source": "reddit",
+   "title": "Looking for IMG-friendly Virtual Open House Threads (Match 2027)",
+   "pubdate": "2026-08-05",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  }
+ ],
+ "watch_changes": [
+  {
+   "url": "https://www.jmhmedicine.com/webinars",
+   "program": "University of Miami / Jackson Memorial Internal Medicine Residency",
+   "state": "FL",
+   "first_check": false,
+   "dates_found": [
+    "2026-09-02",
+    "2026-09-08",
+    "2026-09-14"
+   ],
+   "passage": "Webinars — UM/JMH Internal Medicine Residency \n 0 \n ∙ Contact Us\n Informational webinars for 2026-2027 Match season\n Registration/attendance/participation in webinars is optional and does not influence application review or the likelihood of receiving an interview invitation. Attendance is not logged or reviewed and interaction with panelists is limited to Q&A via chat. We suggest only attending one session.\n Session 1: September 8, 2026, 7:00PM EST - Special session for international medical graduates\nRegistration: https://miami.zoom.us/webinar/register/WN_lqbE0GZLQwWDKRym5XowdA \n Session 2: September 14, 2026, 7:00PM EST - General informational webinar\nRegistration: https://miami.zoom.us/webinar/register/WN_DxmjdrTvTnSVGPZPNIsgWw \nLast update: Sept 2, 2026 ",
+   "why": "watchlist page open-house passage changed"
+  },
+  {
+   "url": "https://www.baystatehealth.org/healthcare-education/academic-programs/umass-chan-medical-school-baystate/residencies/internal-medicine",
+   "program": "Baystate Medical Center Internal Medicine Residency",
+   "state": "MA",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://towerhealth.org/academic-affairs/residency-programs/internal-medicine-residency-rh/how-apply-internal-medicine",
+   "program": "Reading Hospital – Tower Health Internal Medicine Residency",
+   "state": "PA",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "",
+   "why": "first check of watchlist page"
+  },
+  {
+   "url": "https://gme.providence.org/oregon/providence-st-vincent-internal-medicine-residency",
+   "program": "Providence St. Vincent Internal Medicine Residency",
+   "state": "OR",
+   "first_check": true,
+   "dates_found": [],
+   "passage": "",
+   "why": "first check of watchlist page"
+  }
+ ],
+ "errors": [
+  {
+   "url": "https://residency-virtual-open-house.org/index.php?specialty=Internal+Medicine&when=upcoming&sort=date",
+   "error": "HTTP 409"
+  },
+  {
+   "url": "https://www.bing.com/search?format=rss&count=20&q=%22internal%20medicine%22%20residency%20%22virtual%20open%20house%22%202026",
+   "error": "bing degraded (dictionary junk) — backing off"
+  },
+  {
+   "url": "https://www.umassmed.edu/internal-medicine-residency/open-house/",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://medschool.creighton.edu/graduate-medical-education/residency-programs/internal-medicine-residency-phoenix",
+   "error": "HTTP 403"
+  }
+ ]
+}
