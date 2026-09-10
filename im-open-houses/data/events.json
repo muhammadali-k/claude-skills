@@ -263,7 +263,7 @@
     "state": "ME"
    },
    "match_score": 1.15,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-01",
    "last_seen": "2026-09-09",
    "seen_count": 3,
@@ -300,7 +300,7 @@
     "state": "OR"
    },
    "match_score": 1.15,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-01",
    "last_seen": "2026-09-09",
    "seen_count": 3,
@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Harvest auto-candidate (Project IMG list row 20, 'Fri, Oct 2, 2026 • 5:00 PM'); already in state (declined) from 2026-09-01. Program listed there as 'pending accreditation'.",
+   "notes": "Harvest auto-candidate (Project IMG list row 20, 'Fri, Oct 2, 2026 • 5:00 PM'); list now labels the program '(pending accreditation)'. Already in state since 2026-09-01 (status declined) — re-submitted for the audit trail only. Timezone not listed; ET inferred from DE.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-09",
-   "seen_count": 3,
+   "last_seen": "2026-09-10",
+   "seen_count": 4,
    "registration": null,
    "calendar_added": true
   },
@@ -717,6 +717,43 @@
    "seen_count": 1,
    "registration": null,
    "announced_on": "2026-09-09"
+  },
+  "oh_6d8ea69eed": {
+   "id": "oh_6d8ea69eed",
+   "program": "Westchester Medical Center Internal Medicine Residency",
+   "state": "NY",
+   "title": "Westchester Medical Center Internal Medicine Residency Open House (session 2)",
+   "event_type": "virtual open house",
+   "date": "2026-09-16",
+   "date_tbd": false,
+   "start": "2026-09-16T18:00:00-04:00",
+   "end": "2026-09-16T19:00:00-04:00",
+   "all_day": false,
+   "timezone": "America/New_York",
+   "start_phoenix": "2026-09-16T15:00:00-07:00",
+   "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfBv7gdnV4HU8F-6ZWdh0Z8yMTsW-Swq13uTV8-_Pqrt5TkBw/viewform?usp=sharing&ouid=111732454381282841434",
+   "platform": "google_form",
+   "source_url": "https://www.wmcimresidency.org/",
+   "source_kind": "program_site",
+   "audience": "all rising applicants",
+   "notes": "Read from the flyer image 'WMC_IM_OpenHouse_2026_Flyer+Final.jpg' on the program homepage (wmchealth.org GME page redirects there). Flyer text: 'September 9, 2026 6:00 – 7:00 PM ET / September 16, 2026 6:00 – 7:00 PM ET / VIRTUAL · MS TEAMS / All rising applicants welcome · Scan the code to register'. Registration URL decoded from the flyer's 'Scan to register' QR code (Google Form). Session 1 (Sep 9) already past — not recorded. Coordinator: Austin.Charnis@wmchealth.org, +1 (914) 493-6613; Instagram @wmcmedicine. Lead came from r/IMGreddit thread 'Westchester IM virtual open house' (2026-09-09), where a commenter shared the Sep 9 Teams join link.",
+   "match": {
+    "on_my_list": true,
+    "tier": "2",
+    "priority_rank": 106,
+    "visa": "J-1+H-1B",
+    "grad_cutoff_risk": "HARD",
+    "excluded_why": null,
+    "list_program": "Westchester Medical Center Program (NYMC)",
+    "state": "NY"
+   },
+   "match_score": 1.15,
+   "status": "announced",
+   "first_seen": "2026-09-10",
+   "last_seen": "2026-09-10",
+   "seen_count": 1,
+   "registration": null,
+   "announced_on": "2026-09-10"
   }
  },
  "runs": [
@@ -746,6 +783,13 @@
    "candidates": 5,
    "new": 2,
    "updated": 3,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-10",
+   "candidates": 2,
+   "new": 1,
+   "updated": 1,
    "duplicates": 0
   }
  ]

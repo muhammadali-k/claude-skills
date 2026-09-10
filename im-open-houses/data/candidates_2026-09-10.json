@@ -1,0 +1,31 @@
+[
+  {
+    "program": "Beebe Healthcare Internal Medicine Residency",
+    "state": "DE",
+    "title": "Virtual Open House (Internal Medicine)",
+    "event_type": "virtual open house",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+    "platform": "microsoft_form",
+    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+    "source_kind": "aggregator",
+    "notes": "Harvest auto-candidate (Project IMG list row 20, 'Fri, Oct 2, 2026 • 5:00 PM'); list now labels the program '(pending accreditation)'. Already in state since 2026-09-01 (status declined) — re-submitted for the audit trail only. Timezone not listed; ET inferred from DE."
+  },
+  {
+    "program": "Westchester Medical Center Internal Medicine Residency",
+    "state": "NY",
+    "title": "Westchester Medical Center Internal Medicine Residency Open House (session 2)",
+    "event_type": "virtual open house",
+    "date": "2026-09-16",
+    "time": "6:00 PM",
+    "end_time": "7:00 PM",
+    "timezone": "ET",
+    "registration_url": "https://docs.google.com/forms/d/e/1FAIpQLSfBv7gdnV4HU8F-6ZWdh0Z8yMTsW-Swq13uTV8-_Pqrt5TkBw/viewform?usp=sharing&ouid=111732454381282841434",
+    "platform": "google_form",
+    "source_url": "https://www.wmcimresidency.org/",
+    "source_kind": "program_site",
+    "audience": "all rising applicants",
+    "notes": "Read from the flyer image 'WMC_IM_OpenHouse_2026_Flyer+Final.jpg' on the program homepage (wmchealth.org GME page redirects there). Flyer text: 'September 9, 2026 6:00 – 7:00 PM ET / September 16, 2026 6:00 – 7:00 PM ET / VIRTUAL · MS TEAMS / All rising applicants welcome · Scan the code to register'. Registration URL decoded from the flyer's 'Scan to register' QR code (Google Form). Session 1 (Sep 9) already past — not recorded. Coordinator: Austin.Charnis@wmchealth.org, +1 (914) 493-6613; Instagram @wmcmedicine. Lead came from r/IMGreddit thread 'Westchester IM virtual open house' (2026-09-09), where a commenter shared the Sep 9 Teams join link."
+  }
+]

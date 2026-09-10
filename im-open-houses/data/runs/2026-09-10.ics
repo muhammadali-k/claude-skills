@@ -1,0 +1,76 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//im-open-houses//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oh_e6aaf12f4a@im-open-houses
+DTSTAMP:20260910T151016Z
+DTSTART:20260914T223000Z
+DTEND:20260914T233000Z
+SUMMARY:[IM open house] UConn Health Internal Medicine Residency — Residency Open House
+DESCRIPTION:Residency Open House\nProgram: UConn Health Internal Medicine Residency (CT)\nTier 2 · ★ priority #44 · visa: J-1\nRegister: https://teams.microsoft.com/meet/214196996070331?p=L7xbkn6YgUk0k6noTo\nSource: https://health.uconn.edu/graduate-medical-education/internal-medicine-residency-program/\nStatus: registered\nevent id: oh_e6aaf12f4a
+URL:https://teams.microsoft.com/meet/214196996070331?p=L7xbkn6YgUk0k6noTo
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_373691416e@im-open-houses
+DTSTAMP:20260910T151016Z
+DTSTART:20260914T230000Z
+DTEND:20260915T000000Z
+SUMMARY:[IM open house] University of Miami / Jackson Memorial Hospital Internal Medicine Residency — Informational webinar — general session (Session 2) for 2026-2027 Match season
+DESCRIPTION:Informational webinar — general session (Session 2) for 2026-2027 Match season\nProgram: University of Miami / Jackson Memorial Hospital Internal Medicine Residency (FL)\nTier 2 · ★ priority #52 · visa: J-1 · ⚠️ grad-year cutoff\nRegister: https://miami.zoom.us/webinar/register/WN_DxmjdrTvTnSVGPZPNIsgWw\nSource: https://www.jmhmedicine.com/webinars\nStatus: announced\nevent id: oh_373691416e
+URL:https://miami.zoom.us/webinar/register/WN_DxmjdrTvTnSVGPZPNIsgWw
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_da2b3995f7@im-open-houses
+DTSTAMP:20260910T151016Z
+DTSTART:20260917T230000Z
+DTEND:20260918T000000Z
+SUMMARY:[IM open house] Jefferson Health Northeast Internal Medicine Residency Program — Virtual Internal Medicine Residency Open House (session 1)
+DESCRIPTION:Virtual Internal Medicine Residency Open House (session 1)\nProgram: Jefferson Health Northeast Internal Medicine Residency Program (PA)\nTier 4 · ★ priority #307 · visa: J-1+H-1B\nRegister: see source\nSource: https://www.instagram.com/p/DN1avFi4n0x/\nStatus: announced\nevent id: oh_da2b3995f7
+URL:https://www.instagram.com/p/DN1avFi4n0x/
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_3d2a5497b8@im-open-houses
+DTSTAMP:20260910T151016Z
+DTSTART:20260923T230000Z
+DTEND:20260924T000000Z
+SUMMARY:[IM open house] Jefferson Health Northeast Internal Medicine Residency Program — Virtual Internal Medicine Residency Open House (session 2)
+DESCRIPTION:Virtual Internal Medicine Residency Open House (session 2)\nProgram: Jefferson Health Northeast Internal Medicine Residency Program (PA)\nTier 4 · ★ priority #307 · visa: J-1+H-1B\nRegister: see source\nSource: https://www.instagram.com/p/DN1avFi4n0x/\nStatus: announced\nevent id: oh_3d2a5497b8
+URL:https://www.instagram.com/p/DN1avFi4n0x/
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:oh_6d8ea69eed@im-open-houses
+DTSTAMP:20260910T151016Z
+DTSTART:20260916T220000Z
+DTEND:20260916T230000Z
+SUMMARY:[IM open house] Westchester Medical Center Internal Medicine Residency — Westchester Medical Center Internal Medicine Residency Open House (session 2)
+DESCRIPTION:Westchester Medical Center Internal Medicine Residency Open House (session 2)\nProgram: Westchester Medical Center Internal Medicine Residency (NY)\nTier 2 · ★ priority #106 · visa: J-1+H-1B · ⚠️ grad-year cutoff\nRegister: https://docs.google.com/forms/d/e/1FAIpQLSfBv7gdnV4HU8F-6ZWdh0Z8yMTsW-Swq13uTV8-_Pqrt5TkBw/viewform?usp=sharing&ouid=111732454381282841434\nSource: https://www.wmcimresidency.org/\nStatus: new\nevent id: oh_6d8ea69eed
+URL:https://docs.google.com/forms/d/e/1FAIpQLSfBv7gdnV4HU8F-6ZWdh0Z8yMTsW-Swq13uTV8-_Pqrt5TkBw/viewform?usp=sharing&ouid=111732454381282841434
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
