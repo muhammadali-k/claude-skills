@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Harvest auto-candidate (Project IMG list row 20, 'Fri, Oct 2, 2026 • 5:00 PM'); list now labels the program '(pending accreditation)'. Already in state since 2026-09-01 (status declined) — re-submitted for the audit trail only. Timezone not listed; ET inferred from DE.",
+   "notes": "Harvest auto-candidate (Project IMG list row 20, 'Fri, Oct 2, 2026 • 5:00 PM'); list labels the program '(pending accreditation)'. Already in state since 2026-09-01 (status declined) — re-submitted for the audit trail only. Timezone not listed; ET inferred from DE.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-10",
-   "seen_count": 4,
+   "last_seen": "2026-09-11",
+   "seen_count": 5,
    "registration": null,
    "calendar_added": true
   },
@@ -789,6 +789,13 @@
    "date": "2026-09-10",
    "candidates": 2,
    "new": 1,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-11",
+   "candidates": 1,
+   "new": 0,
    "updated": 1,
    "duplicates": 0
   }
