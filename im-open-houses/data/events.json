@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-11",
-   "seen_count": 5,
+   "last_seen": "2026-09-12",
+   "seen_count": 6,
    "registration": null,
    "calendar_added": true
   },
@@ -754,6 +754,43 @@
    "seen_count": 1,
    "registration": null,
    "announced_on": "2026-09-10"
+  },
+  "oh_b114bc2bfb": {
+   "id": "oh_b114bc2bfb",
+   "program": "Saint Vincent Hospital (Worcester) Internal Medicine Residency Program",
+   "state": "MA",
+   "title": "Virtual Open House 2026",
+   "event_type": "virtual open house",
+   "date": null,
+   "date_tbd": true,
+   "start": null,
+   "end": null,
+   "all_day": true,
+   "timezone": "America/New_York",
+   "start_phoenix": null,
+   "registration_url": null,
+   "platform": "unknown",
+   "source_url": "https://www.stvincenthospital.com/health-professionals/graduate-medical-education-programs/internal-medicine-residency-program/for-applicants",
+   "source_kind": "program_site",
+   "audience": "all applicants",
+   "notes": "Search index (three independent WebSearch queries on 2026-09-12) shows the program's 'Internal Medicine Application Information' page carries a 'Virtual Open House Flyer 2026' resource. The page could NOT be opened headlessly: HTTP 403 from both WebFetch and curl (browser headers), and web.archive.org is not reachable from this environment — so the date, time and registration link are unknown and must be read from the flyer in a browser. Program X account @svhmedres announced 2024 sessions on 9/13 and 9/20 (tweet from Jul 2024); 2026 dates not verifiable headlessly. Tenet-owned community program in Worcester, MA.",
+   "match": {
+    "on_my_list": true,
+    "tier": "3",
+    "priority_rank": 154,
+    "visa": "J-1",
+    "grad_cutoff_risk": "HARD",
+    "excluded_why": null,
+    "list_program": "Saint Vincent Hospital Program (Tenet)",
+    "state": "MA"
+   },
+   "match_score": 0.82,
+   "status": "announced",
+   "first_seen": "2026-09-12",
+   "last_seen": "2026-09-12",
+   "seen_count": 1,
+   "registration": null,
+   "announced_on": "2026-09-12"
   }
  },
  "runs": [
@@ -798,6 +835,13 @@
    "new": 0,
    "updated": 1,
    "duplicates": 0
+  },
+  {
+   "date": "2026-09-12",
+   "candidates": 2,
+   "new": 1,
+   "updated": 0,
+   "duplicates": 1
   }
  ]
 }
