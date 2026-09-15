@@ -338,7 +338,7 @@
     "state": "CT"
    },
    "match_score": 1.15,
-   "status": "registered",
+   "status": "attended",
    "first_seen": "2026-09-01",
    "last_seen": "2026-09-01",
    "seen_count": 1,
@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Harvest auto-candidate (Project IMG list row 20, 'Fri, Oct 2, 2026 • 5:00 PM'); list labels the program '(pending accreditation)'. Already in state since 2026-09-01 (status declined) — re-submitted for the audit trail only. Timezone not listed; ET inferred from DE.",
+   "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM' (timezone not printed). Harvest lists the program as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'; name normalised here to match the existing declined record oh_4936a8f267 so ingest de-duplicates it. Re-submitted from harvest auto_candidates for the audit trail only.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-12",
-   "seen_count": 6,
+   "last_seen": "2026-09-15",
+   "seen_count": 7,
    "registration": null,
    "calendar_added": true
   },
@@ -563,7 +563,7 @@
     "state": "FL"
    },
    "match_score": 1.15,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-08",
    "last_seen": "2026-09-08",
    "seen_count": 1,
@@ -893,6 +893,13 @@
    "new": 1,
    "updated": 0,
    "duplicates": 1
+  },
+  {
+   "date": "2026-09-15",
+   "candidates": 1,
+   "new": 0,
+   "updated": 1,
+   "duplicates": 0
   }
  ]
 }
