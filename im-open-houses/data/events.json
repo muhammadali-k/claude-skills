@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM' (timezone not printed). Harvest lists the program as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'; name normalised here to match the existing declined record oh_4936a8f267 so ingest de-duplicates it. Re-submitted from harvest auto_candidates for the audit trail only.",
+   "notes": "Harvest auto-candidate from the Project IMG list (row 20; listed as 'Fri, Oct 2, 2026 • 5:00 PM'; the list prints the program as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)' - suffix dropped so the dedup key matches the tracked record). Already tracked as oh_4936a8f267 (status declined) with the same date; re-submitted unchanged for the audit trail. Timezone not printed on the list; ET inferred from Delaware.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-15",
-   "seen_count": 7,
+   "last_seen": "2026-09-16",
+   "seen_count": 8,
    "registration": null,
    "calendar_added": true
   },
@@ -896,6 +896,13 @@
   },
   {
    "date": "2026-09-15",
+   "candidates": 1,
+   "new": 0,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-16",
    "candidates": 1,
    "new": 0,
    "updated": 1,
