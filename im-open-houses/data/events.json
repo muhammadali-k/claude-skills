@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Harvest auto-candidate from the Project IMG list (row 20; listed as 'Fri, Oct 2, 2026 • 5:00 PM'; the list prints the program as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)' - suffix dropped so the dedup key matches the tracked record). Already tracked as oh_4936a8f267 (status declined) with the same date; re-submitted unchanged for the audit trail. Timezone not printed on the list; ET inferred from Delaware.",
+   "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Already known (declined) — re-submitted by harvest, expected duplicate.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-16",
-   "seen_count": 8,
+   "last_seen": "2026-09-17",
+   "seen_count": 9,
    "registration": null,
    "calendar_added": true
   },
@@ -748,7 +748,7 @@
     "state": "NY"
    },
    "match_score": 1.15,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-10",
    "last_seen": "2026-09-10",
    "seen_count": 1,
@@ -828,6 +828,43 @@
    "seen_count": 1,
    "registration": null,
    "announced_on": "2026-09-14"
+  },
+  "oh_62dc0cae2a": {
+   "id": "oh_62dc0cae2a",
+   "program": "University of Florida College of Medicine – Jacksonville Internal Medicine Residency",
+   "state": "FL",
+   "title": "Virtual Open House on Zoom (last open house of the season)",
+   "event_type": "virtual open house",
+   "date": null,
+   "date_tbd": true,
+   "start": null,
+   "end": null,
+   "all_day": true,
+   "timezone": "America/New_York",
+   "start_phoenix": null,
+   "registration_url": null,
+   "platform": "zoom",
+   "source_url": "https://www.facebook.com/ufjaxim/",
+   "source_kind": "facebook",
+   "audience": "all applicants",
+   "notes": "Search snippet of the program's Facebook page (UF Internal Medicine Residency - Jacksonville) reads: 'last Open House on Zoom this Thursday, September 17th at 7-8 pm EST … 15 minute teaching point from our Infectious Disease attending'. Sept 17 is a Thursday in 2026, so this is very likely TODAY 2026-09-17 7–8 PM ET, but the page could NOT be opened (facebook.com/ufjaxim returns a login wall / HTTP 400 headlessly) and the program's own pages (medicine.med.jax.ufl.edu/education/internal-medicine-residency/ and /how-to-apply/) carry no announcement or Zoom link. Open facebook.com/ufjaxim or instagram.com/ufjaxim from the laptop for the Zoom link; date not assigned per skill rules.",
+   "match": {
+    "on_my_list": true,
+    "tier": "2",
+    "priority_rank": 194,
+    "visa": "J-1+H-1B",
+    "grad_cutoff_risk": "soft",
+    "excluded_why": null,
+    "list_program": "HCA Florida Healthcare/USF Morsani College of Medicine GME - Medical Center Trinity Internal Medicine Residency",
+    "state": "FL"
+   },
+   "match_score": 0.65,
+   "status": "announced",
+   "first_seen": "2026-09-17",
+   "last_seen": "2026-09-17",
+   "seen_count": 1,
+   "registration": null,
+   "announced_on": "2026-09-17"
   }
  },
  "runs": [
@@ -905,6 +942,13 @@
    "date": "2026-09-16",
    "candidates": 1,
    "new": 0,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-17",
+   "candidates": 2,
+   "new": 1,
    "updated": 1,
    "duplicates": 0
   }

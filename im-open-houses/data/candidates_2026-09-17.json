@@ -1,0 +1,27 @@
+[
+  {
+    "program": "Beebe Healthcare Internal Medicine Residency",
+    "state": "DE",
+    "title": "Virtual Open House (Internal Medicine)",
+    "event_type": "virtual open house",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+    "platform": "microsoft_form",
+    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+    "source_kind": "aggregator",
+    "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Already known (declined) — re-submitted by harvest, expected duplicate."
+  },
+  {
+    "program": "University of Florida College of Medicine – Jacksonville Internal Medicine Residency",
+    "state": "FL",
+    "title": "Virtual Open House on Zoom (last open house of the season)",
+    "event_type": "virtual open house",
+    "date_tbd": true,
+    "platform": "zoom",
+    "source_url": "https://www.facebook.com/ufjaxim/",
+    "source_kind": "facebook",
+    "audience": "all applicants",
+    "notes": "Search snippet of the program's Facebook page (UF Internal Medicine Residency - Jacksonville) reads: 'last Open House on Zoom this Thursday, September 17th at 7-8 pm EST … 15 minute teaching point from our Infectious Disease attending'. Sept 17 is a Thursday in 2026, so this is very likely TODAY 2026-09-17 7–8 PM ET, but the page could NOT be opened (facebook.com/ufjaxim returns a login wall / HTTP 400 headlessly) and the program's own pages (medicine.med.jax.ufl.edu/education/internal-medicine-residency/ and /how-to-apply/) carry no announcement or Zoom link. Open facebook.com/ufjaxim or instagram.com/ufjaxim from the laptop for the Zoom link; date not assigned per skill rules."
+  }
+]
