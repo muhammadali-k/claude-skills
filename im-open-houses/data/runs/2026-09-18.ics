@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//im-open-houses//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oh_3d2a5497b8@im-open-houses
+DTSTAMP:20260918T150839Z
+DTSTART:20260923T230000Z
+DTEND:20260924T000000Z
+SUMMARY:[IM open house] Jefferson Health Northeast Internal Medicine Residency Program — Virtual Internal Medicine Residency Open House (session 2)
+DESCRIPTION:Virtual Internal Medicine Residency Open House (session 2)\nProgram: Jefferson Health Northeast Internal Medicine Residency Program (PA)\nTier 4 · ★ priority #307 · visa: J-1+H-1B\nRegister: see source\nSource: https://www.instagram.com/p/DN1avFi4n0x/\nStatus: announced\nevent id: oh_3d2a5497b8
+URL:https://www.instagram.com/p/DN1avFi4n0x/
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
