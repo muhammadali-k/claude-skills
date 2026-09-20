@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Project IMG list row 20 (listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'; re-confirmed 2026-09-19; already tracked as oh_4936a8f267 (declined). Timezone not printed; ET inferred from DE.",
+   "notes": "Harvest auto-candidate (Project IMG 'Open Houses List – Match 2027' row 20, listed as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)', 'Fri, Oct 2, 2026 • 5:00 PM'). Program name normalised to the tracked record oh_4936a8f267 (status declined); re-submitted unchanged on 2026-09-20. Timezone not printed on the list; ET inferred from Delaware.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-19",
-   "seen_count": 11,
+   "last_seen": "2026-09-20",
+   "seen_count": 12,
    "registration": null,
    "calendar_added": true
   },
@@ -588,7 +588,7 @@
    "source_url": "https://x.com/CAMCInternalIAM",
    "source_kind": "x",
    "audience": "all applicants",
-   "notes": "Announced on the program's X account (search snippet: 'hear from program leadership and residents … to register and receive a Microsoft Teams meeting link visit bit.ly/4y75NY8'). Date and year NOT verifiable headlessly: x.com timeline is login-walled and bit.ly resolves to a Microsoft Teams Virtual Events registration page (events.teams.microsoft.com/event/0026420c-…) that is a JavaScript shell with no date in the HTML. Open the bit.ly link in a browser to read the date before registering. Program page camcmedicine.edu/departments/internal-medicine/internal-medicine-residency has no event text.",
+   "notes": "Announced on the program's X account (search snippet: 'hear from program leadership and residents … to register and receive a Microsoft Teams meeting link visit bit.ly/4y75NY8'). Date and year NOT verifiable headlessly: x.com timeline is login-walled and bit.ly resolves to a Microsoft Teams Virtual Events registration page (events.teams.microsoft.com/event/0026420c-…) that is a JavaScript shell with no date in the HTML. Open the bit.ly link in a browser to read the date before registering. Program page camcmedicine.edu/departments/internal-medicine/internal-medicine-residency has no event text. | 2026-09-20 scan: the bit.ly/4y75NY8 Teams event page (rendered in headless Chromium) reads 'CAMC Internal Medicine Residency Virtual Open House — Wednesday, September 16 — Ended', itinerary 4:00–5:00 PM (ET). Event is over; marked past.",
    "match": {
     "on_my_list": true,
     "tier": "2",
@@ -600,7 +600,7 @@
     "state": "WV"
    },
    "match_score": 0.98,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-08",
    "last_seen": "2026-09-08",
    "seen_count": 1,
@@ -847,7 +847,7 @@
    "source_url": "https://www.facebook.com/ufjaxim/",
    "source_kind": "facebook",
    "audience": "all applicants",
-   "notes": "Search snippet of the program's Facebook page (UF Internal Medicine Residency - Jacksonville) reads: 'last Open House on Zoom this Thursday, September 17th at 7-8 pm EST … 15 minute teaching point from our Infectious Disease attending'. Sept 17 is a Thursday in 2026, so this is very likely TODAY 2026-09-17 7–8 PM ET, but the page could NOT be opened (facebook.com/ufjaxim returns a login wall / HTTP 400 headlessly) and the program's own pages (medicine.med.jax.ufl.edu/education/internal-medicine-residency/ and /how-to-apply/) carry no announcement or Zoom link. Open facebook.com/ufjaxim or instagram.com/ufjaxim from the laptop for the Zoom link; date not assigned per skill rules.",
+   "notes": "Search snippet of the program's Facebook page (UF Internal Medicine Residency - Jacksonville) reads: 'last Open House on Zoom this Thursday, September 17th at 7-8 pm EST … 15 minute teaching point from our Infectious Disease attending'. Sept 17 is a Thursday in 2026, so this is very likely TODAY 2026-09-17 7–8 PM ET, but the page could NOT be opened (facebook.com/ufjaxim returns a login wall / HTTP 400 headlessly) and the program's own pages (medicine.med.jax.ufl.edu/education/internal-medicine-residency/ and /how-to-apply/) carry no announcement or Zoom link. Open facebook.com/ufjaxim or instagram.com/ufjaxim from the laptop for the Zoom link; date not assigned per skill rules. | 2026-09-20 scan: UF Jax IM flyer (IMG Helping Hands Corp Facebook post of Aug 31, facebook.com/61587188182652/posts/122133337155239606) lists Zoom open houses Sep 3, Sep 10, Sep 17, 7–8 PM EST, 'Zoom link to come'. All three dates have passed; marked past.",
    "match": {
     "on_my_list": true,
     "tier": "2",
@@ -859,7 +859,7 @@
     "state": "FL"
    },
    "match_score": 0.65,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-17",
    "last_seen": "2026-09-17",
    "seen_count": 1,
@@ -961,6 +961,13 @@
   },
   {
    "date": "2026-09-19",
+   "candidates": 1,
+   "new": 0,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-20",
    "candidates": 1,
    "new": 0,
    "updated": 1,

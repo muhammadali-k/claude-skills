@@ -1,0 +1,103 @@
+{
+ "run_date": "2026-09-20",
+ "auto_candidates": [
+  {
+   "program": "Beebe Healthcare Internal Medicine Residency (pending accreditation)",
+   "state": "DE",
+   "title": "Virtual Open House (Internal Medicine)",
+   "event_type": "virtual open house",
+   "date": "2026-10-02",
+   "date_tbd": false,
+   "time": "5:00 PM",
+   "end_time": null,
+   "timezone": null,
+   "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+   "platform": "microsoft_form",
+   "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+   "source_kind": "aggregator",
+   "notes": "Project IMG list row 20; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'"
+  }
+ ],
+ "leads": [
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wl6107/hey_guys_pediatric_program_open_house_im/",
+   "source": "reddit",
+   "title": "Hey guys, Pediatric Program Open House. I’m promoting my program, please don’t let pass this opportunity!",
+   "pubdate": "2026-09-20",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wjw4cx/camc_open_house/",
+   "source": "reddit",
+   "title": "CAMC open house",
+   "pubdate": "2026-09-18",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wiigkf/open_house_list/",
+   "source": "reddit",
+   "title": "Open house list",
+   "pubdate": "2026-09-17",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wgxrl1/what_are_my_chances_at_albany_med_any_advice_from/",
+   "source": "reddit",
+   "title": "What are my chances at Albany Med? Any advice from the recent open house?",
+   "pubdate": "2026-09-15",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wfkohw/open_house/",
+   "source": "reddit",
+   "title": "Open House",
+   "pubdate": "2026-09-13",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wbzd1w/indications_for_signaling_a_program/",
+   "source": "reddit",
+   "title": "Indications for signaling a program",
+   "pubdate": "2026-09-09",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/comments/1wbq041/westchester_im_virtual_open_house/",
+   "source": "reddit",
+   "title": "Westchester IM virtual open house",
+   "pubdate": "2026-09-09",
+   "why": "recent reddit thread about open houses (may link to lists/sheets)"
+  }
+ ],
+ "watch_changes": [],
+ "errors": [
+  {
+   "url": "https://residency-virtual-open-house.org/index.php?specialty=Internal+Medicine&when=upcoming&sort=date",
+   "error": "HTTP 409"
+  },
+  {
+   "url": "https://www.bing.com/search?format=rss&count=20&q=%22internal%20medicine%20residency%22%20%22open%20house%22%20register%20zoom",
+   "error": "bing degraded (dictionary junk) — backing off"
+  },
+  {
+   "url": "https://www.infirmaryhealth.org/classes-events/event-details/?event=44394",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://www.umassmed.edu/internal-medicine-residency/open-house/",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://www.med.uvm.edu/medicine/residency",
+   "error": "URLError(ConnectionResetError(104, 'Connection reset by peer'))"
+  },
+  {
+   "url": "https://medschool.creighton.edu/graduate-medical-education/residency-programs/internal-medicine-residency-phoenix",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://gme.providence.org/oregon/providence-st-vincent-internal-medicine-residency",
+   "error": "HTTP 403"
+  }
+ ]
+}
