@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Harvest auto-candidate (Project IMG 'Open Houses List – Match 2027' row 20, listed as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)', 'Fri, Oct 2, 2026 • 5:00 PM'). Program name normalised to the tracked record oh_4936a8f267 (status declined); re-submitted unchanged on 2026-09-22. Timezone not printed on the list; ET inferred from Delaware.",
+   "notes": "Project IMG list row 20 (listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Reviewed 2026-09-23: same event already tracked as oh_4936a8f267 (declined); re-submitted only as harvest audit trail. Timezone not printed on the list row; ET inferred from DE.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-22",
-   "seen_count": 14,
+   "last_seen": "2026-09-23",
+   "seen_count": 15,
    "registration": null,
    "calendar_added": true
   },
@@ -982,6 +982,13 @@
   },
   {
    "date": "2026-09-22",
+   "candidates": 1,
+   "new": 0,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-23",
    "candidates": 1,
    "new": 0,
    "updated": 1,
