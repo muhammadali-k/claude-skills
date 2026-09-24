@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Project IMG list row 20 (listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Reviewed 2026-09-23: same event already tracked as oh_4936a8f267 (declined); re-submitted only as harvest audit trail. Timezone not printed on the list row; ET inferred from DE.",
+   "notes": "Project IMG list row 20 lists the program as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'; date as listed: 'Fri, Oct 2, 2026 • 5:00 PM' (no timezone printed; DE -> ET). Same event already in state as oh_4936a8f267 (declined); re-submitted from harvest 2026-09-24 for dedup only.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-23",
-   "seen_count": 15,
+   "last_seen": "2026-09-24",
+   "seen_count": 16,
    "registration": null,
    "calendar_added": true
   },
@@ -711,7 +711,7 @@
     "state": "PA"
    },
    "match_score": 1.15,
-   "status": "announced",
+   "status": "past",
    "first_seen": "2026-09-09",
    "last_seen": "2026-09-09",
    "seen_count": 1,
@@ -989,6 +989,13 @@
   },
   {
    "date": "2026-09-23",
+   "candidates": 1,
+   "new": 0,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-24",
    "candidates": 1,
    "new": 0,
    "updated": 1,
