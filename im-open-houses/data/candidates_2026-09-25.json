@@ -1,0 +1,17 @@
+[
+ {
+  "program": "Beebe Healthcare Internal Medicine Residency",
+  "state": "DE",
+  "title": "Virtual Open House (Internal Medicine)",
+  "event_type": "virtual open house",
+  "date": "2026-10-02",
+  "date_tbd": false,
+  "time": "5:00 PM",
+  "timezone": "ET",
+  "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+  "platform": "microsoft_form",
+  "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+  "source_kind": "aggregator",
+  "notes": "Project IMG list row 20 (listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 \u2022 5:00 PM'. Reviewed 2026-09-25: same event as oh_4936a8f267 (declined); program name normalised so ingest dedups it."
+ }
+]
