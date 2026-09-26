@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Project IMG list row 20 (listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Reviewed 2026-09-25: same event as oh_4936a8f267 (declined); program name normalised so ingest dedups it.",
+   "notes": "Project IMG list row 20 (program listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Re-seen 2026-09-26; already tracked as oh_4936a8f267 (declined).",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-25",
-   "seen_count": 17,
+   "last_seen": "2026-09-26",
+   "seen_count": 18,
    "registration": null,
    "calendar_added": true
   },
@@ -865,6 +865,43 @@
    "seen_count": 1,
    "registration": null,
    "announced_on": "2026-09-17"
+  },
+  "oh_a742744951": {
+   "id": "oh_a742744951",
+   "program": "Marshfield Clinic (Sanford Health) Internal Medicine Residency Program",
+   "state": "WI",
+   "title": "Sanford Health Marshfield Clinic Internal Medicine Residency Virtual Open House",
+   "event_type": "virtual open house",
+   "date": null,
+   "date_tbd": true,
+   "start": null,
+   "end": null,
+   "all_day": true,
+   "timezone": "America/Chicago",
+   "start_phoenix": null,
+   "registration_url": null,
+   "platform": "zoom",
+   "source_url": "https://www.linkedin.com/in/abdul-waheed-md-ms-phs-cpe-faafp-baa821a4/",
+   "source_kind": "other",
+   "audience": "all applicants",
+   "notes": "Found 2026-09-26 via three independent WebSearch snippets of a LinkedIn post by Abdul Waheed, MD (Creighton/Marshfield faculty): 'Sanford Health Marshfield Clinic Internal Medicine Residency is hosting a Virtual Open House ... September 30, 2026 at 11:00 AM Central Time via Zoom' covering the program, resident experience, training environment, mentorship and life in Marshfield. The LinkedIn page could NOT be opened headlessly (HTTP 999 via WebFetch, HTTP 429 via curl), so the date is NOT confirmed from page text and is recorded as TBD; Sep 30, 2026 is a Wednesday. The program site marshfieldclinic.org/education/residents-and-fellows/internal-medicine and its FAQ page show no open-house text (checked 2026-09-26). No registration/Zoom link seen; coordinator Victoria Rodriguez, rodriguez.victoria@marshfieldclinic.org, (715) 387-5260. Verify the LinkedIn post from a browser before Sep 30 (likely Wed Sep 30, 11:00 AM CT). Program sponsors J-1 and H-1B; ~94% non-US IMG residents (my_programs.json).",
+   "match": {
+    "on_my_list": true,
+    "tier": "3",
+    "priority_rank": 109,
+    "visa": "J-1+H-1B",
+    "grad_cutoff_risk": "soft",
+    "excluded_why": null,
+    "list_program": "Marshfield Clinic (Marshfield Medical Center) Internal Medicine Residency",
+    "state": "WI"
+   },
+   "match_score": 1.15,
+   "status": "announced",
+   "first_seen": "2026-09-26",
+   "last_seen": "2026-09-26",
+   "seen_count": 1,
+   "registration": null,
+   "announced_on": "2026-09-26"
   }
  },
  "runs": [
@@ -1005,6 +1042,13 @@
    "date": "2026-09-25",
    "candidates": 1,
    "new": 0,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-26",
+   "candidates": 2,
+   "new": 1,
    "updated": 1,
    "duplicates": 0
   }
