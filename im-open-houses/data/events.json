@@ -368,7 +368,7 @@
    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
    "source_kind": "aggregator",
    "audience": "all applicants",
-   "notes": "Project IMG list row 20 (program listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. Re-seen 2026-09-26; already tracked as oh_4936a8f267 (declined).",
+   "notes": "Project IMG list row 20 (row text: 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM'. 2026-09-27 review: row unchanged from previous runs; already tracked as oh_4936a8f267 (status declined). Resubmitted under the stored program name as audit trail only. Timezone not printed on the row; DE → ET.",
    "match": {
     "on_my_list": false,
     "tier": null,
@@ -380,8 +380,8 @@
    "match_score": 0.0,
    "status": "declined",
    "first_seen": "2026-09-01",
-   "last_seen": "2026-09-26",
-   "seen_count": 18,
+   "last_seen": "2026-09-27",
+   "seen_count": 19,
    "registration": null,
    "calendar_added": true
   },
@@ -1049,6 +1049,13 @@
    "date": "2026-09-26",
    "candidates": 2,
    "new": 1,
+   "updated": 1,
+   "duplicates": 0
+  },
+  {
+   "date": "2026-09-27",
+   "candidates": 1,
+   "new": 0,
    "updated": 1,
    "duplicates": 0
   }
