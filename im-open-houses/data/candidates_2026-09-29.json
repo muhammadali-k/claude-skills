@@ -1,0 +1,28 @@
+[
+  {
+    "program": "Beebe Healthcare Internal Medicine Residency",
+    "state": "DE",
+    "title": "Virtual Open House (Internal Medicine)",
+    "event_type": "virtual open house",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "registration_url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ZzoYiHs_pEmy5B-MLv8N3tWF26WG_W5Gqn7s4R6Av5VUOElUNDNCTVEwN0IwM0ZXRThYTEI0OTBCSC4u&origin=QRCode",
+    "platform": "microsoft_form",
+    "source_url": "https://docs.google.com/document/d/1DbH8EUbE5jxOrJ5WltN92T6zBu2GTyHPfcYfxsQC1d8/mobilebasic",
+    "source_kind": "aggregator",
+    "audience": "all applicants",
+    "notes": "Project IMG list row 20 (listed there as 'Beebe Healthcare Internal Medicine Residency (pending accreditation)'); date as listed: 'Fri, Oct 2, 2026 • 5:00 PM' (timezone not printed; DE -> ET). Same event as oh_4936a8f267 (declined); re-submitted from harvest 2026-09-29 unchanged."
+  },
+  {
+    "program": "Henry Ford Health / Henry Ford Hospital (Detroit) Internal Medicine Residency",
+    "state": "MI",
+    "title": "Virtual Open House for ERAS applicants (invitation emailed to applicants)",
+    "event_type": "virtual open house",
+    "date_tbd": true,
+    "platform": "email",
+    "source_url": "https://www.reddit.com/r/IMGreddit/comments/1wt1yqo/open_house_invite_from_henry_ford_detroit/",
+    "source_kind": "reddit",
+    "audience": "ERAS applicants who received the emailed invitation (poster is a non-US IMG)",
+    "notes": "Found 2026-09-29 via r/IMGreddit thread (read via the thread RSS feed): a non-US IMG applicant posted 'I got an open house invite from Henry Ford Hospital, Detroit'; a commenter confirms 'It's virtual'. Date, time and registration link are NOT public: the invite is emailed to applicants, and the program pages (henryford.com/hcp/med-ed/residencies-fellowships/hfh/internal-med and its Application page, checked 2026-09-29) carry no open-house text - the Application page only lists the 2026-27 timeline (ERAS opens for program review late Sep 2026; Thalamus invitations late Oct-early Nov). Program social: X @HFHIntMedRes, Instagram @hfhintmedres (timelines not readable headlessly). Action: check the Mayo/ERAS inbox for an email from Henry Ford Hospital IM (Detroit) with the date and link; Henry Ford Hospital Detroit is Tier 2, J-1 sponsor. The reddit.com thread could not be opened with WebFetch (host blocked); the RSS feed of the same thread was read instead."
+  }
+]
