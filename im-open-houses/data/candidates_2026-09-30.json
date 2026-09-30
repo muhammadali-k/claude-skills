@@ -1,0 +1,14 @@
+[
+  {
+    "program": "University of Kentucky (Ashland) / UK King's Daughters Internal Medicine Residency Program",
+    "state": "KY",
+    "title": "Internal Medicine Virtual Meet & Greet",
+    "event_type": "meet and greet",
+    "date_tbd": true,
+    "platform": "unknown",
+    "source_url": "https://www.ukkingsdaughters.com/graduate-medical-education/internal-medicine-residency-program/interviewee-information/",
+    "source_kind": "program_site",
+    "audience": "unclear - may be interview invitees only",
+    "notes": "Read 2026-09-30 (page fetched via WebFetch + curl; redirected from kingsdaughtershealth.com). Page 'Interviewee Information' has a section 'Internal Medicine Virtual Meet & Greet Dates': 'Join us to learn about our residency programs! Meet our program director and faculty in an informal virtual setting. This is your opportunity to: Learn about our curriculum and clinical training; Ask questions about the application process; Explore our institution's culture and community. Programs Represented: Internal Medicine.' The only dates on the page are labelled 'Internal Medicine Interview Dates': Tuesday, October 27, 2026; Tuesday, November 17, 2026; Tuesday, December 8, 2026; Tuesday, January 12, 2027 (weekdays match 2026/2027). It is NOT clear whether the virtual meet & greet is open to all applicants or is the evening session for interview invitees only, so no date is assigned. No time, timezone or registration link posted. Contact: UK King's Daughters GME, 2201 Lexington Ave, Ashland, KY 41101, 606-408-4000. Program is not in my_programs.json (no tier match). Verify with the program before relying on it."
+  }
+]
