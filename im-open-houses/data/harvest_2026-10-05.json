@@ -1,0 +1,32 @@
+{
+ "run_date": "2026-10-05",
+ "auto_candidates": [],
+ "leads": [],
+ "watch_changes": [],
+ "errors": [
+  {
+   "url": "https://www.bing.com/search?format=rss&count=20&q=%22internal%20medicine%22%20residency%20%22virtual%20open%20house%22%202026",
+   "error": "bing degraded (dictionary junk) — backing off"
+  },
+  {
+   "url": "https://www.reddit.com/r/IMGreddit/search.rss?q=%22open+house%22&restrict_sr=1&sort=new",
+   "error": "HTTP 429"
+  },
+  {
+   "url": "https://www.infirmaryhealth.org/classes-events/event-details/?event=44394",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://www.umassmed.edu/internal-medicine-residency/open-house/",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://medschool.creighton.edu/graduate-medical-education/residency-programs/internal-medicine-residency-phoenix",
+   "error": "HTTP 403"
+  },
+  {
+   "url": "https://gme.providence.org/oregon/providence-st-vincent-internal-medicine-residency",
+   "error": "HTTP 403"
+  }
+ ]
+}
