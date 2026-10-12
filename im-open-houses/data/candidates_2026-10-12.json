@@ -1,0 +1,31 @@
+[
+  {
+    "program": "University of Illinois College of Medicine at Chicago (UIC) Internal Medicine Residency Program",
+    "state": "IL",
+    "title": "Advocacy and Engagement Resident Council Virtual Open House",
+    "event_type": "virtual open house",
+    "date": "2026-10-15",
+    "time": "6:30 PM",
+    "end_time": "7:30 PM",
+    "duration_min": 60,
+    "timezone": "CST",
+    "registration_url": "https://uic.zoom.us/meeting/register/O68uNkY1Q4OKzDVhjcyt8A",
+    "platform": "zoom",
+    "source_url": "https://chicago.medicine.uic.edu/medicine/education/internal-medicine-residency-program/application-process/",
+    "source_kind": "program_site",
+    "audience": "all applicants",
+    "notes": "Page text (read 2026-10-12): 'On Thursday, October 15, the Advocacy and Engagement Resident Council will host a virtual open house from 6:30 - 7:30 pm (CST). Come join us to learn more about advocacy opportunities at our program. Register here.' No year printed, but Thursday Oct 15 matches 2026 and the same page lists 2026-2027 season interview days (Oct 22/23/29/30 = Thu/Fri in 2026) and states 'All interviews and open houses will be virtual.' Hosted by the residents' advocacy council, so advocacy-focused rather than a general program overview. Program contact: mcrespo@uic.edu. Visa: J-1 only per my_programs.json."
+  },
+  {
+    "program": "Bassett Medical Center Internal Medicine Residency Program (Columbia University affiliate, Cooperstown)",
+    "state": "NY",
+    "title": "Virtual Open House (registration link posted on program Instagram)",
+    "event_type": "virtual open house",
+    "date_tbd": true,
+    "platform": "unknown",
+    "source_url": "https://www.instagram.com/bassettimresidents/",
+    "source_kind": "instagram",
+    "audience": "all applicants",
+    "notes": "Found 2026-10-12 via two independent WebSearch snippets of the program Instagram profile @bassettimresidents ('Bassett Internal Medicine Residency, an affiliate of Columbia University' with a 'Virtual Open House Registration' link). The Instagram page could NOT be opened headlessly (HTTP 429), so the date, time, registration link and even the season are NOT confirmed; the program pages bassett.org/.../internal-medicine-residency-program, /our-internal, the applications page and bassett.org/events show no open-house text (checked 2026-10-12). FREIDA lists the program as participating in an Open House. Open the Instagram profile from a phone/browser to read the link-in-bio and date; coordinator medical.education@bassett.org, (607) 547-3764. Tier 2, priority #17, J-1+H-1B, ~92% non-US IMG residents."
+  }
+]
