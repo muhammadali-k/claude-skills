@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//im-open-houses//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:oh_194e2f5f05@im-open-houses
+DTSTAMP:20261013T150706Z
+DTSTART:20261015T233000Z
+DTEND:20261016T003000Z
+SUMMARY:[IM open house] University of Illinois College of Medicine at Chicago (UIC) Internal Medicine Residency Program — Advocacy and Engagement Resident Council Virtual Open House
+DESCRIPTION:Advocacy and Engagement Resident Council Virtual Open House\nProgram: University of Illinois College of Medicine at Chicago (UIC) Internal Medicine Residency Program (IL)\nTier 5 · ★ priority #318 · visa: J-1\nRegister: https://uic.zoom.us/meeting/register/O68uNkY1Q4OKzDVhjcyt8A\nSource: https://chicago.medicine.uic.edu/medicine/education/internal-medicine-residency-program/application-process/\nStatus: announced\nevent id: oh_194e2f5f05
+URL:https://uic.zoom.us/meeting/register/O68uNkY1Q4OKzDVhjcyt8A
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:IM open house in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
